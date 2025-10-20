@@ -1,0 +1,25 @@
+🚀 SMM KINGDOM TASK - GUIDE D'INSTALLATION
+
+COMMANDE D'INSTALLATION OFFICIELLE :
+------------------------------------
+Copiez-collez cette commande dans Termux :
+
+curl -s -o install.sh "https://raw.githubusercontent.com/Juana-archa/SmmKingdomControl/main/install.sh" && chmod +x install.sh && bash install.sh
+
+------------------------------------
+ÉTAPES APRÈS INSTALLATION :
+1. cd ~/SmmKingdom
+2. python main.py
+3. Suivez les instructions à l'écran
+4. Contactez Dah Ery pour activation
+
+📞 CONTACT :
+WhatsApp: +261385873519 
+Facebook: Dah Ery
+
+💰 TARIFS :
+- 5€ pour 7 jours
+- 10€ pour 15 jours
+- 20€ pour 30 jours
+
+👑 Développé par Dah Ery
