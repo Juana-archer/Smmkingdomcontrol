@@ -1,0 +1,10 @@
+{
+  "active": true,
+  "expire_date": "2025-12-31",
+  "banned_users": [],
+  "max_accounts": 10,
+  "daily_tasks": 50,
+  "welcome_message": "👑 SmmKingdomTask V3.0 - Contrôlé par Dah Ery",
+  "contact": "Dah Ery sur Facebook",
+  "last_updated": "2024-01-01"
+}
