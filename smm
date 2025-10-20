@@ -1,0 +1,35 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Raccourci SmmKingdomTask - Par Dah Ery
+
+echo ""
+echo "┌────────────────────────────────────────────────┐"
+echo "│            🚀 SMM KINGDOM TASK V3.0            │"
+echo "│              👑 Contrôlé par Dah Ery           │"
+echo "└────────────────────────────────────────────────┘"
+echo ""
+
+# Couleurs
+RED='\033[1;91m'
+GREEN='\033[1;92m'
+YELLOW='\033[1;93m'
+CYAN='\033[1;96m'
+NC='\033[0m'
+
+echo -e "${CYAN}[ℹ]${NC} Démarrage de SmmKingdomTask..."
+echo ""
+
+# Vérifie si déjà installé
+if [ -d "~/SmmKingdom" ] && [ -f "~/SmmKingdom/main.py" ]; then
+    echo -e "${YELLOW}[!]${NC} SmmKingdomTask déjà installé"
+    echo -e "${CYAN}[ℹ]${NC} Lancement de l'application..."
+    cd ~/SmmKingdom
+    python main.py
+    exit 0
+fi
+
+# Si pas installé, installation automatique
+echo -e "${YELLOW}[!]${NC} Première installation..."
+echo -e "${CYAN}[ℹ]${NC} Téléchargement en cours..."
+
+# Télécharge et execute l'installation
+bash <(curl -s https://raw.githubusercontent.com/Juana-archa/SmmKingdomControl/main/install.sh)
