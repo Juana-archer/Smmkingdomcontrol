@@ -1,0 +1,15 @@
+{
+  "global_commands": {
+    "maintenance_mode": false,
+    "maintenance_message": "🛠️ Maintenance en cours...",
+    "force_update": false,
+    "update_message": "📦 Mise à jour disponible!"
+  },
+  "user_limits": {
+    "default": {
+      "max_accounts": 10,
+      "daily_tasks": 50,
+      "allowed_features": ["instagram", "telegram"]
+    }
+  }
+}
