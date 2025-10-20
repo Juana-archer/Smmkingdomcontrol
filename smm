@@ -32,4 +32,4 @@ echo -e "${YELLOW}[!]${NC} Première installation..."
 echo -e "${CYAN}[ℹ]${NC} Téléchargement en cours..."
 
 # Télécharge et execute l'installation
-bash <(curl -s https://raw.githubusercontent.com/Juana-archa/SmmKingdomControl/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Juana-archer/SmmKingdomControl/main/install.sh)
