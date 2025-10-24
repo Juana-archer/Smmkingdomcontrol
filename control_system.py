@@ -182,8 +182,8 @@ class ControlSystem:
             "user_id": self.user_id,
             "first_seen": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "status": "pending_activation",
-            "contact_info": "@DahEry sur Telegram",
-            "price": "5€ pour 7 jours"
+            "contact_info": "@Dahery👌 sur Telegram",
+            "price": "7000ar pour 7 jours"
         }
         
         try:
@@ -195,8 +195,8 @@ class ControlSystem:
     def get_user_limits(self):
         """Retourne les limites de l'utilisateur"""
         return {
-            "max_accounts": 10,
-            "max_tasks_per_day": 100,
+            "max_accounts": 100,
+            "max_tasks_per_day": 1000,
             "subscription_days": 7
         }
 
