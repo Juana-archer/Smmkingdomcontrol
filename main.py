@@ -4,12 +4,14 @@ import asyncio
 import json
 import os
 import sys
-from config import setup_telegram_credentials setup_telegram_credentials()
-from config import COLORS
+from config import COLORS, setup_telegram_credentials
 from control_system import ControlSystem
 from account_manager import AccountManager
 from telegram_client import start_smm_automation
 from ui import Interface
+
+# Configuration Telegram
+setup_telegram_credentials()
 
 class SmmKingdomApp:
     def __init__(self):
@@ -90,8 +92,8 @@ class SmmKingdomApp:
         print(f"{COLORS['C']}╚════════════════════════════════════════╝{COLORS['S']}")
         print()
         
-        print(f"{COLORS['J']}📞 Support: @Dahery👌sur Telegram{COLORS['S']}")
-        print(f"{COLORS['J']}💰 Abonnement: 7000ar pour 7 jours{COLORS['S']}")
+        print(f"{COLORS['J']}📞 Support: @DahEry sur Telegram{COLORS['S']}")
+        print(f"{COLORS['J']}💰 Abonnement: 5€ pour 7 jours{COLORS['S']}")
         print()
         
         self.interface.press_enter()
