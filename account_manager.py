@@ -1,176 +1,314 @@
-# account_manager.py - VERSION AMÉLIORÉE
+# account_manager.py - GESTION COMPLÈTE DES COMPTES INSTAGRAM
 import json
 import os
 import requests
-import random
 import time
-from uuid import uuid4                                     from config import PATHS, COLORS
-from control_system import ControlSystem
+import re
+import random
+import asyncio
+from config import PATHS, COLORS
 
 class AccountManager:
     def __init__(self):
         self.accounts_file = PATHS["accounts"]
-        self.trash_file = PATHS["trash"]                           self.control = ControlSystem()
-        self._ensure_directories()                         
+        self.trash_file = PATHS["trash"]
+        self._ensure_directories()
+
     def _ensure_directories(self):
         """Crée les dossiers nécessaires"""
         os.makedirs("/sdcard/SmmKingdomTask", exist_ok=True)
+        if not os.path.exists(self.accounts_file):
+            with open(self.accounts_file, 'w') as f:
+                f.write("# Fichier des comptes Instagram\n")
 
-    def generate_user_agent(self):
-        """Génère un User-Agent réaliste"""
-        android_versions = ["10", "11", "12", "13"]
-        devices = [
-            "SM-G973F", "SM-G975F", "SM-N986B",
-            "Mi 9T", "Redmi Note 8", "OnePlus 8"
-        ]
+    def get_advanced_headers(self):
+        """Headers complets pour contourner les protections"""
+        return {
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Mobile Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Cache-Control': 'max-age=0'
+        }
 
-        android = random.choice(android_versions)
-        device = random.choice(devices)
-
-        return f"Instagram 275.0.0.27.98 Android ({android}/10; 640dpi; 1440x2890; samsung; {device}; {device}; en_US; 454212394)"
-
-    def connect_instagram_account(self, username, password):
-        """Connecte un compte Instagram avec meilleure gestion d'erreurs"""
+    def get_initial_session(self):
+        """Établit une session initiale avec Instagram"""
         try:
-            print(f"{COLORS['C']}[🔄] Tentative de connexion pour {username}...{COLORS['S']}")
-
-            # Génère un UUID unique
-            uid = str(uuid4())
-
-            # Headers améliorés
-            headers = {
-                'User-Agent': self.generate_user_agent(),
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'Accept': '*/*',
-                'Accept-Language': 'en-US,en;q=0.9',
-                'Accept-Encoding': 'gzip, deflate',
-                'X-IG-Capabilities': '3brTvw==',
-                'X-IG-Connection-Type': 'WIFI',
-                'X-IG-App-ID': '567067343352427',
-                'Connection': 'close'
-            }
-
-            # Données de connexion
-            data = {
-                'jazoest': '22265',
-                'phone_id': uid,
-                'enc_password': f'#PWD_INSTAGRAM:0:0:{password}',
-                'username': username,
-                'adid': '',
-                'guid': uid,
-                'device_id': uid,
-                'google_tokens': '[]',
-                'login_attempt_count': '0'
-            }
-
-            # Session avec timeout
             session = requests.Session()
-            session.headers.update(headers)
+            session.headers.update(self.get_advanced_headers())
 
-            # Délai aléatoire pour éviter la détection
-            time.sleep(random.uniform(2, 5))
+            print(f"{COLORS['C']}[🌐] Initialisation de la session...{COLORS['S']}")
 
-            # Tentative de connexion
-            response = session.post(
-                "https://www.instagram.com/api/v1/accounts/login/",
-                data=data,
+            # Première requête pour récupérer les cookies initiaux
+            response = session.get(
+                "https://www.instagram.com/accounts/login/",
                 timeout=30,
                 allow_redirects=True
             )
 
-            print(f"{COLORS['J']}[📡] Code HTTP: {response.status_code}{COLORS['S']}")
-
-            # Vérification de la réponse
             if response.status_code == 200:
-                response_data = response.json()
-
-                if response_data.get('status') == 'ok' or 'logged_in_user' in str(response_data):
-                    # Récupère les cookies
-                    cookies_dict = session.cookies.get_dict()
-
-                    if 'sessionid' in cookies_dict:
-                        cookies = "; ".join([f"{k}={v}" for k, v in cookies_dict.items()])
-                        self._save_account(username, cookies)
-                        print(f"{COLORS['V']}[✅] SUCCÈS! Compte {username} connecté{COLORS['S']}")
-                        return True
-                    else:
-                        print(f"{COLORS['R']}[❌] Aucun cookie de session reçu{COLORS['S']}")
-                        return False
+                # Extraire le CSRF token
+                csrf_match = re.search(r'"csrf_token":"([^"]+)"', response.text)
+                if csrf_match:
+                    csrf_token = csrf_match.group(1)
+                    print(f"{COLORS['V']}[🔑] CSRF Token récupéré{COLORS['S']}")
                 else:
-                    error_message = response_data.get('message', 'Erreur inconnue')
-                    print(f"{COLORS['R']}[❌] Erreur Instagram: {error_message}{COLORS['S']}")
+                    csrf_token = session.cookies.get('csrftoken', '')
+                    print(f"{COLORS['J']}[⚠️] CSRF depuis cookies{COLORS['S']}")
+
+                print(f"{COLORS['C']}[🍪] Cookies initiaux: {len(session.cookies.get_dict())}{COLORS['S']}")
+                return session, csrf_token
+            else:
+                print(f"{COLORS['R']}[❌] Erreur initialisation: {response.status_code}{COLORS['S']}")
+                return None, None
+
+        except Exception as e:
+            print(f"{COLORS['R']}[💥] Erreur session: {e}{COLORS['S']}")
+            return None, None
+
+    def connect_instagram_account(self, username, password):
+        """Nouvelle méthode avec gestion complète de l'authentification"""
+        print(f"{COLORS['C']}=== CONNEXION INSTAGRAM AVANCÉE ==={COLORS['S']}")
+
+        # ÉTAPE 1: Initialiser la session
+        session, csrf_token = self.get_initial_session()
+        if not session:
+            return False
+
+        try:
+            # ÉTAPE 2: Préparer les données de connexion
+            login_data = {
+                'username': username,
+                'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:{int(time.time())}:{password}',
+                'queryParams': '{}',
+                'optIntoOneTap': 'false',
+                'trustedDeviceRecords': '{}',
+                'stopDeletionNonce': ''
+            }
+
+            # ÉTAPE 3: Headers pour la connexion
+            login_headers = {
+                'User-Agent': session.headers['User-Agent'],
+                'X-CSRFToken': csrf_token,
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-Instagram-AJAX': '1',
+                'Referer': 'https://www.instagram.com/accounts/login/',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Origin': 'https://www.instagram.com'
+            }
+
+            # Délai aléatoire
+            wait_time = random.uniform(2, 4)
+            print(f"{COLORS['J']}[⏰] Attente de {wait_time:.1f}s...{COLORS['S']}")
+            time.sleep(wait_time)
+
+            # ÉTAPE 4: Tentative de connexion
+            print(f"{COLORS['C']}[📡] Envoi de la requête de connexion...{COLORS['S']}")
+
+            response = session.post(
+                "https://www.instagram.com/accounts/login/ajax/",
+                data=login_data,
+                headers=login_headers,
+                timeout=30,
+                allow_redirects=False  # IMPORTANT: ne pas suivre les redirects
+            )
+
+            print(f"{COLORS['J']}[📊] Code HTTP: {response.status_code}{COLORS['S']}")
+
+            # ÉTAPE 5: Analyse détaillée de la réponse
+            if response.status_code == 200:
+                try:
+                    response_data = response.json()
+                    print(f"{COLORS['C']}[🔍] Réponse Instagram: {response_data}{COLORS['S']}")
+
+                    # Vérifier l'authentification
+                    if response_data.get('authenticated') == True:
+                        print(f"{COLORS['V']}[✅] Authentification réussie!{COLORS['S']}")
+
+                        # ÉTAPE CRITIQUE: Faire une requête supplémentaire pour solidifier la session
+                        print(f"{COLORS['C']}[🔒] Finalisation de la session...{COLORS['S']}")
+
+                        # Requête vers la page d'accueil pour compléter les cookies
+                        home_response = session.get(
+                            "https://www.instagram.com/",
+                            timeout=20,
+                            allow_redirects=True
+                        )
+
+                        # Récupérer les cookies FINAUX
+                        final_cookies = session.cookies.get_dict()
+                        print(f"{COLORS['C']}[🍪] Cookies finaux: {len(final_cookies)} cookie(s){COLORS['S']}")
+
+                        # VÉRIFICATION DES COOKIES REQUIS
+                        if 'sessionid' in final_cookies and 'csrftoken' in final_cookies:
+                            print(f"{COLORS['V']}[🎉] Session ID valide récupéré!{COLORS['S']}")
+                            self._save_account(username, final_cookies)
+                            return True
+                        else:
+                            print(f"{COLORS['R']}[❌] Cookies de session manquants{COLORS['S']}")
+                            print(f"{COLORS['R']}   SessionID présent: {'sessionid' in final_cookies}{COLORS['S']}")
+                            print(f"{COLORS['R']}   CSRFToken présent: {'csrftoken' in final_cookies}{COLORS['S']}")
+                            return False
+
+                    else:
+                        error_msg = response_data.get('message', 'Non authentifié')
+                        error_type = response_data.get('error_type', 'Inconnu')
+
+                        if 'checkpoint' in error_msg.lower():
+                            print(f"{COLORS['R']}[🚫] Vérification de sécurité requise{COLORS['S']}")
+                            print(f"{COLORS['R']}[💡] Connectez-vous manuellement via l'app puis réessayez{COLORS['S']}")
+                        elif 'password' in error_msg.lower():
+                            print(f"{COLORS['R']}[❌] Mot de passe incorrect{COLORS['S']}")
+                        else:
+                            print(f"{COLORS['R']}[❌] Erreur: {error_msg}{COLORS['S']}")
+
+                        return False
+
+                except requests.exceptions.JSONDecodeError:
+                    print(f"{COLORS['R']}[❌] Réponse non-JSON: {response.text[:100]}...{COLORS['S']}")
                     return False
+
             else:
                 print(f"{COLORS['R']}[❌] Erreur HTTP: {response.status_code}{COLORS['S']}")
                 return False
 
         except requests.exceptions.Timeout:
-            print(f"{COLORS['R']}[⏰] Timeout - Vérifiez votre connexion Internet{COLORS['S']}")
-            return False
-        except requests.exceptions.ConnectionError:
-            print(f"{COLORS['R']}[🌐] Erreur de connexion - Pas d'Internet{COLORS['S']}")
+            print(f"{COLORS['R']}[⏰] Timeout{COLORS['S']}")
             return False
         except Exception as e:
-            print(f"{COLORS['R']}[💥] Erreur inattendue: {str(e)}{COLORS['S']}")
+            print(f"{COLORS['R']}[💥] Erreur: {str(e)}{COLORS['S']}")
             return False
 
     def _save_account(self, username, cookies):
-        """Sauvegarde un compte avec vérification des limites"""
-        accounts = self.get_all_accounts()
-        limits = self.control.get_user_limits()
-
-        if len(accounts) >= limits["max_accounts"]:
-            print(f"{COLORS['R']}[⚠️] Limite de {limits['max_accounts']} comptes atteinte{COLORS['S']}")
-            return
-
-        with open(self.accounts_file, 'a') as f:
-            f.write(f"{username}|{cookies}\n")
-
-        # Rapport de succès
-        self.control.send_usage_report("account_connected", {
-            "username": username,
-            "success": True
-        })
+        """Sauvegarde le compte"""
+        try:
+            account_line = f"{username}|{json.dumps(cookies)}\n"
+            with open(self.accounts_file, 'a', encoding='utf-8') as f:
+                f.write(account_line)
+            print(f"{COLORS['V']}[💾] Compte sauvegardé avec succès!{COLORS['S']}")
+        except Exception as e:
+            print(f"{COLORS['R']}[💥] Erreur sauvegarde: {e}{COLORS['S']}")
 
     def get_all_accounts(self):
         """Récupère tous les comptes"""
+        accounts = []
         try:
-            with open(self.accounts_file, 'r') as f:
-                return [line.strip() for line in f.readlines() if line.strip()]
+            with open(self.accounts_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        try:
+                            if '|' in line:
+                                username, cookies_str = line.split('|', 1)
+                                cookies_dict = json.loads(cookies_str)
+                                if isinstance(cookies_dict, dict):
+                                    accounts.append((username, cookies_str))
+                        except:
+                            continue
+            return accounts
         except FileNotFoundError:
             return []
 
     def display_accounts(self):
         """Affiche les comptes"""
         accounts = self.get_all_accounts()
-        limits = self.control.get_user_limits()
-
         if not accounts:
-            print(f"{COLORS['J']}[⚠️] Aucun compte enregistré{COLORS['S']}")
+            print(f"{COLORS['J']}[📭] Aucun compte enregistré{COLORS['S']}")
             return False
 
-        print(f"{COLORS['C']}[📂] Comptes ({len(accounts)}/{limits['max_accounts']}):{COLORS['S']}")
-        for i, account in enumerate(accounts, 1):
-            username = account.split('|')[0]
-            print(f"  {COLORS['o']}[{COLORS['V']}{i}{COLORS['o']}] {username}{COLORS['S']}")
+        print(f"{COLORS['C']}╔════════════════════════════════════════╗{COLORS['S']}")
+        print(f"{COLORS['C']}║          COMPTES INSTAGRAM            ║{COLORS['S']}")
+        print(f"{COLORS['C']}╠════════════════════════════════════════╣{COLORS['S']}")
+
+        for i, (username, cookies_str) in enumerate(accounts, 1):
+            try:
+                cookies = json.loads(cookies_str)
+                if 'sessionid' in cookies:
+                    session_preview = cookies['sessionid'][:20] + '...' if len(cookies['sessionid']) > 20 else cookies['sessionid']
+                    status = f"{COLORS['V']}✅ ACTIF{COLORS['S']}"
+                else:
+                    session_preview = "AUCUN"
+                    status = f"{COLORS['R']}❌ INACTIF{COLORS['S']}"
+
+                print(f"{COLORS['B']}║ {COLORS['V']}{i:2d}.{COLORS['S']} {username:<20} {status} {COLORS['B']}║{COLORS['S']}")
+
+            except:
+                print(f"{COLORS['B']}║ {COLORS['R']}{i:2d}.{COLORS['S']} {username:<20} ❌ INVALIDE {COLORS['B']}║{COLORS['S']}")
+
+        print(f"{COLORS['C']}╚════════════════════════════════════════╝{COLORS['S']}")
+        print(f"{COLORS['J']}📊 Total: {len(accounts)} compte(s){COLORS['S']}")
         return True
 
     def delete_account(self, index):
         """Supprime un compte"""
         accounts = self.get_all_accounts()
         if 0 <= index < len(accounts):
-            deleted = accounts.pop(index)
+            deleted_account = accounts.pop(index)
+            username = deleted_account[0]
 
-            # Sauvegarde corbeille
-            with open(self.trash_file, 'a') as f:
-                f.write(f"{deleted}\n")
+            try:
+                with open(self.trash_file, 'a', encoding='utf-8') as f:
+                    f.write(f"{username}|{deleted_account[1]}\n")
+            except:
+                pass
 
-            # Réécrit le fichier
-            with open(self.accounts_file, 'w') as f:
-                for acc in accounts:
-                    f.write(f"{acc}\n")
+            try:
+                with open(self.accounts_file, 'w', encoding='utf-8') as f:
+                    f.write("# Fichier des comptes Instagram\n")
+                    for acc in accounts:
+                        f.write(f"{acc[0]}|{acc[1]}\n")
 
-            username = deleted.split('|')[0]
-            print(f"{COLORS['V']}[🗑️] {username} supprimé{COLORS['S']}")
-            return True
-        return False
+                print(f"{COLORS['V']}[🗑️] Compte {username} supprimé{COLORS['S']}")
+                return True
+            except Exception as e:
+                print(f"{COLORS['R']}[💥] Erreur suppression: {e}{COLORS['S']}")
+                return False
+        else:
+            print(f"{COLORS['R']}[❌] Index invalide{COLORS['S']}")
+            return False
+
+    def get_random_account(self):
+        """Retourne un compte aléatoire"""
+        accounts = self.get_all_accounts()
+        if accounts:
+            return random.choice(accounts)
+        return None
+
+    def get_account_by_username(self, username):
+        """Retourne un compte spécifique par username"""
+        accounts = self.get_all_accounts()
+        for acc in accounts:
+            if acc[0] == username:
+                return acc
+        return None
+
+    def validate_account(self, username, cookies_str):
+        """Valide qu'un compte a des cookies valides"""
+        try:
+            cookies = json.loads(cookies_str)
+            return 'sessionid' in cookies and 'csrftoken' in cookies
+        except:
+            return False
+
+    def count_accounts(self):
+        """Compte le nombre de comptes"""
+        return len(self.get_all_accounts())
+
+# Test direct
+if __name__ == "__main__":
+    manager = AccountManager()
+    print(f"{COLORS['C']}=== TEST DE CONNEXION INSTAGRAM ==={COLORS['S']}")
+    username = input(f"{COLORS['B']}[?] Username: {COLORS['S']}")
+    password = input(f"{COLORS['B']}[?] Password: {COLORS['S']}")
+
+    success = manager.connect_instagram_account(username, password)
+
+    if success:
+        print(f"{COLORS['V']}🎉 COMPTE AJOUTÉ AVEC SUCCÈS!{COLORS['S']}")
+    else:
+        print(f"{COLORS['R']}💔 ÉCHEC DE LA CONNEXION{COLORS['S']}")
