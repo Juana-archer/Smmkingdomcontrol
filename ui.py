@@ -1,19 +1,22 @@
 # ui.py
 import os
 from config import COLORS
+import getpass
 
 class Interface:
     def __init__(self):
-        self.logo = f"""
-{COLORS['o']}═════════════════════════════════════════     {COLORS['vi']}┌────────────────────────────────┐
+        self.logo = f"""{COLORS['o']}═════════════════════════════════════════
+{COLORS['vi']}┌────────────────────────────────┐
 │        SMM KINGDOM TASK        │
-│          {COLORS['V']}Version 3.0{COLORS['vi']}           │                                                         │                                │
+│          {COLORS['V']}Version 3.0{COLORS['vi']}           │
+│                                │
 │      {COLORS['J']}Contrôlé par Dah Ery{COLORS['vi']}      │
 └────────────────────────────────┘
 {COLORS['o']}═════════════════════════════════════════"""
 
     def clear_screen(self):
-        os.system('clear')                                         print(self.logo)
+        os.system('clear')
+        print(self.logo)
 
     def display_menu(self):
         menu_items = [
@@ -36,6 +39,13 @@ class Interface:
 
     def get_choice(self, prompt="Choix"):
         return input(f"{COLORS['o']}[{COLORS['V']}?{COLORS['o']}] {prompt}: {COLORS['B']}")
+
+    def get_input(self, prompt="Entrée", is_password=False):
+        """Méthode pour obtenir une entrée utilisateur (nécessaire pour main.py)"""
+        if is_password:
+            return getpass.getpass(f"{COLORS['o']}[{COLORS['V']}🔒{COLORS['o']}] {prompt}: {COLORS['B']}")
+        else:
+            return input(f"{COLORS['o']}[{COLORS['V']}?{COLORS['o']}] {prompt}: {COLORS['B']}")
 
     def show_message(self, message, msg_type="info"):
         colors = {
