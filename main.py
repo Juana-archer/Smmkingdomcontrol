@@ -4,6 +4,7 @@ import asyncio
 import json
 import os
 import sys
+from config import setup_telegram_credentials setup_telegram_credentials()
 from config import COLORS
 from control_system import ControlSystem
 from account_manager import AccountManager
