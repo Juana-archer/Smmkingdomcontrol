@@ -11,7 +11,7 @@ from config import COLORS
 class ControlSystem:
     def __init__(self):
         self.machine_id = self.get_machine_id()  # Renommé pour plus de clarté
-        self.license_url = "https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/license.json"
+        self.license_url = "https://raw.github.com/Juana-archer/Smmkingdomcontrol/main/licence.json"
         self.local_license_file = "local_license.json"
 
     def get_machine_id(self):
