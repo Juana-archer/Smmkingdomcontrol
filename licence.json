@@ -19,3 +19,14 @@
     "vip": {"duration_days": 60, "price": "40000ar"}
   }
 }
+{
+  "authorized_users": {
+    "08698ef2d5f0": {
+      "status": "active",
+      "plan": "basic",
+      "expire_date": "2025-11-02",
+      "expire_time": "23:59",
+      "activated_date": "2025-10-26",
+      "activated_by": "DahEry",
+      "duration_days": 7
+    } 
