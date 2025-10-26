@@ -1,11 +1,21 @@
 {
-  "authorized_users": {},
-  "last_update": "2025-10-26",
+  "authorized_users": {
+    "b47a96dd1816": {
+      "status": "active",
+      "plan": "basic",
+      "expire_date": "2025-11-02",
+      "expire_time": "23:59",
+      "activated_date": "2025-10-26",
+      "activated_by": "DahEry",
+      "duration_days": 7
+    }
+  },
+  "last_update": "2024-10-26",
   "version": "3.0",
   "plans_available": {
     "basic": {"duration_days": 7, "price": "7000ar"},
     "standard": {"duration_days": 15, "price": "12000ar"},
-    "premium": {"duration_days": 30, "price": "22000ar"},
-    "vip": {"duration_days": 60, "price": "42000ar"}
+    "premium": {"duration_days": 30, "price": "23000ar"},
+    "vip": {"duration_days": 60, "price": "40000ar"}
   }
 }
