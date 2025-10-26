@@ -2,217 +2,257 @@
 import requests
 import json
 import time
+import hashlib
+import uuid
 import os
-import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from config import COLORS
 
 class ControlSystem:
     def __init__(self):
-        self.user_id = self.get_user_id()
-        self.license_url = "https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/license.json"
-        self.users_url = "https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/users.json"
+        self.machine_id = self.get_machine_id()  # Renommé pour plus de clarté
+        self.license_url = "https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/licenses.json"
+        self.local_license_file = "local_license.json"
 
-    def get_user_id(self):
-        """Génère un ID unique pour chaque utilisateur"""
+    def get_machine_id(self):
+        """Génère un ID unique basé sur la machine"""
         try:
-            # Essaye de lire l'ID existant
-            with open('/data/data/com.termux/files/usr/etc/smm_user_id', 'r') as f:
-                return f.read().strip()
-        except:
-            # Crée un nouvel ID
-            import uuid
-            user_id = str(uuid.uuid4())
-            try:
-                with open('/data/data/com.termux/files/usr/etc/smm_user_id', 'w') as f:
-                    f.write(user_id)
-            except:
-                pass
-            return user_id
-
-    def check_license(self):
-        """Vérifie la licence - BLOQUE si non activé"""
-        try:
-            # Vérifier d'abord le fichier de contrôle général
-            response = requests.get(self.license_url, timeout=10)
-            control_data = response.json()
+            # Essayer de lire l'ID existant
+            if os.path.exists("machine_id.txt"):
+                with open("machine_id.txt", "r") as f:
+                    machine_id = f.read().strip()
+                    return machine_id
             
-            if not control_data.get("active", True):
-                self.show_blocked_message("❌ Script désactivé par Dah Ery")
-                return False, "Script désactivé"
+            # Générer un nouvel ID unique
+            machine_info = str(uuid.getnode()) + str(os.path.exists)
+            machine_id = hashlib.md5(machine_info.encode()).hexdigest()[:12]
             
-            # Vérifier les utilisateurs bannis
-            banned_users = control_data.get("banned_users", [])
-            if self.user_id in banned_users:
-                self.show_blocked_message("🚫 Accès révoqué par Dah Ery")
-                return False, "Accès révoqué"
+            # Sauvegarder l'ID
+            with open("machine_id.txt", "w") as f:
+                f.write(machine_id)
             
-            # Vérifier l'abonnement utilisateur
-            user_status = self.check_user_subscription()
-            
-            if user_status == "new_user":
-                # NOUVEL UTILISATEUR - BLOQUER COMPLÈTEMENT
-                return self.first_time_setup()
-            elif user_status == "active":
-                # UTILISATEUR ACTIVÉ - Calculer temps restant
-                return self.calculate_time_remaining()
-            elif user_status == "expired":
-                # ABONNEMENT EXPIRÉ - BLOQUER
-                self.show_expired_message()
-                return False, "Abonnement expiré"
-            else:
-                self.show_blocked_message("❌ Erreur de vérification de licence")
-                return False, "Erreur vérification"
+            return machine_id
             
         except Exception as e:
-            self.show_blocked_message(f"❌ Erreur connexion: {e}")
-            return False, f"Erreur: {e}"
+            # Fallback simple
+            return hashlib.md5(str(uuid.getnode()).encode()).hexdigest()[:12]
 
-    def check_user_subscription(self):
-        """Vérifie le statut d'abonnement de l'utilisateur"""
+    def check_license(self):
+        """Vérifie la licence avec limitation par date"""
         try:
-            # Charger les données utilisateurs depuis GitHub
-            response = requests.get(self.users_url, timeout=10)
-            users_data = response.json()
+            print(f"\n{COLORS['C']}" + "="*50)
+            print("🔍 VÉRIFICATION DE LA LICENCE")
+            print("="*50 + f"{COLORS['S']}")
             
-            user_info = users_data.get(self.user_id, {})
+            print(f"{COLORS['J']}📱 Votre ID Machine: {self.machine_id}{COLORS['S']}")
             
-            if not user_info:
-                return "new_user"  # Nouvel utilisateur non activé
-            elif user_info.get("status") == "active":
-                # Vérifier si l'abonnement est encore valide
-                expire_date = user_info.get("expire_date")
-                if expire_date and datetime.now() < datetime.strptime(expire_date, "%Y-%m-%d"):
-                    return "active"
-                else:
-                    return "expired"
-            else:
-                return "expired"
+            # Charge la licence depuis GitHub
+            response = requests.get(self.license_url, timeout=10)
+            license_data = response.json()
+
+            # Vérifie si l'ID machine est autorisé
+            authorized_users = license_data.get("authorized_users", {})
+            
+            if self.machine_id in authorized_users:
+                user_data = authorized_users[self.machine_id]
                 
-        except:
-            return "new_user"  # En cas d'erreur, considérer comme nouveau
-
-    def first_time_setup(self):
-        """Configuration pour les nouveaux utilisateurs - BLOQUE LE SCRIPT"""
-        print(f"\n{COLORS['C']}╔════════════════════════════════════════╗{COLORS['S']}")
-        print(f"{COLORS['C']}║           ACTIVATION REQUISE           ║{COLORS['S']}")
-        print(f"{COLORS['C']}╠════════════════════════════════════════╣{COLORS['S']}")
-        print(f"{COLORS['B']}║ 🔑 VOTRE USER ID: {self.user_id}{COLORS['S']}")
-        print(f"{COLORS['B']}║                                        ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 📞 Contactez: @DahEry sur Telegram     ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 💰 Prix: 5€ pour 7 jours d'accès       ║{COLORS['S']}")
-        print(f"{COLORS['B']}║                                        ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 💳 Méthodes de paiement:               ║{COLORS['S']}")
-        print(f"{COLORS['B']}║   • PayPal                             ║{COLORS['S']}")
-        print(f"{COLORS['B']}║   • Crypto (USDT)                      ║{COLORS['S']}")
-        print(f"{COLORS['B']}║   • Mobile Money                       ║{COLORS['S']}")
-        print(f"{COLORS['C']}╚════════════════════════════════════════╝{COLORS['S']}")
-        print()
-        
-        print(f"{COLORS['J']}📋 PROCÉDURE D'ACTIVATION:{COLORS['S']}")
-        print(f"{COLORS['B']}1. Contactez @DahEry sur Telegram{COLORS['S']}")
-        print(f"{COLORS['B']}2. Envoyez votre USER ID + preuve de paiement{COLORS['S']}")
-        print(f"{COLORS['B']}3. Recevez l'activation sous 24h{COLORS['S']}")
-        print()
-        
-        # Sauvegarder les données utilisateur localement
-        self.save_user_data()
-        
-        # BLOQUER COMPLÈTEMENT LE SCRIPT
-        input(f"{COLORS['R']}⏎ Appuyez sur Entrée pour quitter...{COLORS['S']}")
-        sys.exit(1)  # Quitte complètement le script
-
-    def show_blocked_message(self, reason):
-        """Affiche un message de blocage et quitte"""
-        print(f"\n{COLORS['R']}╔════════════════════════════════════════╗{COLORS['S']}")
-        print(f"{COLORS['R']}║              ACCÈS BLOQUÉ              ║{COLORS['S']}")
-        print(f"{COLORS['R']}╠════════════════════════════════════════╣{COLORS['S']}")
-        print(f"{COLORS['B']}║ {reason}{COLORS['S']}")
-        print(f"{COLORS['B']}║                                        ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 📞 Contactez @DahEry sur Telegram      ║{COLORS['S']}")
-        print(f"{COLORS['R']}╚════════════════════════════════════════╝{COLORS['S']}")
-        print()
-        sys.exit(1)
-
-    def show_expired_message(self):
-        """Affiche un message d'expiration et quitte"""
-        print(f"\n{COLORS['R']}╔════════════════════════════════════════╗{COLORS['S']}")
-        print(f"{COLORS['R']}║           ABONNEMENT EXPIRÉ            ║{COLORS['S']}")
-        print(f"{COLORS['R']}╠════════════════════════════════════════╣{COLORS['S']}")
-        print(f"{COLORS['B']}║ Votre abonnement de 7 jours a expiré   ║{COLORS['S']}")
-        print(f"{COLORS['B']}║                                        ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 💰 Renouvellement: 5€ pour 7 jours     ║{COLORS['S']}")
-        print(f"{COLORS['B']}║ 📞 Contactez @DahEry sur Telegram      ║{COLORS['S']}")
-        print(f"{COLORS['R']}╚════════════════════════════════════════╝{COLORS['S']}")
-        print()
-        sys.exit(1)
-
-    def calculate_time_remaining(self):
-        """Calcule le temps restant de l'abonnement"""
-        try:
-            response = requests.get(self.users_url, timeout=10)
-            users_data = response.json()
-            
-            user_info = users_data.get(self.user_id, {})
-            expire_date = user_info.get("expire_date")
-            
-            if expire_date:
-                expire_datetime = datetime.strptime(expire_date, "%Y-%m-%d")
+                # Vérification date d'expiration
+                expire_date_str = user_data.get("expire_date", "2099-12-31")
+                expire_time_str = user_data.get("expire_time", "23:59")
+                
+                # Combine date et heure
+                expire_datetime = datetime.strptime(f"{expire_date_str} {expire_time_str}", "%Y-%m-%d %H:%M")
                 current_datetime = datetime.now()
-                
+
                 if current_datetime > expire_datetime:
                     days_passed = (current_datetime - expire_datetime).days
-                    self.show_expired_message()
-                    return False, f"Expiré depuis {days_passed} jour(s)"
-                
+                    return False, f"📅 Abonnement expiré depuis {days_passed} jour(s)\n📞 Contactez @DahEry sur Telegram"
+
+                # Calcul du temps restant
                 time_left = expire_datetime - current_datetime
                 days = time_left.days
                 hours = time_left.seconds // 3600
-                
-                return True, f"✅ Abonnement valide - {days}j {hours}h restantes"
-            
-            return False, "❌ Date d'expiration manquante"
-            
-        except Exception as e:
-            return False, f"❌ Erreur calcul: {e}"
+                minutes = (time_left.seconds % 3600) // 60
 
-    def save_user_data(self):
-        """Sauvegarde les données utilisateur localement"""
-        user_data = {
-            "user_id": self.user_id,
-            "first_seen": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "status": "pending_activation",
-            "contact_info": "@Dahery👌 sur Telegram",
-            "price": "7000ar pour 7 jours"
-        }
-        
+                # Informations supplémentaires
+                status = user_data.get("status", "active")
+                plan = user_data.get("plan", "standard")
+                
+                return True, f"✅ Licence {plan} - {days}j {hours}h {minutes}m restantes"
+
+            else:
+                # ID non autorisé
+                return False, f"❌ ACCÈS BLOQUÉ\n📞 Contactez @DahEry sur Telegram\n🔑 ID: {self.machine_id}"
+
+        except Exception as e:
+            # Mode hors ligne - vérification locale
+            return self.check_local_license()
+
+    def check_local_license(self):
+        """Vérification locale en cas de problème de connexion"""
         try:
-            with open('user_data.json', 'w') as f:
-                json.dump(user_data, f, indent=2)
-        except:
-            pass
+            if os.path.exists(self.local_license_file):
+                with open(self.local_license_file, 'r') as f:
+                    local_data = json.load(f)
+                
+                authorized_users = local_data.get("authorized_users", {})
+                if self.machine_id in authorized_users:
+                    user_data = authorized_users[self.machine_id]
+                    expire_date = user_data.get("expire_date", "2099-12-31")
+                    return True, f"🔶 Mode local - Valide jusqu'au {expire_date}"
+                else:
+                    return False, f"❌ Licence locale non valide\n🔑 ID: {self.machine_id}"
+            else:
+                return False, f"👋 Nouvel utilisateur\n🔑 Votre ID: {self.machine_id}\n📞 Contactez @DahEry"
+
+        except Exception as e:
+            return False, f"❌ Erreur vérification licence: {e}"
 
     def get_user_limits(self):
-        """Retourne les limites de l'utilisateur"""
-        return {
-            "max_accounts": 100,
-            "max_tasks_per_day": 1000,
-            "subscription_days": 7
-        }
+        """Récupère les limites selon le plan"""
+        try:
+            response = requests.get(self.license_url, timeout=10)
+            license_data = response.json()
+
+            authorized_users = license_data.get("authorized_users", {})
+            
+            if self.machine_id in authorized_users:
+                user_data = authorized_users[self.machine_id]
+                plan = user_data.get("plan", "standard")
+                
+                # Définir les limites selon le plan
+                plans_limits = {
+                    "basic": {"max_accounts": 3, "daily_tasks": 20},
+                    "standard": {"max_accounts": 5, "daily_tasks": 30},
+                    "premium": {"max_accounts": 10, "daily_tasks": 50},
+                    "vip": {"max_accounts": 20, "daily_tasks": 100}
+                }
+                
+                limits = plans_limits.get(plan, plans_limits["standard"])
+                limits["features"] = ["instagram", "telegram"]
+                limits["user_level"] = plan
+                
+                return limits
+            else:
+                # Plan par défaut si non autorisé
+                return {
+                    "max_accounts": 0,
+                    "daily_tasks": 0,
+                    "features": [],
+                    "user_level": "none"
+                }
+
+        except:
+            # Valeurs par défaut en cas d'erreur
+            return {
+                "max_accounts": 0,
+                "daily_tasks": 0,
+                "features": [],
+                "user_level": "none"
+            }
 
     def send_usage_report(self, action, details):
-        """Envoie un rapport d'utilisation à Dah Ery"""
+        """Envoie un rapport d'utilisation"""
         try:
             report = {
-                "user_id": self.user_id,
+                "machine_id": self.machine_id,
                 "action": action,
                 "details": details,
                 "timestamp": datetime.now().isoformat(),
                 "version": "3.0"
             }
 
-            # Affiche le rapport localement
-            print(f"[📊] Rapport pour Dah Ery: {action}")
+            print(f"{COLORS['B']}[📊] Rapport: {action}{COLORS['S']}")
 
         except Exception as e:
-            print(f"[⚠️] Erreur envoi rapport: {e}")
+            print(f"{COLORS['R']}[⚠️] Erreur envoi rapport: {e}{COLORS['S']}")
+
+    def first_time_setup(self):
+        """Configuration première utilisation"""
+        try:
+            if os.path.exists('user_data.json'):
+                return False
+        except:
+            pass
+
+        # NOUVEL UTILISATEUR
+        print(f"\n{COLORS['C']}" + "="*60)
+        print("👋 BIENVENUE SUR SMM KINGDOM - DAH ERY")
+        print("="*60 + f"{COLORS['S']}")
+
+        print(f"{COLORS['J']}📞 POUR ACTIVER VOTRE ACCÈS:{COLORS['S']}")
+        print(f"{COLORS['B']}1. Contactez @DahEry sur Telegram{COLORS['S']}")
+        print(f"{COLORS['B']}2. Envoyez-lui votre ID Machine ci-dessous{COLORS['S']}")
+        print(f"{COLORS['B']}3. Choisissez votre forfait{COLORS['S']}")
+        print(f"{COLORS['B']}4. Recevez l'activation instantanée{COLORS['S']}")
+
+        print(f"\n{COLORS['V']}🔑 VOTRE ID MACHINE: {self.machine_id}{COLORS['S']}")
+
+        # Sauvegarde les données utilisateur
+        user_data = {
+            "machine_id": self.machine_id,
+            "first_use": datetime.now().isoformat(),
+            "status": "pending_activation"
+        }
+
+        try:
+            contact = input(f"\n{COLORS['o']}[?] Votre pseudo Telegram: {COLORS['B']}")
+            user_data["contact_info"] = contact
+        except:
+            user_data["contact_info"] = "Non spécifié"
+
+        with open('user_data.json', 'w') as f:
+            json.dump(user_data, f, indent=2)
+
+        print(f"\n{COLORS['V']}✅ CONFIGURATION TERMINÉE!{COLORS['S']}")
+        print(f"{COLORS['J']}📞 Contactez @DahEry sur Telegram pour activation{COLORS['S']}")
+        
+        input(f"\n{COLORS['o']}Appuyez sur Entrée pour continuer...{COLORS['S']}")
+        
+        return True
+
+    def display_license_info(self):
+        """Affiche les informations de licence"""
+        success, message = self.check_license()
+        
+        print(f"\n{COLORS['C']}" + "="*50)
+        print("📋 INFORMATIONS DE LICENCE")
+        print("="*50 + f"{COLORS['S']}")
+        
+        print(f"{COLORS['B']}🔑 ID Machine: {self.machine_id}{COLORS['S']}")
+        print(f"{COLORS['V']}📊 Statut: {message}{COLORS['S']}")
+        
+        # Afficher les limites
+        limits = self.get_user_limits()
+        if limits["max_accounts"] > 0:
+            print(f"{COLORS['J']}📈 Limites: {limits['max_accounts']} comptes, {limits['daily_tasks']} tâches/jour{COLORS['S']}")
+        
+        if not success:
+            print(f"\n{COLORS['J']}💡 Pour activer:{COLORS['S']}")
+            print(f"{COLORS['B']}1. Contactez @DahEry sur Telegram")
+            print(f"2. Envoyez votre ID Machine")
+            print(f"3. Choisissez la durée{COLORS['S']}")
+        
+        return success
+
+# Fonction utilitaire pour vérifier la licence
+def verify_license():
+    """Fonction pour vérifier la licence au démarrage"""
+    control = ControlSystem()
+    
+    # Vérifie si première utilisation
+    control.first_time_setup()
+    
+    # Vérifie la licence
+    success, message = control.check_license()
+    
+    if not success:
+        print(f"\n{COLORS['R']}" + "="*50)
+        print("🚫 ACCÈS REFUSÉ")
+        print("="*50)
+        print(f"{message}{COLORS['S']}")
+        print(f"\n{COLORS['J']}💡 Contactez @DahEry sur Telegram{COLORS['S']}")
+        input(f"\n{COLORS['o']}Appuyez sur Entrée pour quitter...{COLORS['S']}")
+        exit()
+    
+    return control
