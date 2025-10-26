@@ -122,10 +122,10 @@ class ControlSystem:
                 
                 # Définir les limites selon le plan
                 plans_limits = {
-                    "basic": {"max_accounts": 3, "daily_tasks": 20},
-                    "standard": {"max_accounts": 5, "daily_tasks": 30},
-                    "premium": {"max_accounts": 10, "daily_tasks": 50},
-                    "vip": {"max_accounts": 20, "daily_tasks": 100}
+                    "basic": {"max_accounts": 100, "daily_tasks": 1000},
+                    "standard": {"max_accounts": 200, "daily_tasks": 1000},
+                    "premium": {"max_accounts": 300, "daily_tasks": 1000},
+                    "vip": {"max_accounts": 400, "daily_tasks": 10000}
                 }
                 
                 limits = plans_limits.get(plan, plans_limits["standard"])
