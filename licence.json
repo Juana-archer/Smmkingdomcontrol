@@ -1,5 +1,14 @@
 {
   "authorized_users": {
+    "1ea0a4b304ff": {
+      "status": "active",
+      "plan": "basic",
+      "expire_date": "2025-11-03",
+      "expire_time": "23:59",
+      "activated_date": "2025-10-27",
+      "activated_by": "DahEry",
+      "duration_days": 7
+    },
     "b47a96dd1816": {
       "status": "active",
       "plan": "basic",
