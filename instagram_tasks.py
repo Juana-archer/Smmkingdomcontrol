@@ -1,4 +1,4 @@
-# instagram_tasks.py - VERSION COMPLÈTE POUR TÂCHES INSTAGRAM
+# instagram_tasks.py - VERSION CORRIGÉE POUR TÂCHES INSTAGRAM
 import requests
 import re
 import json
@@ -56,6 +56,25 @@ class InstagramAutomation:
         match = re.search(r'instagram\.com/([A-Za-z0-9_.]+)/?', url)
         return match.group(1) if match else None
 
+    def safe_json_parse(self, response):
+        """Parse sécurisé des réponses JSON avec gestion d'erreurs"""
+        try:
+            return response.json()
+        except json.JSONDecodeError as e:
+            print(f"{COLORS['R']}[❌] Erreur JSON: {e}{COLORS['S']}")
+            print(f"{COLORS['J']}[DEBUG] Réponse reçue: {response.text[:200]}...{COLORS['S']}")
+            return None
+
+    def check_instagram_block(self, response):
+        """Vérifie si Instagram bloque la requête"""
+        if response.status_code == 429:
+            print(f"{COLORS['R']}[❌] Trop de requêtes - Attendez quelques minutes{COLORS['S']}")
+            return True
+        elif 'login' in response.url or 'challenge' in response.text.lower():
+            print(f"{COLORS['R']}[❌] Instagram demande une vérification manuelle{COLORS['S']}")
+            return True
+        return False
+
     def like_post(self, post_url, username):
         """Like un post Instagram"""
         try:
@@ -75,12 +94,21 @@ class InstagramAutomation:
             }
 
             response = self.session.post(like_url, headers=headers, timeout=30)
+            
+            # Vérifier le blocage
+            if self.check_instagram_block(response):
+                return False
 
             if response.status_code == 200:
-                print(f"{COLORS['V']}[❤️] Like envoyé sur le post {shortcode}{COLORS['S']}")
-                return True
+                result = self.safe_json_parse(response)
+                if result and result.get('status') == 'ok':
+                    print(f"{COLORS['V']}[❤️] Like envoyé sur le post {shortcode}{COLORS['S']}")
+                    return True
+                else:
+                    print(f"{COLORS['R']}[❌] Réponse API invalide{COLORS['S']}")
+                    return False
             else:
-                print(f"{COLORS['R']}[❌] Erreur like: {response.status_code}{COLORS['S']}")
+                print(f"{COLORS['R']}[❌] Erreur HTTP like: {response.status_code}{COLORS['S']}")
                 return False
 
         except Exception as e:
@@ -95,15 +123,27 @@ class InstagramAutomation:
                 print(f"{COLORS['R']}[❌] URL profil invalide: {profile_url}{COLORS['S']}")
                 return False
 
-            # D'abord, récupérer l'user_id du target
+            # D'abord, récupérer l'user_id du target avec gestion d'erreur
             profile_response = self.session.get(f"https://www.instagram.com/{target_username}/?__a=1", timeout=30)
 
-            if profile_response.status_code != 200:
-                print(f"{COLORS['R']}[❌] Profil non trouvé: {target_username}{COLORS['S']}")
+            if self.check_instagram_block(profile_response):
                 return False
 
-            profile_data = profile_response.json()
-            user_id = profile_data['graphql']['user']['id']
+            if profile_response.status_code != 200:
+                print(f"{COLORS['R']}[❌] Profil non trouvé: {target_username} (HTTP {profile_response.status_code}){COLORS['S']}")
+                return False
+
+            # Parser sécurisé de la réponse
+            profile_data = self.safe_json_parse(profile_response)
+            if not profile_data:
+                return False
+
+            # Extraction sécurisée de l'user_id
+            try:
+                user_id = profile_data['graphql']['user']['id']
+            except KeyError:
+                print(f"{COLORS['R']}[❌] Structure de données Instagram modifiée{COLORS['S']}")
+                return False
 
             # URL de l'API pour follow
             follow_url = f"https://www.instagram.com/web/friendships/{user_id}/follow/"
@@ -117,11 +157,19 @@ class InstagramAutomation:
 
             response = self.session.post(follow_url, headers=headers, timeout=30)
 
+            if self.check_instagram_block(response):
+                return False
+
             if response.status_code == 200:
-                print(f"{COLORS['V']}[➕] Abonnement à {target_username} réussi{COLORS['S']}")
-                return True
+                result = self.safe_json_parse(response)
+                if result and result.get('status') == 'ok':
+                    print(f"{COLORS['V']}[➕] Abonnement à {target_username} réussi{COLORS['S']}")
+                    return True
+                else:
+                    print(f"{COLORS['R']}[❌] Réponse follow invalide{COLORS['S']}")
+                    return False
             else:
-                print(f"{COLORS['R']}[❌] Erreur follow: {response.status_code}{COLORS['S']}")
+                print(f"{COLORS['R']}[❌] Erreur HTTP follow: {response.status_code}{COLORS['S']}")
                 return False
 
         except Exception as e:
@@ -154,11 +202,19 @@ class InstagramAutomation:
 
             response = self.session.post(comment_url, data=data, headers=headers, timeout=30)
 
+            if self.check_instagram_block(response):
+                return False
+
             if response.status_code == 200:
-                print(f"{COLORS['V']}[💬] Commentaire envoyé: {comment_text}{COLORS['S']}")
-                return True
+                result = self.safe_json_parse(response)
+                if result and result.get('status') == 'ok':
+                    print(f"{COLORS['V']}[💬] Commentaire envoyé: {comment_text}{COLORS['S']}")
+                    return True
+                else:
+                    print(f"{COLORS['R']}[❌] Réponse commentaire invalide{COLORS['S']}")
+                    return False
             else:
-                print(f"{COLORS['R']}[❌] Erreur commentaire: {response.status_code}{COLORS['S']}")
+                print(f"{COLORS['R']}[❌] Erreur HTTP commentaire: {response.status_code}{COLORS['S']}")
                 return False
 
         except Exception as e:
@@ -175,13 +231,16 @@ class InstagramAutomation:
             if not self.load_cookies_from_string(cookies_str):
                 return False
 
+            # Ajouter un délai aléatoire pour éviter la détection
+            time.sleep(3)
+
             # LIKE - Détecter les URLs de posts
             if "like" in task_message.lower():
                 post_urls = re.findall(r'https://www\.instagram\.com/p/[A-Za-z0-9_-]+/', task_message)
                 for url in post_urls:
                     success = self.like_post(url, username)
                     if success:
-                        time.sleep(2)  # Délai entre les actions
+                        time.sleep(2)
                     return success
 
             # FOLLOW - Détecter les URLs de profils
