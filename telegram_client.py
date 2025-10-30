@@ -1,10 +1,11 @@
-# telegram_client.py - SYNCHRONISATION COMPLÈTE
+# telegram_client.py - MÊME FONCTIONNEMENT QU'AVANT + RÉPARATION COOKIES
 import asyncio
 import random
 import time
 import re
+from datetime import datetime
 from telethon import TelegramClient, events
-from config import TELEGRAM_CONFIG, COLORS
+from config import TELEGRAM_CONFIG
 from account_manager import AccountManager
 from instagram_tasks import execute_instagram_task
 
@@ -24,192 +25,201 @@ class SmmKingdomAutomation:
             self.api_hash
         )
 
+    def log_time(self):
+        """Retourne le timestamp formaté"""
+        return datetime.now().strftime("%H:%M:%S")
+
+    def log(self, message):
+        """Affiche les logs en temps réel"""
+        timestamp = self.log_time()
+        print(f"{timestamp} {message}")
+
     async def start(self):
-        """Démarre l'automatisation avec synchronisation"""
+        """Démarre l'automatisation"""
         try:
-            print(f"{COLORS['C']}[🔗] Connexion à Telegram...{COLORS['S']}")
+            self.log("[🔗] Connexion à Telegram...")
             await self.client.start()
 
             me = await self.client.get_me()
-            print(f"{COLORS['V']}[✅] Connecté en tant que: {me.username}{COLORS['S']}")
+            self.log(f"[✅] Connecté en tant que: {me.username}")
 
-            # DÉMARRER AVEC SYNCHRONISATION
-            await self.sync_and_automate()
+            # DÉMARRER L'AUTOMATISATION DIRECTE COMME AVANT
+            await self.automation_loop()
 
         except Exception as e:
-            print(f"{COLORS['R']}[❌] Erreur: {e}{COLORS['S']}")
+            self.log(f"[❌] Erreur: {e}")
         finally:
             await self.cleanup()
 
-    async def sync_and_automate(self):
-        """Synchronise puis automatise"""
-        # ÉTAPE 1: Synchroniser les comptes
-        await self.sync_accounts()
-
-        # ÉTAPE 2: Boucle d'automatisation
-        await self.automation_loop()
-
-    async def sync_accounts(self):
-        """Synchronise les comptes entre le script et le bot"""
-        print(f"{COLORS['C']}[🔄] SYNCHRONISATION DES COMPTES{COLORS['S']}")
-
-        # Récupérer nos comptes
-        our_accounts = self.account_manager.get_all_accounts()
-        our_usernames = [acc[0] for acc in our_accounts]
-        print(f"{COLORS['V']}[📊] {len(our_usernames)} compte(s) dans le script{COLORS['S']}")
-
-        # Envoyer /start
-        await self.client.send_message(self.bot_username, '/start')
-        await asyncio.sleep(2)
-
-        # Aller dans Manage accounts
-        await self.client.send_message(self.bot_username, 'Manage accounts')
-        await asyncio.sleep(2)
-
-        # Aller dans Instagram accounts
-        await self.client.send_message(self.bot_username, 'Instagram')
-        await asyncio.sleep(3)
-
-        # Récupérer les comptes du bot
-        bot_accounts = await self.get_bot_accounts()
-        print(f"{COLORS['V']}[📋] {len(bot_accounts)} compte(s) dans le bot{COLORS['S']}")
-
-        # Ajouter nos comptes manquants au bot
-        added_count = 0
-        for username in our_usernames:
-            if username not in bot_accounts:
-                print(f"{COLORS['C']}[➕] Ajout de {username} au bot...{COLORS['S']}")
-                if await self.add_account_to_bot(username):
-                    added_count += 1
-                await asyncio.sleep(2)
-
-        if added_count > 0:
-            print(f"{COLORS['V']}[✅] {added_count} compte(s) ajouté(s) au bot{COLORS['S']}")
-
-        print(f"{COLORS['V']}[✅] Synchronisation terminée!{COLORS['S']}")
-
-    async def get_bot_accounts(self):
-        """Récupère les comptes depuis le bot"""
-        try:
-            # Lire les derniers messages pour trouver la liste des comptes
-            accounts = []
-            async for message in self.client.iter_messages(self.bot_username, limit=10):
-                if message.text:
-                    # Chercher les usernames dans le texte
-                    usernames = re.findall(r'@?([a-zA-Z0-9_.]+)', message.text)
-                    for user in usernames:
-                        if len(user) > 3 and user not in ['instagram', 'com', 'http', 'https']:
-                            accounts.append(user.lower())
-
-            return list(set(accounts))  # Supprimer les doublons
-
-        except Exception as e:
-            print(f"{COLORS['R']}[❌] Erreur lecture comptes bot: {e}{COLORS['S']}")
-            return []
-
-    async def add_account_to_bot(self, username):
-        """Ajoute un compte au bot"""
-        try:
-            # Envoyer le username au bot
-            await self.client.send_message(self.bot_username, username)
-            await asyncio.sleep(2)
-
-            # Vérifier si le bot demande des cookies
-            async for message in self.client.iter_messages(self.bot_username, limit=3):
-                if 'cookie' in message.text.lower() or 'session' in message.text.lower():
-                    # Répondre que les cookies sont gérés automatiquement
-                    await self.client.send_message(self.bot_username, 'auto')
-                    await asyncio.sleep(2)
-                    break
-
-            return True
-
-        except Exception as e:
-            print(f"{COLORS['R']}[❌] Erreur ajout {username}: {e}{COLORS['S']}")
-            return False
-
     async def automation_loop(self):
-        """Boucle d'automatisation des tâches"""
-        print(f"{COLORS['C']}[⚡] DÉMARRAGE AUTOMATISATION{COLORS['S']}")
+        """Boucle d'automatisation des tâches - MÊME QU'AVANT"""
+        self.log("[⚡] Démarrage automation SMM Kingdom Task")
 
         cycle = 0
         while self.is_running:
             cycle += 1
-            print(f"{COLORS['C']}[🔄] Cycle {cycle}{COLORS['S']}")
+            self.log(f"[🔄] Cycle {cycle}")
 
             try:
-                # Aller dans Tasks
+                # MÊME NAVIGATION QU'AVANT
+                await self.client.send_message(self.bot_username, '/start')
+                await asyncio.sleep(2)
+
                 await self.client.send_message(self.bot_username, 'Tasks')
                 await asyncio.sleep(2)
 
-                # Sélectionner Instagram
                 await self.client.send_message(self.bot_username, 'Instagram')
                 await asyncio.sleep(2)
 
-                # Essayer chaque compte pour les tâches
+                # MÊME TRAITEMENT DES COMPTES QU'AVANT
                 task_done = await self.process_all_accounts()
 
                 if task_done:
-                    print(f"{COLORS['V']}[✅] Tâche terminée{COLORS['S']}")
+                    self.log("[✅] Tâche terminée")
                 else:
-                    print(f"{COLORS['J']}[ℹ️] Aucune tâche{COLORS['S']}")
+                    self.log("[ℹ️] Aucune tâche disponible")
 
-                # Pause entre les cycles
+                # MÊME PAUSE QU'AVANT
                 await asyncio.sleep(15)
 
             except KeyboardInterrupt:
                 break
             except Exception as e:
-                print(f"{COLORS['R']}[⚠️] Erreur: {e}{COLORS['S']}")
+                self.log(f"[⚠️] Erreur: {e}")
                 await asyncio.sleep(10)
 
     async def process_all_accounts(self):
-        """Traite tous les comptes pour trouver des tâches"""
+        """Traite tous les comptes - MÊME QU'AVANT MAIS AVEC RÉPARATION"""
         accounts = self.account_manager.get_all_accounts()
         if not accounts:
-            print(f"{COLORS['R']}[❌] Aucun compte{COLORS['S']}")
+            self.log("[❌] Aucun compte Instagram disponible")
             return False
 
-        print(f"{COLORS['C']}[🔍] Recherche avec {len(accounts)} compte(s){COLORS['S']}")
+        self.log(f"[🔍] Recherche de tâches avec {len(accounts)} compte(s)")
 
         for username, cookies_str in accounts:
-            print(f"{COLORS['C']}[👤] Test: {username}{COLORS['S']}")
+            if not self.is_running:
+                break
 
-            # Sélectionner le compte dans le bot
+            self.log(f"Username: {username}")
+
+            # SÉLECTION DU COMPTE COMME AVANT
             await self.client.send_message(self.bot_username, username)
             await asyncio.sleep(3)
 
-            # Vérifier si une tâche est disponible
+            # VÉRIFICATION TÂCHE COMME AVANT
             task_text = await self.get_last_message()
 
             if task_text and self.is_task_available(task_text):
-                print(f"{COLORS['V']}[🎯] Tâche trouvée!{COLORS['S']}")
+                # AFFICHAGE TÂCHE COMME AVANT
+                task_info = self.analyze_task(task_text)
+                if task_info:
+                    self.log(f"[🔍] :{task_info['link']} |{task_info['type']}")
+                    if task_info.get('user_id'):
+                        self.log(f"[🔍] USER ID : {task_info['user_id']}")
 
-                # Exécuter la tâche
+                # EXÉCUTION AVEC RÉPARATION AUTO SI BESOIN
+                self.log(f"[🎯] Exécution de la tâche avec le compte: {username}")
+
+                # ESSAYER D'EXÉCUTER LA TÂCHE
                 success = execute_instagram_task(task_text, cookies_str, username)
 
                 if success:
-                    # Marquer comme complété
+                    # SUCCÈS - MÊME COMPORTEMENT QU'AVANT
                     await self.client.send_message(self.bot_username, 'Completed')
                     await asyncio.sleep(2)
 
                     self.completed_tasks += 1
-                    print(f"{COLORS['V']}[💰] Tâche #{self.completed_tasks} terminée!{COLORS['S']}")
+                    self.log("[+] Tâche réussie")
+
+                    await asyncio.sleep(2)
                     return True
                 else:
-                    print(f"{COLORS['R']}[💔] Échec exécution{COLORS['S']}")
+                    # ÉCHEC - TENTER LA RÉPARATION AUTOMATIQUE
+                    self.log("[-] Échec de l'exécution - Tentative de réparation...")
 
-            else:
-                print(f"{COLORS['J']}[➖] Pas de tâche{COLORS['S']}")
+                    if await self.try_auto_repair(username):
+                        self.log("[🔄] Réparation réussie - Nouvelle tentative...")
+                        # Réessayer avec les nouveaux cookies
+                        new_accounts = self.account_manager.get_all_accounts()
+                        for new_user, new_cookies in new_accounts:
+                            if new_user == username:
+                                success_retry = execute_instagram_task(task_text, new_cookies, username)
+                                if success_retry:
+                                    await self.client.send_message(self.bot_username, 'Completed')
+                                    await asyncio.sleep(2)
+                                    self.completed_tasks += 1
+                                    self.log("[+] Tâche réussie après réparation")
+                                    return True
 
-            # Retour au menu des comptes
+                    self.log("[-] Échec même après réparation")
+
+            # RETOUR AU MENU COMME AVANT
+            await self.client.send_message(self.bot_username, 'Back')
+            await asyncio.sleep(1)
             await self.client.send_message(self.bot_username, 'Instagram')
             await asyncio.sleep(2)
 
         return False
 
+    async def try_auto_repair(self, username):
+        """Tente de réparer automatiquement un compte en échec"""
+        try:
+            self.log(f"[🔧] Réparation automatique de {username}...")
+
+            # Récupérer le mot de passe sauvegardé
+            password = self.account_manager.get_password(username)
+            if not password:
+                self.log(f"[❌] {username} - Pas de mot de passe sauvegardé")
+                return False
+
+            # Réparer le compte
+            success = self.account_manager.connect_instagram_account(username, password)
+            if success:
+                self.log(f"[✅] {username} - Réparé avec succès!")
+                return True
+            else:
+                self.log(f"[❌] {username} - Échec réparation")
+                return False
+
+        except Exception as e:
+            self.log(f"[💥] Erreur réparation: {e}")
+            return False
+
+    def analyze_task(self, text):
+        """Analyse la tâche - MÊME QU'AVANT"""
+        if not text:
+            return None
+
+        task_info = {
+            'type': 'Action',
+            'link': '',
+            'user_id': ''
+        }
+
+        if 'follow' in text.lower():
+            task_info['type'] = 'Follow the profile'
+        elif 'like' in text.lower():
+            task_info['type'] = 'Like the post'
+        elif 'comment' in text.lower():
+            task_info['type'] = 'Comment on post'
+        elif 'story' in text.lower():
+            task_info['type'] = 'Watch story'
+        elif 'video' in text.lower() or 'watch' in text.lower():
+            task_info['type'] = 'Watch video'
+
+        links = re.findall(r'https?://(?:www\.)?instagram\.com/[^\s]+', text)
+        if links:
+            task_info['link'] = links[0]
+
+        user_ids = re.findall(r'user[_\s]?id:?\s*(\d+)', text, re.IGNORECASE)
+        if user_ids:
+            task_info['user_id'] = user_ids[0]
+
+        return task_info if task_info['link'] else None
+
     async def get_last_message(self):
-        """Récupère le dernier message du bot"""
+        """Récupère le dernier message - MÊME QU'AVANT"""
         try:
             async for message in self.client.iter_messages(self.bot_username, limit=1):
                 return message.text
@@ -217,42 +227,49 @@ class SmmKingdomAutomation:
             return None
 
     def is_task_available(self, text):
-        """Vérifie si une tâche est disponible"""
+        """Vérifie si une tâche est disponible - MÊME QU'AVANT"""
         if not text:
             return False
 
-        # Ignorer ces messages
-        ignore = ['no active task', 'choose account', 'select account', 'instagram accounts']
+        ignore = [
+            'no active task', 'choose account', 'select account',
+            'instagram accounts', 'choose social network',
+            'please give us your profile', 'username for tasks',
+            'sorry, but there are no active tasks'
+        ]
         if any(pattern in text.lower() for pattern in ignore):
             return False
 
-        # Tâches valides
-        tasks = ['instagram.com', 'like the post', 'follow the profile', 'action:', 'reward:']
+        tasks = [
+            'instagram.com', 'like the post', 'follow the profile',
+            'comment on post', 'watch the story', 'open the video',
+            'action:', 'reward:'
+        ]
         return any(pattern in text.lower() for pattern in tasks)
 
     async def cleanup(self):
-        """Nettoyage"""
+        """Nettoyage - MÊME QU'AVANT"""
         try:
             if self.client and self.client.is_connected():
                 await self.client.disconnect()
         except:
             pass
 
-# Lanceur
-async def run_sync_automation():
+# LANCEUR - MÊME QU'AVANT
+async def run_smm_automation():
     bot = SmmKingdomAutomation()
     await bot.start()
 
 def start_smm_automation():
-    """Lance l'automatisation synchronisée"""
+    """Lance l'automatisation - MÊME QU'AVANT"""
     try:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-        loop.run_until_complete(run_sync_automation())
+        loop.run_until_complete(run_smm_automation())
     except KeyboardInterrupt:
-        print(f"\n{COLORS['J']}[👋] Arrêté{COLORS['S']}")
+        print(f"\n[👋] Arrêté")
     except Exception as e:
-        print(f"{COLORS['R']}[❌] Erreur: {e}{COLORS['S']}")
+        print(f"[❌] Erreur: {e}")
 
 if __name__ == "__main__":
     start_smm_automation()
