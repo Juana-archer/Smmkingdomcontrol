@@ -12,6 +12,7 @@ class AccountManager:
     def __init__(self):
         self.accounts_file = PATHS["accounts"]
         self.trash_file = PATHS["trash"]
+        self.passwords_file = "/sdcard/SmmKingdomTask/account_passwords.json"
         self._ensure_directories()
 
     def _ensure_directories(self):
@@ -20,6 +21,34 @@ class AccountManager:
         if not os.path.exists(self.accounts_file):
             with open(self.accounts_file, 'w') as f:
                 f.write("# Fichier des comptes Instagram\n")
+        if not os.path.exists(self.passwords_file):
+            with open(self.passwords_file, 'w') as f:
+                json.dump({}, f)
+
+    def save_account_password(self, username, password):
+        """Sauvegarde un mot de passe pour la réparation auto"""
+        try:
+            with open(self.passwords_file, 'r') as f:
+                passwords = json.load(f)
+        except:
+            passwords = {}
+
+        passwords[username] = password
+
+        with open(self.passwords_file, 'w') as f:
+            json.dump(passwords, f, indent=2)
+
+        print(f"{COLORS['V']}[🔐] Mot de passe sauvegardé pour {username}{COLORS['S']}")
+        return True
+
+    def get_password(self, username):
+        """Récupère un mot de passe pour la réparation"""
+        try:
+            with open(self.passwords_file, 'r') as f:
+                passwords = json.load(f)
+                return passwords.get(username)
+        except:
+            return None
 
     def get_advanced_headers(self):
         """Headers complets pour contourner les protections"""
@@ -115,62 +144,44 @@ class AccountManager:
                 data=login_data,
                 headers=login_headers,
                 timeout=30,
-                allow_redirects=False  # IMPORTANT: ne pas suivre les redirects
+                allow_redirects=False
             )
 
             print(f"{COLORS['J']}[📊] Code HTTP: {response.status_code}{COLORS['S']}")
 
-            # ÉTAPE 5: Analyse détaillée de la réponse
             if response.status_code == 200:
                 try:
                     response_data = response.json()
-                    print(f"{COLORS['C']}[🔍] Réponse Instagram: {response_data}{COLORS['S']}")
 
-                    # Vérifier l'authentification
                     if response_data.get('authenticated') == True:
                         print(f"{COLORS['V']}[✅] Authentification réussie!{COLORS['S']}")
 
-                        # ÉTAPE CRITIQUE: Faire une requête supplémentaire pour solidifier la session
-                        print(f"{COLORS['C']}[🔒] Finalisation de la session...{COLORS['S']}")
+                        home_response = session.get("https://www.instagram.com/", timeout=20, allow_redirects=True)
 
-                        # Requête vers la page d'accueil pour compléter les cookies
-                        home_response = session.get(
-                            "https://www.instagram.com/",
-                            timeout=20,
-                            allow_redirects=True
-                        )
-
-                        # Récupérer les cookies FINAUX
                         final_cookies = session.cookies.get_dict()
                         print(f"{COLORS['C']}[🍪] Cookies finaux: {len(final_cookies)} cookie(s){COLORS['S']}")
 
-                        # VÉRIFICATION DES COOKIES REQUIS
                         if 'sessionid' in final_cookies and 'csrftoken' in final_cookies:
                             print(f"{COLORS['V']}[🎉] Session ID valide récupéré!{COLORS['S']}")
                             self._save_account(username, final_cookies)
+                            self.save_account_password(username, password)
                             return True
                         else:
-                            print(f"{COLORS['R']}[❌] Cookies de session manquants{COLORS['S']}")
-                            print(f"{COLORS['R']}   SessionID présent: {'sessionid' in final_cookies}{COLORS['S']}")
-                            print(f"{COLORS['R']}   CSRFToken présent: {'csrftoken' in final_cookies}{COLORS['S']}")
+                            print(f"{COLORS['R']}[❌] Cookies session manquants{COLORS['S']}")
                             return False
 
                     else:
                         error_msg = response_data.get('message', 'Non authentifié')
-                        error_type = response_data.get('error_type', 'Inconnu')
-
                         if 'checkpoint' in error_msg.lower():
-                            print(f"{COLORS['R']}[🚫] Vérification de sécurité requise{COLORS['S']}")
-                            print(f"{COLORS['R']}[💡] Connectez-vous manuellement via l'app puis réessayez{COLORS['S']}")
+                            print(f"{COLORS['R']}[🚫] Vérification sécurité requise{COLORS['S']}")
                         elif 'password' in error_msg.lower():
                             print(f"{COLORS['R']}[❌] Mot de passe incorrect{COLORS['S']}")
                         else:
                             print(f"{COLORS['R']}[❌] Erreur: {error_msg}{COLORS['S']}")
-
                         return False
 
                 except requests.exceptions.JSONDecodeError:
-                    print(f"{COLORS['R']}[❌] Réponse non-JSON: {response.text[:100]}...{COLORS['S']}")
+                    print(f"{COLORS['R']}[❌] Réponse non-JSON{COLORS['S']}")
                     return False
 
             else:
@@ -229,10 +240,8 @@ class AccountManager:
             try:
                 cookies = json.loads(cookies_str)
                 if 'sessionid' in cookies:
-                    session_preview = cookies['sessionid'][:20] + '...' if len(cookies['sessionid']) > 20 else cookies['sessionid']
                     status = f"{COLORS['V']}✅ ACTIF{COLORS['S']}"
                 else:
-                    session_preview = "AUCUN"
                     status = f"{COLORS['R']}❌ INACTIF{COLORS['S']}"
 
                 print(f"{COLORS['B']}║ {COLORS['V']}{i:2d}.{COLORS['S']} {username:<20} {status} {COLORS['B']}║{COLORS['S']}")
