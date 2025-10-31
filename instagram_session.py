@@ -1,4 +1,4 @@
-# instagram_session.py - VERSION CORRIGÉE POUR CONTOURNER LES BLOCAGES
+# instagram_session.py - VERSION CORRIGÉE
 import requests
 import json
 import time
@@ -29,7 +29,7 @@ class InstagramSessionManager:
             'Cache-Control': 'max-age=0'
         }
 
-    def get_session(self, username):
+    def get_session(self, username, cookies_str=None):
         """
         Récupère ou crée une session Instagram pour un compte
         """
@@ -75,7 +75,7 @@ class InstagramSessionManager:
         session.headers.update(self.get_advanced_headers())
 
         try:
-            # ÉTAPE 1: Récupérer la page de login avec plus de délais
+            # ÉTAPE 1: Récupérer la page de login
             print("📄 Récupération page login...")
             time.sleep(random.uniform(2, 4))
 
@@ -89,7 +89,7 @@ class InstagramSessionManager:
                 print(f"❌ Erreur page login: {login_page.status_code}")
                 return None
 
-            # Extraire le CSRF token de différentes manières
+            # Extraire le CSRF token
             csrf_token = self.extract_csrf_token(login_page.text, session)
             if not csrf_token:
                 print("❌ Impossible d'extraire le CSRF token")
@@ -97,11 +97,11 @@ class InstagramSessionManager:
 
             print(f"🔑 CSRF Token: {csrf_token[:20]}...")
 
-            # ÉTAPE 2: Préparer la connexion avec format correct
+            # ÉTAPE 2: Préparer la connexion
             print("🔐 Préparation connexion...")
             time.sleep(random.uniform(1, 3))
 
-            # Format du mot de passe encrypté pour Instagram
+            # Format du mot de passe encrypté
             enc_password = self.create_enc_password(password)
 
             login_data = {
@@ -170,7 +170,6 @@ class InstagramSessionManager:
                     print(f"❌ Erreur parsing réponse: {e}")
             else:
                 print(f"❌ Erreur HTTP connexion: {login_response.status_code}")
-                print(f"🔍 Réponse: {login_response.text[:200]}...")
 
         except requests.exceptions.Timeout:
             print("⏰ Timeout lors de la connexion")
