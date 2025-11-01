@@ -8,7 +8,6 @@ from telethon import TelegramClient, events
 from config import TELEGRAM_CONFIG
 from account_manager import AccountManager
 from instagram_tasks import execute_instagram_task
-from instagram_session import InstagramSessionManager
 
 class SmmKingdomAutomation:
     def __init__(self):
@@ -17,7 +16,6 @@ class SmmKingdomAutomation:
         self.session_name = TELEGRAM_CONFIG["session_name"]
         self.bot_username = TELEGRAM_CONFIG["bot_username"]
         self.account_manager = AccountManager()
-        self.session_manager = InstagramSessionManager()
         self.completed_tasks = 0
         self.is_running = True
 
@@ -50,10 +48,6 @@ class SmmKingdomAutomation:
             me = await self.client.get_me()
             self.log(f"[✅] Connecté en tant que: {me.username if me else 'None'}")
 
-            # INITIALISER LES SESSIONS INSTAGRAM
-            self.log("[🔄] Initialisation des sessions Instagram...")
-            await self.initialize_instagram_sessions()
-
             # DÉMARRER L'AUTOMATISATION
             await self.automation_loop()
 
@@ -62,33 +56,18 @@ class SmmKingdomAutomation:
         finally:
             await self.cleanup()
 
-    async def initialize_instagram_sessions(self):
-        """Initialise toutes les sessions Instagram au démarrage"""
-        accounts = self.account_manager.get_all_accounts()
-        self.log(f"[📱] Initialisation de {len(accounts)} compte(s) Instagram...")
-
-        for username, cookies, session_data in accounts:
-            try:
-                session = self.session_manager.get_session(username)
-                if session:
-                    self.log(f"[✅] Session OK: {username}")
-                else:
-                    self.log(f"[❌] Session échouée: {username}")
-            except Exception as e:
-                self.log(f"[⚠️] Erreur session {username}: {e}")
-
     async def automation_loop(self):
         """Boucle d'automatisation des tâches - CONTINUITÉ DES CYCLES"""
         self.log("[⚡] Démarrage automation SMM Kingdom Task")
 
         cycle = 0
-        
+
         # PREMIER DÉMARRAGE SEULEMENT : /start et Tasks
         await self.client.send_message(self.bot_username, '/start')
         await asyncio.sleep(2)
         await self.client.send_message(self.bot_username, 'Tasks')
         await asyncio.sleep(2)
-        
+
         while self.is_running:
             cycle += 1
             self.log(f"[🔄] Cycle {cycle}")
@@ -132,17 +111,17 @@ class SmmKingdomAutomation:
             task_executed = False
             while self.is_running:
                 task_text = await self.get_last_message()
-                
+
                 # VÉRIFIER SI "NO ACTIVE TASKS" - alors cliquer "Instagram" pour compte suivant
                 if task_text and self.has_no_tasks(task_text):
                     await self.client.send_message(self.bot_username, 'Instagram')
                     await asyncio.sleep(2)
                     break
-                
+
                 # VÉRIFIER SI ON EST DANS "PLEASE GIVE USERNAME" - alors sortir pour compte suivant
                 if task_text and self.is_username_request(task_text):
                     break
-                
+
                 # VÉRIFIER SI TÂCHE DISPONIBLE (TOUTES LES ACTIONS)
                 if task_text and self.is_real_task_all_actions(task_text):
                     # Analyser la tâche détectée
@@ -152,23 +131,23 @@ class SmmKingdomAutomation:
                         timestamp = self.log_time()
                         print(f"{timestamp} 🔗 {task_info['link']}")
                         print(f"{timestamp} 🎯 Action: {task_info['action']}")
-                        
-                        # EXÉCUTER LA TÂCHE
+
+                        # EXÉCUTER LA TÂCHE (cookies_str est ignoré par instagrapi mais conservé pour compatibilité)
                         success = execute_instagram_task(task_text, cookies, username)
 
                         if success:
                             # Marquer comme complété dans SMM Kingdom
                             await self.client.send_message(self.bot_username, 'Completed')
                             await asyncio.sleep(3)
-                            
+
                             self.completed_tasks += 1
                             timestamp = self.log_time()
                             print(f"{timestamp} ✅ Tâche exécutée avec succès")
                             task_executed = True
-                            
+
                             # ATTENDRE POUR VOIR SI UNE AUTRE TÂCHE APPARAÎT
                             await asyncio.sleep(5)
-                            
+
                             # VÉRIFIER SI UNE NOUVELLE TÂCHE EST DISPONIBLE
                             new_task_text = await self.get_last_message()
                             if new_task_text and self.is_real_task_all_actions(new_task_text):
@@ -184,7 +163,7 @@ class SmmKingdomAutomation:
                             print(f"{timestamp} ❌ Échec execution")
                             self.account_manager.mark_problem_account(username)
                             break
-                
+
                 # Si aucune tâche détectée après un certain temps, passer au compte suivant
                 if not task_executed:
                     await asyncio.sleep(3)
@@ -207,7 +186,7 @@ class SmmKingdomAutomation:
         # IGNORER ABSOLUMENT ces messages
         ignore_patterns = [
             'no active tasks',
-            'sorry, but there are no active tasks', 
+            'sorry, but there are no active tasks',
             'please give us your profile',
             'username for tasks completing',
             'choose social network',
@@ -225,7 +204,7 @@ class SmmKingdomAutomation:
         # ÉLÉMENTS REQUIS POUR TOUTES LES TÂCHES
         required_patterns = [
             'link',
-            'action', 
+            'action',
             'instagram.com',
             'cashcoins'
         ]
@@ -243,7 +222,7 @@ class SmmKingdomAutomation:
         # VÉRIFIER LES ÉLÉMENTS REQUIS + AU MOINS 1 ACTION SUPPORTÉE
         has_required = all(pattern in text_lower for pattern in required_patterns)
         has_supported_action = any(action in text_lower for action in supported_actions)
-        
+
         return has_required and has_supported_action
 
     def analyze_real_task_all_actions(self, text):
@@ -303,13 +282,13 @@ class SmmKingdomAutomation:
         """Vérifie si le bot demande un username"""
         if not text:
             return False
-            
+
         request_patterns = [
             'please give us your profile',
             'username for tasks completing',
             'give us your profile'
         ]
-        
+
         text_lower = text.lower()
         return any(pattern in text_lower for pattern in request_patterns)
 
