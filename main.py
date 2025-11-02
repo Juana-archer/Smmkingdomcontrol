@@ -162,7 +162,10 @@ class SmmKingdomApp:
             self.interface.press_enter()
             return
 
-        password = self.interface.get_input("Mot de passe Instagram", is_password=True)
+        # CORRECTION : Afficher le mot de passe en clair dans Termux
+        print(f"{COLORS['B']}[🔓] Mot de passe Instagram: {COLORS['S']}", end="", flush=True)
+        password = input()
+        
         if not password:
             self.interface.show_message("❌ Mot de passe requis", "error")
             self.interface.press_enter()
@@ -170,7 +173,7 @@ class SmmKingdomApp:
 
         print(f"\n{COLORS['C']}[ℹ️] Résumé du compte:{COLORS['S']}")
         print(f"{COLORS['B']}   Utilisateur: {username}{COLORS['S']}")
-        print(f"{COLORS['B']}   Mot de passe: {'*' * len(password)}{COLORS['S']}")
+        print(f"{COLORS['B']}   Mot de passe: {password}{COLORS['S']}")  # Afficher en clair pour confirmation
         print()
 
         confirm = self.interface.get_input("Confirmer l'ajout? (o/n)").lower()
