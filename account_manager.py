@@ -1,11 +1,11 @@
-# account_manager.py - VERSION COMPLÈTE ET CORRIGÉE
+# account_manager.py - VERSION COMPLÈTE CORRIGÉE AVEC INSTAGRAPI
 import json
 import os
-import requests
 import time
-import re
 import random
 from datetime import datetime
+from instagrapi import Client
+from instagrapi.exceptions import LoginRequired, ChallengeRequired, TwoFactorRequired
 
 class AccountManager:
     def __init__(self, accounts_file="instagram_accounts.json"):
@@ -105,26 +105,9 @@ class AccountManager:
         print("╚════════════════════════════════════════╝")
         print(f"📊 Total: {len(accounts)} compte(s)")
 
-    def get_advanced_headers(self):
-        """Headers complets pour contourner les protections Instagram"""
-        return {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-            'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'DNT': '1',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1',
-            'Cache-Control': 'max-age=0'
-        }
-
     def connect_instagram_account(self, username, password):
         """
-        Nouvelle méthode de connexion avec contournement des protections
+        Connexion Instagram avec Instagrapi - VERSION CORRIGÉE
         """
         print(f"🔐 Connexion Instagram pour {username}...")
 
@@ -132,159 +115,191 @@ class AccountManager:
         self.add_account(username, password, "", "")
 
         try:
-            session = requests.Session()
-            session.headers.update(self.get_advanced_headers())
-
-            # ÉTAPE 1: Récupérer la page de login avec délai
-            print("📄 Récupération page login...")
-            time.sleep(random.uniform(2, 4))
-
-            login_page = session.get(
-                'https://www.instagram.com/accounts/login/',
-                timeout=30,
-                allow_redirects=True
-            )
-
-            if login_page.status_code != 200:
-                print(f"❌ Erreur page login: {login_page.status_code}")
+            # Créer le client Instagrapi
+            client = Client()
+            
+            # Configurer pour éviter la détection
+            client.delay_range = [2, 5]
+            client.set_user_agent("Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1")
+            
+            print("📡 Tentative de connexion avec Instagrapi...")
+            
+            # Essayer de se connecter
+            client.login(username, password)
+            
+            # Vérifier si la connexion a réussi
+            user_id = client.user_id
+            if user_id:
+                print(f"✅ Connexion réussie pour {username}")
+                print(f"👤 User ID: {user_id}")
+                
+                # Sauvegarder la session
+                self._save_instagrapi_session(client, username)
+                return True
+            else:
+                print("❌ Connexion échouée - Aucun user_id reçu")
                 return False
 
-            # Extraire le CSRF token
-            csrf_token = self.extract_csrf_token(login_page.text, session)
-            if not csrf_token:
-                print("❌ Impossible d'extraire le CSRF token")
-                return None
-
-            print(f"🔑 CSRF Token récupéré")
-
-            # ÉTAPE 2: Préparer la connexion
-            print("🔐 Préparation connexion...")
-            time.sleep(random.uniform(1, 3))
-
-            # Format du mot de passe encrypté pour Instagram
-            enc_password = self.create_enc_password(password)
-
-            login_data = {
-                'username': username,
-                'enc_password': enc_password,
-                'queryParams': '{}',
-                'optIntoOneTap': 'false',
-                'trustedDeviceRecords': '{}'
-            }
-
-            login_headers = {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'X-CSRFToken': csrf_token,
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-Instagram-AJAX': '1',
-                'Referer': 'https://www.instagram.com/accounts/login/',
-                'Origin': 'https://www.instagram.com'
-            }
-
-            # ÉTAPE 3: Envoyer la requête de connexion
-            print("📡 Envoi requête connexion...")
-            login_response = session.post(
-                'https://www.instagram.com/accounts/login/ajax/',
-                data=login_data,
-                headers=login_headers,
-                timeout=30,
-                allow_redirects=False
-            )
-
-            print(f"📊 Code HTTP: {login_response.status_code}")
-
-            if login_response.status_code == 200:
-                try:
-                    response_data = login_response.json()
-
-                    if response_data.get('authenticated'):
-                        print(f"✅ Connexion réussie pour {username}")
-
-                        # Vérifier que la session est valide
-                        if self.verify_session(session):
-                            # Préparer les données de session
-                            session_data = {
-                                'cookies': dict(session.cookies),
-                                'created_at': datetime.now().isoformat(),
-                                'user_agent': session.headers['User-Agent']
-                            }
-
-                            # Sauvegarder les cookies au format string
-                            cookies_str = '; '.join([f"{k}={v}" for k, v in session.cookies.items()])
-
-                            # Mettre à jour le compte avec les cookies
-                            self.update_cookies(username, cookies_str)
-                            self.update_session(username, json.dumps(session_data))
-
-                            print(f"💾 Session sauvegardée pour {username}")
-                            return True
-                        else:
-                            print("❌ Session non valide après connexion")
-                    else:
-                        error_msg = response_data.get('message', 'Erreur inconnue')
-                        print(f"❌ Authentification échouée: {error_msg}")
-                        if 'checkpoint' in error_msg.lower():
-                            print("🚫 Vérification de sécurité requise")
-
-                except Exception as e:
-                    print(f"❌ Erreur parsing réponse: {e}")
-            else:
-                print(f"❌ Erreur HTTP connexion: {login_response.status_code}")
-
-        except requests.exceptions.Timeout:
-            print("⏰ Timeout lors de la connexion")
+        except TwoFactorRequired:
+            print("🔐 Authentification à deux facteurs requise")
+            print("💡 Désactivez 2FA temporairement ou utilisez l'app officielle")
+            return False
+            
+        except ChallengeRequired:
+            print("🚫 Défi de sécurité Instagram requis")
+            print("💡 Connectez-vous manuellement d'abord depuis l'app officielle")
+            return self._handle_challenge_retry(username, password)
+            
+        except LoginRequired:
+            print("❌ Connexion requise - Identifiants incorrects ou compte bloqué")
+            return False
+            
         except Exception as e:
-            print(f"❌ Erreur connexion: {e}")
+            print(f"❌ Erreur de connexion: {str(e)}")
+            return False
 
-        # En cas d'échec, supprimer le compte
-        if username in self.accounts:
-            del self.accounts[username]
-            self.save_accounts()
-
+    def _handle_challenge_retry(self, username, password):
+        """Tentative de reconnexion après un défi de sécurité"""
+        print("🔄 Tentative de reconnexion dans 10 secondes...")
+        time.sleep(10)
+        
+        try:
+            client = Client()
+            client.delay_range = [3, 7]
+            
+            # Réessayer avec des paramètres différents
+            client.login(username, password)
+            
+            if client.user_id:
+                print(f"✅ Connexion réussie après défi de sécurité!")
+                self._save_instagrapi_session(client, username)
+                return True
+        except Exception as e:
+            print(f"❌ Échec de la reconnexion: {str(e)}")
+            
         return False
 
-    def extract_csrf_token(self, html_content, session):
-        """Extrait le CSRF token de différentes manières"""
-        # Méthode 1: Depuis le JSON dans le HTML
-        pattern1 = r'"csrf_token":"([^"]+)"'
-        match1 = re.search(pattern1, html_content)
-        if match1:
-            return match1.group(1)
-
-        # Méthode 2: Depuis les cookies
-        csrf_cookie = session.cookies.get('csrftoken')
-        if csrf_cookie:
-            return csrf_cookie
-
-        # Méthode 3: Depuis les meta tags
-        pattern3 = r'<meta name="csrf-token" content="([^"]+)"'
-        match3 = re.search(pattern3, html_content)
-        if match3:
-            return match3.group(1)
-
-        return None
-
-    def create_enc_password(self, password):
-        """Crée le mot de passe encrypté pour Instagram"""
-        timestamp = int(time.time())
-        return f'#PWD_INSTAGRAM_BROWSER:0:{timestamp}:{password}'
-
-    def verify_session(self, session):
-        """Vérifie que la session est valide"""
+    def _save_instagrapi_session(self, client, username):
+        """Sauvegarde la session Instagrapi"""
         try:
-            test_response = session.get(
-                'https://www.instagram.com/accounts/edit/',
-                timeout=15,
-                allow_redirects=True
-            )
+            # Récupérer les données de session
+            session_data = client.get_settings()
+            cookies = client.get_cookies()
+            
+            # Convertir les cookies en string pour compatibilité
+            cookies_str = '; '.join([f"{k}={v}" for k, v in cookies.items()])
+            
+            # Préparer les données de session complètes
+            session_info = {
+                'settings': session_data,
+                'cookies': cookies,
+                'user_id': client.user_id,
+                'created_at': datetime.now().isoformat(),
+                'user_agent': client.get_user_agent()
+            }
+            
+            # Mettre à jour le compte
+            self.update_cookies(username, cookies_str)
+            self.update_session(username, json.dumps(session_info))
+            
+            print(f"💾 Session sauvegardée pour {username}")
+            
+        except Exception as e:
+            print(f"⚠️  Erreur lors de la sauvegarde de session: {e}")
 
-            # Si on est redirigé vers login, session invalide
-            if 'accounts/login' in test_response.url:
-                return False
-
-            return test_response.status_code == 200
-        except:
+    def test_account_session(self, username):
+        """
+        Teste si une session est encore valide
+        """
+        account_data = self.accounts.get(username, {})
+        session_data_str = account_data.get('session_data', '')
+        
+        if not session_data_str:
+            print(f"❌ Aucune session pour {username}")
             return False
+            
+        try:
+            session_data = json.loads(session_data_str)
+            settings = session_data.get('settings', {})
+            
+            client = Client(settings=settings)
+            
+            # Tester la session en récupérant les infos du compte
+            user_info = client.account_info()
+            if user_info:
+                print(f"✅ Session valide pour {username}")
+                return True
+                
+        except LoginRequired:
+            print(f"❌ Session expirée pour {username}")
+            return False
+        except Exception as e:
+            print(f"⚠️  Erreur test session {username}: {str(e)}")
+            return False
+            
+        return False
+
+    def reconnect_account(self, username):
+        """
+        Reconnexion automatique d'un compte
+        """
+        account_data = self.accounts.get(username, {})
+        password = account_data.get('password', '')
+        
+        if not password:
+            print(f"❌ Mot de passe manquant pour {username}")
+            return False
+            
+        print(f"🔄 Reconnexion du compte {username}...")
+        return self.connect_instagram_account(username, password)
+
+    def get_client_for_account(self, username):
+        """
+        Retourne un client Instagrapi configuré pour un compte
+        """
+        account_data = self.accounts.get(username, {})
+        session_data_str = account_data.get('session_data', '')
+        
+        if not session_data_str:
+            print(f"❌ Aucune session pour {username}")
+            return None
+            
+        try:
+            session_data = json.loads(session_data_str)
+            settings = session_data.get('settings', {})
+            
+            client = Client(settings=settings)
+            client.delay_range = [1, 3]
+            
+            # Tester la session avec une requête simple
+            client.get_timeline_feed()
+            return client
+            
+        except LoginRequired:
+            print(f"🔁 Session expirée pour {username}, tentative de reconnexion...")
+            if self.reconnect_account(username):
+                return self.get_client_for_account(username)
+            return None
+        except Exception as e:
+            print(f"❌ Erreur client pour {username}: {str(e)}")
+            return None
+
+    def get_all_valid_clients(self):
+        """
+        Retourne tous les clients valides pour l'automatisation
+        """
+        valid_clients = {}
+        accounts = self.get_all_accounts()
+        
+        for username, cookies, session_data in accounts:
+            client = self.get_client_for_account(username)
+            if client:
+                valid_clients[username] = client
+                print(f"✅ {username} - Client prêt")
+            else:
+                print(f"❌ {username} - Client non disponible")
+                
+        return valid_clients
 
     def delete_account(self, username):
         """Supprime un compte"""
@@ -310,6 +325,19 @@ class AccountManager:
     def get_account_info(self, username):
         """Retourne les informations d'un compte"""
         return self.accounts.get(username, {})
+
+    def check_all_sessions(self):
+        """Vérifie l'état de toutes les sessions"""
+        print("🔍 Vérification de toutes les sessions...")
+        accounts = self.get_all_accounts()
+        valid_count = 0
+        
+        for username, cookies, session_data in accounts:
+            if self.test_account_session(username):
+                valid_count += 1
+                
+        print(f"📊 Sessions valides: {valid_count}/{len(accounts)}")
+        return valid_count
 
 # Fonction utilitaire pour faciliter la migration
 def migrate_from_old_format(manager, old_accounts_file):
@@ -352,10 +380,11 @@ def main_menu():
         print(f"📁 Fichier: {manager.accounts_file}")
         print(f"👥 Comptes: {manager.get_account_count()}")
         print("\n1. 📋 Afficher les comptes")
-        print("2. ➕ Ajouter un compte")
-        print("3. 🗑️ Supprimer un compte")
-        print("4. 🔄 Migrer depuis ancien format")
-        print("5. 🚪 Quitter")
+        print("2. ➕ Ajouter un compte (Instagrapi)")
+        print("3. 🔄 Tester les sessions")
+        print("4. 🗑️ Supprimer un compte")
+        print("5. 🔄 Migrer depuis ancien format")
+        print("6. 🚪 Quitter")
 
         choice = input("\n📝 Choix: ").strip()
 
@@ -365,26 +394,38 @@ def main_menu():
         elif choice == "2":
             print("\n👤 AJOUTER UN COMPTE INSTAGRAM")
             username = input("[?] Nom d'utilisateur Instagram: ").strip()
-            password = input("[🔒] Mot de passe Instagram: ").strip()
-
+            
+            # Afficher le mot de passe en clair
+            print("[🔓] Mot de passe Instagram: ", end="", flush=True)
+            password = input()
+            
             if username and password:
                 print(f"\n[ℹ️] Résumé du compte:")
                 print(f"   Utilisateur: {username}")
-                print(f"   Mot de passe: {'*' * len(password)}")
+                print(f"   Mot de passe: {password}")
 
                 confirm = input("[?] Confirmer l'ajout? (o/n): ").strip().lower()
                 if confirm == 'o':
                     success = manager.connect_instagram_account(username, password)
+                    
                     if success:
                         print("🎉 Compte ajouté avec succès!")
                     else:
                         print("💔 Échec de l'ajout du compte")
+                        print("💡 Conseils:")
+                        print("   - Vérifiez nom d'utilisateur/mot de passe")
+                        print("   - Désactivez 2FA temporairement")
+                        print("   - Connectez-vous manuellement d'abord sur l'app")
                 else:
                     print("❌ Ajout annulé")
             else:
                 print("❌ Nom d'utilisateur et mot de passe requis")
 
         elif choice == "3":
+            print("\n🔍 TEST DES SESSIONS")
+            manager.check_all_sessions()
+
+        elif choice == "4":
             manager.display_accounts()
             if manager.get_account_count() > 0:
                 try:
@@ -401,14 +442,14 @@ def main_menu():
                 except ValueError:
                     print("❌ Veuillez entrer un nombre")
 
-        elif choice == "4":
+        elif choice == "5":
             old_file = input("[?] Chemin de l'ancien fichier: ").strip()
             if old_file:
                 migrate_from_old_format(manager, old_file)
             else:
                 print("❌ Chemin invalide")
 
-        elif choice == "5":
+        elif choice == "6":
             print("👋 Au revoir!")
             break
 
