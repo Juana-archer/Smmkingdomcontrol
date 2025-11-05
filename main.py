@@ -165,7 +165,7 @@ class SmmKingdomApp:
         # CORRECTION : Afficher le mot de passe en clair dans Termux
         print(f"{COLORS['B']}[🔓] Mot de passe Instagram: {COLORS['S']}", end="", flush=True)
         password = input()
-        
+
         if not password:
             self.interface.show_message("❌ Mot de passe requis", "error")
             self.interface.press_enter()
@@ -179,25 +179,22 @@ class SmmKingdomApp:
         confirm = self.interface.get_input("Confirmer l'ajout? (o/n)").lower()
 
         if confirm == 'o' or confirm == 'oui':
-            # Vérifier le statut du compte après ajout
-            from instagram_tasks import check_single_account_status
-
-            # Ajouter le compte d'abord
+            # CORRECTION : Utiliser AccountManager au lieu de la fonction supprimée
             success = self.account_manager.connect_instagram_account(username, password)
 
             if success:
                 self.interface.show_message("✅ Compte ajouté avec succès!", "success")
                 print(f"{COLORS['J']}🔍 Vérification du statut du compte...{COLORS['S']}")
 
-                # Vérifier le statut
-                status = check_single_account_status(username)
+                # CORRECTION : Utiliser la méthode INTERNE d'AccountManager
+                status = self.account_manager.check_single_account_status(username)
 
-                if status == "working":
+                if status == "active":
                     self.interface.show_message("🎉 Compte fonctionnel ! Prêt pour l'automatisation.", "success")
-                elif status == "verification":
+                elif status == "no_session":
                     self.interface.show_message("📧 Vérification requise. Connecte-toi manuellement sur Instagram.", "warning")
-                elif status == "suspended":
-                    self.interface.show_message("🚫 Compte suspendu. Résous le problème sur Instagram d'abord.", "error")
+                elif status == "not_found":
+                    self.interface.show_message("🚫 Compte non trouvé. Vérifiez les identifiants.", "error")
                 else:
                     self.interface.show_message("❓ Statut inconnu. Le compte pourrait avoir des problèmes.", "warning")
             else:
@@ -265,39 +262,40 @@ class SmmKingdomApp:
         working_count = 0
         problem_count = 0
 
-        from instagram_tasks import check_single_account_status, problem_accounts
+        # CORRECTION : Utiliser AccountManager pour le statut au lieu de l'import supprimé
+        from instagram_tasks import problem_accounts
 
         for i, (username, cookies, session_data) in enumerate(accounts, 1):
             print(f"{COLORS['B']}║ {COLORS['J']}[{i}] {username:<25}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
 
-            # Vérifier le statut
-            status = check_single_account_status(username)
+            # CORRECTION : Utiliser AccountManager pour vérifier le statut
+            status = self.account_manager.check_single_account_status(username)
 
-            if status == "working":
+            if status == "active":
                 status_icon = "✅"
                 status_text = "FONCTIONNEL"
                 color = COLORS['V']
                 working_count += 1
-            elif status == "verification":
-                status_icon = "📧"
-                status_text = "VÉRIFICATION REQUISE"
+            elif status == "no_session":
+                status_icon = "🔓"
+                status_text = "PAS DE SESSION"
                 color = COLORS['J']
                 problem_count += 1
-            elif status == "suspended":
-                status_icon = "🚫"
-                status_text = "SUSPENDU"
+            elif status == "not_found":
+                status_icon = "❓"
+                status_text = "NON TROUVÉ"
                 color = COLORS['R']
                 problem_count += 1
             else:
-                status_icon = "❓"
-                status_text = "STATUT INCONNU"
-                color = COLORS['J']
+                status_icon = "⚠️"
+                status_text = "PROBLÈME"
+                color = COLORS['R']
                 problem_count += 1
 
             print(f"{COLORS['B']}║   {color}{status_icon} {status_text:<20}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
 
             # Afficher la raison si problème
-            if status in ["verification", "suspended"] and username in problem_accounts:
+            if status != "active" and username in problem_accounts:
                 reason = problem_accounts[username].get('reason', 'Raison inconnue')
                 print(f"{COLORS['B']}║   📋 {reason:<35} {COLORS['B']}║{COLORS['S']}")
 
