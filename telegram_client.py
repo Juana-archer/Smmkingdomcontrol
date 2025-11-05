@@ -161,8 +161,8 @@ class SmmKingdomAutomation:
                         else:
                             timestamp = self.log_time()
                             print(f"{timestamp} ❌ Échec execution")
-                            # CORRECTION : Utiliser la fonction existante d'AccountManager
-                            # self.account_manager.mark_problem_account(username) - FONCTION SUPPRIMÉE
+                            # CORRECTION : Fonction commentée pour éviter l'erreur
+                            # self.account_manager.mark_problem_account(username)
                             break
 
                 # Si aucune tâche détectée après un certain temps, passer au compte suivant
