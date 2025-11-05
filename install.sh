@@ -26,10 +26,8 @@ print_error() { echo -e "${RED}[❌] $1${RESET}"; }
 
 # URLs GitHub
 GITHUB_USER="Juana-archer"
-GITHUB_REPO_MAIN="SmmKingdom"
-GITHUB_REPO_CONTROL="Smmkingdomcontrol"
-BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO_MAIN/main"
-CONTROL_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO_CONTROL/main"
+GITHUB_REPO="Smmkingdomcontrol"
+BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO/main"
 
 # Vérifier Termux
 if [ ! -d "/data/data/com.termux" ]; then
@@ -123,55 +121,96 @@ mkdir -p /sdcard/SmmKingdomTask/logs
 
 print_success "Dossiers créés avec succès"
 
-# ÉTAPE 6: Téléchargement des fichiers
+# ÉTAPE 6: Téléchargement des fichiers UN PAR UN
 print_info "ÉTAPE 6: Téléchargement des fichiers..."
 
-# Liste des fichiers à télécharger
-files=(
-    "main.py"
-    "config.py" 
-    "control_system.py"
-    "account_manager.py"
-    "telegram_client.py"
-    "instagram_tasks.py"
-    "ui.py"
-)
+print_info "Téléchargement: main.py"
+curl -o main.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/main.py
+if [ $? -eq 0 ]; then
+    print_success "main.py ✓"
+else
+    print_error "Échec: main.py"
+    exit 1
+fi
 
-for file in "${files[@]}"; do
-    print_info "Téléchargement: $file"
-    if wget -q "$BASE_URL/$file"; then
-        print_success "$file ✓"
-    else
-        print_error "Échec: $file"
-        echo "Tentative avec curl..."
-        if curl -s -o "$file" "$BASE_URL/$file"; then
-            print_success "$file ✓ (via curl)"
-        else
-            print_error "Impossible de télécharger $file"
-            print_info "URL essayée: $BASE_URL/$file"
-            exit 1
-        fi
-    fi
-done
+print_info "Téléchargement: config.py"
+curl -o config.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/config.py
+if [ $? -eq 0 ]; then
+    print_success "config.py ✓"
+else
+    print_error "Échec: config.py"
+    exit 1
+fi
+
+print_info "Téléchargement: account_manager.py"
+curl -o account_manager.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/account_manager.py
+if [ $? -eq 0 ]; then
+    print_success "account_manager.py ✓"
+else
+    print_error "Échec: account_manager.py"
+    exit 1
+fi
+
+print_info "Téléchargement: telegram_client.py"
+curl -o telegram_client.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/telegram_client.py
+if [ $? -eq 0 ]; then
+    print_success "telegram_client.py ✓"
+else
+    print_error "Échec: telegram_client.py"
+    exit 1
+fi
+
+print_info "Téléchargement: instagram_tasks.py"
+curl -o instagram_tasks.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/instagram_tasks.py
+if [ $? -eq 0 ]; then
+    print_success "instagram_tasks.py ✓"
+else
+    print_error "Échec: instagram_tasks.py"
+    exit 1
+fi
+
+print_info "Téléchargement: ui.py"
+curl -o ui.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/ui.py
+if [ $? -eq 0 ]; then
+    print_success "ui.py ✓"
+else
+    print_error "Échec: ui.py"
+    exit 1
+fi
+
+print_info "Téléchargement: control_system.py"
+curl -o control_system.py https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/control_system.py
+if [ $? -eq 0 ]; then
+    print_success "control_system.py ✓"
+else
+    print_error "Échec: control_system.py"
+    exit 1
+fi
 
 # Télécharger le fichier requirements
 print_info "Téléchargement du fichier requirements..."
-if wget -q "$BASE_URL/requirements.txt"; then
+curl -o requirements.txt https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/requirements.txt
+if [ $? -eq 0 ]; then
     print_success "requirements.txt ✓"
 else
-    # Créer un fichier requirements par défaut
-    cat > requirements.txt << EOF
+    # Créer un fichier requirements par défaut avec TOUTES les dépendances
+    cat > requirements.txt << 'EOF'
 telethon==1.28.5
 requests==2.31.0
+instagrapi==1.16.42
 python-dotenv==1.0.0
 urllib3==1.26.16
+colorama==0.4.6
+pycryptodome==3.18.0
+rsa==4.9
 EOF
-    print_success "requirements.txt créé"
+    print_success "requirements.txt créé avec toutes les dépendances"
 fi
 
 # Télécharger le guide API
 print_info "Téléchargement du guide API..."
-if wget -q "$BASE_URL/API_GUIDE.md"; then
+curl -o API_GUIDE.md https://raw.githubusercontent.com/Juana-archer/Smmkingdomcontrol/main/API_GUIDE.md
+if [ $? -eq 0 ]; then
     print_success "API_GUIDE.md ✓"
 else
     # Créer un guide API basique
@@ -208,7 +247,7 @@ EOF
     print_success "API_GUIDE.md créé"
 fi
 
-# ÉTAPE 7: Installation des dépendances Python
+# ÉTAPE 7: Installation des dépendances Python COMPLÈTES
 print_info "ÉTAPE 7: Installation des dépendances Python..."
 print_warning "Cela peut prendre plusieurs minutes..."
 
@@ -216,23 +255,29 @@ print_warning "Cela peut prendre plusieurs minutes..."
 print_info "Mise à jour de pip..."
 pip install --upgrade pip
 
-# Installation des dépendances
+# Installation des dépendances depuis requirements.txt
 if [ -f "requirements.txt" ]; then
     print_info "Installation depuis requirements.txt..."
     pip install -r requirements.txt
 else
-    print_info "Installation manuelle des dépendances..."
-    pip install telethon requests python-dotenv urllib3
+    print_info "Installation manuelle de TOUTES les dépendances..."
+    pip install telethon requests instagrapi python-dotenv urllib3 colorama pycryptodome rsa
 fi
+
+# Installation supplémentaire pour instagrapi
+print_info "Installation des dépendances supplémentaires..."
+pip install --upgrade instagrapi
+pip install moviepy  # Pour le traitement vidéo
+pip install pillow   # Pour le traitement d'images
 
 # Vérification de l'installation
 print_info "Vérification des installations..."
-if python -c "import telethon, requests, dotenv" &> /dev/null; then
+if python -c "import telethon, requests, instagrapi, dotenv, colorama" &> /dev/null; then
     print_success "Toutes les dépendances sont installées"
 else
     print_error "Certaines dépendances sont manquantes"
     print_info "Tentative de réinstallation..."
-    pip install --force-reinstall telethon requests python-dotenv
+    pip install --force-reinstall telethon requests instagrapi python-dotenv colorama
 fi
 
 # ÉTAPE 8: Configuration API Telegram
@@ -393,8 +438,10 @@ fi
 print_info "ÉTAPE 9: Vérification finale..."
 
 # Vérifier que tous les fichiers sont présents
+files_list=("main.py" "config.py" "account_manager.py" "telegram_client.py" "instagram_tasks.py" "ui.py" "control_system.py")
 missing_files=0
-for file in "${files[@]}"; do
+
+for file in "${files_list[@]}"; do
     if [ ! -f "$file" ]; then
         print_error "Fichier manquant: $file"
         missing_files=$((missing_files + 1))
@@ -417,7 +464,7 @@ fi
 
 # Test de connexion au système de contrôle
 print_info "Test de connexion au système de licence..."
-if curl -s --head "$CONTROL_URL/license.json" | grep "200 OK" > /dev/null; then
+if curl -s --head "$BASE_URL/license.json" | grep "200 OK" > /dev/null; then
     print_success "Système de licence accessible"
 else
     print_warning "Impossible de contacter le système de licence"
@@ -440,6 +487,7 @@ else
 fi
 echo "│ 💾 Stockage: ✅ Activé             │"
 echo "│ 🔒 Licence: ✅ Connecté           │"
+echo "│ 🐍 Dépendances: ✅ Complètes      │"
 echo "└─────────────────────────────────────┘"
 
 # ÉTAPE 10: Message de fin
@@ -457,6 +505,7 @@ echo "║ ✅ Bibliothèques Python installées    ║"
 echo "║ ✅ Structure créée                    ║"
 echo "║ ✅ API Telegram configurée            ║"
 echo "║ ✅ Système de licence connecté        ║"
+echo "║ ✅ Dépendances Instagram installées   ║"
 echo "╚════════════════════════════════════════╝"
 echo ""
 echo "📁 Dossier d'installation: ~/SmmKingdom"
