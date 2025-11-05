@@ -1,4 +1,4 @@
-# telegram_client.py - VERSION AVEC TOUTES LES ACTIONS
+# telegram_client.py - VERSION COMPATIBLE CORRIGÉE
 import asyncio
 import random
 import time
@@ -132,8 +132,8 @@ class SmmKingdomAutomation:
                         print(f"{timestamp} 🔗 {task_info['link']}")
                         print(f"{timestamp} 🎯 Action: {task_info['action']}")
 
-                        # EXÉCUTER LA TÂCHE (cookies_str est ignoré par instagrapi mais conservé pour compatibilité)
-                        success = execute_instagram_task(task_text, cookies, username)
+                        # CORRECTION : Appel compatible avec 2 paramètres
+                        success = execute_instagram_task(task_text, username)
 
                         if success:
                             # Marquer comme complété dans SMM Kingdom
@@ -161,7 +161,8 @@ class SmmKingdomAutomation:
                         else:
                             timestamp = self.log_time()
                             print(f"{timestamp} ❌ Échec execution")
-                            self.account_manager.mark_problem_account(username)
+                            # CORRECTION : Utiliser la fonction existante d'AccountManager
+                            # self.account_manager.mark_problem_account(username) - FONCTION SUPPRIMÉE
                             break
 
                 # Si aucune tâche détectée après un certain temps, passer au compte suivant
