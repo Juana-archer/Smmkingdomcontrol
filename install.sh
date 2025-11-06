@@ -70,6 +70,16 @@ else
     exit 1
 fi
 
+# AJOUT DES DÉPENDANCES INSTAGRAM SPÉCIFIQUES
+print_info "Installation des dépendances spécifiques pour Instagram..."
+pkg install libjpeg-turbo libpng -y
+if [ $? -eq 0 ]; then
+    print_success "libjpeg-turbo et libpng installés"
+else
+    print_error "Erreur installation libjpeg-turbo/libpng"
+    exit 1
+fi
+
 pkg install git -y
 pkg install wget -y
 pkg install curl -y
@@ -197,7 +207,7 @@ else
     cat > requirements.txt << 'EOF'
 telethon==1.28.5
 requests==2.31.0
-instagrapi==1.16.42
+instagrapi==1.16.22
 python-dotenv==1.0.0
 urllib3==1.26.16
 colorama==0.4.6
@@ -255,96 +265,150 @@ print_warning "Cela peut prendre plusieurs minutes..."
 print_info "Mise à jour de pip..."
 pip install --upgrade pip
 
+# INSTALLATION SPÉCIFIQUE POUR INSTAGRAM AVEC LES VERSIONS EXACTES
+print_info "Installation des dépendances spécifiques Instagram..."
+pip install pillow --no-cache-dir
+if [ $? -eq 0 ]; then
+    print_success "Pillow installé avec succès"
+else
+    print_error "Erreur installation Pillow"
+    exit 1
+fi
+
+pip install instagrapi==1.16.22
+if [ $? -eq 0 ]; then
+    print_success "instagrapi 1.16.22 installé avec succès"
+else
+    print_error "Erreur installation instagrapi"
+    exit 1
+fi
+
 # Installation des dépendances depuis requirements.txt
 if [ -f "requirements.txt" ]; then
     print_info "Installation depuis requirements.txt..."
     pip install -r requirements.txt
 else
     print_info "Installation manuelle de TOUTES les dépendances..."
-    pip install telethon requests instagrapi python-dotenv urllib3 colorama pycryptodome rsa
+    pip install telethon requests python-dotenv urllib3 colorama pycryptodome rsa
 fi
 
 # Installation supplémentaire pour instagrapi
 print_info "Installation des dépendances supplémentaires..."
-pip install --upgrade instagrapi
 pip install moviepy  # Pour le traitement vidéo
-pip install pillow   # Pour le traitement d'images
 
 # Vérification de l'installation
 print_info "Vérification des installations..."
-if python -c "import telethon, requests, instagrapi, dotenv, colorama" &> /dev/null; then
+if python -c "import telethon, requests, instagrapi, dotenv, colorama, PIL" &> /dev/null; then
     print_success "Toutes les dépendances sont installées"
 else
     print_error "Certaines dépendances sont manquantes"
     print_info "Tentative de réinstallation..."
-    pip install --force-reinstall telethon requests instagrapi python-dotenv colorama
+    pip install --force-reinstall telethon requests python-dotenv colorama pillow instagrapi==1.16.22
 fi
 
-# ÉTAPE 8: Configuration API Telegram
-print_info "ÉTAPE 8: Configuration Telegram API..."
+# ÉTAPE 8: Configuration API Telegram OBLIGATOIRE
+print_info "ÉTAPE 8: Configuration API Telegram OBLIGATOIRE..."
 
 echo ""
 echo "╔════════════════════════════════════════╗"
 echo "║       CONFIGURATION TELEGRAM API       ║"
 echo "╠════════════════════════════════════════╣"
-echo "║ 🔧 Vous avez 2 options:                ║"
+echo "║ 🔒 API PERSONNALISÉE OBLIGATOIRE       ║"
 echo "║                                        ║"
-echo "║ 1. Utiliser API par défaut (simple)    ║"
-echo "║ 2. Utiliser votre propre API (recommandé)║"
+echo "║ Pour des raisons de sécurité, vous     ║"
+echo "║ DEVEZ utiliser votre propre API.       ║"
+echo "║                                        ║"
+echo "║ Les API partagées sont bloquées par    ║"
+echo "║ Telegram et causent des erreurs.       ║"
 echo "╚════════════════════════════════════════╝"
 echo ""
 
-# Variables par défaut
-custom_api_id="218625378"
-custom_api_hash="3bb872935bgjjxhv2318cedf657a9f0c"
+# Afficher le guide API
+echo ""
+print_info "📖 GUIDE RAPIDE POUR OBTENIR VOS CREDENTIALS:"
+echo "┌─────────────────────────────────────┐"
+echo "│ 1. Allez sur: https://my.telegram.org │"
+echo "│ 2. Connectez-vous avec votre compte  │"
+echo "│ 3. Cliquez sur 'API Development Tools'│"
+echo "│ 4. Créez une nouvelle application    │"
+echo "│ 5. Copiez API ID et API HASH         │"
+echo "└─────────────────────────────────────┘"
+echo ""
 
-read -p "Choisissez l'option (1 ou 2): " api_choice
+print_warning "🚫 IMPORTANT: Ne partagez jamais votre API HASH avec personne!"
+print_warning "⚠️  Les API partagées causent l'erreur: 'API ID or Hash cannot be empty'"
+echo ""
 
-if [ "$api_choice" = "2" ]; then
+# Variables pour stocker les credentials
+custom_api_id=""
+custom_api_hash=""
+
+# Boucle pour API ID
+while true; do
     echo ""
-    print_info "🎯 Configuration API personnalisée"
+    read -p "🔑 Entrez votre API ID (chiffres uniquement): " user_api_id
+    
+    # Vérifications strictes
+    if [[ -z "$user_api_id" ]]; then
+        print_error "L'API ID ne peut pas être vide"
+        continue
+    fi
+    
+    if ! [[ "$user_api_id" =~ ^[0-9]+$ ]]; then
+        print_error "L'API ID doit contenir uniquement des chiffres"
+        continue
+    fi
+    
+    if [ ${#user_api_id} -lt 5 ]; then
+        print_error "L'API ID doit avoir au moins 5 chiffres"
+        continue
+    fi
+    
+    # Validation réussie
+    custom_api_id="$user_api_id"
+    print_success "✅ API ID valide"
+    break
+done
+
+# Boucle pour API HASH
+while true; do
     echo ""
-    echo "📖 COMMENT OBTENIR VOS API CREDENTIALS:"
-    echo "┌─────────────────────────────────────┐"
-    echo "│ 1. Allez sur: https://my.telegram.org │"
-    echo "│ 2. Connectez-vous avec votre compte  │"
-    echo "│ 3. Cliquez sur 'API Development Tools'│"
-    echo "│ 4. Créez une nouvelle application    │"
-    echo "│ 5. Copiez API ID et API HASH         │"
-    echo "└─────────────────────────────────────┘"
-    echo ""
-    print_warning "⚠️  Ne partagez jamais votre API HASH avec personne!"
-    echo ""
+    read -p "🗝️  Entrez votre API HASH (chaîne de caractères): " user_api_hash
     
-    while true; do
-        read -p "Entrez votre API ID: " user_api_id
-        # Vérifier que c'est un nombre
-        if [[ "$user_api_id" =~ ^[0-9]+$ ]] && [ ${#user_api_id} -gt 4 ]; then
-            custom_api_id="$user_api_id"
-            break
-        else
-            print_error "API ID invalide. Doit être un nombre (ex: 1234567)"
-        fi
-    done
+    # Vérifications strictes
+    if [[ -z "$user_api_hash" ]]; then
+        print_error "L'API HASH ne peut pas être vide"
+        continue
+    fi
     
-    while true; do
-        read -p "Entrez votre API HASH: " user_api_hash
-        # Vérifier la longueur minimale
-        if [ ${#user_api_hash} -ge 10 ]; then
-            custom_api_hash="$user_api_hash"
-            break
-        else
-            print_error "API HASH trop court. Doit avoir au moins 10 caractères"
-        fi
-    done
+    if [ ${#user_api_hash} -lt 10 ]; then
+        print_error "L'API HASH doit avoir au moins 10 caractères"
+        continue
+    fi
     
-    print_success "✅ API personnalisée configurée avec succès!"
-    
-else
-    print_info "🔄 Utilisation de l'API par défaut"
-    print_warning "⚠️  Pour plus de sécurité, il est recommandé d'utiliser votre propre API"
-    print_info "💡 Vous pourrez la changer plus tard avec: python setup_api.py"
+    # Validation réussie
+    custom_api_hash="$user_api_hash"
+    print_success "✅ API HASH valide"
+    break
+done
+
+# Confirmation finale
+echo ""
+print_info "🔍 RÉCAPITULATIF DE VOS CREDENTIALS:"
+echo "┌─────────────────────────────────────┐"
+echo "│ 🔑 API ID: $custom_api_id"
+echo "│ 🗝️  API HASH: ${custom_api_hash:0:10}..."
+echo "└─────────────────────────────────────┘"
+echo ""
+
+read -p "✅ Ces informations sont-elles correctes? (o/n): " confirm_credentials
+
+if [[ $confirm_credentials != "o" && $confirm_credentials != "O" && $confirm_credentials != "oui" ]]; then
+    print_error "❌ Installation annulée. Relancez le script pour recommencer."
+    exit 1
 fi
+
+print_success "🎯 API personnalisée configurée avec succès!"
 
 # Créer le fichier de configuration d'environnement
 cat > .env << EOF
@@ -476,18 +540,13 @@ echo ""
 print_success "🔧 RÉSUMÉ DE VOTRE CONFIGURATION:"
 echo "┌─────────────────────────────────────┐"
 echo "│ 📱 API Telegram:                   │"
-if [ "$api_choice" = "2" ]; then
-    echo "│    ✅ Personnalisée                 │"
-    echo "│    🔑 API ID: $custom_api_id             │"
-    echo "│    🗝️  API HASH: ${custom_api_hash:0:10}...        │"
-else
-    echo "│    ⚠️  Par défaut                   │"
-    echo "│    💡 Pour plus de sécurité:        │"
-    echo "│       python setup_api.py          │"
-fi
+echo "│    ✅ Personnalisée                 │"
+echo "│    🔑 API ID: $custom_api_id"
+echo "│    🗝️  API HASH: ${custom_api_hash:0:10}..."
 echo "│ 💾 Stockage: ✅ Activé             │"
 echo "│ 🔒 Licence: ✅ Connecté           │"
 echo "│ 🐍 Dépendances: ✅ Complètes      │"
+echo "│ 📸 Instagram: ✅ Compatible       │"
 echo "└─────────────────────────────────────┘"
 
 # ÉTAPE 10: Message de fin
