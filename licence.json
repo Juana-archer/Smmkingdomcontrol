@@ -9,7 +9,7 @@
       "activated_by": "DahEry",
       "duration_days": 7
      },
-    "02b46d990edb" : {
+    "02b46d990" : {
       "status": "active",
       "plan": "basic",
       "expire_date": "2025-11-09",
@@ -18,10 +18,10 @@
       "activated_by": "DahEry",
       "duration_days": 7
     },
-    "34aa1023da66" : {
+    "574d393581b1" : {
       "status": "active",
       "plan": "basic",
-      "expire_date": "2025-11-18",
+      "expire_date": "2025-11-13",
       "expire_time": "23:59",
       "activated_date": "2025-10-31",
       "activated_by": "DahEry",
@@ -36,10 +36,10 @@
       "activated_by": "DahEry",
       "duration_days": 7
     },
-    "08698ef2d5f0": {
+    "05a8a768f398" : {
       "status": "active",
       "plan": "basic",
-      "expire_date": "2025-11-02",
+      "expire_date": "2025-11-13",
       "expire_time": "23:59",
       "activated_date": "2025-10-26",
       "activated_by": "DahEry",
