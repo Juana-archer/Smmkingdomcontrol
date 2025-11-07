@@ -15,7 +15,7 @@ def get_instagram_client(username):
     Utilise les cookies sauvegardés sans reconnexion
     """
     try:
-        from account_manager_corrected import AccountManager
+        from account_manager import AccountManager
         
         account_manager = AccountManager()
         
