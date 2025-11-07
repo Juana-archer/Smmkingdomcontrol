@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 from telethon import TelegramClient, events
 from config import TELEGRAM_CONFIG
-from account_manager_corrected import AccountManager
+from account_manager import AccountManager
 from instagram_tasks import execute_instagram_task
 
 class SmmKingdomAutomation:
