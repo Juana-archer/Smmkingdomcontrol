@@ -282,7 +282,7 @@ class AccountManager:
             account_data = self.accounts[username]
             cookies = account_data.get('cookies', '')
             status = account_data.get('status', 'unknown')
-            
+
             if cookies and 'sessionid' in cookies and status == 'active':
                 return "active"
             return "no_session"
