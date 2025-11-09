@@ -1,4 +1,4 @@
-# telegram_client.py - VERSION COMPATIBLE CORRIGÉE
+# telegram_client.py - VERSION COMPLÈTE CORRIGÉE
 import asyncio
 import random
 import time
@@ -7,7 +7,7 @@ from datetime import datetime
 from telethon import TelegramClient, events
 from config import TELEGRAM_CONFIG
 from account_manager import AccountManager
-from instagram_tasks import execute_instagram_task
+from instagram_tasks import execute_instagram_task, clean_corrupted_sessions
 
 class SmmKingdomAutomation:
     def __init__(self):
@@ -29,36 +29,90 @@ class SmmKingdomAutomation:
         """Retourne le timestamp formaté"""
         return datetime.now().strftime("%H:%M:%S")
 
-    def log(self, message):
-        """Affiche les logs en temps réel"""
-        timestamp = self.log_time()
-        print(f"{timestamp} {message}")
-
     def print_username(self, username):
         """Affiche le username avec timestamp"""
         timestamp = self.log_time()
-        print(f"{timestamp} username :{username}")
+        print(f"{timestamp} Username: {username}")
+
+    def print_link(self, url):
+        """Affiche le lien détecté"""
+        timestamp = self.log_time()
+        print(f"{timestamp} 🔗 {url}")
+
+    def print_action(self, action):
+        """Affiche l'action à effectuer"""
+        timestamp = self.log_time()
+        # Icônes pour chaque action
+        icons = {
+            'like': '❤️',
+            'follow': '👤', 
+            'comment': '💬',
+            'story': '📖',
+            'video': '🎥'
+        }
+        
+        action_lower = action.lower()
+        icon = '⚡'
+        for key, value in icons.items():
+            if key in action_lower:
+                icon = value
+                break
+                
+        print(f"{timestamp} {action} {icon}")
+
+    def print_success(self):
+        """Affiche la confirmation de réussite"""
+        timestamp = self.log_time()
+        print(f"{timestamp} ✅ Action réussie")
+
+    def print_skip(self, reason):
+        """Affiche le passage au compte suivant"""
+        timestamp = self.log_time()
+        print(f"{timestamp} ⏭️ {reason}")
 
     async def start(self):
         """Démarre l'automatisation"""
         try:
-            self.log("[🔗] Connexion à Telegram...")
+            print("🔗 Connexion à Telegram...")
             await self.client.start()
 
             me = await self.client.get_me()
-            self.log(f"[✅] Connecté en tant que: {me.username if me else 'None'}")
+            print(f"✔ Connecté à Telegram avec succès")
+
+            # Nettoyage silencieux
+            clean_corrupted_sessions()
+            
+            # Vérification des sessions AVEC DÉTECTION CORRIGÉE
+            print("[*] Vérification des sessions Instagram...")
+            await self.check_all_sessions()
 
             # DÉMARRER L'AUTOMATISATION
             await self.automation_loop()
 
         except Exception as e:
-            self.log(f"[❌] Erreur: {e}")
+            print(f"❌ Erreur: {e}")
         finally:
             await self.cleanup()
 
+    async def check_all_sessions(self):
+        """Vérifie les sessions - DÉTECTION CORRIGÉE"""
+        accounts = self.account_manager.get_all_accounts()
+        active_count = 0
+        
+        for username, cookies, session_data in accounts:
+            # ✅ CORRECTION : Vérifier si cookies existe (peu importe le format)
+            if cookies and len(cookies.strip()) > 20:
+                print(f"✔ Session restaurée pour {username}")
+                active_count += 1
+            else:
+                print(f"🔄 Session manquante pour {username}")
+        
+        print(f"📊 {active_count} compte(s) actif(s) sur {len(accounts)} total")
+        return active_count
+
     async def automation_loop(self):
-        """Boucle d'automatisation des tâches - CONTINUITÉ DES CYCLES"""
-        self.log("[⚡] Démarrage automation SMM Kingdom Task")
+        """Boucle d'automatisation des tâches"""
+        print("⚡ Démarrage automation SMM Kingdom Task")
 
         cycle = 0
 
@@ -70,10 +124,10 @@ class SmmKingdomAutomation:
 
         while self.is_running:
             cycle += 1
-            self.log(f"[🔄] Cycle {cycle}")
+            print(f"🔄 Cycle {cycle}")
 
             try:
-                # TOUJOURS COMMENCER PAR "Instagram" (pas de /start après le premier cycle)
+                # TOUJOURS COMMENCER PAR "Instagram"
                 await self.client.send_message(self.bot_username, 'Instagram')
                 await asyncio.sleep(2)
 
@@ -86,21 +140,21 @@ class SmmKingdomAutomation:
             except KeyboardInterrupt:
                 break
             except Exception as e:
-                self.log(f"[⚠️] Erreur: {e}")
+                print(f"⚠️ Erreur: {e}")
                 await asyncio.sleep(10)
 
     async def process_all_accounts(self):
-        """Traite tous les comptes pour trouver et exécuter des tâches - TOUTES LES ACTIONS"""
+        """Traite tous les comptes pour trouver et exécuter des tâches"""
         accounts = self.account_manager.get_all_accounts()
         if not accounts:
-            self.log("[❌] Aucun compte Instagram disponible")
+            print("❌ Aucun compte disponible")
             return
 
         for username, cookies, session_data in accounts:
             if not self.is_running:
                 break
 
-            # Afficher le username AVEC TIMESTAMP
+            # Afficher le username
             self.print_username(username)
 
             # Sélectionner le compte dans le bot SMM Kingdom
@@ -128,11 +182,10 @@ class SmmKingdomAutomation:
                     task_info = self.analyze_real_task_all_actions(task_text)
                     if task_info and task_info['link']:
                         # AFFICHER LE LIEN ET L'ACTION
-                        timestamp = self.log_time()
-                        print(f"{timestamp} 🔗 {task_info['link']}")
-                        print(f"{timestamp} 🎯 Action: {task_info['action']}")
+                        self.print_link(task_info['link'])
+                        self.print_action(task_info['action'])
 
-                        # CORRECTION : Appel compatible avec 2 paramètres
+                        # Exécuter la tâche Instagram
                         success = execute_instagram_task(task_text, username)
 
                         if success:
@@ -141,8 +194,7 @@ class SmmKingdomAutomation:
                             await asyncio.sleep(3)
 
                             self.completed_tasks += 1
-                            timestamp = self.log_time()
-                            print(f"{timestamp} ✅ Tâche exécutée avec succès")
+                            self.print_success()
                             task_executed = True
 
                             # ATTENDRE POUR VOIR SI UNE AUTRE TÂCHE APPARAÎT
@@ -159,10 +211,7 @@ class SmmKingdomAutomation:
                                 await asyncio.sleep(2)
                                 break
                         else:
-                            timestamp = self.log_time()
-                            print(f"{timestamp} ❌ Échec execution")
-                            # CORRECTION : Fonction commentée pour éviter l'erreur
-                            # self.account_manager.mark_problem_account(username)
+                            self.print_skip("Échec execution")
                             break
 
                 # Si aucune tâche détectée après un certain temps, passer au compte suivant
@@ -339,9 +388,9 @@ def start_smm_automation():
         asyncio.set_event_loop(loop)
         loop.run_until_complete(run_smm_automation())
     except KeyboardInterrupt:
-        print(f"\n[👋] Arrêté")
+        print(f"\n👋 Arrêté")
     except Exception as e:
-        print(f"[❌] Erreur: {e}")
+        print(f"❌ Erreur: {e}")
 
 if __name__ == "__main__":
     start_smm_automation()
