@@ -1,155 +1,114 @@
-# instagram_tasks.py - VERSION COMPLÈTE CORRIGÉE
+# instagram_tasks.py - VERSION CORRIGÉE AVEC AFFICHAGE PROFESSIONNEL
 import time
 import random
 import re
 import os
 import json
-import tempfile
 from instagrapi import Client
 from instagrapi.exceptions import ClientError, LoginRequired, ChallengeRequired
 
 # Gestion des comptes problématiques
 problem_accounts = {}
 
+def clean_corrupted_sessions():
+    """Nettoie toutes les sessions corrompues"""
+    try:
+        from account_manager import AccountManager
+        account_manager = AccountManager()
+
+        for username in account_manager.accounts:
+            account_manager.accounts[username]['cookies'] = ''
+
+        account_manager.save_accounts()
+        print("✅ Toutes les sessions ont été nettoyées")
+        return True
+
+    except Exception as e:
+        print(f"❌ Erreur nettoyage: {e}")
+        return False
+
 def get_instagram_client(username):
     """
-    Récupère un client Instagram COMPATIBLE avec AccountManager
-    Utilise les cookies sauvegardés sans reconnexion
+    VERSION AVEC AFFICHAGE PROFESSIONNEL
     """
     try:
         from account_manager import AccountManager
 
         account_manager = AccountManager()
 
-        # Vérifier que le compte existe
         if username not in account_manager.accounts:
-            print(f"❌ Compte {username} non trouvé dans AccountManager")
             return None
 
         account_data = account_manager.accounts[username]
-        cookies_str = account_data.get('cookies', '')
         password = account_data.get('password')
 
-        if not cookies_str and not password:
-            print(f"❌ Aucun cookie ou mot de passe sauvegardé pour {username}")
+        if not password:
             return None
 
-        # Vérifier si le compte est marqué problématique
+        # Vérifier si le compte est suspendu
         if is_account_suspended(username):
-            print(f"🚫 Compte {username} suspendu - Action bloquée")
             return None
 
         # Créer le client
         client = Client()
-        client.delay_range = [2, 6]  # Délais réalistes
+        client.delay_range = [2, 6]
 
-        # NOUVELLE MÉTHODE - CONNEXION DIRECTE AVEC MOT DE PASSE
-        if password:
-            try:
-                print(f"🔄 Connexion directe pour {username}...")
-                client.login(username, password)
-                
-                # Mettre à jour les cookies dans AccountManager
-                new_cookies_dict = client.get_cookies()
-                new_cookies_str = '; '.join([f"{k}={v}" for k, v in new_cookies_dict.items()])
-                account_manager.accounts[username]['cookies'] = new_cookies_str
-                account_manager.save_accounts()
-                
-                print(f"✅ Connexion directe réussie pour {username}")
-                
-                # Tester la session
-                try:
-                    print(f"🔍 Test de la session {username}...")
-                    client.get_timeline_feed()  # Test simple
-                    print(f"✅ Session {username} opérationnelle")
-                    return client
-                except Exception as test_error:
-                    print(f"❌ Session test échoué: {test_error}")
-                    mark_account_suspended(username, f"Test session échoué: {test_error}")
-                    return None
-                    
-            except Exception as login_error:
-                print(f"❌ Échec connexion directe: {login_error}")
-                # Continuer avec la méthode alternative
+        # Gestion des cookies
+        cookies_str = account_data.get('cookies', '')
 
-        # MÉTHODE ALTERNATIVE AVEC COOKIES EXISTANTS
         if cookies_str:
             try:
-                print(f"🔄 Tentative avec cookies existants pour {username}...")
-                
-                # Créer un fichier settings temporaire
-                settings = {
-                    'cookies': {},
-                    'user_agent': 'Instagram 219.0.0.12.117 Android',
-                    'uuid': client.state.uuid,
-                    'device_id': client.state.device_id,
-                    'phone_id': client.state.phone_id,
-                    'ad_id': client.state.ad_id,
-                }
-                
-                # Convertir cookies string en format instagrapi
-                for cookie in cookies_str.split('; '):
-                    if '=' in cookie:
-                        key, value = cookie.split('=', 1)
-                        settings['cookies'][key.strip()] = value.strip()
-                
-                # Sauvegarder settings temporairement
-                with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as f:
-                    json.dump(settings, f)
-                    temp_file = f.name
-                
-                # Charger les settings
-                client.load_settings(temp_file)
-                os.unlink(temp_file)  # Nettoyer
-                
-                print(f"✅ Cookies chargés via settings pour {username}")
-                
-                # Tester la session
+                # Essayer de parser comme JSON d'abord
                 try:
-                    print(f"🔍 Test de la session {username}...")
-                    client.get_timeline_feed()  # Test simple
-                    print(f"✅ Session {username} opérationnelle")
-                    return client
-                except Exception as test_error:
-                    print(f"❌ Session expirée pour {username}: {test_error}")
-                    
-                    # Tentative de reconnexion si mot de passe disponible
-                    if password:
-                        try:
-                            print(f"🔄 Reconnexion pour {username}...")
-                            client.login(username, password)
+                    cookies_dict = json.loads(cookies_str)
+                except:
+                    # Fallback: format string original
+                    cookies_dict = {}
+                    for cookie in cookies_str.split('; '):
+                        if '=' in cookie:
+                            key, value = cookie.split('=', 1)
+                            cookies_dict[key.strip()] = value.strip()
 
-                            # Mettre à jour les cookies dans AccountManager
-                            new_cookies_dict = client.get_cookies()
-                            new_cookies_str = '; '.join([f"{k}={v}" for k, v in new_cookies_dict.items()])
+                client.set_cookies(cookies_dict)
 
-                            account_manager.accounts[username]['cookies'] = new_cookies_str
-                            account_manager.save_accounts()
+                # Tester la session - MESSAGE PROFESSIONNEL
+                client.get_timeline_feed()
+                print(f"✔ Session restaurée pour {username}")
+                return client
 
-                            print(f"✅ Reconnexion réussie pour {username}")
-                            return client
+            except Exception as e:
+                print(f"🔄 Session expirée pour {username}")
 
-                        except Exception as relogin_error:
-                            print(f"❌ Échec reconnexion: {relogin_error}")
-                            mark_account_suspended(username, f"Échec reconnexion: {relogin_error}")
-                            return None
-                    else:
-                        print(f"❌ Mot de passe non disponible pour {username}")
-                        mark_account_suspended(username, "Session expirée - Mot de passe manquant")
-                        return None
-                        
-            except Exception as cookie_error:
-                print(f"❌ Erreur gestion cookies: {cookie_error}")
-                return None
+        # NOUVELLE AUTHENTIFICATION
+        print(f"🔐 Authentification pour {username}...")
+        try:
+            client.login(username, password)
 
-        print(f"❌ Aucune méthode de connexion disponible pour {username}")
-        return None
+            # Sauvegarder les cookies
+            new_cookies_dict = client.get_cookies()
+            cookies_list = []
+            for key, value in new_cookies_dict.items():
+                cookies_list.append(f"{key}={value}")
+            new_cookies_str = '; '.join(cookies_list)
 
-    except ImportError:
-        print("❌ AccountManager non trouvé")
-        return None
+            account_manager.accounts[username]['cookies'] = new_cookies_str
+            account_manager.save_accounts()
+
+            print(f"✔ Session créée pour {username}")
+            time.sleep(3)
+            return client
+
+        except LoginRequired as e:
+            print(f"❌ Login requis pour {username}")
+            return None
+        except ChallengeRequired as e:
+            print(f"🛡️ Vérification sécurité requise pour {username}")
+            return None
+        except Exception as login_error:
+            print(f"❌ Échec authentification pour {username}")
+            return None
+
     except Exception as e:
-        print(f"❌ Erreur récupération client: {e}")
         return None
 
 def is_account_suspended(username):
@@ -231,12 +190,11 @@ def analyze_instagram_task(text):
         task_info['type'] = 'Comment on post'
 
         # Extraire le texte du commentaire depuis la tâche
-        # Format attendu: "Comment on post: [texte] https://instagram.com/..."
         comment_patterns = [
             r'comment on post:\s*([^\n]+?)\s*https?://',
             r'comment:\s*([^\n]+?)\s*https?://',
             r'comment\s*"([^"]+)"',
-            r'comment\s*\'\'([^\'\']+)\'\'',
+            r"comment\s*'([^']+)'",
         ]
 
         for pattern in comment_patterns:
@@ -247,13 +205,11 @@ def analyze_instagram_task(text):
 
         # Si pas trouvé avec les patterns, essayer une méthode simple
         if not task_info['comment_text']:
-            # Prendre tout le texte entre "comment" et l'URL
             url_match = re.search(r'https?://[^\s]+', text)
             if url_match:
                 url_start = url_match.start()
                 comment_part = text[:url_start].lower()
                 if 'comment' in comment_part:
-                    # Extraire le texte après "comment"
                     comment_start = comment_part.find('comment') + 7
                     task_info['comment_text'] = text[comment_start:url_start].strip(' :"\'()-')
 
@@ -288,13 +244,9 @@ def human_delay(action_type):
 
 def execute_instagram_task(task_text, username):
     """
-    EXÉCUTE DE VRAIES ACTIONS INSTAGRAM de manière SÉCURISÉE
-    Version COMPLÈTEMENT COMPATIBLE avec AccountManager
+    EXÉCUTE DE VRAIES ACTIONS INSTAGRAM - AFFICHAGE MINIMAL
     """
-    print(f"\n🎯 Début de tâche pour {username}")
-    print(f"📝 Tâche: {task_text[:80]}...")
-
-    # Récupérer le client depuis AccountManager
+    # Récupérer le client
     client = get_instagram_client(username)
     if not client:
         return False
@@ -302,14 +254,10 @@ def execute_instagram_task(task_text, username):
     # Analyser la tâche
     task_info = analyze_instagram_task(task_text)
     if not task_info:
-        print("❌ Impossible d'analyser la tâche")
         return False
 
     task_type = task_info['type']
     target_url = task_info['link']
-
-    print(f"🔍 Type: {task_type}")
-    print(f"🔗 URL: {target_url}")
 
     try:
         # Exécuter l'action avec gestion d'erreurs
@@ -318,52 +266,42 @@ def execute_instagram_task(task_text, username):
         elif 'follow' in task_type.lower():
             return follow_instagram_profile(target_url, client, username)
         elif 'comment' in task_type.lower():
-            # Passer le texte du commentaire extrait
             comment_text = task_info.get('comment_text', '')
             if not comment_text:
-                print("❌ Aucun texte de commentaire trouvé dans la tâche")
                 return False
-            print(f"💬 Texte du commentaire: \"{comment_text}\"")
             return comment_instagram_post(target_url, client, username, comment_text)
         elif 'story' in task_type.lower():
             return watch_instagram_story(target_url, client, username)
         elif 'video' in task_type.lower():
             return watch_instagram_video(target_url, client, username)
         else:
-            print(f"❌ Type de tâche non supporté: {task_type}")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors de l'exécution: {e}")
         return False
 
 def like_instagram_post(post_url, client, username):
     """Like RÉEL d'un post Instagram"""
     try:
-        print(f"❤️ Tentative de like...")
         human_delay('like')
 
         clean_url = clean_instagram_url(post_url)
         if not clean_url:
-            print("❌ URL invalide")
             return False
 
         media_code = extract_media_id_from_url(clean_url)
         if not media_code:
-            print("❌ Impossible d'extraire l'ID média")
             return False
 
         # Récupérer l'ID média
         media_id = client.media_id(media_code)
         if not media_id:
-            print("❌ Média non trouvé")
             return False
 
         # Vérifier si déjà liké
         try:
             media_info = client.media_info(media_id)
             if media_info.has_liked:
-                print("✅ Déjà liké précédemment")
                 return True
         except:
             pass
@@ -372,44 +310,36 @@ def like_instagram_post(post_url, client, username):
         result = client.media_like(media_id)
 
         if result:
-            print(f"✅ Like RÉUSSI sur le post")
             time.sleep(random.uniform(2, 4))
             return True
         else:
-            print("❌ Échec du like")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors du like: {e}")
         return False
 
 def follow_instagram_profile(profile_url, client, username):
     """Follow RÉEL d'un profil Instagram"""
     try:
-        print(f"👤 Tentative de follow...")
         human_delay('follow')
 
         clean_url = clean_instagram_url(profile_url)
         if not clean_url:
-            print("❌ URL invalide")
             return False
 
         target_username = extract_username_from_url(clean_url)
         if not target_username:
-            print("❌ Impossible d'extraire le username")
             return False
 
         # Récupérer l'ID utilisateur
         user_id = client.user_id_from_username(target_username)
         if not user_id:
-            print("❌ Utilisateur non trouvé")
             return False
 
         # Vérifier si déjà follow
         try:
             user_info = client.user_info(user_id)
             if user_info.following:
-                print("✅ Déjà follow précédemment")
                 return True
         except:
             pass
@@ -418,47 +348,38 @@ def follow_instagram_profile(profile_url, client, username):
         result = client.user_follow(user_id)
 
         if result:
-            print(f"✅ Follow RÉUSSI de {target_username}")
             time.sleep(random.uniform(3, 6))
             return True
         else:
-            print("❌ Échec du follow")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors du follow: {e}")
         return False
 
 def comment_instagram_post(post_url, client, username, comment_text=None):
     """Commentaire RÉEL sur un post Instagram avec texte personnalisé"""
     try:
-        print(f"💬 Préparation du commentaire...")
         human_delay('comment')
 
         clean_url = clean_instagram_url(post_url)
         if not clean_url:
-            print("❌ URL invalide")
             return False
 
         media_code = extract_media_id_from_url(clean_url)
         if not media_code:
-            print("❌ Impossible d'extraire l'ID média")
             return False
 
         media_id = client.media_id(media_code)
         if not media_id:
-            print("❌ Média non trouvé")
             return False
 
         # Vérifier si un texte de commentaire est fourni
         if not comment_text or comment_text.strip() == "":
-            print("❌ Aucun texte de commentaire fourni")
             return False
 
         # Vérifier la longueur du commentaire
         if len(comment_text) > 300:
             comment_text = comment_text[:300] + "..."
-            print(f"⚠️ Commentaire tronqué à 300 caractères")
 
         # Simuler la frappe humaine
         time.sleep(random.uniform(2, 4))
@@ -467,21 +388,17 @@ def comment_instagram_post(post_url, client, username, comment_text=None):
         result = client.media_comment(media_id, comment_text)
 
         if result:
-            print(f"✅ Commentaire RÉEL posté avec succès!")
             time.sleep(random.uniform(4, 8))
             return True
         else:
-            print("❌ Échec du commentaire")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors du commentaire: {e}")
         return False
 
 def watch_instagram_story(story_url, client, username):
     """Visionnage RÉEL d'une story Instagram"""
     try:
-        print(f"📖 Tentative de visionnage story...")
         human_delay('story')
 
         clean_url = clean_instagram_url(story_url)
@@ -498,7 +415,6 @@ def watch_instagram_story(story_url, client, username):
         # Récupérer les stories
         stories = client.user_stories(user_id)
         if not stories:
-            print("❌ Aucune story disponible")
             return False
 
         # Marquer la première story comme vue
@@ -506,21 +422,17 @@ def watch_instagram_story(story_url, client, username):
         result = client.story_seen([story_id])
 
         if result:
-            print(f"✅ Story RÉELLE marquée comme vue")
             time.sleep(random.uniform(4, 6))
             return True
         else:
-            print("❌ Échec du visionnage story")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors du visionnage story: {e}")
         return False
 
 def watch_instagram_video(video_url, client, username):
     """Visionnage RÉEL d'une vidéo Instagram"""
     try:
-        print(f"🎥 Tentative de visionnage vidéo...")
         human_delay('video')
 
         clean_url = clean_instagram_url(video_url)
@@ -535,20 +447,14 @@ def watch_instagram_video(video_url, client, username):
         media_info = client.media_info(media_code)
 
         if media_info:
-            print(f"✅ Vidéo RÉELLE chargée: {media_info.title or 'Sans titre'}")
-
             # Simuler le temps de visionnage
             view_duration = random.uniform(8, 15)
-            print(f"⏱️ Visionnage simulé: {view_duration:.1f}s")
             time.sleep(view_duration)
-
             return True
         else:
-            print("❌ Vidéo non trouvée")
             return False
 
     except Exception as e:
-        print(f"❌ Erreur lors du visionnage vidéo: {e}")
         return False
 
 def get_problem_accounts():
@@ -559,28 +465,5 @@ def reset_problem_account(username):
     """Réinitialise un compte problématique"""
     if username in problem_accounts:
         del problem_accounts[username]
-        print(f"✅ Compte {username} réinitialisé")
         return True
     return False
-
-# Test de démonstration
-if __name__ == "__main__":
-    print("🎯 TEST INSTAGRAM TASKS - VERSION CORRIGÉE")
-
-    # Test avec un compte existant
-    test_username = input("Nom d'utilisateur pour test: ").strip()
-
-    if test_username:
-        # Test de connexion
-        client = get_instagram_client(test_username)
-        if client:
-            print("✅ Client Instagram opérationnel!")
-
-            # Test d'une tâche commentaire
-            test_task = 'Comment on post: "Très beau contenu, continuez comme ça!" https://www.instagram.com/p/Cul9bfhIhCas-9/'
-            success = execute_instagram_task(test_task, test_username)
-            print(f"Résultat test: {'✅ RÉUSSI' if success else '❌ ÉCHEC'}")
-        else:
-            print("❌ Impossible de récupérer le client")
-    else:
-        print("❌ Aucun username fourni")
