@@ -11,9 +11,9 @@ class AccountManager:
         self.accounts_file = accounts_file
         self.accounts = self.load_accounts()
         self.user_agents = [
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
+            'Mozilla/5.0 (Android 13; Mobile; rv:109.0) Gecko/115.0 Firefox/115.0',
+            'Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36'
         ]
 
     def load_accounts(self):
@@ -22,60 +22,284 @@ class AccountManager:
             try:
                 with open(self.accounts_file, 'r', encoding='utf-8') as f:
                     accounts_data = json.load(f)
-                    print(f"✅ {len(accounts_data)} compte(s) chargé(s) depuis {self.accounts_file}")
+                    print(f"✅ {len(accounts_data)} compte(s) chargé(s)")
+
+                    # S'assurer que tous les comptes ont les champs requis
+                    for username, data in accounts_data.items():
+                        if 'cookies' not in data:
+                            data['cookies'] = ''
+                        if 'password' not in data:
+                            data['password'] = ''
+                        if 'status' not in data:
+                            data['status'] = 'active'
+
                     return accounts_data
             except Exception as e:
-                print(f"❌ Erreur chargement comptes: {e}")
+                print(f"❌ Erreur chargement: {e}")
                 return {}
         else:
-            print(f"📁 Fichier {self.accounts_file} non trouvé, création...")
+            print(f"📁 Création nouveau fichier: {self.accounts_file}")
             return {}
 
     def save_accounts(self):
-        """Sauvegarde les comptes dans le fichier JSON"""
+        """Sauvegarde les comptes"""
         try:
             with open(self.accounts_file, 'w', encoding='utf-8') as f:
                 json.dump(self.accounts, f, indent=2, ensure_ascii=False)
-            print(f"💾 {len(self.accounts)} compte(s) sauvegardé(s) dans {self.accounts_file}")
             return True
         except Exception as e:
-            print(f"❌ Erreur sauvegarde comptes: {e}")
+            print(f"❌ Erreur sauvegarde: {e}")
             return False
 
+    # ✅ MÉTHODES MANQUANTES AJOUTÉES
+    def get_all_accounts(self):
+        """Retourne tous les comptes - MÉTHODE MANQUANTE"""
+        return self.accounts
+
+    def get_account_count(self):
+        """Retourne le nombre de comptes - MÉTHODE MANQUANTE"""
+        return len(self.accounts)
+
+    def get_active_accounts(self):
+        """Retourne tous les comptes actifs - MÉTHODE MANQUANTE"""
+        active_accounts = []
+        for username, data in self.accounts.items():
+            if data.get('status') != 'inactive':
+                active_accounts.append({
+                    'username': username,
+                    'cookies': data.get('cookies', ''),
+                    'session_data': data.get('session_data', ''),
+                    'password': data.get('password', '')
+                })
+        return active_accounts
+
+    def get_random_account(self):
+        """Retourne un compte aléatoire actif - MÉTHODE MANQUANTE"""
+        active_accounts = self.get_active_accounts()
+        if active_accounts:
+            return random.choice(active_accounts)
+        return None
+
+    def get_account_by_username(self, username):
+        """Retourne un compte spécifique - MÉTHODE MANQUANTE"""
+        return self.accounts.get(username)
+
+    def check_single_account_status(self, username):
+        """Vérifie le statut d'un compte - MÉTHODE MANQUANTE"""
+        if username in self.accounts:
+            account_data = self.accounts[username]
+            cookies = account_data.get('cookies', '')
+            status = account_data.get('status', 'unknown')
+
+            if cookies and 'sessionid' in cookies and status == 'active':
+                return "active"
+            return "no_session"
+        return "not_found"
+
+    def add_account(self, username, password, cookies="", session_data=""):
+        """Ajoute un compte manuellement - MÉTHODE MANQUANTE"""
+        self.accounts[username] = {
+            'password': password,
+            'cookies': cookies,
+            'session_data': session_data,
+            'last_used': datetime.now().isoformat(),
+            'status': 'active'
+        }
+        return self.save_accounts()
+
+    def delete_account(self, username):
+        """Supprime un compte - MÉTHODE MANQUANTE"""
+        if username in self.accounts:
+            del self.accounts[username]
+            if self.save_accounts():
+                print(f"✅ Compte {username} supprimé")
+                return True
+        print(f"❌ Compte {username} non trouvé")
+        return False
+
+    # ✅ MÉTHODES POUR INSTAGRAPi
+    def get_account_for_instagrapi(self, username):
+        """Retourne les données formatées pour instagrapi"""
+        if username not in self.accounts:
+            return None
+
+        account_data = self.accounts[username]
+
+        return {
+            'username': username,
+            'password': account_data.get('password', ''),
+            'cookies': account_data.get('cookies', ''),
+            'status': account_data.get('status', 'active'),
+            'last_used': account_data.get('last_used', '')
+        }
+
+    def get_all_usernames(self):
+        """Retourne tous les noms d'utilisateurs"""
+        return list(self.accounts.keys())
+
+    def update_account_cookies(self, username, cookies_str):
+        """Met à jour les cookies d'un compte"""
+        if username in self.accounts:
+            self.accounts[username]['cookies'] = cookies_str
+            self.accounts[username]['last_used'] = datetime.now().isoformat()
+            return self.save_accounts()
+        return False
+
+    def validate_session(self, username):
+        """Valide si une session est encore active"""
+        if username not in self.accounts:
+            return False
+
+        account_data = self.accounts[username]
+        cookies = account_data.get('cookies', '')
+
+        if not cookies or 'sessionid' not in cookies:
+            return False
+
+        last_used = account_data.get('last_used', '')
+        if last_used:
+            try:
+                last_date = datetime.fromisoformat(last_used)
+                if (datetime.now() - last_date).days > 7:
+                    return False
+            except:
+                pass
+
+        return True
+
+    def get_active_accounts_info(self):
+        """Retourne les infos des comptes actifs"""
+        active_accounts = []
+        for username, data in self.accounts.items():
+            if data.get('status') == 'active':
+                active_accounts.append({
+                    'username': username,
+                    'has_password': bool(data.get('password')),
+                    'has_cookies': bool(data.get('cookies')),
+                    'last_used': data.get('last_used', 'Never')
+                })
+        return active_accounts
+
+    def mark_account_problem(self, username, reason=""):
+        """Marque un compte comme ayant des problèmes"""
+        if username in self.accounts:
+            self.accounts[username]['status'] = 'problem'
+            self.accounts[username]['last_error'] = reason
+            self.accounts[username]['error_time'] = datetime.now().isoformat()
+            self.save_accounts()
+            print(f"🚫 Compte {username} marqué comme problématique: {reason}")
+
+    def reactivate_account(self, username):
+        """Réactive un compte précédemment problématique"""
+        if username in self.accounts:
+            self.accounts[username]['status'] = 'active'
+            if 'last_error' in self.accounts[username]:
+                del self.accounts[username]['last_error']
+            self.save_accounts()
+            print(f"✅ Compte {username} réactivé")
+
+    def connect_with_instagrapi(self, username, password):
+        """Tentative de connexion optimisée pour instagrapi"""
+        try:
+            from instagrapi import Client
+
+            client = Client()
+            client.delay_range = [3, 7]
+
+            client.set_user_agent("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
+
+            print(f"🔐 Connexion instagrapi pour {username}...")
+
+            client.login(username, password)
+
+            try:
+                user_id = client.user_id
+                print(f"✅ Connexion instagrapi réussie! User ID: {user_id}")
+
+                cookies_dict = client.get_cookies()
+                cookies_str = '; '.join([f"{k}={v}" for k, v in cookies_dict.items()])
+
+                if username not in self.accounts:
+                    self.accounts[username] = {}
+
+                self.accounts[username].update({
+                    'password': password,
+                    'cookies': cookies_str,
+                    'status': 'active',
+                    'last_used': datetime.now().isoformat(),
+                    'user_id': user_id
+                })
+
+                self.save_accounts()
+                return client
+
+            except Exception as e:
+                print(f"❌ Erreur vérification connexion: {e}")
+                return None
+
+        except Exception as e:
+            print(f"❌ Erreur connexion instagrapi: {e}")
+            return None
+
+    def get_instagrapi_client_from_cookies(self, username):
+        """Crée un client instagrapi depuis les cookies sauvegardés"""
+        try:
+            from instagrapi import Client
+
+            if username not in self.accounts:
+                return None
+
+            account_data = self.accounts[username]
+            cookies_str = account_data.get('cookies', '')
+
+            if not cookies_str:
+                return None
+
+            client = Client()
+            client.delay_range = [3, 7]
+
+            cookies_dict = {}
+            for cookie in cookies_str.split('; '):
+                if '=' in cookie:
+                    key, value = cookie.split('=', 1)
+                    cookies_dict[key.strip()] = value.strip()
+
+            client.set_cookies(cookies_dict)
+
+            try:
+                client.get_timeline_feed()
+                print(f"✅ Session restaurée pour {username}")
+                return client
+            except Exception:
+                print(f"🔄 Session expirée pour {username}")
+                return None
+
+        except Exception as e:
+            print(f"❌ Erreur création client depuis cookies: {e}")
+            return None
+
     def get_advanced_headers(self, referer=None):
-        """Headers avancés pour éviter la détection"""
+        """Headers avancés"""
         headers = {
             'User-Agent': random.choice(self.user_agents),
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
             'Accept-Encoding': 'gzip, deflate, br',
-            'DNT': '1',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1',
-            'Cache-Control': 'max-age=0',
         }
-
         if referer:
             headers['Referer'] = referer
-
         return headers
 
     def human_delay(self, min_seconds=2, max_seconds=5):
-        """Délai humain aléatoire"""
+        """Délai humain"""
         time.sleep(random.uniform(min_seconds, max_seconds))
 
     def extract_csrf_token(self, html_content, session):
         """Extrait le CSRF token de multiple sources"""
-        # Depuis les cookies
         csrf_token = session.cookies.get('csrftoken')
         if csrf_token:
             return csrf_token
 
-        # Depuis le HTML
         patterns = [
             r'"csrf_token":"([^"]+)"',
             r"csrf_token\":\"([^\"]+)\"",
@@ -89,16 +313,13 @@ class AccountManager:
         return None
 
     def connect_instagram_account(self, username, password):
-        """
-        CONNEXION INSTAGRAM - VERSION CORRIGÉE POUR ERREUR 400
-        """
+        """CONNEXION INSTAGRAM - VERSION CORRIGÉE"""
         print(f"🔐 Connexion Instagram pour {username}...")
 
         session = requests.Session()
         session.headers.update(self.get_advanced_headers())
 
         try:
-            # ÉTAPE 1: Page de login avec plus de délai
             print("📄 Chargement page de connexion...")
             time.sleep(random.uniform(3, 6))
 
@@ -111,7 +332,6 @@ class AccountManager:
                 print(f"❌ Erreur page login: {login_response.status_code}")
                 return False
 
-            # ÉTAPE 2: Extraction CSRF Token améliorée
             csrf_token = self.extract_csrf_token(login_response.text, session)
             if not csrf_token:
                 print("❌ CSRF token non trouvé")
@@ -119,11 +339,9 @@ class AccountManager:
 
             print(f"🔑 Token CSRF récupéré: {csrf_token[:10]}...")
 
-            # ÉTAPE 3: Format de mot de passe CORRECT pour éviter 400
             timestamp = int(time.time())
             enc_password = f"#PWD_INSTAGRAM_BROWSER:0:{timestamp}:{password}"
 
-            # Données de connexion CORRIGÉES
             login_data = {
                 'username': username,
                 'enc_password': enc_password,
@@ -133,7 +351,6 @@ class AccountManager:
                 'loginAttemptCount': 0
             }
 
-            # ÉTAPE 4: Headers CORRIGÉS pour éviter 400
             login_headers = {
                 'User-Agent': random.choice(self.user_agents),
                 'Accept': '*/*',
@@ -143,7 +360,7 @@ class AccountManager:
                 'X-CSRFToken': csrf_token,
                 'X-Requested-With': 'XMLHttpRequest',
                 'X-Instagram-AJAX': '1',
-                'X-IG-App-ID': '936619743392459',  # CRITIQUE
+                'X-IG-App-ID': '936619743392459',
                 'Origin': 'https://www.instagram.com',
                 'Referer': 'https://www.instagram.com/accounts/login/',
                 'Connection': 'keep-alive',
@@ -152,7 +369,6 @@ class AccountManager:
                 'Sec-Fetch-Site': 'same-origin',
             }
 
-            # ÉTAPE 5: Connexion avec plus de délai
             print("🚀 Envoi des identifiants...")
             time.sleep(random.uniform(2, 4))
 
@@ -165,13 +381,11 @@ class AccountManager:
 
             print(f"📊 Réponse serveur: {response.status_code}")
 
-            # AFFICHER PLUS D'INFOS POUR DEBUG
             if response.status_code != 200:
                 print(f"🔍 Headers réponse: {dict(response.headers)}")
                 if response.text:
                     print(f"🔍 Contenu réponse: {response.text[:200]}...")
 
-            # ÉTAPE 6: Analyse réponse
             if response.status_code == 200:
                 try:
                     response_data = response.json()
@@ -193,8 +407,6 @@ class AccountManager:
 
             elif response.status_code == 400:
                 print("❌ ERREUR 400 - Mauvais format de requête")
-                print("💡 Instagram a rejeté la requête de connexion")
-                print("🔧 Vérifiez le format du mot de passe et les headers")
                 return False
 
             else:
@@ -214,16 +426,13 @@ class AccountManager:
     def save_successful_session(self, username, password, session, response_data):
         """Sauvegarde la session après connexion réussie"""
         try:
-            # Conversion cookies
             cookies_dict = dict(session.cookies)
             cookies_str = '; '.join([f"{k}={v}" for k, v in cookies_dict.items()])
 
-            # Vérification cookies essentiels
             if 'sessionid' not in cookies_str:
                 print("⚠️ Cookie sessionid manquant")
                 return False
 
-            # Données de session
             session_info = {
                 'cookies': cookies_dict,
                 'user_id': response_data.get('userId'),
@@ -231,7 +440,6 @@ class AccountManager:
                 'status': 'active'
             }
 
-            # Sauvegarde compte
             self.accounts[username] = {
                 'password': password,
                 'cookies': cookies_str,
@@ -251,103 +459,6 @@ class AccountManager:
             print(f"❌ Erreur sauvegarde session: {e}")
             return False
 
-    # CORRECTION : Méthodes manquantes ajoutées
-    def get_active_accounts(self):
-        """Retourne tous les comptes actifs - CORRIGÉ"""
-        active_accounts = []
-        for username, data in self.accounts.items():
-            if data.get('status') != 'inactive':
-                active_accounts.append({
-                    'username': username,
-                    'cookies': data.get('cookies', ''),
-                    'session_data': data.get('session_data', ''),
-                    'password': data.get('password', '')
-                })
-        return active_accounts
-
-    def get_random_account(self):
-        """Retourne un compte aléatoire actif"""
-        active_accounts = self.get_active_accounts()
-        if active_accounts:
-            return random.choice(active_accounts)
-        return None
-
-    def get_account_by_username(self, username):
-        """Retourne un compte spécifique par username"""
-        return self.accounts.get(username)
-
-    def check_single_account_status(self, username):
-        """Vérifie le statut d'un compte - CORRIGÉ"""
-        if username in self.accounts:
-            account_data = self.accounts[username]
-            cookies = account_data.get('cookies', '')
-            status = account_data.get('status', 'unknown')
-
-            if cookies and 'sessionid' in cookies and status == 'active':
-                return "active"
-            return "no_session"
-        return "not_found"
-
-    def add_account(self, username, password, cookies="", session_data=""):
-        """Ajoute un compte manuellement"""
-        self.accounts[username] = {
-            'password': password,
-            'cookies': cookies,
-            'session_data': session_data,
-            'last_used': datetime.now().isoformat(),
-            'status': 'active'
-        }
-        return self.save_accounts()
-
-    def get_all_accounts(self):
-        """Retourne tous les comptes actifs"""
-        active_accounts = []
-        for username, data in self.accounts.items():
-            if data.get('status') != 'inactive':
-                active_accounts.append((
-                    username,
-                    data.get('cookies', ''),
-                    data.get('session_data', '')
-                ))
-        return active_accounts
-
-    def display_accounts(self):
-        """Affiche tous les comptes avec statut détaillé"""
-        if not self.accounts:
-            print("📭 Aucun compte enregistré")
-            return
-
-        print("\n" + "═" * 50)
-        print("║          COMPTES INSTAGRAM - STATUT         ║")
-        print("═" * 50)
-
-        for i, (username, data) in enumerate(self.accounts.items(), 1):
-            status = self.check_single_account_status(username)
-            status_icon = "✅" if status == "active" else "❌"
-            last_used = data.get('last_used', 'Jamais')
-
-            if len(last_used) > 10:
-                last_used = last_used[:10]
-
-            print(f"│ {i:2d}. {username:<20} {status_icon} {last_used:>10} │")
-
-        print("═" * 50)
-        print(f"📊 Total: {len(self.accounts)} compte(s)")
-
-    def delete_account(self, username):
-        """Supprime un compte"""
-        if username in self.accounts:
-            del self.accounts[username]
-            if self.save_accounts():
-                print(f"✅ Compte {username} supprimé")
-                return True
-        print(f"❌ Compte {username} non trouvé")
-        return False
-
-    def get_account_count(self):
-        """Retourne le nombre de comptes"""
-        return len(self.accounts)
-
     def debug_connection(self, username, password):
         """Fonction de débug pour tester la connexion"""
         print("🔧 MODE DÉBUG CONNEXION")
@@ -355,40 +466,64 @@ class AccountManager:
         session = requests.Session()
         session.headers.update(self.get_advanced_headers())
 
-        # Test connexion basique
         test_response = session.get('https://www.instagram.com/')
         print(f"✅ Test connexion: {test_response.status_code}")
 
-        # Test page login
         login_page = session.get('https://www.instagram.com/accounts/login/')
         print(f"✅ Page login: {login_page.status_code}")
 
-        # Extraction CSRF
         csrf_token = self.extract_csrf_token(login_page.text, session)
         print(f"✅ CSRF Token: {csrf_token}")
 
-        # Test format mot de passe
         timestamp = int(time.time())
         enc_password = f"#PWD_INSTAGRAM_BROWSER:0:{timestamp}:{password}"
         print(f"✅ Format mot de passe: {enc_password[:50]}...")
 
         return True
 
-# Interface utilisateur
+    def display_accounts(self):
+        """Affiche les comptes avec statut détaillé"""
+        if not self.accounts:
+            print("📭 Aucun compte enregistré")
+            return
+
+        print("\n" + "═" * 60)
+        print("║               COMPTES INSTAGRAM - STATUT DÉTAILLÉ            ║")
+        print("═" * 60)
+
+        for i, (username, data) in enumerate(self.accounts.items(), 1):
+            status = data.get('status', 'unknown')
+            has_cookies = '✅' if data.get('cookies') else '❌'
+            has_password = '✅' if data.get('password') else '❌'
+            last_used = data.get('last_used', 'Jamais')[:10]
+
+            status_icon = "✅" if status == "active" else "⚠️" if status == "problem" else "❌"
+
+            print(f"│ {i:2d}. {username:<20} {status_icon} │ Cookies: {has_cookies} │ Pass: {has_password} │ {last_used:>10} │")
+
+        print("═" * 60)
+        print(f"📊 Total: {len(self.accounts)} compte(s)")
+
+# INTERFACE UTILISATEUR
 def main_menu():
     """Menu principal"""
     manager = AccountManager()
 
     while True:
-        print("\n" + "═" * 40)
-        print("║    GESTIONNAIRE COMPTES INSTAGRAM    ║")
-        print("═" * 40)
+        print("\n" + "═" * 50)
+        print("║      GESTIONNAIRE COMPTES INSTAGRAM - INSTAGRAPi    ║")
+        print("═" * 50)
         print(f"📁 Fichier: {manager.accounts_file}")
         print(f"👥 Comptes: {manager.get_account_count()}")
-        print("\n1. 📋 Afficher les comptes")
-        print("2. ➕ Ajouter un compte")
-        print("3. 🗑️ Supprimer un compte")
-        print("4. 🔧 Tester connexion (débug)")
+
+        active_info = manager.get_active_accounts_info()
+        active_count = len([acc for acc in active_info if acc['has_cookies']])
+        print(f"✅ Sessions actives: {active_count}")
+
+        print("\n1. 📋 Afficher les comptes (détail)")
+        print("2. ➕ Ajouter un compte (instagrapi)")
+        print("3. 🔄 Tester connexion instagrapi")
+        print("4. 🗑️ Supprimer un compte")
         print("5. 🚪 Quitter")
 
         choice = input("\n🎯 Choix: ").strip()
@@ -397,23 +532,44 @@ def main_menu():
             manager.display_accounts()
 
         elif choice == "2":
-            print("\n👤 AJOUT D'UN COMPTE INSTAGRAM")
+            print("\n👤 AJOUT COMPTE AVEC INSTAGRAPi")
             username = input("Nom d'utilisateur: ").strip()
             password = input("Mot de passe: ").strip()
 
             if username and password:
-                print(f"\n[ℹ️] Connexion pour {username}...")
-                success = manager.connect_instagram_account(username, password)
-                if success:
-                    print(f"\n🎉 COMPTE {username} PRÊT À UTILISER!")
+                print(f"\n[🔄] Connexion instagrapi pour {username}...")
+                client = manager.connect_with_instagrapi(username, password)
+                if client:
+                    print(f"\n🎉 COMPTE {username} CONFIGURÉ POUR L'AUTOMATISATION!")
                 else:
-                    print(f"\n💔 Échec de la connexion")
+                    print(f"\n💔 Échec de la connexion instagrapi")
             else:
                 print("❌ Identifiants manquants")
 
         elif choice == "3":
+            print("\n🔧 TEST CONNEXION INSTAGRAPi")
             manager.display_accounts()
-            if manager.get_account_count() > 0:
+            if manager.accounts:
+                username = input("Nom d'utilisateur à tester: ").strip()
+                if username in manager.accounts:
+                    client = manager.get_instagrapi_client_from_cookies(username)
+                    if client:
+                        print("✅ Session instagrapi VALIDE!")
+                    else:
+                        print("❌ Session invalide, tentative reconnexion...")
+                        password = manager.accounts[username].get('password')
+                        if password:
+                            manager.connect_with_instagrapi(username, password)
+                        else:
+                            print("❌ Mot de passe manquant")
+                else:
+                    print("❌ Compte non trouvé")
+            else:
+                print("📭 Aucun compte")
+
+        elif choice == "4":
+            manager.display_accounts()
+            if manager.accounts:
                 try:
                     index = int(input("\nNuméro du compte à supprimer: ")) - 1
                     accounts = list(manager.accounts.keys())
@@ -421,24 +577,12 @@ def main_menu():
                         username = accounts[index]
                         if manager.delete_account(username):
                             print("✅ Compte supprimé")
-                        else:
-                            print("❌ Erreur suppression")
                     else:
                         print("❌ Numéro invalide")
                 except ValueError:
                     print("❌ Veuillez entrer un nombre")
             else:
                 print("📭 Aucun compte à supprimer")
-
-        elif choice == "4":
-            print("\n🔧 MODE DÉBUG CONNEXION")
-            username = input("Nom d'utilisateur: ").strip()
-            password = input("Mot de passe: ").strip()
-
-            if username and password:
-                manager.debug_connection(username, password)
-            else:
-                print("❌ Identifiants manquants")
 
         elif choice == "5":
             print("👋 Au revoir!")
