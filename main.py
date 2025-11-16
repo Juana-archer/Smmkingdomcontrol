@@ -186,17 +186,13 @@ class SmmKingdomApp:
                 self.interface.show_message("✅ Compte ajouté avec succès!", "success")
                 print(f"{COLORS['J']}🔍 Vérification du statut du compte...{COLORS['S']}")
 
-                # CORRECTION : Utiliser la méthode INTERNE d'AccountManager
-                status = self.account_manager.check_single_account_status(username)
+                # CORRECTION : Utiliser validate_session au lieu de check_single_account_status
+                status = self.account_manager.validate_session(username)
 
-                if status == "active":
+                if status:
                     self.interface.show_message("🎉 Compte fonctionnel ! Prêt pour l'automatisation.", "success")
-                elif status == "no_session":
-                    self.interface.show_message("📧 Vérification requise. Connecte-toi manuellement sur Instagram.", "warning")
-                elif status == "not_found":
-                    self.interface.show_message("🚫 Compte non trouvé. Vérifiez les identifiants.", "error")
                 else:
-                    self.interface.show_message("❓ Statut inconnu. Le compte pourrait avoir des problèmes.", "warning")
+                    self.interface.show_message("📧 Vérification requise. Connecte-toi manuellement sur Instagram.", "warning")
             else:
                 self.interface.show_message("❌ Échec de l'ajout du compte", "error")
         else:
@@ -214,13 +210,16 @@ class SmmKingdomApp:
             self.interface.show_message("📭 Aucun compte enregistré", "warning")
             self.interface.show_message("💡 Utilisez l'option 2 pour ajouter un compte", "info")
         else:
-            from instagram_tasks import problem_accounts
+            from instagram_tasks import get_problem_accounts
+            problem_accounts = get_problem_accounts()
 
             print(f"{COLORS['C']}╔════════════════════════════════════════╗{COLORS['S']}")
             print(f"{COLORS['C']}║          COMPTES INSTAGRAM             ║{COLORS['S']}")
             print(f"{COLORS['C']}╠════════════════════════════════════════╣{COLORS['S']}")
 
-            for i, (username, cookies, session_data) in enumerate(accounts, 1):
+            # CORRECTION : Itération correcte sur le dictionnaire
+            for i, (username, account_data) in enumerate(accounts.items(), 1):
+                cookies = account_data.get('cookies', '')
                 # Vérifier si le compte a des problèmes
                 if username in problem_accounts:
                     status_icon = "🚫"
@@ -236,7 +235,7 @@ class SmmKingdomApp:
             print(f"{COLORS['C']}╚════════════════════════════════════════╝{COLORS['S']}")
 
             # Statistiques
-            problem_count = len([acc for acc in accounts if acc[0] in problem_accounts])
+            problem_count = len([acc for acc in accounts if acc in problem_accounts])
             working_count = len(accounts) - problem_count
 
             print(f"{COLORS['J']}📊 Total: {len(accounts)} compte(s) | {working_count}✅ actifs | {problem_count}🚫 problèmes{COLORS['S']}")
@@ -262,40 +261,33 @@ class SmmKingdomApp:
         working_count = 0
         problem_count = 0
 
-        # CORRECTION : Utiliser AccountManager pour le statut au lieu de l'import supprimé
-        from instagram_tasks import problem_accounts
+        # CORRECTION : Utiliser get_problem_accounts()
+        from instagram_tasks import get_problem_accounts
+        problem_accounts = get_problem_accounts()
 
-        for i, (username, cookies, session_data) in enumerate(accounts, 1):
+        # CORRECTION : Itération correcte
+        for i, (username, account_data) in enumerate(accounts.items(), 1):
+            cookies = account_data.get('cookies', '')
             print(f"{COLORS['B']}║ {COLORS['J']}[{i}] {username:<25}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
 
-            # CORRECTION : Utiliser AccountManager pour vérifier le statut
-            status = self.account_manager.check_single_account_status(username)
+            # CORRECTION : Utiliser validate_session
+            status = self.account_manager.validate_session(username)
 
-            if status == "active":
+            if status:
                 status_icon = "✅"
                 status_text = "FONCTIONNEL"
                 color = COLORS['V']
                 working_count += 1
-            elif status == "no_session":
+            else:
                 status_icon = "🔓"
                 status_text = "PAS DE SESSION"
                 color = COLORS['J']
-                problem_count += 1
-            elif status == "not_found":
-                status_icon = "❓"
-                status_text = "NON TROUVÉ"
-                color = COLORS['R']
-                problem_count += 1
-            else:
-                status_icon = "⚠️"
-                status_text = "PROBLÈME"
-                color = COLORS['R']
                 problem_count += 1
 
             print(f"{COLORS['B']}║   {color}{status_icon} {status_text:<20}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
 
             # Afficher la raison si problème
-            if status != "active" and username in problem_accounts:
+            if not status and username in problem_accounts:
                 reason = problem_accounts[username].get('reason', 'Raison inconnue')
                 print(f"{COLORS['B']}║   📋 {reason:<35} {COLORS['B']}║{COLORS['S']}")
 
@@ -322,10 +314,12 @@ class SmmKingdomApp:
             self.interface.press_enter()
             return
 
-        from instagram_tasks import problem_accounts
+        from instagram_tasks import get_problem_accounts
+        problem_accounts = get_problem_accounts()
 
         problem_accounts_list = []
-        for username, cookies, session_data in accounts:
+        # CORRECTION : Itération correcte
+        for username, account_data in accounts.items():
             if username in problem_accounts:
                 problem_accounts_list.append(username)
 
@@ -364,10 +358,12 @@ class SmmKingdomApp:
             return
 
         # Afficher la liste numérotée avec statuts
-        from instagram_tasks import problem_accounts
+        from instagram_tasks import get_problem_accounts
+        problem_accounts = get_problem_accounts()
 
         print(f"{COLORS['C']}Comptes disponibles:{COLORS['S']}")
-        for i, (username, cookies, session_data) in enumerate(accounts, 1):
+        # CORRECTION : Itération correcte
+        for i, (username, account_data) in enumerate(accounts.items(), 1):
             status_icon = "🚫" if username in problem_accounts else "✅"
             print(f"  {COLORS['V']}[{i}] {username} {status_icon}{COLORS['S']}")
         print()
@@ -378,8 +374,9 @@ class SmmKingdomApp:
             self.interface.show_message("❌ Suppression annulée", "warning")
         elif choice.isdigit():
             index = int(choice) - 1
-            if 0 <= index < len(accounts):
-                username = accounts[index][0]
+            usernames = list(accounts.keys())
+            if 0 <= index < len(usernames):
+                username = usernames[index]
                 confirm = self.interface.get_input(f"Supprimer {username}? (o/n)").lower()
 
                 if confirm == 'o' or confirm == 'oui':
@@ -409,7 +406,10 @@ class SmmKingdomApp:
             print(f"{COLORS['C']}║                     COOKIES DES COMPTES                  ║{COLORS['S']}")
             print(f"{COLORS['C']}╠══════════════════════════════════════════════════════════╣{COLORS['S']}")
 
-            for i, (username, cookies_str, session_data) in enumerate(accounts, 1):
+            # CORRECTION : Itération correcte
+            for i, (username, account_data) in enumerate(accounts.items(), 1):
+                cookies_str = account_data.get('cookies', '')
+                session_data = account_data.get('session_data', '')
                 print(f"{COLORS['B']}║ {COLORS['V']}[{i}] {username}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
                 try:
                     if session_data:
