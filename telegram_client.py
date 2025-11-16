@@ -1,4 +1,4 @@
-# telegram_client.py - VERSION COMPLÈTE CORRIGÉE
+# telegram_client.py - VERSION RECONNEXION AUTOMATIQUE
 import asyncio
 import random
 import time
@@ -7,7 +7,7 @@ from datetime import datetime
 from telethon import TelegramClient, events
 from config import TELEGRAM_CONFIG
 from account_manager import AccountManager
-from instagram_tasks import execute_instagram_task, clean_corrupted_sessions
+from instagram_tasks import execute_instagram_task, clean_corrupted_sessions, initialize_sessions_with_recovery
 
 class SmmKingdomAutomation:
     def __init__(self):
@@ -45,19 +45,19 @@ class SmmKingdomAutomation:
         # Icônes pour chaque action
         icons = {
             'like': '❤️',
-            'follow': '👤', 
+            'follow': '👤',
             'comment': '💬',
             'story': '📖',
             'video': '🎥'
         }
-        
+
         action_lower = action.lower()
         icon = '⚡'
         for key, value in icons.items():
             if key in action_lower:
                 icon = value
                 break
-                
+
         print(f"{timestamp} {action} {icon}")
 
     def print_success(self):
@@ -79,9 +79,13 @@ class SmmKingdomAutomation:
             me = await self.client.get_me()
             print(f"✔ Connecté à Telegram avec succès")
 
+            # ✅ NOUVEAU : SESSIONS AVEC RECONNEXION AUTOMATIQUE
+            session_count = initialize_sessions_with_recovery()
+            print(f"🔐 {session_count} session(s) avec reconnexion auto initialisée(s)")
+
             # Nettoyage silencieux
             clean_corrupted_sessions()
-            
+
             # Vérification des sessions AVEC DÉTECTION CORRIGÉE
             print("[*] Vérification des sessions Instagram...")
             await self.check_all_sessions()
@@ -98,15 +102,17 @@ class SmmKingdomAutomation:
         """Vérifie les sessions - DÉTECTION CORRIGÉE"""
         accounts = self.account_manager.get_all_accounts()
         active_count = 0
-        
-        for username, cookies, session_data in accounts:
+
+        # ✅ CORRECTION : Itération correcte sur le dictionnaire
+        for username, account_data in accounts.items():
+            cookies = account_data.get('cookies', '')
             # ✅ CORRECTION : Vérifier si cookies existe (peu importe le format)
             if cookies and len(cookies.strip()) > 20:
                 print(f"✔ Session restaurée pour {username}")
                 active_count += 1
             else:
                 print(f"🔄 Session manquante pour {username}")
-        
+
         print(f"📊 {active_count} compte(s) actif(s) sur {len(accounts)} total")
         return active_count
 
@@ -150,7 +156,8 @@ class SmmKingdomAutomation:
             print("❌ Aucun compte disponible")
             return
 
-        for username, cookies, session_data in accounts:
+        # ✅ CORRECTION : Itération correcte sur le dictionnaire
+        for username, account_data in accounts.items():
             if not self.is_running:
                 break
 
@@ -185,7 +192,7 @@ class SmmKingdomAutomation:
                         self.print_link(task_info['link'])
                         self.print_action(task_info['action'])
 
-                        # Exécuter la tâche Instagram
+                        # Exécuter la tâche Instagram AVEC RECONNEXION AUTO
                         success = execute_instagram_task(task_text, username)
 
                         if success:
@@ -251,12 +258,10 @@ class SmmKingdomAutomation:
         if any(pattern in text_lower for pattern in ignore_patterns):
             return False
 
-        # ÉLÉMENTS REQUIS POUR TOUTES LES TÂCHES
+        # ✅ CORRECTION : Patterns requis plus flexibles
         required_patterns = [
-            'link',
-            'action',
-            'instagram.com',
-            'cashcoins'
+            'instagram.com'
+            # Supprimé 'link', 'action', 'cashcoins' pour plus de flexibilité
         ]
 
         # ACTIONS SUPPORTÉES
