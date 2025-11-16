@@ -9,7 +9,7 @@
       "activated_by": "DahEry",
       "duration_days": 7
      },
-    "02b46d990" : {
+    "88e6e8dce136" : {
       "status": "active",
       "plan": "basic",
       "expire_date": "2025-11-09",
@@ -21,9 +21,9 @@
     "574d393581b1" : {
       "status": "active",
       "plan": "basic",
-      "expire_date": "2025-11-13",
+      "expire_date": "2025-11-30",
       "expire_time": "23:59",
-      "activated_date": "2025-10-31",
+      "activated_date": "2025-11-16",
       "activated_by": "DahEry",
       "duration_days": 7
     },
