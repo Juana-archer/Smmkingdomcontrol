@@ -19,11 +19,33 @@ class AccountManager:
         ]
 
     # ======================================================
+    # NOUVELLE MÉTHODE : NETTOYAGE COOKIES
+    # ======================================================
+
+    def clean_duplicate_cookies(self, session):
+        """Nettoie les cookies dupliqués dans la session"""
+        try:
+            # Créer un nouveau cookiejar sans doublons
+            clean_cookies = {}
+            for cookie in session.cookies:
+                clean_cookies[cookie.name] = cookie.value
+            
+            # Recréer la session avec cookies propres
+            session.cookies.clear()
+            for name, value in clean_cookies.items():
+                session.cookies.set(name, value)
+                
+            return True
+        except Exception as e:
+            print(f"⚠️ Erreur nettoyage cookies: {e}")
+            return False
+
+    # ======================================================
     # MÉTHODES PRINCIPALES POUR INSTAGRAM_TASKS.PY
     # ======================================================
 
     def get_requests_session_for_tasks(self, username):
-        """MÉTHODE PRINCIPALE - Fournit session requests pour instagram_tasks.py"""
+        """MÉTHODE PRINCIPALE - Fournit session requests pour instagram_tasks.py - VERSION CORRIGÉE"""
         print(f"🔍 Récupération session requests pour {username}")
         
         # Vérifier si le compte existe
@@ -34,6 +56,8 @@ class AccountManager:
         # Charger la session existante
         session = self.load_session_requests(username)
         if session and self.session_valid_requests(session):
+            # ✅ NETTOYER LES COOKIES AVANT UTILISATION
+            self.clean_duplicate_cookies(session)
             print(f"✅ Session requests valide pour {username}")
             return session
         
@@ -43,6 +67,8 @@ class AccountManager:
             print(f"🔄 Reconnexion nécessaire pour {username}")
             success, new_session = self.login_instagram_requests(username, password)
             if success:
+                # ✅ NETTOYER LES COOKIES DE LA NOUVELLE SESSION
+                self.clean_duplicate_cookies(new_session)
                 return new_session
         
         print(f"❌ Impossible d'obtenir session pour {username}")
@@ -238,7 +264,7 @@ class AccountManager:
             return False
 
     # ======================================================
-    # MÉTHODES DE GESTION DES COMPTES
+    # MÉTHODES DE GESTION DES COMPTES (CONSERVÉES)
     # ======================================================
 
     def load_accounts(self):
