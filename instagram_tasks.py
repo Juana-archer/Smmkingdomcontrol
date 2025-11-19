@@ -212,11 +212,16 @@ def perform_action_with_requests(username, task_info):
         mark_account_suspended(username, f"Exception: {str(e)}")
         return False
 
-# ✅ FONCTIONS D'ACTION AVEC REQUESTS
+# ✅ FONCTIONS D'ACTION AVEC REQUESTS - CORRIGÉES
 def perform_like_with_requests(session, link, username):
-    """Like avec requests"""
+    """Like avec requests - VERSION CORRIGÉE"""
     try:
         print(f"❤️ Tentative de like pour {username}")
+        
+        # Nettoyer les cookies avant l'action
+        from account_manager import AccountManager
+        manager = AccountManager()
+        manager.clean_duplicate_cookies(session)
         
         # Extraire l'ID média du lien
         media_id = extract_media_id_from_url(link)
@@ -230,9 +235,15 @@ def perform_like_with_requests(session, link, username):
         # Endpoint pour like
         like_url = f"https://www.instagram.com/api/v1/web/likes/{media_id}/like/"
         
+        # Récupérer le CSRF token des cookies nettoyés
+        csrf_token = session.cookies.get('csrftoken')
+        if not csrf_token:
+            print("❌ CSRF token manquant")
+            return False
+            
         # Headers pour la requête API
         headers = {
-            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-CSRFToken': csrf_token,
             'X-Requested-With': 'XMLHttpRequest',
             'X-IG-App-ID': '936619743392459',
             'Referer': 'https://www.instagram.com/',
@@ -254,9 +265,14 @@ def perform_like_with_requests(session, link, username):
         return False
 
 def perform_follow_with_requests(session, link, username):
-    """Follow avec requests"""
+    """Follow avec requests - VERSION CORRIGÉE"""
     try:
         print(f"👤 Tentative de follow pour {username}")
+        
+        # Nettoyer les cookies avant l'action
+        from account_manager import AccountManager
+        manager = AccountManager()
+        manager.clean_duplicate_cookies(session)
         
         # Extraire le username du profil
         target_username = extract_username_from_url(link)
@@ -276,8 +292,14 @@ def perform_follow_with_requests(session, link, username):
         # Endpoint pour follow
         follow_url = f"https://www.instagram.com/api/v1/friendships/create/{user_id}/follow/"
         
+        # Récupérer le CSRF token des cookies nettoyés
+        csrf_token = session.cookies.get('csrftoken')
+        if not csrf_token:
+            print("❌ CSRF token manquant")
+            return False
+            
         headers = {
-            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-CSRFToken': csrf_token,
             'X-Requested-With': 'XMLHttpRequest',
             'X-IG-App-ID': '936619743392459',
             'Referer': f'https://www.instagram.com/{target_username}/',
@@ -299,9 +321,14 @@ def perform_follow_with_requests(session, link, username):
         return False
 
 def perform_comment_with_requests(session, link, username):
-    """Commentaire avec requests"""
+    """Commentaire avec requests - VERSION CORRIGÉE"""
     try:
         print(f"💬 Tentative de commentaire pour {username}")
+        
+        # Nettoyer les cookies avant l'action
+        from account_manager import AccountManager
+        manager = AccountManager()
+        manager.clean_duplicate_cookies(session)
         
         media_id = extract_media_id_from_url(link)
         if not media_id:
@@ -321,8 +348,14 @@ def perform_comment_with_requests(session, link, username):
 
         comment_url = f"https://www.instagram.com/api/v1/web/comments/{media_id}/add/"
         
+        # Récupérer le CSRF token des cookies nettoyés
+        csrf_token = session.cookies.get('csrftoken')
+        if not csrf_token:
+            print("❌ CSRF token manquant")
+            return False
+            
         headers = {
-            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-CSRFToken': csrf_token,
             'X-Requested-With': 'XMLHttpRequest',
             'X-IG-App-ID': '936619743392459',
             'Referer': link,
@@ -371,7 +404,7 @@ def perform_watch_with_requests(session, link, username):
         print(f"❌ Erreur watch avec requests: {e}")
         return False
 
-# ✅ FONCTIONS UTILITAIRES POUR REQUESTS
+# ✅ FONCTIONS UTILITAIRES POUR REQUESTS - CORRIGÉES
 def extract_media_id_from_url(url):
     """Extrait l'ID média d'une URL Instagram"""
     try:
@@ -389,29 +422,64 @@ def extract_media_id_from_url(url):
         return None
 
 def extract_username_from_url(url):
-    """Extrait le username d'une URL de profil"""
+    """Extrait le username d'une URL de profil - VERSION CORRIGÉE"""
     try:
-        pattern = r'instagram\.com/([a-zA-Z0-9_.]+)/?'
-        match = re.search(pattern, url)
-        if match:
-            return match.group(1)
+        # Nettoyer l'URL d'abord
+        clean_url = clean_instagram_url(url)
+        if not clean_url:
+            return None
+            
+        # Patterns améliorés pour les URLs Instagram
+        patterns = [
+            r'instagram\.com/([a-zA-Z0-9_.]+)/?$',
+            r'instagram\.com/([a-zA-Z0-9_.]+)\?',
+            r'instagram\.com/([a-zA-Z0-9_.]+)'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, clean_url)
+            if match:
+                username = match.group(1)
+                # Filtrer les noms de pages spéciaux
+                if username not in ['p', 'reel', 'stories', 'explore', 'accounts']:
+                    return username
         return None
     except:
         return None
 
 def get_user_id_from_username(session, username):
-    """Récupère l'user_id depuis un username"""
+    """Récupère l'user_id depuis un username - VERSION CORRIGÉE"""
     try:
         profile_url = f"https://www.instagram.com/{username}/"
-        response = session.get(profile_url, timeout=15)
+        
+        # Headers améliorés
+        headers = {
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+        }
+        
+        response = session.get(profile_url, headers=headers, timeout=15)
         
         if response.status_code == 200:
-            pattern = r'"user_id":"(\d+)"'
-            match = re.search(pattern, response.text)
-            if match:
-                return match.group(1)
+            # Recherche améliorée de l'user_id
+            patterns = [
+                r'"user_id":"(\d+)"',
+                r'"profile_user_id":"(\d+)"',
+                r'instagram://user\?id=(\d+)',
+                r'content="instagram://user\?id=(\d+)"'
+            ]
+            
+            for pattern in patterns:
+                match = re.search(pattern, response.text)
+                if match:
+                    return match.group(1)
+                    
+        print(f"❌ User ID non trouvé pour {username} (status: {response.status_code})")
         return None
-    except:
+        
+    except Exception as e:
+        print(f"❌ Erreur récupération user_id: {e}")
         return None
 
 # ✅ FONCTIONS EXISTANTES CONSERVÉES
