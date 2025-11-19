@@ -1,4 +1,4 @@
-# telegram_client.py - VERSION RECONNEXION AUTOMATIQUE
+# telegram_client.py - VERSION SILENCIEUSE
 import asyncio
 import random
 import time
@@ -7,7 +7,7 @@ from datetime import datetime
 from telethon import TelegramClient, events
 from config import TELEGRAM_CONFIG
 from account_manager import AccountManager
-from instagram_tasks import execute_instagram_task, clean_corrupted_sessions, initialize_sessions_with_recovery
+from instagram_tasks import execute_instagram_task
 
 class SmmKingdomAutomation:
     def __init__(self):
@@ -79,15 +79,11 @@ class SmmKingdomAutomation:
             me = await self.client.get_me()
             print(f"✔ Connecté à Telegram avec succès")
 
-            # ✅ NOUVEAU : SESSIONS AVEC RECONNEXION AUTOMATIQUE
-            session_count = initialize_sessions_with_recovery()
-            print(f"🔐 {session_count} session(s) avec reconnexion auto initialisée(s)")
+            # ✅ INITIALISATION SILENCIEUSE DES SESSIONS
+            session_count = self.initialize_sessions_silent()
+            print(f"🔐 {session_count} session(s) Instagram prête(s)")
 
-            # Nettoyage silencieux
-            clean_corrupted_sessions()
-
-            # Vérification des sessions AVEC DÉTECTION CORRIGÉE
-            print("[*] Vérification des sessions Instagram...")
+            # Vérification des sessions
             await self.check_all_sessions()
 
             # DÉMARRER L'AUTOMATISATION
@@ -98,20 +94,43 @@ class SmmKingdomAutomation:
         finally:
             await self.cleanup()
 
+    def initialize_sessions_silent(self):
+        """Initialisation SILENCIEUSE - Reconnexion automatique si nécessaire"""
+        manager = AccountManager()
+        valid_sessions = 0
+
+        for username, data in manager.accounts.items():
+            try:
+                # Vérifier silencieusement si la session est valide
+                if manager.validate_session(username):
+                    valid_sessions += 1
+                    # Session valide - aucune action nécessaire
+                    continue
+                
+                # Session invalide - reconnexion silencieuse
+                password = data.get('password')
+                if password:
+                    success, session = manager.login_instagram_requests(username, password)
+                    if success:
+                        valid_sessions += 1
+                    # Échec silencieux - pas de message d'erreur
+                # Pas de password - échec silencieux
+                    
+            except Exception:
+                # Erreur silencieuse - on continue avec les autres comptes
+                pass
+
+        return valid_sessions
+
     async def check_all_sessions(self):
-        """Vérifie les sessions - DÉTECTION CORRIGÉE"""
+        """Vérification silencieuse des sessions"""
         accounts = self.account_manager.get_all_accounts()
         active_count = 0
 
-        # ✅ CORRECTION : Itération correcte sur le dictionnaire
         for username, account_data in accounts.items():
             cookies = account_data.get('cookies', '')
-            # ✅ CORRECTION : Vérifier si cookies existe (peu importe le format)
             if cookies and len(cookies.strip()) > 20:
-                print(f"✔ Session restaurée pour {username}")
                 active_count += 1
-            else:
-                print(f"🔄 Session manquante pour {username}")
 
         print(f"📊 {active_count} compte(s) actif(s) sur {len(accounts)} total")
         return active_count
@@ -156,10 +175,13 @@ class SmmKingdomAutomation:
             print("❌ Aucun compte disponible")
             return
 
-        # ✅ CORRECTION : Itération correcte sur le dictionnaire
         for username, account_data in accounts.items():
             if not self.is_running:
                 break
+
+            # Vérification silencieuse de la session avant traitement
+            if not self.silent_session_check(username):
+                continue  # Passe au compte suivant silencieusement
 
             # Afficher le username
             self.print_username(username)
@@ -192,8 +214,8 @@ class SmmKingdomAutomation:
                         self.print_link(task_info['link'])
                         self.print_action(task_info['action'])
 
-                        # Exécuter la tâche Instagram AVEC RECONNEXION AUTO
-                        success = execute_instagram_task(task_text, username)
+                        # Exécuter la tâche Instagram
+                        success = await self.execute_task_sync_wrapper(task_text, username)
 
                         if success:
                             # Marquer comme complété dans SMM Kingdom
@@ -233,6 +255,44 @@ class SmmKingdomAutomation:
                 else:
                     await asyncio.sleep(2)
 
+    def silent_session_check(self, username):
+        """Vérification SILENCIEUSE de la session - retourne True si valide"""
+        try:
+            manager = AccountManager()
+            
+            # Vérifier si la session est valide
+            if manager.validate_session(username):
+                return True
+            
+            # Session invalide - tentative de reconnexion silencieuse
+            account_data = manager.accounts.get(username, {})
+            password = account_data.get('password')
+            
+            if password:
+                success, session = manager.login_instagram_requests(username, password)
+                return success
+            
+            return False
+            
+        except Exception:
+            # Erreur silencieuse
+            return False
+
+    async def execute_task_sync_wrapper(self, task_text, username):
+        """Wrapper pour exécuter la fonction synchrone dans asyncio"""
+        try:
+            loop = asyncio.get_event_loop()
+            success = await loop.run_in_executor(
+                None, 
+                execute_instagram_task, 
+                task_text, 
+                username
+            )
+            return success
+        except Exception as e:
+            print(f"❌ Erreur exécution tâche: {e}")
+            return False
+
     def is_real_task_all_actions(self, text):
         """Détection de TOUTES les actions SMM Kingdom"""
         if not text:
@@ -258,10 +318,9 @@ class SmmKingdomAutomation:
         if any(pattern in text_lower for pattern in ignore_patterns):
             return False
 
-        # ✅ CORRECTION : Patterns requis plus flexibles
+        # ✅ Patterns requis
         required_patterns = [
             'instagram.com'
-            # Supprimé 'link', 'action', 'cashcoins' pour plus de flexibilité
         ]
 
         # ACTIONS SUPPORTÉES
