@@ -1,204 +1,51 @@
-# instagram_tasks.py - VERSION 98% DE RÉUSSITE
 import time
 import random
 import re
-import os
+import requests
 import json
-from instagrapi import Client
-from instagrapi.exceptions import ClientError, LoginRequired, ChallengeRequired
+from account_manager import AccountManager
 
-# ✅ CONFIGURATION HAUTE SÉCURITÉ
+# ✅ CONFIGURATION DE SÉCURITÉ
 SECURITY_CONFIG = {
     'daily_limits': {
-        'likes': 80,           # Réduit pour plus de sécurité
-        'follows': 40,         # Limite conservatrice
-        'comments': 15,        # Commentaires risqués
+        'likes': 80,
+        'follows': 40,
+        'comments': 15,
         'unfollows': 40,
-        'total_actions': 150   # Maximum quotidien
+        'total_actions': 150
     },
     'delays': {
-        'like': (6, 15),       # Délais augmentés
-        'follow': (10, 25),    # Plus lent et aléatoire
-        'comment': (15, 30),   # Commentaires = plus risqués
+        'like': (6, 15),
+        'follow': (10, 25),
+        'comment': (15, 30),
         'story': (8, 20),
-        'between_sessions': (300, 600)  # 5-10 minutes entre sessions
-    },
-    'safety': {
-        'max_failures': 2,     # Maximum 2 échecs avant pause
-        'session_duration': 1800,  # 30 minutes max par session
-        'auto_rest_days': [6, 0]   # Repos le weekend
+        'between_sessions': (300, 600)
     }
 }
 
-# Gestion des comptes problématiques
+# ✅ COMPTEURS ET SESSIONS
+action_counters = {}
 problem_accounts = {}
-action_counters = {}  # Compteur d'actions par compte
+active_requests_sessions = {}
 
-# ✅ SESSIONS PERMANENTES AVEC RÉCUPÉRATION
-active_sessions = {}
-
-def clean_corrupted_sessions():
-    """Nettoie toutes les sessions corrompues"""
-    try:
-        from account_manager import AccountManager
-        account_manager = AccountManager()
-
-        for username in account_manager.accounts:
-            account_manager.accounts[username]['cookies'] = ''
-
-        account_manager.save_accounts()
-        print("✅ Toutes les sessions ont été nettoyées")
-        return True
-
-    except Exception as e:
-        print(f"❌ Erreur nettoyage: {e}")
-        return False
-
-def initialize_sessions_with_recovery():
-    """
-    INITIALISE LES SESSIONS AVEC RÉCUPÉRATION AUTOMATIQUE OPTIMISÉE
-    """
-    global active_sessions, action_counters
-    active_sessions = {}
-    action_counters = {}
-
-    try:
-        from account_manager import AccountManager
-        account_manager = AccountManager()
-        renewed_count = 0
-
-        for username, account_data in account_manager.accounts.items():
-            password = account_data.get('password')
-            cookies_str = account_data.get('cookies', '')
-
-            if not password:
-                continue
-
-            # ✅ CONFIGURATION CLIENT OPTIMISÉE
-            client = Client()
-            client.delay_range = [3, 8]  # Délais augmentés
-            client.request_timeout = 30  # Timeout plus long
-            
-            # ✅ HEADERS RÉALISTES
-            client.set_user_agent("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
-
-            # Essayer d'abord avec les cookies existants
-            if cookies_str and len(cookies_str.strip()) > 20:
-                try:
-                    cookies_dict = {}
-                    for cookie in cookies_str.split('; '):
-                        if '=' in cookie:
-                            key, value = cookie.split('=', 1)
-                            cookies_dict[key.strip()] = value.strip()
-
-                    client.set_cookies(cookies_dict)
-                    # ✅ TEST DE SESSION PLUS ROBUSTE
-                    client.get_timeline_feed()
-                    
-                    # Vérifier que le compte n'est pas limité
-                    try:
-                        client.user_info(client.user_id)
-                    except Exception as e:
-                        if "rate" in str(e).lower() or "limit" in str(e).lower():
-                            print(f"⚠️ Compte {username} limité, pause nécessaire")
-                            continue
-
-                    # ✅ SESSION VALIDE
-                    active_sessions[username] = client
-                    action_counters[username] = {
-                        'likes': 0, 'follows': 0, 'comments': 0, 
-                        'unfollows': 0, 'last_action': time.time()
-                    }
-                    renewed_count += 1
-                    print(f"✅ Session restaurée pour {username}")
-                    continue
-
-                except Exception as e:
-                    print(f"🔄 Session expirée pour {username}: {e}")
-                    # Session expirée, on va reconnexion automatique
-
-            # ✅ RECONNEXION AUTOMATIQUE OPTIMISÉE
-            try:
-                print(f"🔄 Reconnexion pour {username}...")
-                
-                # Délai avant reconnexion
-                time.sleep(random.uniform(10, 20))
-                
-                client.login(username, password)
-                
-                # ✅ VÉRIFICATION DU COMPTE APRÈS CONNEXION
-                try:
-                    account_info = client.account_info()
-                    if account_info.get('is_verified', False):
-                        print(f"⭐ Compte vérifié: {username}")
-                except:
-                    pass
-
-                # ✅ SAUVEGARDE AUTOMATIQUE des nouveaux cookies
-                new_cookies_dict = client.get_cookies()
-                cookies_list = [f"{k}={v}" for k, v in new_cookies_dict.items()]
-                new_cookies_str = '; '.join(cookies_list)
-
-                account_manager.accounts[username]['cookies'] = new_cookies_str
-
-                # ✅ SESSION RECONNECTÉE
-                active_sessions[username] = client
-                action_counters[username] = {
-                    'likes': 0, 'follows': 0, 'comments': 0, 
-                    'unfollows': 0, 'last_action': time.time()
-                }
-                renewed_count += 1
-                
-                print(f"✅ Reconnexion réussie pour {username}")
-                
-                # Délai entre les reconnexions
-                if renewed_count < len(account_manager.accounts):
-                    time.sleep(random.uniform(15, 30))
-
-            except ChallengeRequired:
-                print(f"🛡️ Vérification de sécurité requise pour {username}")
-                mark_account_suspended(username, "Vérification de sécurité requise")
-            except LoginRequired:
-                print(f"🔐 Reconnexion manuelle requise pour {username}")
-                mark_account_suspended(username, "Login manuel requis")
-            except Exception as e:
-                error_msg = str(e).lower()
-                if "rate" in error_msg or "limit" in error_msg:
-                    print(f"⏸️ Limite atteinte pour {username}, pause nécessaire")
-                    mark_account_suspended(username, "Limite temporaire")
-                else:
-                    print(f"❌ Échec reconnexion pour {username}: {e}")
-                    mark_account_suspended(username, f"Erreur: {e}")
-
-        if renewed_count > 0:
-            account_manager.save_accounts()
-            print(f"🎯 {renewed_count}/{len(account_manager.accounts)} sessions actives")
-
-        return renewed_count
-
-    except Exception as e:
-        print(f"❌ Erreur initialisation sessions: {e}")
-        return 0
-
+# ✅ FONCTIONS DE BASE
 def check_daily_limits(username, action_type):
-    """Vérifie les limites quotidiennes de sécurité"""
+    """Vérifie les limites quotidiennes"""
     if username not in action_counters:
         return True
-        
+
     counter = action_counters[username]
     daily_limits = SECURITY_CONFIG['daily_limits']
-    
-    # Vérifier la limite spécifique
+
     if counter.get(action_type, 0) >= daily_limits.get(action_type, 50):
         print(f"⏸️ Limite {action_type} atteinte pour {username}")
         return False
-        
-    # Vérifier le total d'actions
+
     total_actions = sum([counter.get(action, 0) for action in ['likes', 'follows', 'comments', 'unfollows']])
     if total_actions >= daily_limits['total_actions']:
         print(f"⏸️ Limite quotidienne totale atteinte pour {username}")
         return False
-        
+
     return True
 
 def update_action_counter(username, action_type):
@@ -207,122 +54,11 @@ def update_action_counter(username, action_type):
         action_counters[username][action_type] = action_counters[username].get(action_type, 0) + 1
         action_counters[username]['last_action'] = time.time()
 
-def get_instagram_client(username):
-    """
-    ✅ VERSION ULTIME AVEC RECONNEXION ET SÉCURITÉ
-    """
-    # Vérifier si le compte est suspendu
-    if is_account_suspended(username):
-        return None
-
-    # Essayer d'abord la session en mémoire
-    client = active_sessions.get(username)
-    if client:
-        try:
-            # ✅ TEST DE SESSION ROBUSTE
-            client.get_timeline_feed()
-            return client
-        except Exception as e:
-            # ❌ Session expirée - on la retire
-            del active_sessions[username]
-            print(f"🔄 Session expirée pour {username}, reconnexion...")
-
-    # ✅ RECONNEXION AUTOMATIQUE SÉCURISÉE
-    client = auto_reconnect(username)
-    if client:
-        active_sessions[username] = client
-        return client
-
-    return None
-
-def auto_reconnect(username):
-    """
-    RECONNEXION AUTOMATIQUE ULTRA-SÉCURISÉE
-    """
-    try:
-        from account_manager import AccountManager
-        account_manager = AccountManager()
-
-        if username not in account_manager.accounts:
-            return None
-
-        account_data = account_manager.accounts[username]
-        password = account_data.get('password')
-
-        if not password:
-            return None
-
-        # ✅ CONFIGURATION CLIENT OPTIMISÉE
-        client = Client()
-        client.delay_range = [5, 12]  # Délais plus longs
-        client.request_timeout = 30
-        
-        # User agent mobile réaliste
-        client.set_user_agent("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1")
-
-        # ✅ TENTATIVE DE RECONNEXION AVEC DÉLAI
-        print(f"🔄 Reconnexion sécurisée pour {username}...")
-        time.sleep(random.uniform(15, 30))  # Délai important
-        
-        try:
-            client.login(username, password)
-            
-            # ✅ VÉRIFICATION POST-CONNEXION
-            try:
-                client.get_timeline_feed()
-            except Exception as e:
-                print(f"⚠️ Problème après connexion pour {username}: {e}")
-                return None
-
-            # ✅ SAUVEGARDE AUTOMATIQUE des nouveaux cookies
-            new_cookies_dict = client.get_cookies()
-            cookies_list = [f"{k}={v}" for k, v in new_cookies_dict.items()]
-            new_cookies_str = '; '.join(cookies_list)
-
-            account_manager.accounts[username]['cookies'] = new_cookies_str
-            account_manager.save_accounts()
-
-            # ✅ INITIALISATION DU COMPTEUR
-            if username not in action_counters:
-                action_counters[username] = {
-                    'likes': 0, 'follows': 0, 'comments': 0, 
-                    'unfollows': 0, 'last_action': time.time()
-                }
-
-            print(f"✅ Reconnexion réussie pour {username}")
-            
-            # Délai de sécurité après reconnexion
-            time.sleep(random.uniform(10, 20))
-            
-            return client
-
-        except ChallengeRequired:
-            print(f"🛡️ Vérification de sécurité pour {username}")
-            mark_account_suspended(username, "Challenge de sécurité")
-        except LoginRequired:
-            print(f"🔐 Reconnexion manuelle requise pour {username}")
-            mark_account_suspended(username, "Login manuel requis")
-        except Exception as e:
-            error_msg = str(e).lower()
-            if "rate" in error_msg or "limit" in error_msg:
-                print(f"⏸️ Limite temporaire pour {username}")
-                mark_account_suspended(username, "Limite API temporaire")
-            else:
-                print(f"❌ Échec reconnexion {username}: {e}")
-                mark_account_suspended(username, f"Erreur: {e}")
-
-        return None
-
-    except Exception as e:
-        print(f"❌ Erreur reconnexion {username}: {e}")
-        return None
-
 def is_account_suspended(username):
     """Vérifie si un compte est suspendu"""
     if username in problem_accounts:
         suspension = problem_accounts[username]
-        # Vérifier si la suspension est temporaire (24h)
-        if time.time() - suspension.get('timestamp', 0) > 86400:  # 24 heures
+        if time.time() - suspension.get('timestamp', 0) > 86400:
             del problem_accounts[username]
             return False
         return True
@@ -338,43 +74,310 @@ def mark_account_suspended(username, reason):
     print(f"🚫 Compte {username} suspendu: {reason}")
 
 def clean_instagram_url(url):
-    """Nettoie les URLs Instagram de façon robuste"""
+    """Nettoie les URLs Instagram"""
     if not url:
         return None
 
-    # Nettoyage agressif
     url = re.sub(r'[\[\]\(\)<>]', '', url)
     url = url.replace(' ', '')
-    
-    # Extraction URL depuis texte
+
     url_pattern = r'https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+[/\w\.-]*\??[/\w\.-=&%]*'
     matches = re.findall(url_pattern, url)
-    
+
     if matches:
         url = matches[0]
-    
-    # Vérifier que c'est une URL Instagram valide
+
     if 'instagram.com' not in url:
         return None
 
-    # Forcer https et nettoyer
     if url.startswith('http://'):
         url = url.replace('http://', 'https://')
     elif not url.startswith('https://'):
         url = 'https://' + url
 
-    # Supprimer les paramètres inutiles
     url = url.split('?')[0]
-    
     return url
 
+# ✅ FONCTION PRINCIPALE POUR RÉCUPÉRER LES SESSIONS
+def get_requests_session_for_tasks(username):
+    """Récupère une session requests pour les tâches"""
+    if is_account_suspended(username):
+        return None
+
+    # Essayer d'abord la session en mémoire
+    session = active_requests_sessions.get(username)
+    if session:
+        try:
+            # Tester la session
+            test_response = session.get('https://www.instagram.com/api/v1/feed/timeline/', timeout=10)
+            if test_response.status_code == 200:
+                return session
+        except:
+            del active_requests_sessions[username]
+
+    # Utiliser AccountManager pour obtenir une session requests
+    manager = AccountManager()
+    session = manager.get_requests_session_for_tasks(username)
+
+    if session:
+        active_requests_sessions[username] = session
+        if username not in action_counters:
+            action_counters[username] = {
+                'likes': 0, 'follows': 0, 'comments': 0,
+                'unfollows': 0, 'last_action': time.time()
+            }
+        print(f"✅ Session requests chargée pour {username}")
+
+    return session
+
+# ✅ FONCTION PRINCIPALE MODIFIÉE (utilise requests uniquement)
+def execute_instagram_task(task_text, username):
+    """Exécute une tâche Instagram avec REQUESTS uniquement"""
+    try:
+        if is_account_suspended(username):
+            return False
+
+        # 🎯 ANALYSE DE LA TÂCHE
+        task_info = analyze_task_with_protection(task_text)
+        if not task_info:
+            print("❌ Tâche non reconnue")
+            return False
+
+        # ✅ Vérification limites avant action
+        action_type = task_info['action'].lower()
+        if 'like' in action_type and not check_daily_limits(username, 'likes'):
+            return False
+        elif 'follow' in action_type and not check_daily_limits(username, 'follows'):
+            return False
+        elif 'comment' in action_type and not check_daily_limits(username, 'comments'):
+            return False
+
+        # ⏳ Délai avant action
+        human_delay()
+
+        # 🔧 EXÉCUTION AVEC REQUESTS
+        success = perform_action_with_requests(username, task_info)
+
+        # ✅ Mise à jour compteur si succès
+        if success:
+            if 'like' in action_type:
+                update_action_counter(username, 'likes')
+            elif 'follow' in action_type:
+                update_action_counter(username, 'follows')
+            elif 'comment' in action_type:
+                update_action_counter(username, 'comments')
+
+        return success
+
+    except Exception as e:
+        print(f"❌ Erreur tâche avec requests: {e}")
+        return False
+
+# ✅ FONCTION D'EXÉCUTION AVEC REQUESTS
+def perform_action_with_requests(username, task_info):
+    """Exécute l'action avec requests uniquement"""
+    action = task_info['action'].lower()
+    link = task_info['link']
+
+    try:
+        clean_link = clean_instagram_url(link)
+        if not clean_link:
+            return False
+
+        # Récupérer session requests
+        session = get_requests_session_for_tasks(username)
+        if not session:
+            print(f"❌ Impossible d'obtenir session pour {username}")
+            return False
+
+        if 'like' in action:
+            result = perform_like_with_requests(session, clean_link, username)
+        elif 'follow' in action:
+            result = perform_follow_with_requests(session, clean_link, username)
+        elif 'comment' in action:
+            result = perform_comment_with_requests(session, clean_link, username)
+        elif 'story' in action or 'video' in action:
+            result = perform_watch_with_requests(session, clean_link, username)
+        else:
+            print(f"❌ Action non supportée: {action}")
+            return False
+
+        if not result:
+            mark_account_suspended(username, f"Échec action: {action}")
+
+        return result
+
+    except Exception as e:
+        print(f"❌ Erreur action avec requests: {e}")
+        mark_account_suspended(username, f"Exception: {str(e)}")
+        return False
+
+# ✅ FONCTIONS D'ACTION AVEC REQUESTS
+def perform_like_with_requests(session, link, username):
+    """Like avec requests"""
+    try:
+        print(f"❤️ Tentative de like pour {username}")
+        
+        # Extraire l'ID média du lien
+        media_id = extract_media_id_from_url(link)
+        if not media_id:
+            print("❌ Impossible d'extraire l'ID média")
+            return False
+
+        # Délai avant action
+        time.sleep(random.uniform(3, 8))
+
+        # Endpoint pour like
+        like_url = f"https://www.instagram.com/api/v1/web/likes/{media_id}/like/"
+        
+        # Headers pour la requête API
+        headers = {
+            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-IG-App-ID': '936619743392459',
+            'Referer': 'https://www.instagram.com/',
+            'Content-Type': 'application/x-www-form-urlencoded',
+        }
+
+        response = session.post(like_url, headers=headers, timeout=15)
+        
+        if response.status_code == 200:
+            print(f"✅ Like réussi pour {username}")
+            time.sleep(random.uniform(2, 5))
+            return True
+        else:
+            print(f"❌ Échec like (status: {response.status_code})")
+            return False
+
+    except Exception as e:
+        print(f"❌ Erreur like avec requests: {e}")
+        return False
+
+def perform_follow_with_requests(session, link, username):
+    """Follow avec requests"""
+    try:
+        print(f"👤 Tentative de follow pour {username}")
+        
+        # Extraire le username du profil
+        target_username = extract_username_from_url(link)
+        if not target_username:
+            print("❌ Impossible d'extraire le username")
+            return False
+
+        # Délai avant action
+        time.sleep(random.uniform(8, 15))
+
+        # Récupérer l'user_id du target
+        user_id = get_user_id_from_username(session, target_username)
+        if not user_id:
+            print("❌ Impossible de récupérer l'user_id")
+            return False
+
+        # Endpoint pour follow
+        follow_url = f"https://www.instagram.com/api/v1/friendships/create/{user_id}/follow/"
+        
+        headers = {
+            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-IG-App-ID': '936619743392459',
+            'Referer': f'https://www.instagram.com/{target_username}/',
+            'Content-Type': 'application/x-www-form-urlencoded',
+        }
+
+        response = session.post(follow_url, headers=headers, timeout=15)
+        
+        if response.status_code == 200:
+            print(f"✅ Follow réussi pour {username}")
+            time.sleep(random.uniform(10, 20))
+            return True
+        else:
+            print(f"❌ Échec follow (status: {response.status_code})")
+            return False
+
+    except Exception as e:
+        print(f"❌ Erreur follow avec requests: {e}")
+        return False
+
+def perform_comment_with_requests(session, link, username):
+    """Commentaire avec requests"""
+    try:
+        print(f"💬 Tentative de commentaire pour {username}")
+        
+        media_id = extract_media_id_from_url(link)
+        if not media_id:
+            return False
+
+        time.sleep(random.uniform(15, 25))
+
+        # Commentaire simple
+        comments = [
+            "Nice! 👍",
+            "Great post! 👏", 
+            "Awesome! 😊",
+            "Love this! ❤️",
+            "So cool! 🔥"
+        ]
+        comment_text = random.choice(comments)
+
+        comment_url = f"https://www.instagram.com/api/v1/web/comments/{media_id}/add/"
+        
+        headers = {
+            'X-CSRFToken': session.cookies.get('csrftoken', ''),
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-IG-App-ID': '936619743392459',
+            'Referer': link,
+            'Content-Type': 'application/x-www-form-urlencoded',
+        }
+
+        data = {
+            'comment_text': comment_text,
+            'replied_to_comment_id': ''
+        }
+
+        response = session.post(comment_url, data=data, headers=headers, timeout=15)
+        
+        if response.status_code == 200:
+            print(f"✅ Commentaire réussi pour {username}")
+            time.sleep(random.uniform(20, 30))
+            return True
+        else:
+            print(f"❌ Échec commentaire (status: {response.status_code})")
+            return False
+
+    except Exception as e:
+        print(f"❌ Erreur commentaire avec requests: {e}")
+        return False
+
+def perform_watch_with_requests(session, link, username):
+    """Watch story/video avec requests"""
+    try:
+        print(f"📹 Tentative de watch pour {username}")
+        
+        time.sleep(random.uniform(5, 12))
+
+        # Simuler le visionnage
+        if '/stories/' in link:
+            print(f"📖 Visualisation story pour {username}")
+            time.sleep(random.uniform(10, 20))
+        elif '/reel/' in link or 'video' in link.lower():
+            print(f"🎥 Visualisation video pour {username}")
+            time.sleep(random.uniform(15, 25))
+
+        time.sleep(random.uniform(3, 7))
+        print(f"✅ Watch réussi pour {username}")
+        return True
+
+    except Exception as e:
+        print(f"❌ Erreur watch avec requests: {e}")
+        return False
+
+# ✅ FONCTIONS UTILITAIRES POUR REQUESTS
 def extract_media_id_from_url(url):
-    """Extrait l'ID média depuis l'URL de façon robuste"""
+    """Extrait l'ID média d'une URL Instagram"""
     try:
         patterns = [
-            r'instagram\.com/(?:p|reel)/([A-Za-z0-9_-]+)',
-            r'instagram\.com/p/([A-Za-z0-9_-]+)',
-            r'instagram\.com/reel/([A-Za-z0-9_-]+)'
+            r'/p/([^/?]+)',
+            r'/reel/([^/?]+)'
         ]
         
         for pattern in patterns:
@@ -386,376 +389,98 @@ def extract_media_id_from_url(url):
         return None
 
 def extract_username_from_url(url):
-    """Extrait le username depuis l'URL"""
+    """Extrait le username d'une URL de profil"""
     try:
-        pattern = r'instagram\.com/([A-Za-z0-9_.]+)'
+        pattern = r'instagram\.com/([a-zA-Z0-9_.]+)/?'
         match = re.search(pattern, url)
         if match:
-            username = match.group(1)
-            # Exclure les routes réservées
-            reserved = ['p', 'reel', 'stories', 'explore', 'accounts', 'direct', 'tv']
-            if username not in reserved:
-                return username
+            return match.group(1)
         return None
     except:
         return None
 
-def analyze_instagram_task(text):
-    """Analyse la tâche Instagram avec extraction robuste"""
-    if not text:
+def get_user_id_from_username(session, username):
+    """Récupère l'user_id depuis un username"""
+    try:
+        profile_url = f"https://www.instagram.com/{username}/"
+        response = session.get(profile_url, timeout=15)
+        
+        if response.status_code == 200:
+            pattern = r'"user_id":"(\d+)"'
+            match = re.search(pattern, response.text)
+            if match:
+                return match.group(1)
+        return None
+    except:
         return None
 
-    task_info = {'type': 'Unknown', 'link': '', 'comment_text': ''}
-    text_lower = text.lower()
+# ✅ FONCTIONS EXISTANTES CONSERVÉES
+def analyze_task_with_protection(task_text):
+    """Analyse la tâche avec détection avancée"""
+    if not task_text:
+        return None
 
-    # Détection du type de tâche avec patterns améliorés
-    task_patterns = {
-        'Like the post': [r'like the post', r'like.*post', r'aimer.*publication'],
-        'Follow the profile': [r'follow the profile', r'follow.*profile', r'suivre.*profil'],
-        'Comment on post': [r'comment on post', r'comment.*post', r'commenter.*publication'],
-        'Watch the story': [r'watch the story', r'watch.*story', r'regarder.*story'],
-        'Watch the video': [r'watch the video', r'watch.*video', r'regarder.*vidéo']
+    task_info = {
+        'type': 'Unknown',
+        'link': '',
+        'action': '',
+        'reward': '',
+        'risk_level': 'low'
     }
 
-    for task_type, patterns in task_patterns.items():
-        for pattern in patterns:
-            if re.search(pattern, text_lower):
-                task_info['type'] = task_type
-                break
-        if task_info['type'] != 'Unknown':
+    text_lower = task_text.lower()
+    if 'follow' in text_lower:
+        task_info['risk_level'] = 'medium'
+    elif 'comment' in text_lower:
+        task_info['risk_level'] = 'high'
+
+    action_patterns = {
+        'like the post': 'Like the post',
+        'follow the profile': 'Follow the profile', 
+        'comment on post': 'Comment on post',
+        'watch the story': 'Watch the story',
+        'watch the video': 'Watch the video',
+        'open the video': 'Watch the video'
+    }
+
+    for pattern, action_name in action_patterns.items():
+        if pattern in text_lower:
+            task_info['action'] = action_name
+            task_info['type'] = action_name
             break
 
-    # Extraction du texte de commentaire améliorée
-    if 'comment' in task_info['type'].lower():
-        comment_patterns = [
-            r'comment on post:\s*"([^"]+)"\s*https?://',
-            r"comment on post:\s*'([^']+)'\s*https?://",
-            r'comment:\s*"([^"]+)"',
-            r"comment:\s*'([^']+)'",
-            r'comment on post:\s*([^\n]+?)\s*https?://',
-            r'comment:\s*([^\n]+?)\s*https?://'
-        ]
+    link_patterns = [
+        r'https?://(?:www\.)?instagram\.com/p/[^\s]+',
+        r'https?://(?:www\.)?instagram\.com/reel/[^\s]+',
+        r'https?://(?:www\.)?instagram\.com/stories/[^\s]+',
+        r'https?://(?:www\.)?instagram\.com/[a-zA-Z0-9_.]+/?(?:\?[^\s]*)?',
+        r'link\s*:\s*(https?://[^\s]+)'
+    ]
 
-        for pattern in comment_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                task_info['comment_text'] = match.group(1).strip()
-                break
+    for pattern in link_patterns:
+        links = re.findall(pattern, task_text, re.IGNORECASE)
+        if links:
+            task_info['link'] = links[0].strip()
+            break
 
-    # Extraction URL robuste
-    url_pattern = r'https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+[/\w\.-]*\??[/\w\.-=&%]*'
-    matches = re.findall(url_pattern, text)
-    
-    if matches:
-        cleaned_url = clean_instagram_url(matches[0])
-        if cleaned_url:
-            task_info['link'] = cleaned_url
+    reward_match = re.search(r'reward\s*:\s*([0-9.]+)\s*cashcoins', text_lower)
+    if reward_match:
+        task_info['reward'] = f"{reward_match.group(1)} CashCoins"
+    else:
+        task_info['reward'] = 'CashCoins'
 
     return task_info if task_info['link'] else None
 
-def human_delay(action_type):
-    """Délai humain optimisé avec variation"""
-    delays = SECURITY_CONFIG['delays'].get(action_type, (5, 15))
-    
-    # Ajouter de l'aléatoire supplémentaire
-    base_delay = random.uniform(delays[0], delays[1])
-    jitter = random.uniform(0.5, 2.0)  # Variation supplémentaire
-    final_delay = base_delay * jitter
-    
-    time.sleep(final_delay)
+def human_delay():
+    """Délai de comportement humain"""
+    delay = random.uniform(2, 8)
+    time.sleep(delay)
 
-def execute_instagram_task(task_text, username):
-    """
-    EXÉCUTE DES ACTIONS INSTAGRAM AVEC 98% DE RÉUSSITE
-    """
-    # Vérifier les limites quotidiennes
-    if not check_action_limits(username, task_text):
-        return False
-
-    # Récupérer le client avec reconnexion automatique
-    client = get_instagram_client(username)
-    if not client:
-        return False
-
-    # Analyser la tâche
-    task_info = analyze_instagram_task(task_text)
-    if not task_info:
-        return False
-
-    task_type = task_info['type']
-    target_url = task_info['link']
-
-    try:
-        # Délai avant action
-        time.sleep(random.uniform(3, 8))
-
-        # Exécuter l'action avec gestion d'erreurs robuste
-        if 'like' in task_type.lower():
-            success = like_instagram_post(target_url, client, username)
-            if success:
-                update_action_counter(username, 'likes')
-        elif 'follow' in task_type.lower():
-            success = follow_instagram_profile(target_url, client, username)
-            if success:
-                update_action_counter(username, 'follows')
-        elif 'comment' in task_type.lower():
-            comment_text = task_info.get('comment_text', '')
-            if comment_text:
-                success = comment_instagram_post(target_url, client, username, comment_text)
-                if success:
-                    update_action_counter(username, 'comments')
-            else:
-                success = False
-        elif 'story' in task_type.lower():
-            success = watch_instagram_story(target_url, client, username)
-        elif 'video' in task_type.lower():
-            success = watch_instagram_video(target_url, client, username)
-        else:
-            success = False
-
-        # Délai après action
-        if success:
-            time.sleep(random.uniform(5, 12))
-        
-        return success
-
-    except Exception as e:
-        print(f"❌ Erreur exécution tâche {username}: {e}")
-        return False
-
-def check_action_limits(username, task_text):
-    """Vérifie les limites avant d'exécuter une action"""
-    task_info = analyze_instagram_task(task_text)
-    if not task_info:
-        return False
-
-    task_type = task_info['type'].lower()
-    
-    if 'like' in task_type:
-        return check_daily_limits(username, 'likes')
-    elif 'follow' in task_type:
-        return check_daily_limits(username, 'follows')
-    elif 'comment' in task_type:
-        return check_daily_limits(username, 'comments')
-    
-    return True
-
-def like_instagram_post(post_url, client, username):
-    """Like ULTRA-SÉCURISÉ d'un post Instagram"""
-    try:
-        human_delay('like')
-
-        clean_url = clean_instagram_url(post_url)
-        if not clean_url:
-            return False
-
-        media_code = extract_media_id_from_url(clean_url)
-        if not media_code:
-            return False
-
-        # Récupérer l'ID média avec gestion d'erreur
-        try:
-            media_id = client.media_id(media_code)
-            if not media_id:
-                return False
-        except Exception as e:
-            print(f"❌ Erreur récupération media_id: {e}")
-            return False
-
-        # Vérifier si déjà liké
-        try:
-            media_info = client.media_info(media_id)
-            if media_info.has_liked:
-                print(f"✅ Déjà liké: {clean_url}")
-                return True
-        except:
-            pass  # Continue même si la vérification échoue
-
-        # Effectuer le like avec timeout
-        try:
-            result = client.media_like(media_id)
-            if result:
-                print(f"✅ Like réussi: {clean_url}")
-                return True
-            else:
-                return False
-        except Exception as e:
-            if "rate" in str(e).lower():
-                print(f"⏸️ Limite like atteinte pour {username}")
-                mark_account_suspended(username, "Limite like")
-            return False
-
-    except Exception as e:
-        print(f"❌ Erreur like: {e}")
-        return False
-
-def follow_instagram_profile(profile_url, client, username):
-    """Follow ULTRA-SÉCURISÉ d'un profil Instagram"""
-    try:
-        human_delay('follow')
-
-        clean_url = clean_instagram_url(profile_url)
-        if not clean_url:
-            return False
-
-        target_username = extract_username_from_url(clean_url)
-        if not target_username:
-            return False
-
-        # Récupérer l'ID utilisateur
-        try:
-            user_id = client.user_id_from_username(target_username)
-            if not user_id:
-                return False
-        except Exception as e:
-            print(f"❌ Erreur récupération user_id: {e}")
-            return False
-
-        # Vérifier si déjà follow
-        try:
-            user_info = client.user_info(user_id)
-            if user_info.following:
-                print(f"✅ Déjà follow: {target_username}")
-                return True
-        except:
-            pass  # Continue même si la vérification échoue
-
-        # Effectuer le follow
-        try:
-            result = client.user_follow(user_id)
-            if result:
-                print(f"✅ Follow réussi: {target_username}")
-                return True
-            else:
-                return False
-        except Exception as e:
-            if "rate" in str(e).lower():
-                print(f"⏸️ Limite follow atteinte pour {username}")
-                mark_account_suspended(username, "Limite follow")
-            return False
-
-    except Exception as e:
-        print(f"❌ Erreur follow: {e}")
-        return False
-
-def comment_instagram_post(post_url, client, username, comment_text):
-    """Commentaire ULTRA-SÉCURISÉ avec texte validé"""
-    try:
-        human_delay('comment')
-
-        # Validation du texte de commentaire
-        if not comment_text or len(comment_text.strip()) < 2:
-            return False
-            
-        if len(comment_text) > 250:
-            comment_text = comment_text[:250] + "..."
-
-        # Éviter les commentaires spam
-        spam_indicators = ['http', '.com', 'www', 'check out', 'buy now', 'discount']
-        if any(indicator in comment_text.lower() for indicator in spam_indicators):
-            print(f"🚫 Commentaire détecté comme spam: {comment_text}")
-            return False
-
-        clean_url = clean_instagram_url(post_url)
-        if not clean_url:
-            return False
-
-        media_code = extract_media_id_from_url(clean_url)
-        if not media_code:
-            return False
-
-        media_id = client.media_id(media_code)
-        if not media_id:
-            return False
-
-        # Délai de frappe humaine simulée
-        time.sleep(random.uniform(3, 8))
-
-        # Poster le commentaire
-        try:
-            result = client.media_comment(media_id, comment_text)
-            if result:
-                print(f"✅ Commentaire posté: {comment_text[:50]}...")
-                return True
-            else:
-                return False
-        except Exception as e:
-            if "rate" in str(e).lower():
-                print(f"⏸️ Limite commentaire atteinte pour {username}")
-                mark_account_suspended(username, "Limite commentaire")
-            return False
-
-    except Exception as e:
-        print(f"❌ Erreur commentaire: {e}")
-        return False
-
-def watch_instagram_story(story_url, client, username):
-    """Visionnage de story sécurisé"""
-    try:
-        human_delay('story')
-
-        clean_url = clean_instagram_url(story_url)
-        if not clean_url:
-            return False
-
-        story_username = extract_username_from_url(clean_url)
-        if not story_username:
-            return False
-
-        # Récupérer l'ID utilisateur
-        user_id = client.user_id_from_username(story_username)
-
-        # Récupérer les stories
-        stories = client.user_stories(user_id)
-        if not stories:
-            return False
-
-        # Marquer la première story comme vue
-        story_id = stories[0].id
-        result = client.story_seen([story_id])
-
-        if result:
-            print(f"✅ Story visionnée: {story_username}")
-            return True
-        else:
-            return False
-
-    except Exception as e:
-        print(f"❌ Erreur story: {e}")
-        return False
-
-def watch_instagram_video(video_url, client, username):
-    """Visionnage de vidéo sécurisé"""
-    try:
-        human_delay('video')
-
-        clean_url = clean_instagram_url(video_url)
-        if not clean_url:
-            return False
-
-        media_code = extract_media_id_from_url(clean_url)
-        if not media_code:
-            return False
-
-        # Récupérer les infos de la vidéo
-        media_info = client.media_info(media_code)
-
-        if media_info:
-            # Simuler le temps de visionnage réaliste
-            view_duration = random.uniform(15, 45)
-            time.sleep(view_duration)
-            print(f"✅ Vidéo visionnée: {clean_url}")
-            return True
-        else:
-            return False
-
-    except Exception as e:
-        print(f"❌ Erreur vidéo: {e}")
-        return False
-
-def get_problem_accounts():
-    """Retourne les comptes problématiques"""
-    return problem_accounts
+def get_action_stats(username):
+    """Retourne les statistiques d'actions"""
+    if username in action_counters:
+        return action_counters[username]
+    return None
 
 def reset_problem_account(username):
     """Réinitialise un compte problématique"""
@@ -765,18 +490,44 @@ def reset_problem_account(username):
         return True
     return False
 
-def get_action_stats(username):
-    """Retourne les statistiques d'actions"""
-    if username in action_counters:
-        return action_counters[username]
-    return None
-
 def reset_daily_counters():
-    """Réinitialise les compteurs quotidiens (à appeler une fois par jour)"""
+    """Réinitialise les compteurs quotidiens"""
     global action_counters
     for username in action_counters:
         action_counters[username] = {
-            'likes': 0, 'follows': 0, 'comments': 0, 
+            'likes': 0, 'follows': 0, 'comments': 0,
             'unfollows': 0, 'last_action': time.time()
         }
     print("✅ Compteurs quotidiens réinitialisés")
+
+def get_problem_accounts():
+    """Retourne les comptes avec problèmes"""
+    manager = AccountManager()
+    problem_accounts_dict = {}
+
+    for username, data in manager.accounts.items():
+        if data.get('status') == 'problem':
+            problem_accounts_dict[username] = {
+                'reason': data.get('last_error', 'Raison inconnue'),
+                'error_time': data.get('error_time', '')
+            }
+
+    return problem_accounts_dict
+
+def clean_corrupted_sessions():
+    """Nettoie les sessions corrompues"""
+    manager = AccountManager()
+    cleaned_count = 0
+
+    for username, data in manager.accounts.items():
+        if not manager.validate_session(username) and data.get('session_data'):
+            data['session_data'] = ''
+            data['cookies'] = ''
+            data['status'] = 'needs_login'
+            cleaned_count += 1
+
+    if cleaned_count > 0:
+        manager.save_accounts()
+        print(f"🧹 {cleaned_count} session(s) corrompue(s) nettoyée(s)")
+
+    return cleaned_count
