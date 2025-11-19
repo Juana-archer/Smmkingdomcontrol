@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# main.py - Script principal SmmKingdomTask
+# main.py - Script principal SmmKingdomTask (VERSION REQUESTS)
 import asyncio
 import json
 import os
@@ -10,6 +10,7 @@ from control_system import ControlSystem
 from account_manager import AccountManager
 from telegram_client import start_smm_automation
 from ui import Interface
+from instagram_tasks import get_problem_accounts, execute_instagram_task
 
 class SmmKingdomApp:
     def __init__(self):
@@ -37,9 +38,9 @@ class SmmKingdomApp:
             try:
                 with open('user_data.json', 'r') as f:
                     user_data = json.load(f)
-                    print(f"{COLORS['J']}[👤] Votre ID: {user_data['user_id']}{COLORS['S']}")
+                    print(f"{COLORS['J']}[👤] Votre ID: {user_data.get('machine_id', 'Non disponible')}{COLORS['S']}")
             except:
-                print(f"{COLORS['J']}[👤] Votre ID: {self.control.user_id}{COLORS['S']}")
+                print(f"{COLORS['J']}[👤] Votre ID: {self.control.machine_id}{COLORS['S']}")
 
             self.interface.press_enter()
             return False
@@ -110,7 +111,6 @@ class SmmKingdomApp:
                 return
 
             # Vérifier les comptes problématiques avant de démarrer
-            from instagram_tasks import get_problem_accounts
             problem_accounts = get_problem_accounts()
 
             if problem_accounts:
@@ -152,7 +152,7 @@ class SmmKingdomApp:
             self.interface.press_enter()
 
     def add_account(self):
-        """Ajoute un compte Instagram"""
+        """Ajoute un compte Instagram - VERSION REQUESTS"""
         self.interface.clear_screen()
         self.interface.show_message("👤 AJOUTER UN COMPTE INSTAGRAM", "info")
 
@@ -162,7 +162,7 @@ class SmmKingdomApp:
             self.interface.press_enter()
             return
 
-        # CORRECTION : Afficher le mot de passe en clair dans Termux
+        # Afficher le mot de passe en clair dans Termux
         print(f"{COLORS['B']}[🔓] Mot de passe Instagram: {COLORS['S']}", end="", flush=True)
         password = input()
 
@@ -173,28 +173,29 @@ class SmmKingdomApp:
 
         print(f"\n{COLORS['C']}[ℹ️] Résumé du compte:{COLORS['S']}")
         print(f"{COLORS['B']}   Utilisateur: {username}{COLORS['S']}")
-        print(f"{COLORS['B']}   Mot de passe: {password}{COLORS['S']}")  # Afficher en clair pour confirmation
+        print(f"{COLORS['B']}   Mot de passe: {password}{COLORS['S']}")
         print()
 
         confirm = self.interface.get_input("Confirmer l'ajout? (o/n)").lower()
 
         if confirm == 'o' or confirm == 'oui':
-            # CORRECTION : Utiliser AccountManager au lieu de la fonction supprimée
-            success = self.account_manager.connect_instagram_account(username, password)
+            # ✅ CORRECTION : Utiliser la méthode REQUESTS au lieu d'instagrapi
+            success, session = self.account_manager.login_instagram_requests(username, password)
 
             if success:
                 self.interface.show_message("✅ Compte ajouté avec succès!", "success")
                 print(f"{COLORS['J']}🔍 Vérification du statut du compte...{COLORS['S']}")
 
-                # CORRECTION : Utiliser validate_session au lieu de check_single_account_status
+                # Vérification de la session
                 status = self.account_manager.validate_session(username)
 
                 if status:
                     self.interface.show_message("🎉 Compte fonctionnel ! Prêt pour l'automatisation.", "success")
                 else:
-                    self.interface.show_message("📧 Vérification requise. Connecte-toi manuellement sur Instagram.", "warning")
+                    self.interface.show_message("⚠️ Session créée mais vérification recommandée", "warning")
             else:
-                self.interface.show_message("❌ Échec de l'ajout du compte", "error")
+                self.interface.show_message("❌ Échec de la connexion Instagram", "error")
+                self.interface.show_message("💡 Vérifiez vos identifiants et réessayez", "info")
         else:
             self.interface.show_message("❌ Ajout annulé", "warning")
 
@@ -210,16 +211,13 @@ class SmmKingdomApp:
             self.interface.show_message("📭 Aucun compte enregistré", "warning")
             self.interface.show_message("💡 Utilisez l'option 2 pour ajouter un compte", "info")
         else:
-            from instagram_tasks import get_problem_accounts
             problem_accounts = get_problem_accounts()
 
             print(f"{COLORS['C']}╔════════════════════════════════════════╗{COLORS['S']}")
             print(f"{COLORS['C']}║          COMPTES INSTAGRAM             ║{COLORS['S']}")
             print(f"{COLORS['C']}╠════════════════════════════════════════╣{COLORS['S']}")
 
-            # CORRECTION : Itération correcte sur le dictionnaire
             for i, (username, account_data) in enumerate(accounts.items(), 1):
-                cookies = account_data.get('cookies', '')
                 # Vérifier si le compte a des problèmes
                 if username in problem_accounts:
                     status_icon = "🚫"
@@ -235,7 +233,7 @@ class SmmKingdomApp:
             print(f"{COLORS['C']}╚════════════════════════════════════════╝{COLORS['S']}")
 
             # Statistiques
-            problem_count = len([acc for acc in accounts if acc in problem_accounts])
+            problem_count = len(problem_accounts)
             working_count = len(accounts) - problem_count
 
             print(f"{COLORS['J']}📊 Total: {len(accounts)} compte(s) | {working_count}✅ actifs | {problem_count}🚫 problèmes{COLORS['S']}")
@@ -261,16 +259,12 @@ class SmmKingdomApp:
         working_count = 0
         problem_count = 0
 
-        # CORRECTION : Utiliser get_problem_accounts()
-        from instagram_tasks import get_problem_accounts
         problem_accounts = get_problem_accounts()
 
-        # CORRECTION : Itération correcte
         for i, (username, account_data) in enumerate(accounts.items(), 1):
-            cookies = account_data.get('cookies', '')
             print(f"{COLORS['B']}║ {COLORS['J']}[{i}] {username:<25}{COLORS['S']}{COLORS['B']} ║{COLORS['S']}")
 
-            # CORRECTION : Utiliser validate_session
+            # Vérification de la session
             status = self.account_manager.validate_session(username)
 
             if status:
@@ -314,11 +308,9 @@ class SmmKingdomApp:
             self.interface.press_enter()
             return
 
-        from instagram_tasks import get_problem_accounts
         problem_accounts = get_problem_accounts()
 
         problem_accounts_list = []
-        # CORRECTION : Itération correcte
         for username, account_data in accounts.items():
             if username in problem_accounts:
                 problem_accounts_list.append(username)
@@ -358,11 +350,9 @@ class SmmKingdomApp:
             return
 
         # Afficher la liste numérotée avec statuts
-        from instagram_tasks import get_problem_accounts
         problem_accounts = get_problem_accounts()
 
         print(f"{COLORS['C']}Comptes disponibles:{COLORS['S']}")
-        # CORRECTION : Itération correcte
         for i, (username, account_data) in enumerate(accounts.items(), 1):
             status_icon = "🚫" if username in problem_accounts else "✅"
             print(f"  {COLORS['V']}[{i}] {username} {status_icon}{COLORS['S']}")
@@ -406,7 +396,6 @@ class SmmKingdomApp:
             print(f"{COLORS['C']}║                     COOKIES DES COMPTES                  ║{COLORS['S']}")
             print(f"{COLORS['C']}╠══════════════════════════════════════════════════════════╣{COLORS['S']}")
 
-            # CORRECTION : Itération correcte
             for i, (username, account_data) in enumerate(accounts.items(), 1):
                 cookies_str = account_data.get('cookies', '')
                 session_data = account_data.get('session_data', '')
