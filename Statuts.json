@@ -41,6 +41,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-01",
       "status": "active"
+    },
+    "juliettedfrt": {
+      "android_id": "juliettedfrt",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-02-28",
+      "status": "active"
     }
   }
 }
