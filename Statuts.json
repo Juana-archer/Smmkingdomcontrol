@@ -35,6 +35,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-22",
       "status": "active"
+    },
+    "noelyandry": {
+      "android_id": "noelyandry",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-03-23",
+      "status": "active"
     }
   }
 }
