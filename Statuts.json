@@ -1,0 +1,10 @@
+{
+  "utilisateurs": {
+    "ID": {
+      "android_id": "ID",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-02-28",
+      "status": "active"
+    }
+  }
+}
