@@ -47,6 +47,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-28",
       "status": "active"
+    },
+    "elidiotgdft": {
+      "android_id": "elidiotgdft",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2053-07-08",
+      "status": "active"
     }
   }
 }
