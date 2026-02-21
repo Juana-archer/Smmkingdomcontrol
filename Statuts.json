@@ -5,6 +5,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-28",
       "status": "active"
+    },
+    "zaitinao": {
+      "android_id": "zaitinao",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-03-23",
+      "status": "active"
     }
   }
 }
