@@ -11,6 +11,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-23",
       "status": "active"
+    },
+    "fgertys": {
+      "android_id": "fgertys",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-03-23",
+      "status": "active"
     }
   }
 }
