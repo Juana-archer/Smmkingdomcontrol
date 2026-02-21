@@ -71,6 +71,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-03",
       "status": "active"
+    },
+    "Blandine": {
+      "android_id": "Blandine",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-02-23",
+      "status": "active"
     }
   }
 }
