@@ -53,6 +53,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2053-07-08",
       "status": "active"
+    },
+    "tahinjanaharyfe": {
+      "android_id": "tahinjanaharyfe",
+      "activation_date": "2026-02-21",
+      "expiration_date": "2026-02-23",
+      "status": "active"
     }
   }
 }
