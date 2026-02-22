@@ -89,6 +89,12 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-24",
       "status": "active"
+    },
+    "jessissicatiko": {
+      "android_id": "jessissicatiko",
+      "activation_date": "2026-02-22",
+      "expiration_date": "2026-03-24",
+      "status": "active"
     }
   }
 }
