@@ -101,6 +101,12 @@
       "activation_date": "2026-02-23",
       "expiration_date": "2026-03-02",
       "status": "active"
+    },
+    "Zinartfret": {
+      "android_id": "Zinartfret",
+      "activation_date": "2026-02-23",
+      "expiration_date": "2026-03-02",
+      "status": "active"
     }
   }
 }
