@@ -71,8 +71,7 @@
       "android_id": "radavanirina",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-03",
-      "status": "paused",
-      "paused_at": "2026-02-23 09:42:16"
+      "status": "active"
     },
     "Blandine": {
       "android_id": "Blandine",
@@ -109,6 +108,15 @@
       "activation_date": "2026-02-23",
       "expiration_date": "2026-03-02",
       "status": "active"
+    },
+    "Brutal9100202": {
+      "android_id": "Brutal9100202",
+      "activation_date": "2026-02-23",
+      "activation_time": "09:43:51",
+      "expiration_date": "2026-02-27",
+      "expiration_time": "09:43:51",
+      "status": "active",
+      "last_update": "2026-02-23 09:43:51"
     }
   }
 }
