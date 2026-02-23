@@ -34,7 +34,8 @@
       "android_id": "moifrtskd",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-22",
-      "status": "active"
+      "status": "expired",
+      "expired_at": "2026-02-23 09:36:02"
     },
     "andrynoelyrt": {
       "android_id": "andrynoelyrt",
