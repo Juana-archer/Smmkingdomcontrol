@@ -124,8 +124,9 @@
       "activation_time": "09:46:44",
       "expiration_date": "2026-03-18",
       "expiration_time": "09:46:44",
-      "status": "active",
-      "last_update": "2026-02-23 09:46:44"
+      "status": "paused",
+      "last_update": "2026-02-23 09:46:44",
+      "paused_at": "2026-02-23 12:12:44"
     }
   }
 }
