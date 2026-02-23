@@ -127,6 +127,15 @@
       "status": "paused",
       "last_update": "2026-02-23 09:46:44",
       "paused_at": "2026-02-23 12:12:44"
+    },
+    "germainfrt": {
+      "android_id": "germainfrt",
+      "activation_date": "2026-02-23",
+      "activation_time": "14:46:01",
+      "expiration_date": "2026-03-02",
+      "expiration_time": "14:46:01",
+      "status": "active",
+      "last_update": "2026-02-23 14:46:01"
     }
   }
 }
