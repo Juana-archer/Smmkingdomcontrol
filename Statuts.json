@@ -170,6 +170,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:20:29"
+    },
+    "hfertgh": {
+      "android_id": "hfertgh",
+      "activation_date": "2026-02-24",
+      "activation_time": "09:43:40",
+      "expiration_date": "2026-02-24",
+      "expiration_time": "14:43:40",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-02-24 09:43:40"
     }
   }
 }
