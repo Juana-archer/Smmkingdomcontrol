@@ -150,6 +150,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 08:41:20"
+    },
+    "daheryyj": {
+      "android_id": "daheryyj",
+      "activation_date": "2026-02-24",
+      "activation_time": "09:13:05",
+      "expiration_date": "2026-02-24",
+      "expiration_time": "18:13:05",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-02-24 09:13:05"
     }
   }
 }
