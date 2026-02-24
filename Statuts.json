@@ -140,6 +140,16 @@
       "expiration_time": "15:12:09",
       "status": "active",
       "last_update": "2026-02-23 15:12:09"
+    },
+    "fertd3faniru": {
+      "android_id": "fertd3faniru",
+      "activation_date": "2026-02-24",
+      "activation_time": "08:41:20",
+      "expiration_date": "2026-02-24",
+      "expiration_time": "16:41:20",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-02-24 08:41:20"
     }
   }
 }
