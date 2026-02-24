@@ -65,7 +65,8 @@
       "android_id": "florinehttp",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-02",
-      "status": "active"
+      "status": "paused",
+      "paused_at": "2026-02-24 05:28:29"
     },
     "radavanirina": {
       "android_id": "radavanirina",
