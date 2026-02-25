@@ -79,7 +79,9 @@
       "android_id": "Blandine",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-24",
-      "status": "active"
+      "status": "expired",
+      "expired_at": "2026-02-25 18:24:58",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "honor\u00e9efdgjy": {
       "android_id": "honor\u00e9efdgjy",
@@ -91,7 +93,9 @@
       "android_id": "philibertdff",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-24",
-      "status": "active"
+      "status": "expired",
+      "expired_at": "2026-02-25 18:24:58",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "jessissicatiko": {
       "android_id": "jessissicatiko",
@@ -147,9 +151,11 @@
       "activation_time": "08:41:20",
       "expiration_date": "2026-02-24",
       "expiration_time": "16:41:20",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-02-24 08:41:20"
+      "last_update": "2026-02-24 08:41:20",
+      "expired_at": "2026-02-25 18:24:58",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "daheryyj": {
       "android_id": "daheryyj",
@@ -157,9 +163,11 @@
       "activation_time": "09:13:05",
       "expiration_date": "2026-02-24",
       "expiration_time": "18:13:05",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-02-24 09:13:05"
+      "last_update": "2026-02-24 09:13:05",
+      "expired_at": "2026-02-25 18:24:58",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "jujoujhrt": {
       "android_id": "jujoujhrt",
@@ -177,9 +185,11 @@
       "activation_time": "09:43:40",
       "expiration_date": "2026-02-24",
       "expiration_time": "14:43:40",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-02-24 09:43:40"
+      "last_update": "2026-02-24 09:43:40",
+      "expired_at": "2026-02-25 18:24:58",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     }
   }
 }
