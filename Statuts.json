@@ -80,7 +80,7 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-24",
       "status": "expired",
-      "expired_at": "2026-02-25 18:24:58",
+      "expired_at": "2026-02-25 18:25:40",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "honor\u00e9efdgjy": {
@@ -94,7 +94,7 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-24",
       "status": "expired",
-      "expired_at": "2026-02-25 18:24:58",
+      "expired_at": "2026-02-25 18:25:40",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "jessissicatiko": {
@@ -154,7 +154,7 @@
       "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 08:41:20",
-      "expired_at": "2026-02-25 18:24:58",
+      "expired_at": "2026-02-25 18:25:40",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "daheryyj": {
@@ -166,7 +166,7 @@
       "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:13:05",
-      "expired_at": "2026-02-25 18:24:58",
+      "expired_at": "2026-02-25 18:25:40",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "jujoujhrt": {
@@ -188,7 +188,7 @@
       "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:43:40",
-      "expired_at": "2026-02-25 18:24:58",
+      "expired_at": "2026-02-25 18:25:40",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     }
   }
