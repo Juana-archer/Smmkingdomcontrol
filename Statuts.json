@@ -61,7 +61,9 @@
       "android_id": "arianefaly",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-27",
-      "status": "active"
+      "status": "paused",
+      "paused_at": "2026-02-26 08:12:53",
+      "pause_note": "Mis en pause le 26/02/2026 08:12 (Madagascar)"
     },
     "florinehttp": {
       "android_id": "florinehttp",
