@@ -206,6 +206,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-25 18:25:43"
+    },
+    "dahertdef": {
+      "android_id": "dahertdef",
+      "activation_date": "2026-02-26",
+      "activation_time": "11:55:44",
+      "expiration_date": "2026-02-26",
+      "expiration_time": "18:55:44",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-02-26 11:55:44"
     }
   }
 }
