@@ -49,7 +49,9 @@
       "android_id": "juliettedfrt",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-28",
-      "status": "active"
+      "status": "paused",
+      "paused_at": "2026-02-26 17:20:39",
+      "pause_note": "Mis en pause le 26/02/2026 17:20 (Madagascar)"
     },
     "elidiotgdft": {
       "android_id": "elidiotgdft",
