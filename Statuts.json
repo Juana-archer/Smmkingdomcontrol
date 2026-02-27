@@ -132,8 +132,10 @@
       "activation_time": "09:43:51",
       "expiration_date": "2026-02-27",
       "expiration_time": "09:43:51",
-      "status": "active",
-      "last_update": "2026-02-23 09:43:51"
+      "status": "expired",
+      "last_update": "2026-02-23 09:43:51",
+      "expired_at": "2026-02-27 15:54:32",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "faniryert": {
       "android_id": "faniryert",
@@ -185,9 +187,11 @@
       "activation_time": "09:20:29",
       "expiration_date": "2026-02-27",
       "expiration_time": "09:20:29",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-02-24 09:20:29"
+      "last_update": "2026-02-24 09:20:29",
+      "expired_at": "2026-02-27 15:54:32",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "hfertgh": {
       "android_id": "hfertgh",
