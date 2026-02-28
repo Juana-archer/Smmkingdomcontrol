@@ -29,8 +29,11 @@
     "ainaclaramasisokely": {
       "android_id": "ainaclaramasisokely",
       "activation_date": "2026-02-21",
-      "expiration_date": "2026-02-28",
-      "status": "active"
+      "expiration_date": "2026-03-08",
+      "status": "active",
+      "expiration_time": "23:59:59",
+      "last_prolongation": "2026-02-28 08:42:02",
+      "prolongation_note": "Prolong\u00e9 de 8 jour(s) le 28/02/2026 08:42 (Madagascar)"
     },
     "moifrtskd": {
       "android_id": "moifrtskd",
