@@ -230,6 +230,16 @@
       "last_update": "2026-02-26 11:55:44",
       "expired_at": "2026-02-26 23:15:53",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+    },
+    "verthertze": {
+      "android_id": "verthertze",
+      "activation_date": "2026-02-28",
+      "activation_time": "13:12:26",
+      "expiration_date": "2026-02-28",
+      "expiration_time": "21:12:26",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-02-28 13:12:26"
     }
   }
 }
