@@ -253,15 +253,15 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-28 13:46:35"
     },
-    "jepeuxtaider": {
-      "android_id": "jepeuxtaider",
+    "jeveuxdetoi": {
+      "android_id": "jeveuxdetoi",
       "activation_date": "2026-02-28",
-      "activation_time": "14:15:09",
-      "expiration_date": "2026-03-05",
-      "expiration_time": "14:15:09",
+      "activation_time": "14:15:31",
+      "expiration_date": "2026-02-28",
+      "expiration_time": "19:15:31",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-02-28 14:15:09"
+      "last_update": "2026-02-28 14:15:31"
     }
   }
 }
