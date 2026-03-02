@@ -49,7 +49,7 @@
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-01",
       "status": "expired",
-      "expired_at": "2026-03-02 15:29:01",
+      "expired_at": "2026-03-02 15:29:23",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "juliettedfrt": {
@@ -167,7 +167,7 @@
       "expiration_time": "15:12:09",
       "status": "expired",
       "last_update": "2026-02-23 15:12:09",
-      "expired_at": "2026-03-02 15:29:01",
+      "expired_at": "2026-03-02 15:29:23",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "fertd3faniru": {
@@ -251,7 +251,7 @@
       "last_update": "2026-02-28 13:12:26",
       "last_prolongation": "2026-02-28 13:32:06",
       "prolongation_note": "Prolong\u00e9 de 1 jour(s) le 28/02/2026 13:32 (Madagascar)",
-      "expired_at": "2026-03-02 15:29:01",
+      "expired_at": "2026-03-02 15:29:23",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "tumaimeencore": {
