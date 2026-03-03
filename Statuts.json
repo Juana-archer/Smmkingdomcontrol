@@ -123,12 +123,13 @@
     },
     "tantelyfrta": {
       "android_id": "tantelyfrta",
-      "activation_date": "2026-02-23",
-      "expiration_date": "2026-03-04",
+      "activation_date": "2026-03-03",
+      "activation_time": "22:12:22",
+      "expiration_date": "2026-03-11",
+      "expiration_time": "22:12:22",
       "status": "active",
-      "expiration_time": "23:59:59",
-      "last_prolongation": "2026-03-01 13:17:18",
-      "prolongation_note": "Prolong\u00e9 de 2 jour(s) le 01/03/2026 13:17 (Madagascar)"
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-03-03 22:12:22"
     },
     "Zinartfret": {
       "android_id": "Zinartfret",
