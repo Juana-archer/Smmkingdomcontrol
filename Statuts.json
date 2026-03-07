@@ -31,11 +31,11 @@
     "ainaclaramasisokely": {
       "android_id": "ainaclaramasisokely",
       "activation_date": "2026-02-21",
-      "expiration_date": "2026-03-08",
+      "expiration_date": "2026-03-10",
       "status": "active",
       "expiration_time": "23:59:59",
-      "last_prolongation": "2026-02-28 08:42:02",
-      "prolongation_note": "Prolong\u00e9 de 8 jour(s) le 28/02/2026 08:42 (Madagascar)"
+      "last_prolongation": "2026-03-07 20:07:27",
+      "prolongation_note": "Prolong\u00e9 de 2 jour(s) le 07/03/2026 20:07 (Madagascar)"
     },
     "moifrtskd": {
       "android_id": "moifrtskd",
@@ -135,10 +135,8 @@
       "android_id": "Zinartfret",
       "activation_date": "2026-02-23",
       "expiration_date": "2026-03-02",
-      "status": "active",
-      "paused_at": "2026-02-24 05:32:56",
-      "resumed_at": "2026-03-07 20:06:24",
-      "resume_note": "Repris le 07/03/2026 20:06 (Madagascar)"
+      "status": "paused",
+      "paused_at": "2026-02-24 05:32:56"
     },
     "Brutal9100202": {
       "android_id": "Brutal9100202",
