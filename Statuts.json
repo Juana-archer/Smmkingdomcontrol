@@ -135,8 +135,10 @@
       "android_id": "Zinartfret",
       "activation_date": "2026-02-23",
       "expiration_date": "2026-03-02",
-      "status": "paused",
-      "paused_at": "2026-02-24 05:32:56"
+      "status": "active",
+      "paused_at": "2026-02-24 05:32:56",
+      "resumed_at": "2026-03-08 12:36:03",
+      "resume_note": "Repris le 08/03/2026 12:36 (Madagascar)"
     },
     "Brutal9100202": {
       "android_id": "Brutal9100202",
