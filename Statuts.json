@@ -292,11 +292,13 @@
       "android_id": "frigater",
       "activation_date": "2026-03-02",
       "activation_time": "15:50:32",
-      "expiration_date": "2026-03-09",
+      "expiration_date": "2026-03-16",
       "expiration_time": "15:50:32",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-03-02 15:50:32"
+      "last_update": "2026-03-02 15:50:32",
+      "last_prolongation": "2026-03-09 08:33:16",
+      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 09/03/2026 08:33 (Madagascar)"
     }
   }
 }
