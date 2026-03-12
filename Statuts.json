@@ -236,9 +236,11 @@
       "activation_time": "09:08:02",
       "expiration_date": "2026-03-12",
       "expiration_time": "09:08:02",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-03-05 09:08:02"
+      "last_update": "2026-03-05 09:08:02",
+      "expired_at": "2026-03-12 09:24:48",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "dahertdef": {
       "android_id": "dahertdef",
