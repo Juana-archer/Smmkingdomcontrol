@@ -129,13 +129,15 @@
       "activation_time": "22:12:22",
       "expiration_date": "2026-03-11",
       "expiration_time": "22:12:22",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-03 22:12:22",
       "paused_at": "2026-03-08 20:23:52",
       "pause_note": "Mis en pause le 08/03/2026 20:23 (Madagascar)",
       "resumed_at": "2026-03-13 20:01:25",
-      "resume_note": "Repris le 13/03/2026 20:01 (Madagascar)"
+      "resume_note": "Repris le 13/03/2026 20:01 (Madagascar)",
+      "expired_at": "2026-03-14 21:46:34",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "Zinartfret": {
       "android_id": "Zinartfret",
