@@ -172,10 +172,12 @@
       "activation_time": "09:46:44",
       "expiration_date": "2026-03-18",
       "expiration_time": "09:46:44",
-      "status": "active",
+      "status": "expired",
       "last_update": "2026-02-23 09:46:44",
       "paused_at": "2026-02-23 12:12:44",
-      "resumed_at": "2026-02-23 14:47:18"
+      "resumed_at": "2026-02-23 14:47:18",
+      "expired_at": "2026-03-18 17:02:45",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "germainfrt": {
       "android_id": "germainfrt",
@@ -304,11 +306,13 @@
       "activation_time": "15:50:32",
       "expiration_date": "2026-03-16",
       "expiration_time": "15:50:32",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-02 15:50:32",
       "last_prolongation": "2026-03-09 08:33:16",
-      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 09/03/2026 08:33 (Madagascar)"
+      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 09/03/2026 08:33 (Madagascar)",
+      "expired_at": "2026-03-18 17:02:45",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
@@ -316,13 +320,15 @@
       "activation_time": "20:57:12",
       "expiration_date": "2026-03-16",
       "expiration_time": "20:57:12",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-09 20:57:12",
       "paused_at": "2026-03-10 16:17:37",
       "pause_note": "Mis en pause le 10/03/2026 16:17 (Madagascar)",
       "resumed_at": "2026-03-10 21:05:59",
-      "resume_note": "Repris le 10/03/2026 21:05 (Madagascar)"
+      "resume_note": "Repris le 10/03/2026 21:05 (Madagascar)",
+      "expired_at": "2026-03-18 17:02:45",
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     }
   }
 }
