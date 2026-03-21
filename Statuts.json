@@ -80,10 +80,10 @@
       "android_id": "florinehttp",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-03-02",
-      "status": "paused",
+      "status": "active",
       "paused_at": "2026-02-27 16:43:59",
-      "resumed_at": "2026-02-27 07:26:18",
-      "resume_note": "Repris le 27/02/2026 07:26 (Madagascar)",
+      "resumed_at": "2026-03-21 08:38:07",
+      "resume_note": "Repris le 21/03/2026 08:38 (Madagascar)",
       "pause_note": "Mis en pause le 27/02/2026 16:43 (Madagascar)"
     },
     "radavanirina": {
