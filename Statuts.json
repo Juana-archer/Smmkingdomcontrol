@@ -347,9 +347,11 @@
       "activation_time": "19:08:06",
       "expiration_date": "2026-04-02",
       "expiration_time": "19:08:06",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-03-26 19:08:06"
+      "last_update": "2026-03-26 19:08:06",
+      "paused_at": "2026-03-26 20:26:07",
+      "pause_note": "Mis en pause le 26/03/2026 20:26 (Madagascar)"
     }
   }
 }
