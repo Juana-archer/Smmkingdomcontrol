@@ -140,11 +140,11 @@
       "activation_time": "22:12:22",
       "expiration_date": "2026-04-01",
       "expiration_time": "08:14:56",
-      "status": "paused",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-03 22:12:22",
-      "paused_at": "2026-03-27 08:48:27",
-      "pause_note": "Mis en pause le 27/03/2026 08:48 (Madagascar)",
+      "paused_at": "2026-03-19 10:24:05",
+      "pause_note": "Mis en pause le 19/03/2026 10:24 (Madagascar)",
       "resumed_at": "2026-03-13 20:01:25",
       "resume_note": "Repris le 13/03/2026 20:01 (Madagascar)",
       "expired_at": "2026-03-14 21:46:38",
@@ -352,6 +352,16 @@
       "last_update": "2026-03-26 19:08:06",
       "paused_at": "2026-03-26 20:26:07",
       "pause_note": "Mis en pause le 26/03/2026 20:26 (Madagascar)"
+    },
+    "Jessica": {
+      "android_id": "Jessica",
+      "activation_date": "2026-03-27",
+      "activation_time": "08:49:16",
+      "expiration_date": "2031-12-29",
+      "expiration_time": "08:49:16",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-03-27 08:49:16"
     }
   }
 }
