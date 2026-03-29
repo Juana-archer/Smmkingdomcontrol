@@ -124,13 +124,10 @@
     "philibertdff": {
       "android_id": "philibertdff",
       "activation_date": "2026-02-21",
-      "expiration_date": "2026-04-05",
-      "status": "active",
+      "expiration_date": "2026-02-24",
+      "status": "expired",
       "expired_at": "2026-02-25 18:25:40",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
-      "expiration_time": "12:21:14",
-      "last_prolongation": "2026-03-29 12:21:14",
-      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 29/03/2026 12:21 (Madagascar)"
+      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
     },
     "jessissicatiko": {
       "android_id": "jessissicatiko",
@@ -392,6 +389,16 @@
       "last_update": "2026-03-27 21:04:55",
       "paused_at": "2026-03-28 12:36:46",
       "pause_note": "Mis en pause le 28/03/2026 12:36 (Madagascar)"
+    },
+    "babasertq": {
+      "android_id": "babasertq",
+      "activation_date": "2026-03-29",
+      "activation_time": "12:23:19",
+      "expiration_date": "2026-04-05",
+      "expiration_time": "12:23:19",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-03-29 12:23:19"
     }
   }
 }
