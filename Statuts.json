@@ -1,13 +1,5 @@
 {
   "utilisateurs": {
-    "ID": {
-      "android_id": "ID",
-      "activation_date": "2026-02-21",
-      "expiration_date": "2026-02-28",
-      "status": "expired",
-      "expired_at": "2026-03-01 08:53:39",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
-    },
     "zaitinao": {
       "android_id": "zaitinao",
       "activation_date": "2026-02-21",
