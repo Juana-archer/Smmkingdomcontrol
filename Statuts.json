@@ -111,9 +111,11 @@
       "activation_time": "21:15:26",
       "expiration_date": "2026-04-05",
       "expiration_time": "21:15:26",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-03-29 21:15:26"
+      "last_update": "2026-03-29 21:15:26",
+      "paused_at": "2026-03-29 21:18:23",
+      "pause_until": "2026-04-05 21:18:23"
     },
     "honor\u00e9efdgjy": {
       "android_id": "honor\u00e9efdgjy",
