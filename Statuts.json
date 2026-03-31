@@ -103,9 +103,11 @@
       "activation_time": "12:40:04",
       "expiration_date": "2026-04-04",
       "expiration_time": "12:40:04",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-03-27 12:40:04"
+      "last_update": "2026-03-27 12:40:04",
+      "paused_at": "2026-03-31 06:43:57",
+      "pause_until": "2026-04-04 06:43:57"
     },
     "Blandine": {
       "android_id": "Blandine",
