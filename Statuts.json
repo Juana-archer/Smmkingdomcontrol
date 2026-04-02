@@ -392,7 +392,7 @@
       "activation_time": "21:04:55",
       "expiration_date": "2026-04-02",
       "expiration_time": "21:04:55",
-      "status": "expired",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-27 21:04:55",
       "paused_at": "2026-03-28 12:36:46",
@@ -408,6 +408,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-29 12:23:19"
+    },
+    "Alphonsed": {
+      "android_id": "Alphonsed",
+      "activation_date": "2026-04-02",
+      "activation_time": "22:18:40",
+      "expiration_date": "2026-04-09",
+      "expiration_time": "22:18:40",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-04-02 22:18:40"
     }
   }
 }
