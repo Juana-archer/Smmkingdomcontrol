@@ -418,16 +418,6 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-02 22:18:40"
-    },
-    "fabydefrt": {
-      "android_id": "fabydefrt",
-      "activation_date": "2026-04-03",
-      "activation_time": "17:25:04",
-      "expiration_date": "2026-04-10",
-      "expiration_time": "17:25:04",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-03 17:25:04"
     }
   }
 }
