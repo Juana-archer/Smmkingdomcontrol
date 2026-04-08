@@ -181,14 +181,13 @@
     },
     "Brutal9100202": {
       "android_id": "Brutal9100202",
-      "activation_date": "2026-02-23",
-      "activation_time": "09:43:51",
-      "expiration_date": "2026-02-27",
-      "expiration_time": "09:43:51",
-      "status": "expired",
-      "last_update": "2026-02-23 09:43:51",
-      "expired_at": "2026-02-27 15:54:32",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "activation_date": "2026-04-08",
+      "activation_time": "09:24:53",
+      "expiration_date": "2026-04-15",
+      "expiration_time": "09:24:53",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-04-08 09:24:53"
     },
     "faniryert": {
       "android_id": "faniryert",
