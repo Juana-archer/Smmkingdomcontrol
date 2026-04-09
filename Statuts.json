@@ -431,9 +431,11 @@
       "activation_time": "18:22:51",
       "expiration_date": "2026-04-14",
       "expiration_time": "18:22:51",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-07 18:22:51"
+      "last_update": "2026-04-07 18:22:51",
+      "paused_at": "2026-04-09 18:27:58",
+      "pause_until": "2026-04-14 18:27:58"
     },
     "Tsivoanino": {
       "android_id": "Tsivoanino",
