@@ -456,6 +456,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-09 16:06:04"
+    },
+    "Tsioryaime": {
+      "android_id": "Tsioryaime",
+      "activation_date": "2026-04-13",
+      "activation_time": "13:43:39",
+      "expiration_date": "2026-04-20",
+      "expiration_time": "13:43:39",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-04-13 13:43:39"
     }
   }
 }
