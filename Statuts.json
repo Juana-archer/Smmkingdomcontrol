@@ -182,13 +182,13 @@
     },
     "Brutal9100202": {
       "android_id": "Brutal9100202",
-      "activation_date": "2026-04-08",
-      "activation_time": "09:24:53",
-      "expiration_date": "2026-04-15",
-      "expiration_time": "09:24:53",
-      "status": "expired",
+      "activation_date": "2026-04-15",
+      "activation_time": "12:51:01",
+      "expiration_date": "2026-04-18",
+      "expiration_time": "12:51:01",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-08 09:24:53"
+      "last_update": "2026-04-15 12:51:01"
     },
     "faniryert": {
       "android_id": "faniryert",
