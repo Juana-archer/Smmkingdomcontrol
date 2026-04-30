@@ -330,15 +330,16 @@
       "activation_time": "15:50:32",
       "expiration_date": "2026-05-03",
       "expiration_time": "19:51:30",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-02 15:50:32",
       "last_prolongation": "2026-03-29 13:29:40",
       "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 29/03/2026 13:29 (Madagascar)",
       "expired_at": "2026-03-29 12:19:17",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
-      "paused_at": "2026-04-08 19:55:39",
-      "resumed_at": "2026-04-09 11:47:13"
+      "paused_at": "2026-05-01 02:15:20",
+      "resumed_at": "2026-04-09 11:47:13",
+      "pause_until": "2026-05-03 02:15:20"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
