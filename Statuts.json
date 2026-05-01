@@ -180,16 +180,6 @@
       "last_prolongation": "2026-03-12 09:27:15",
       "prolongation_note": "Prolong\u00e9 de 2 jour(s) le 12/03/2026 09:27 (Madagascar)"
     },
-    "Brutal9100202": {
-      "android_id": "Brutal9100202",
-      "activation_date": "2026-04-15",
-      "activation_time": "12:51:01",
-      "expiration_date": "2026-05-02",
-      "expiration_time": "08:55:40",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-15 12:51:01"
-    },
     "faniryert": {
       "android_id": "faniryert",
       "activation_date": "2026-02-23",
