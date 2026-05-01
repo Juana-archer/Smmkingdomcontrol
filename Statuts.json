@@ -469,6 +469,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-17 17:47:21"
+    },
+    "Brutal9100202": {
+      "android_id": "Brutal9100202",
+      "activation_date": "2026-05-01",
+      "activation_time": "10:54:03",
+      "expiration_date": "2026-05-02",
+      "expiration_time": "07:54:03",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-01 10:54:03"
     }
   }
 }
