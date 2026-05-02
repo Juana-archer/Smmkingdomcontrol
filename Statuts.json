@@ -318,7 +318,7 @@
       "android_id": "frigater",
       "activation_date": "2026-03-02",
       "activation_time": "15:50:32",
-      "expiration_date": "2026-05-03",
+      "expiration_date": "2026-05-04",
       "expiration_time": "19:51:30",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
@@ -328,7 +328,8 @@
       "expired_at": "2026-03-29 12:19:17",
       "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
       "paused_at": "2026-05-01 02:15:20",
-      "resumed_at": "2026-05-02 12:51:01"
+      "resumed_at": "2026-04-09 11:47:13",
+      "pause_until": "2026-05-03 02:15:20"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
