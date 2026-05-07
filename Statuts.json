@@ -501,6 +501,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-07 00:37:18"
+    },
+    "faniryjuan": {
+      "android_id": "faniryjuan",
+      "activation_date": "2026-05-07",
+      "activation_time": "11:26:37",
+      "expiration_date": "2026-05-07",
+      "expiration_time": "14:26:37",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-07 11:26:37"
     }
   }
 }
