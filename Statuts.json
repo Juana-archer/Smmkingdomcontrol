@@ -521,6 +521,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-09 09:49:24"
+    },
+    "moipourtoi": {
+      "android_id": "moipourtoi",
+      "activation_date": "2026-05-09",
+      "activation_time": "12:49:58",
+      "expiration_date": "2026-05-16",
+      "expiration_time": "12:49:58",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-09 12:49:58"
     }
   }
 }
