@@ -531,6 +531,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-09 12:49:58"
+    },
+    "roddyyy6ert": {
+      "android_id": "roddyyy6ert",
+      "activation_date": "2026-05-09",
+      "activation_time": "18:50:08",
+      "expiration_date": "2026-05-17",
+      "expiration_time": "18:50:08",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-09 18:50:08"
     }
   }
 }
