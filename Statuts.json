@@ -414,10 +414,9 @@
       "activation_time": "17:28:43",
       "expiration_date": "2026-05-11",
       "expiration_time": "20:53:45",
-      "status": "expired",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-03 17:28:43",
-      "expired_at": "2026-05-11 22:42:25"
+      "last_update": "2026-04-03 17:28:43"
     },
     "Farissaddf": {
       "android_id": "Farissaddf",
@@ -565,12 +564,13 @@
     },
     "MAMAKO12": {
       "android_id": "MAMAKO12",
-      "activation_date": "2026-05-11",
-      "activation_time": "22:42:28",
+      "activation_date": "2026-05-12",
+      "activation_time": "00:42:32",
       "expiration_date": "2026-05-12",
-      "expiration_time": "06:42:28",
+      "expiration_time": "08:42:32",
       "status": "active",
-      "last_update": "2026-05-11 22:42:28"
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-12 00:42:32"
     }
   }
 }
