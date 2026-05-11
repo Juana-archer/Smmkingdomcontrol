@@ -545,12 +545,12 @@
     "Mamako12": {
       "android_id": "Mamako12",
       "activation_date": "2026-05-12",
-      "activation_time": "00:26:00",
-      "expiration_date": "2026-05-12",
-      "expiration_time": "08:26:00",
+      "activation_time": "00:26:19",
+      "expiration_date": "2026-05-13",
+      "expiration_time": "00:26:19",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-12 00:26:00"
+      "last_update": "2026-05-12 00:26:19"
     }
   }
 }
