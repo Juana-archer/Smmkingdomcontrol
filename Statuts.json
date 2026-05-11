@@ -466,7 +466,7 @@
       "activation_time": "17:47:21",
       "expiration_date": "2026-05-11",
       "expiration_time": "11:02:45",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-17 17:47:21"
     },
@@ -476,7 +476,7 @@
       "activation_time": "10:54:03",
       "expiration_date": "2026-05-10",
       "expiration_time": "19:06:17",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-01 10:54:03",
       "paused_at": "2026-05-07 10:07:09",
