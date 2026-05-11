@@ -414,9 +414,10 @@
       "activation_time": "17:28:43",
       "expiration_date": "2026-05-11",
       "expiration_time": "20:53:45",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-04-03 17:28:43"
+      "last_update": "2026-04-03 17:28:43",
+      "expired_at": "2026-05-11 22:41:13"
     },
     "Farissaddf": {
       "android_id": "Farissaddf",
