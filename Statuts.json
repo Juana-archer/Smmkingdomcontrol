@@ -417,7 +417,7 @@
       "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-03 17:28:43",
-      "expired_at": "2026-05-11 22:42:42"
+      "expired_at": "2026-05-11 22:42:57"
     },
     "Farissaddf": {
       "android_id": "Farissaddf",
@@ -555,12 +555,13 @@
     },
     "friciadeft": {
       "android_id": "friciadeft",
-      "activation_date": "2026-05-11",
-      "activation_time": "22:42:45",
-      "expiration_date": "2026-05-18",
-      "expiration_time": "22:42:45",
+      "activation_date": "2026-05-12",
+      "activation_time": "00:34:48",
+      "expiration_date": "2026-05-19",
+      "expiration_time": "00:34:48",
       "status": "active",
-      "last_update": "2026-05-11 22:42:45"
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-12 00:34:48"
     }
   }
 }
