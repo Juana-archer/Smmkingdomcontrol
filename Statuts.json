@@ -552,16 +552,6 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-12 00:34:48"
-    },
-    "mamako12": {
-      "android_id": "mamako12",
-      "activation_date": "2026-05-12",
-      "activation_time": "10:25:32",
-      "expiration_date": "2026-05-19",
-      "expiration_time": "10:25:32",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-12 10:25:32"
     }
   }
 }
