@@ -6,7 +6,7 @@
       "expiration_date": "2026-02-28",
       "status": "expired",
       "expired_at": "2026-03-01 08:53:39",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "zaitinao": {
       "android_id": "zaitinao",
@@ -14,7 +14,7 @@
       "expiration_date": "2026-03-23",
       "status": "expired",
       "expired_at": "2026-03-24 08:13:50",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "fgertys": {
       "android_id": "fgertys",
@@ -22,7 +22,7 @@
       "expiration_date": "2026-03-23",
       "status": "expired",
       "expired_at": "2026-03-24 08:13:50",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "juertdfga": {
       "android_id": "juertdfga",
@@ -30,7 +30,7 @@
       "expiration_date": "2026-02-25",
       "status": "expired",
       "expired_at": "2026-02-26 08:12:50",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "ainaclaramasisokely": {
       "android_id": "ainaclaramasisokely",
@@ -39,9 +39,9 @@
       "status": "expired",
       "expiration_time": "19:29:26",
       "last_prolongation": "2026-03-27 19:29:26",
-      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 27/03/2026 19:29 (Madagascar)",
+      "prolongation_note": "Prolongé de 7 jour(s) le 27/03/2026 19:29 (Madagascar)",
       "expired_at": "2026-03-11 06:05:11",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "paused_at": "2026-03-30 09:34:06",
       "pause_until": "2026-04-03 09:34:06"
     },
@@ -58,7 +58,7 @@
       "expiration_date": "2026-03-01",
       "status": "expired",
       "expired_at": "2026-03-02 15:29:23",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "juliettedfrt": {
       "android_id": "juliettedfrt",
@@ -94,10 +94,10 @@
       "resume_note": "Repris le 24/03/2026 20:35 (Madagascar)",
       "pause_note": "Mis en pause le 24/03/2026 22:03 (Madagascar)",
       "expired_at": "2026-03-24 20:59:53",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "expiration_time": "20:59:57",
       "last_prolongation": "2026-03-24 20:59:57",
-      "prolongation_note": "Prolong\u00e9 de 6 jour(s) le 24/03/2026 20:59 (Madagascar)"
+      "prolongation_note": "Prolongé de 6 jour(s) le 24/03/2026 20:59 (Madagascar)"
     },
     "radavanirina": {
       "android_id": "radavanirina",
@@ -123,8 +123,8 @@
       "paused_at": "2026-04-01 20:16:51",
       "resumed_at": "2026-04-02 20:07:36"
     },
-    "honor\u00e9efdgjy": {
-      "android_id": "honor\u00e9efdgjy",
+    "honoréefdgjy": {
+      "android_id": "honoréefdgjy",
       "activation_date": "2026-02-21",
       "expiration_date": "2026-02-27",
       "status": "paused",
@@ -137,7 +137,7 @@
       "expiration_date": "2026-02-24",
       "status": "expired",
       "expired_at": "2026-02-25 18:25:40",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "jessissicatiko": {
       "android_id": "jessissicatiko",
@@ -145,7 +145,7 @@
       "expiration_date": "2026-03-24",
       "status": "expired",
       "expired_at": "2026-03-25 08:06:58",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "tantelyfrta": {
       "android_id": "tantelyfrta",
@@ -161,9 +161,9 @@
       "resumed_at": "2026-04-05 19:29:13",
       "resume_note": "Repris le 13/03/2026 20:01 (Madagascar)",
       "expired_at": "2026-03-14 21:46:38",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "last_prolongation": "2026-03-24 08:14:56",
-      "prolongation_note": "Prolong\u00e9 de 8 jour(s) le 24/03/2026 08:14 (Madagascar)",
+      "prolongation_note": "Prolongé de 8 jour(s) le 24/03/2026 08:14 (Madagascar)",
       "pause_until": "2026-04-12 08:21:04"
     },
     "Zinartfret": {
@@ -175,10 +175,10 @@
       "resumed_at": "2026-03-08 12:36:03",
       "resume_note": "Repris le 08/03/2026 12:36 (Madagascar)",
       "expired_at": "2026-03-15 18:24:14",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "expiration_time": "12:43:50",
       "last_prolongation": "2026-03-12 09:27:15",
-      "prolongation_note": "Prolong\u00e9 de 2 jour(s) le 12/03/2026 09:27 (Madagascar)"
+      "prolongation_note": "Prolongé de 2 jour(s) le 12/03/2026 09:27 (Madagascar)"
     },
     "faniryert": {
       "android_id": "faniryert",
@@ -191,7 +191,7 @@
       "paused_at": "2026-02-23 12:12:44",
       "resumed_at": "2026-02-23 14:47:18",
       "expired_at": "2026-03-18 17:02:45",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "germainfrt": {
       "android_id": "germainfrt",
@@ -202,7 +202,7 @@
       "status": "expired",
       "last_update": "2026-02-23 15:12:09",
       "expired_at": "2026-03-02 15:29:23",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "fertd3faniru": {
       "android_id": "fertd3faniru",
@@ -214,7 +214,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 08:41:20",
       "expired_at": "2026-02-25 18:25:40",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "daheryyj": {
       "android_id": "daheryyj",
@@ -226,7 +226,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:13:05",
       "expired_at": "2026-02-25 18:25:40",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "jujoujhrt": {
       "android_id": "jujoujhrt",
@@ -238,7 +238,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:20:29",
       "expired_at": "2026-02-27 15:54:32",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "hfertgh": {
       "android_id": "hfertgh",
@@ -250,7 +250,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-24 09:43:40",
       "expired_at": "2026-02-25 18:25:40",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "odilonerttw": {
       "android_id": "odilonerttw",
@@ -262,7 +262,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-05 09:08:02",
       "expired_at": "2026-03-12 09:25:47",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "dahertdef": {
       "android_id": "dahertdef",
@@ -274,7 +274,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-26 11:55:44",
       "expired_at": "2026-02-26 23:15:53",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "verthertze": {
       "android_id": "verthertze",
@@ -286,9 +286,9 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-28 13:12:26",
       "last_prolongation": "2026-02-28 13:32:06",
-      "prolongation_note": "Prolong\u00e9 de 1 jour(s) le 28/02/2026 13:32 (Madagascar)",
+      "prolongation_note": "Prolongé de 1 jour(s) le 28/02/2026 13:32 (Madagascar)",
       "expired_at": "2026-03-02 15:29:23",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "tumaimeencore": {
       "android_id": "tumaimeencore",
@@ -300,7 +300,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-28 13:46:35",
       "expired_at": "2026-03-01 08:53:39",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "jeveuxdetoi": {
       "android_id": "jeveuxdetoi",
@@ -312,7 +312,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-02-28 14:15:31",
       "expired_at": "2026-02-28 20:14:18",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "frigater": {
       "android_id": "frigater",
@@ -324,9 +324,9 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-02 15:50:32",
       "last_prolongation": "2026-03-29 13:29:40",
-      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 29/03/2026 13:29 (Madagascar)",
+      "prolongation_note": "Prolongé de 7 jour(s) le 29/03/2026 13:29 (Madagascar)",
       "expired_at": "2026-03-29 12:19:17",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)",
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "paused_at": "2026-05-01 02:15:20",
       "resumed_at": "2026-04-09 11:47:13",
       "pause_until": "2026-05-03 02:15:20"
@@ -345,7 +345,7 @@
       "resumed_at": "2026-03-10 21:05:59",
       "resume_note": "Repris le 10/03/2026 21:05 (Madagascar)",
       "expired_at": "2026-03-18 17:02:45",
-      "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
     "claudiaeert": {
       "android_id": "claudiaeert",
@@ -369,7 +369,7 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-27 17:09:56",
       "last_prolongation": "2026-03-27 17:11:02",
-      "prolongation_note": "Prolong\u00e9 de 7 jour(s) le 27/03/2026 17:11 (Madagascar)",
+      "prolongation_note": "Prolongé de 7 jour(s) le 27/03/2026 17:11 (Madagascar)",
       "paused_at": "2026-04-15 13:20:12",
       "pause_until": "2026-04-17 13:20:12"
     },
@@ -562,16 +562,6 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-13 12:22:02"
-    },
-    "faniryjuank": {
-      "android_id": "faniryjuank",
-      "activation_date": "2026-05-13",
-      "activation_time": "11:32:00",
-      "expiration_date": "2026-05-20",
-      "expiration_time": "11:32:00",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-13 11:32:00"
     }
   }
 }
