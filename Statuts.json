@@ -582,6 +582,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-13 14:35:58"
+    },
+    "harisoafan": {
+      "android_id": "harisoafan",
+      "activation_date": "2026-05-14",
+      "activation_time": "21:08:31",
+      "expiration_date": "2026-05-21",
+      "expiration_time": "21:08:31",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-14 21:08:31"
     }
   }
 }
