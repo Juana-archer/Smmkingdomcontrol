@@ -11,6 +11,12 @@
       "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
       "date_liaison": "2026-05-14 11:27:55",
       "statut": "verrouille"
+    },
+    "faniryjuan2": {
+      "device_id": "DEV_eaa3a3e7e83a5fe46676",
+      "api_hash_hash": "f5543b6f5576f3d534be7e1c008773356079a598a8d876b05154e9b40c00a350",
+      "date_liaison": "2026-05-14 11:34:49",
+      "statut": "verrouille"
     }
   }
 }
