@@ -365,13 +365,13 @@
       "activation_time": "17:09:56",
       "expiration_date": "2026-05-18",
       "expiration_time": "08:01:45",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-27 17:09:56",
       "last_prolongation": "2026-03-27 17:11:02",
       "prolongation_note": "Prolongé de 7 jour(s) le 27/03/2026 17:11 (Madagascar)",
-      "paused_at": "2026-04-15 13:20:12",
-      "pause_until": "2026-04-17 13:20:12"
+      "paused_at": "2026-05-14 13:17:13",
+      "pause_until": "2026-05-15 01:17:13"
     },
     "nathortefg": {
       "android_id": "nathortefg",
