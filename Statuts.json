@@ -582,6 +582,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-14 21:08:31"
+    },
+    "mouirjuan": {
+      "android_id": "mouirjuan",
+      "activation_date": "2026-05-17",
+      "activation_time": "21:09:59",
+      "expiration_date": "2026-05-18",
+      "expiration_time": "05:09:59",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-17 21:09:59"
     }
   }
 }
