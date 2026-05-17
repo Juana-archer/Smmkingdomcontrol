@@ -41,6 +41,12 @@
       "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
       "date_liaison": "2026-05-15 21:35:30",
       "statut": "verrouille"
+    },
+    "faniryjuank": {
+      "device_id": "DEV_287ee2dffef82373e43f",
+      "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
+      "date_liaison": "2026-05-17 09:52:32",
+      "statut": "verrouille"
     }
   }
 }
