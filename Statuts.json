@@ -489,7 +489,7 @@
       "activation_time": "23:41:20",
       "expiration_date": "2026-05-16",
       "expiration_time": "23:41:20",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-06 23:41:20"
     },
@@ -519,7 +519,7 @@
       "activation_time": "09:49:24",
       "expiration_date": "2026-05-16",
       "expiration_time": "09:49:24",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-09 09:49:24"
     },
@@ -529,7 +529,7 @@
       "activation_time": "21:32:13",
       "expiration_date": "2026-05-15",
       "expiration_time": "21:32:13",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-13 21:32:13"
     },
@@ -539,7 +539,7 @@
       "activation_time": "18:54:16",
       "expiration_date": "2026-05-16",
       "expiration_time": "18:54:16",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-09 18:54:16"
     },
