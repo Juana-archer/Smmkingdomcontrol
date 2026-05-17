@@ -47,6 +47,12 @@
       "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
       "date_liaison": "2026-05-17 09:53:53",
       "statut": "verrouille"
+    },
+    "odilonerttw": {
+      "device_id": "DEV_eb20ce142e7c82590bd1",
+      "api_hash_hash": "3a3e50817ba13f8f6941e9348774834155ecd1a1f9ca2fcb8a9c121d840bac2b",
+      "date_liaison": "2026-05-17 14:55:04",
+      "statut": "verrouille"
     }
   }
 }
