@@ -1,93 +1,9 @@
 {
   "locks": {
-    "moipourtoi": {
-      "device_id": "DEV_f2e7e7de4581508fed04",
-      "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
-      "date_liaison": "2026-05-11 15:12:08",
-      "statut": "verrouille"
-    },
-    "pourmoi": {
-      "device_id": "DEV_f2e7e7de4581508fed04",
-      "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
-      "date_liaison": "2026-05-14 11:27:55",
-      "statut": "verrouille"
-    },
-    "faniryjuan2": {
-      "device_id": "DEV_eaa3a3e7e83a5fe46676",
-      "api_hash_hash": "f5543b6f5576f3d534be7e1c008773356079a598a8d876b05154e9b40c00a350",
-      "date_liaison": "2026-05-14 11:34:49",
-      "statut": "verrouille"
-    },
-    "Mampisava": {
-      "device_id": "DEV_391747ad3cf3cf20acb6",
-      "api_hash_hash": "813998759bf11a0702afde3e5fcafa821354b436839a2484182ecd79e8896838",
-      "date_liaison": "2026-05-15 04:08:41",
-      "statut": "verrouille"
-    },
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-05-15 12:28:12",
-      "statut": "verrouille"
-    },
-    "harisoafan": {
-      "device_id": "DEV_d21c06373f88310b32a1",
-      "api_hash_hash": "b8b6e3a0375f65f9fb47250d9b05fb793489b4bf43bb40a44cc2824882769511",
-      "date_liaison": "2026-05-15 15:19:00",
-      "statut": "verrouille"
-    },
-    "elidiotgdft": {
-      "device_id": "DEV_f2d99ec8336b3e39793c",
-      "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
-      "date_liaison": "2026-05-15 21:35:30",
-      "statut": "verrouille"
-    },
-    "faniryjuank": {
-      "device_id": "DEV_287ee2dffef82373e43f",
-      "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
-      "date_liaison": "2026-05-17 09:53:53",
-      "statut": "verrouille"
-    },
-    "odilonerttw": {
-      "device_id": "DEV_eb20ce142e7c82590bd1",
-      "api_hash_hash": "3a3e50817ba13f8f6941e9348774834155ecd1a1f9ca2fcb8a9c121d840bac2b",
-      "date_liaison": "2026-05-17 14:55:04",
-      "statut": "verrouille"
-    },
-    "Tsioryaime": {
-      "device_id": "DEV_70568a6aee983d62cbcc",
-      "api_hash_hash": "96df6416a09d882ace4805f1dda33c97cbf020202423437ae64ec02b8e67f5fc",
-      "date_liaison": "2026-05-17 21:03:29",
-      "statut": "verrouille"
-    },
-    "friciadeft": {
-      "device_id": "DEV_6077490cf360ba61429d",
-      "api_hash_hash": "b538c2b237faccfa6b4b65d9914819f01277c97f4d04a44eb3a6ed41d6a2e53e",
-      "date_liaison": "2026-05-18 08:47:18",
-      "statut": "verrouille"
-    },
-    "fabydefrt": {
-      "device_id": "DEV_3445677bf3609f0333f4",
-      "api_hash_hash": "4268d2d18385e8850742602c66b7c042247536cfafd75322976c2a0b39ddf999",
-      "date_liaison": "2026-05-18 10:33:52",
-      "statut": "verrouille"
-    },
     "Sedillontdfg": {
       "device_id": "DEV_2a1e5a4885927890d547",
       "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-05-18 17:11:16",
-      "statut": "verrouille"
-    },
-    "moijuana": {
-      "device_id": "DEV_6077490cf360ba61429d",
-      "api_hash_hash": "b538c2b237faccfa6b4b65d9914819f01277c97f4d04a44eb3a6ed41d6a2e53e",
-      "date_liaison": "2026-05-18 18:01:48",
-      "statut": "verrouille"
-    },
-    "philbert": {
-      "device_id": "DEV_4c4407828e101ecf8a6e",
-      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
-      "date_liaison": "2026-05-18 20:37:11",
+      "date_liaison": "2026-05-18 20:50:02",
       "statut": "verrouille"
     }
   }
