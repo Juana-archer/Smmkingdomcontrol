@@ -59,6 +59,12 @@
       "api_hash_hash": "96df6416a09d882ace4805f1dda33c97cbf020202423437ae64ec02b8e67f5fc",
       "date_liaison": "2026-05-17 21:03:29",
       "statut": "verrouille"
+    },
+    "friciadeft": {
+      "device_id": "DEV_6077490cf360ba61429d",
+      "api_hash_hash": "b538c2b237faccfa6b4b65d9914819f01277c97f4d04a44eb3a6ed41d6a2e53e",
+      "date_liaison": "2026-05-18 08:47:18",
+      "statut": "verrouille"
     }
   }
 }
