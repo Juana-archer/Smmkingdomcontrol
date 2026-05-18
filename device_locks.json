@@ -77,6 +77,12 @@
       "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
       "date_liaison": "2026-05-18 17:11:16",
       "statut": "verrouille"
+    },
+    "moijuana": {
+      "device_id": "DEV_6077490cf360ba61429d",
+      "api_hash_hash": "b538c2b237faccfa6b4b65d9914819f01277c97f4d04a44eb3a6ed41d6a2e53e",
+      "date_liaison": "2026-05-18 18:01:48",
+      "statut": "verrouille"
     }
   }
 }
