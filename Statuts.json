@@ -602,6 +602,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-18 17:49:29"
+    },
+    "moijuana": {
+      "android_id": "moijuana",
+      "activation_date": "2026-05-18",
+      "activation_time": "17:58:52",
+      "expiration_date": "2026-05-21",
+      "expiration_time": "17:58:52",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-18 17:58:52"
     }
   }
 }
