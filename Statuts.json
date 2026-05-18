@@ -596,12 +596,12 @@
     "frigatersby": {
       "android_id": "frigatersby",
       "activation_date": "2026-05-18",
-      "activation_time": "17:48:44",
-      "expiration_date": "2026-05-21",
-      "expiration_time": "17:48:44",
+      "activation_time": "17:49:29",
+      "expiration_date": "2026-05-23",
+      "expiration_time": "17:49:29",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-18 17:48:44"
+      "last_update": "2026-05-18 17:49:29"
     }
   }
 }
