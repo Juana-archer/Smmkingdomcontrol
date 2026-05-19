@@ -23,6 +23,12 @@
       "api_hash_hash": "3cae0263493bdc449062df99c508160441977e65f02204be25223fac195b3d31",
       "date_liaison": "2026-05-19 03:25:28",
       "statut": "verrouille"
+    },
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-05-19 06:25:46",
+      "statut": "verrouille"
     }
   }
 }
