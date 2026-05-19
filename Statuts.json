@@ -612,6 +612,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-18 17:58:52"
+    },
+    "rickaman": {
+      "android_id": "rickaman",
+      "activation_date": "2026-05-19",
+      "activation_time": "15:31:02",
+      "expiration_date": "2026-08-17",
+      "expiration_time": "15:31:02",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-19 15:31:02"
     }
   }
 }
