@@ -41,6 +41,12 @@
       "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
       "date_liaison": "2026-05-20 21:56:13",
       "statut": "verrouille"
+    },
+    "deeleydfz": {
+      "device_id": "DEV_c69490be97c624459709",
+      "api_hash_hash": "1aeff5693c23bd11dfaf0ac85d0ffa9acfa6fa70c1a81c1079130b4ee82b8e05",
+      "date_liaison": "2026-05-20 22:16:44",
+      "statut": "verrouille"
     }
   }
 }
