@@ -3,67 +3,7 @@
     "Sedillontdfg": {
       "device_id": "DEV_2a1e5a4885927890d547",
       "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-05-18 20:50:02",
-      "statut": "verrouille"
-    },
-    "harisoafan": {
-      "device_id": "DEV_d21c06373f88310b32a1",
-      "api_hash_hash": "b8b6e3a0375f65f9fb47250d9b05fb793489b4bf43bb40a44cc2824882769511",
-      "date_liaison": "2026-05-18 21:11:05",
-      "statut": "verrouille"
-    },
-    "philbert": {
-      "device_id": "DEV_4c4407828e101ecf8a6e",
-      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
-      "date_liaison": "2026-05-18 22:24:55",
-      "statut": "verrouille"
-    },
-    "iarimalala": {
-      "device_id": "DEV_4c0d614435d789a6e337",
-      "api_hash_hash": "3cae0263493bdc449062df99c508160441977e65f02204be25223fac195b3d31",
-      "date_liaison": "2026-05-19 03:25:28",
-      "statut": "verrouille"
-    },
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-05-19 06:28:49",
-      "statut": "verrouille"
-    },
-    "elidiotgdft": {
-      "device_id": "DEV_f2d99ec8336b3e39793c",
-      "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
-      "date_liaison": "2026-05-19 08:37:59",
-      "statut": "verrouille"
-    },
-    "odilonerttw": {
-      "device_id": "DEV_eb20ce142e7c82590bd1",
-      "api_hash_hash": "3a3e50817ba13f8f6941e9348774834155ecd1a1f9ca2fcb8a9c121d840bac2b",
-      "date_liaison": "2026-05-19 14:43:06",
-      "statut": "verrouille"
-    },
-    "rickaman": {
-      "device_id": "DEV_69220f166e3ec7ea113d",
-      "api_hash_hash": "b5f5c5129a0eb0f4a36442f389aa68b507009355904c50c3f7901b9f272bcdc6",
-      "date_liaison": "2026-05-19 16:11:35",
-      "statut": "verrouille"
-    },
-    "deeleydfz": {
-      "device_id": "DEV_c69490be97c624459709",
-      "api_hash_hash": "1aeff5693c23bd11dfaf0ac85d0ffa9acfa6fa70c1a81c1079130b4ee82b8e05",
-      "date_liaison": "2026-05-19 19:35:03",
-      "statut": "verrouille"
-    },
-    "steciaanniciah": {
-      "device_id": "DEV_97515098e472c49e61bb",
-      "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
-      "date_liaison": "2026-05-19 22:54:01",
-      "statut": "verrouille"
-    },
-    "joehestan": {
-      "device_id": "DEV_ab0ef79a0cdbbd16076a",
-      "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
-      "date_liaison": "2026-05-20 17:09:12",
+      "date_liaison": "2026-05-20 19:31:39",
       "statut": "verrouille"
     }
   }
