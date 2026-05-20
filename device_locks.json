@@ -11,6 +11,12 @@
       "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
       "date_liaison": "2026-05-20 19:47:22",
       "statut": "verrouille"
+    },
+    "joehestan": {
+      "device_id": "DEV_ab0ef79a0cdbbd16076a",
+      "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
+      "date_liaison": "2026-05-20 20:26:50",
+      "statut": "verrouille"
     }
   }
 }
