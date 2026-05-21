@@ -652,6 +652,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-21 11:11:03"
+    },
+    "Louisidit": {
+      "android_id": "Louisidit",
+      "activation_date": "2026-05-21",
+      "activation_time": "17:59:49",
+      "expiration_date": "2026-05-28",
+      "expiration_time": "17:59:49",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-21 17:59:49"
     }
   }
 }
