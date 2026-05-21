@@ -65,6 +65,12 @@
       "api_hash_hash": "5a1b40e82102fc57db373240c0348e092ad6e8f4c8ec797bac4ccdf46fcf6ed2",
       "date_liaison": "2026-05-21 11:17:44",
       "statut": "verrouille"
+    },
+    "Louisidit": {
+      "device_id": "DEV_7a5c5e6d92c4f1ef359f",
+      "api_hash_hash": "cee1132d125e8f4c787415edbb11b048baa34537f7d294d879437d28c5134078",
+      "date_liaison": "2026-05-21 18:07:20",
+      "statut": "verrouille"
     }
   }
 }
