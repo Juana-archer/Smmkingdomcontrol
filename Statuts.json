@@ -642,6 +642,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-19 20:47:07"
+    },
+    "cristiannoh": {
+      "android_id": "cristiannoh",
+      "activation_date": "2026-05-21",
+      "activation_time": "11:11:03",
+      "expiration_date": "2026-06-20",
+      "expiration_time": "11:11:03",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-21 11:11:03"
     }
   }
 }
