@@ -567,8 +567,8 @@
       "android_id": "harisoafan",
       "activation_date": "2026-05-14",
       "activation_time": "21:08:31",
-      "expiration_date": "2026-05-30",
-      "expiration_time": "18:08:31",
+      "expiration_date": "2026-05-29",
+      "expiration_time": "20:08:31",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-14 21:08:31"
@@ -592,16 +592,6 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-18 14:56:06"
-    },
-    "frigatersby": {
-      "android_id": "frigatersby",
-      "activation_date": "2026-05-18",
-      "activation_time": "17:49:29",
-      "expiration_date": "2026-05-23",
-      "expiration_time": "17:49:29",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-18 17:49:29"
     },
     "moijuana": {
       "android_id": "moijuana",
