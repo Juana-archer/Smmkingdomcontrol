@@ -77,6 +77,12 @@
       "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
       "date_liaison": "2026-05-23 21:53:23",
       "statut": "verrouille"
+    },
+    "Tsioryaime": {
+      "device_id": "DEV_70568a6aee983d62cbcc",
+      "api_hash_hash": "96df6416a09d882ace4805f1dda33c97cbf020202423437ae64ec02b8e67f5fc",
+      "date_liaison": "2026-05-23 22:11:22",
+      "statut": "verrouille"
     }
   }
 }
