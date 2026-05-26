@@ -662,6 +662,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-25 19:06:27"
+    },
+    "Andréhje": {
+      "android_id": "Andréhje",
+      "activation_date": "2026-05-26",
+      "activation_time": "19:02:03",
+      "expiration_date": "2026-06-02",
+      "expiration_time": "19:02:03",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-26 19:02:03"
     }
   }
 }
