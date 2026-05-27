@@ -95,6 +95,12 @@
       "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
       "date_liaison": "2026-05-25 19:56:20",
       "statut": "verrouille"
+    },
+    "luciotjkel": {
+      "device_id": "DEV_e5406d7fbe56cfdfc1f4",
+      "api_hash_hash": "a55d623054125af7e53309901845e1a38c2b9121e7f8fdb96ee8e107b087bc68",
+      "date_liaison": "2026-05-27 10:08:36",
+      "statut": "verrouille"
     }
   }
 }
