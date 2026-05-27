@@ -77,6 +77,12 @@
       "api_hash_hash": "5a1b40e82102fc57db373240c0348e092ad6e8f4c8ec797bac4ccdf46fcf6ed2",
       "date_liaison": "2026-05-28 00:46:26",
       "statut": "verrouille"
+    },
+    "joehestan": {
+      "device_id": "DEV_ab0ef79a0cdbbd16076a",
+      "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
+      "date_liaison": "2026-05-28 01:05:05",
+      "statut": "verrouille"
     }
   }
 }
