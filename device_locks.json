@@ -89,6 +89,12 @@
       "api_hash_hash": "41d633680250295a3d384d0bd29481b31b8ca382f0e3e6719a40e2d2e5e8a865",
       "date_liaison": "2026-05-28 11:45:59",
       "statut": "verrouille"
+    },
+    "adelinahkkk": {
+      "device_id": "DEV_23c300b5ee669470df11",
+      "api_hash_hash": "fb70fd798dcb0282f710d07eec445b97cfe041e47805843a55d3c0654fbd1ff5",
+      "date_liaison": "2026-05-28 23:22:31",
+      "statut": "verrouille"
     }
   }
 }
