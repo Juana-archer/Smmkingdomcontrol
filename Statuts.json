@@ -692,6 +692,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-27 20:59:20"
+    },
+    "adelinahkkk": {
+      "android_id": "adelinahkkk",
+      "activation_date": "2026-05-28",
+      "activation_time": "23:08:41",
+      "expiration_date": "2026-06-02",
+      "expiration_time": "23:08:41",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-28 23:08:41"
     }
   }
 }
