@@ -17,6 +17,12 @@
       "api_hash_hash": "5a1b40e82102fc57db373240c0348e092ad6e8f4c8ec797bac4ccdf46fcf6ed2",
       "date_liaison": "2026-05-29 17:13:21",
       "statut": "verrouille"
+    },
+    "radavanirina": {
+      "device_id": "DEV_2bae83f9e3f32dcdbde3",
+      "api_hash_hash": "41d633680250295a3d384d0bd29481b31b8ca382f0e3e6719a40e2d2e5e8a865",
+      "date_liaison": "2026-05-29 17:22:18",
+      "statut": "verrouille"
     }
   }
 }
