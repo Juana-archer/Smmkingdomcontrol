@@ -5,6 +5,12 @@
       "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
       "date_liaison": "2026-05-29 16:40:39",
       "statut": "verrouille"
+    },
+    "fabydefrt": {
+      "device_id": "DEV_6c1921e216eef9906057",
+      "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
+      "date_liaison": "2026-05-29 17:02:05",
+      "statut": "verrouille"
     }
   }
 }
