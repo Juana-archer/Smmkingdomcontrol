@@ -83,6 +83,12 @@
       "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
       "date_liaison": "2026-05-30 12:04:14",
       "statut": "verrouille"
+    },
+    "stephanoted": {
+      "device_id": "DEV_fd8b8e1141fdee0a5159",
+      "api_hash_hash": "df62dda3488e0ccd02f6799ecfdd4bf53e72435e190c08dc23e26bc369c8f3ce",
+      "date_liaison": "2026-05-30 12:59:48",
+      "statut": "verrouille"
     }
   }
 }
