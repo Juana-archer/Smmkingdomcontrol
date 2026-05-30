@@ -712,6 +712,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-29 17:07:45"
+    },
+    "stephanoted": {
+      "android_id": "stephanoted",
+      "activation_date": "2026-05-30",
+      "activation_time": "12:25:53",
+      "expiration_date": "2026-06-06",
+      "expiration_time": "12:25:53",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-05-30 12:25:53"
     }
   }
 }
