@@ -722,6 +722,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-30 12:25:53"
+    },
+    "moiadmin": {
+      "android_id": "moiadmin",
+      "activation_date": "2026-06-01",
+      "activation_time": "01:08:26",
+      "expiration_date": "2053-10-16",
+      "expiration_time": "01:08:26",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-01 01:08:26"
     }
   }
 }
