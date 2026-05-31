@@ -101,6 +101,12 @@
       "api_hash_hash": "3423953f9d12e12de1ee387536c3fa246d5824e08a33f29c1c567e8b5db2aceb",
       "date_liaison": "2026-05-31 22:57:59",
       "statut": "verrouille"
+    },
+    "moiadmin": {
+      "device_id": "DEV_601e8f44c08a02895fb9",
+      "api_hash_hash": "8cec64e7709c8df7a91973625f12412d82ba2b0165e091eaa76225b22b0467b4",
+      "date_liaison": "2026-06-01 01:12:05",
+      "statut": "verrouille"
     }
   }
 }
