@@ -107,6 +107,12 @@
       "api_hash_hash": "8cec64e7709c8df7a91973625f12412d82ba2b0165e091eaa76225b22b0467b4",
       "date_liaison": "2026-06-01 01:12:52",
       "statut": "verrouille"
+    },
+    "rickaman": {
+      "device_id": "DEV_69220f166e3ec7ea113d",
+      "api_hash_hash": "b5f5c5129a0eb0f4a36442f389aa68b507009355904c50c3f7901b9f272bcdc6",
+      "date_liaison": "2026-06-01 09:05:41",
+      "statut": "verrouille"
     }
   }
 }
