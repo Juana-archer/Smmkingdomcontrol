@@ -752,6 +752,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-02 11:59:49"
+    },
+    "alexdetdi": {
+      "android_id": "alexdetdi",
+      "activation_date": "2026-06-02",
+      "activation_time": "18:28:52",
+      "expiration_date": "2026-06-09",
+      "expiration_time": "18:28:52",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-02 18:28:52"
     }
   }
 }
