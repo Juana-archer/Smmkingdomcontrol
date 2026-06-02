@@ -24,10 +24,10 @@
       "date_liaison": "2026-06-02 20:00:16",
       "statut": "verrouille"
     },
-    "stephanoted": {
-      "device_id": "DEV_fd8b8e1141fdee0a5159",
-      "api_hash_hash": "df62dda3488e0ccd02f6799ecfdd4bf53e72435e190c08dc23e26bc369c8f3ce",
-      "date_liaison": "2026-06-02 20:12:50",
+    "miorahdkdl": {
+      "device_id": "DEV_3f3800712a64d7ef6acc",
+      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
+      "date_liaison": "2026-06-02 20:14:08",
       "statut": "verrouille"
     }
   }
