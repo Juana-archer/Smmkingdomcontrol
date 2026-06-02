@@ -41,6 +41,12 @@
       "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
       "date_liaison": "2026-06-02 19:00:52",
       "statut": "verrouille"
+    },
+    "moiadmin": {
+      "device_id": "DEV_601e8f44c08a02895fb9",
+      "api_hash_hash": "8cec64e7709c8df7a91973625f12412d82ba2b0165e091eaa76225b22b0467b4",
+      "date_liaison": "2026-06-02 19:19:26",
+      "statut": "verrouille"
     }
   }
 }
