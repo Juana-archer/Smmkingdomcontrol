@@ -1,57 +1,9 @@
 {
   "locks": {
-    "stephanoted": {
-      "device_id": "DEV_fd8b8e1141fdee0a5159",
-      "api_hash_hash": "df62dda3488e0ccd02f6799ecfdd4bf53e72435e190c08dc23e26bc369c8f3ce",
-      "date_liaison": "2026-06-02 17:36:59",
-      "statut": "verrouille"
-    },
-    "adelinahkkk": {
-      "device_id": "DEV_23c300b5ee669470df11",
-      "api_hash_hash": "fb70fd798dcb0282f710d07eec445b97cfe041e47805843a55d3c0654fbd1ff5",
-      "date_liaison": "2026-06-02 17:40:13",
-      "statut": "verrouille"
-    },
-    "miorahdkdl": {
-      "device_id": "DEV_3f3800712a64d7ef6acc",
-      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
-      "date_liaison": "2026-06-02 18:00:37",
-      "statut": "verrouille"
-    },
-    "luciotjkel": {
-      "device_id": "DEV_e5406d7fbe56cfdfc1f4",
-      "api_hash_hash": "a55d623054125af7e53309901845e1a38c2b9121e7f8fdb96ee8e107b087bc68",
-      "date_liaison": "2026-06-02 18:16:37",
-      "statut": "verrouille"
-    },
-    "loyaledrt": {
-      "device_id": "DEV_5264730ec78a96fd9bd4",
-      "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
-      "date_liaison": "2026-06-02 18:27:06",
-      "statut": "verrouille"
-    },
-    "alexdetdi": {
-      "device_id": "DEV_e45265850915a3dd98f4",
-      "api_hash_hash": "8f71a9784c7b04e2b8cc2d8ed6489204c9424bc0b6f0f9bde669adfc7a425a80",
-      "date_liaison": "2026-06-02 18:31:55",
-      "statut": "verrouille"
-    },
-    "Sedillontdfg": {
-      "device_id": "DEV_2a1e5a4885927890d547",
-      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-06-02 19:00:52",
-      "statut": "verrouille"
-    },
-    "moiadmin": {
-      "device_id": "DEV_601e8f44c08a02895fb9",
-      "api_hash_hash": "8cec64e7709c8df7a91973625f12412d82ba2b0165e091eaa76225b22b0467b4",
-      "date_liaison": "2026-06-02 19:19:26",
-      "statut": "verrouille"
-    },
     "adreafhrt": {
       "device_id": "DEV_3dfdb53e2cf6df7bf8d5",
       "api_hash_hash": "9ec31116f21b418e4c5857d0cbc6ac79ab306d4b882a48aabb045161d72cebcc",
-      "date_liaison": "2026-06-02 19:30:12",
+      "date_liaison": "2026-06-02 19:37:05",
       "statut": "verrouille"
     }
   }
