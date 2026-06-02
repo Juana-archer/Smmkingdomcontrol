@@ -47,6 +47,12 @@
       "api_hash_hash": "8cec64e7709c8df7a91973625f12412d82ba2b0165e091eaa76225b22b0467b4",
       "date_liaison": "2026-06-02 19:19:26",
       "statut": "verrouille"
+    },
+    "adreafhrt": {
+      "device_id": "DEV_3dfdb53e2cf6df7bf8d5",
+      "api_hash_hash": "9ec31116f21b418e4c5857d0cbc6ac79ab306d4b882a48aabb045161d72cebcc",
+      "date_liaison": "2026-06-02 19:27:10",
+      "statut": "verrouille"
     }
   }
 }
