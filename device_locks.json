@@ -41,6 +41,12 @@
       "api_hash_hash": "df62dda3488e0ccd02f6799ecfdd4bf53e72435e190c08dc23e26bc369c8f3ce",
       "date_liaison": "2026-06-02 21:11:09",
       "statut": "verrouille"
+    },
+    "feffyeikv": {
+      "device_id": "DEV_5d3326718978d71b81cd",
+      "api_hash_hash": "3423953f9d12e12de1ee387536c3fa246d5824e08a33f29c1c567e8b5db2aceb",
+      "date_liaison": "2026-06-02 21:18:35",
+      "statut": "verrouille"
     }
   }
 }
