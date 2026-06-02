@@ -742,6 +742,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-01 09:39:47"
+    },
+    "miorahdkdl": {
+      "android_id": "miorahdkdl",
+      "activation_date": "2026-06-02",
+      "activation_time": "11:59:49",
+      "expiration_date": "2026-06-09",
+      "expiration_time": "11:59:49",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-02 11:59:49"
     }
   }
 }
