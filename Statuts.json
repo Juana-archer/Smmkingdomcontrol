@@ -792,6 +792,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-03 21:51:21"
+    },
+    "faniryjuany": {
+      "android_id": "faniryjuany",
+      "activation_date": "2026-06-04",
+      "activation_time": "00:50:47",
+      "expiration_date": "2265-08-13",
+      "expiration_time": "00:50:47",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-04 00:50:47"
     }
   }
 }
