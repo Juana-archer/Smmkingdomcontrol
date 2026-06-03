@@ -772,6 +772,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-03 09:15:18"
+    },
+    "boydah": {
+      "android_id": "boydah",
+      "activation_date": "2026-06-03",
+      "activation_time": "19:48:04",
+      "expiration_date": "2026-06-10",
+      "expiration_time": "19:48:04",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-03 19:48:04"
     }
   }
 }
