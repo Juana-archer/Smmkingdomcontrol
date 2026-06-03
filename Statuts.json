@@ -762,6 +762,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-02 18:28:52"
+    },
+    "rhnaldefet": {
+      "android_id": "rhnaldefet",
+      "activation_date": "2026-06-03",
+      "activation_time": "09:15:18",
+      "expiration_date": "2026-06-10",
+      "expiration_time": "09:15:18",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-03 09:15:18"
     }
   }
 }
