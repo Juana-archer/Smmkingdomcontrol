@@ -89,6 +89,12 @@
       "api_hash_hash": "3cae0263493bdc449062df99c508160441977e65f02204be25223fac195b3d31",
       "date_liaison": "2026-06-03 08:02:35",
       "statut": "verrouille"
+    },
+    "rhnaldefet": {
+      "device_id": "DEV_1ccb5252f9183498d130",
+      "api_hash_hash": "9593c6c07741893bf9373945b072925dadc11d23841bc2c13bf21e4adeefa28f",
+      "date_liaison": "2026-06-03 09:33:24",
+      "statut": "verrouille"
     }
   }
 }
