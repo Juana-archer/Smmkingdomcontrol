@@ -812,6 +812,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 11:47:07"
+    },
+    "rhalinohah": {
+      "android_id": "rhalinohah",
+      "activation_date": "2026-06-04",
+      "activation_time": "14:01:28",
+      "expiration_date": "2026-06-11",
+      "expiration_time": "14:01:28",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-04 14:01:28"
     }
   }
 }
