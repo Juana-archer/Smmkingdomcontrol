@@ -137,6 +137,12 @@
       "api_hash_hash": "62f6cf9b52fccb5a10b6786ce2b9ea6e9e4e58f307fe316320d51c58801c2576",
       "date_liaison": "2026-06-04 01:01:41",
       "statut": "verrouille"
+    },
+    "avotragjd": {
+      "device_id": "DEV_120fa4be1a80cefdd2ab",
+      "api_hash_hash": "1894f656534fd0737fe5ab5e19be1f6a29ff1191fca46b65bdd8c1c83fda6204",
+      "date_liaison": "2026-06-04 11:52:18",
+      "statut": "verrouille"
     }
   }
 }
