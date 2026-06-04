@@ -802,6 +802,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 00:50:47"
+    },
+    "avotragjd": {
+      "android_id": "avotragjd",
+      "activation_date": "2026-06-04",
+      "activation_time": "11:47:07",
+      "expiration_date": "2026-06-11",
+      "expiration_time": "11:47:07",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-04 11:47:07"
     }
   }
 }
