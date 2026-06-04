@@ -822,6 +822,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 14:01:28"
+    },
+    "anniciahe": {
+      "android_id": "anniciahe",
+      "activation_date": "2026-06-04",
+      "activation_time": "18:30:36",
+      "expiration_date": "2026-06-09",
+      "expiration_time": "18:30:36",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-04 18:30:36"
     }
   }
 }
