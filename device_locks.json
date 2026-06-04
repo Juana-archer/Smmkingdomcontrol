@@ -149,6 +149,12 @@
       "api_hash_hash": "23ce67e09eeda513540e8fff2098ce552d8abe1877b28cfa209072bd4baf9998",
       "date_liaison": "2026-06-04 14:18:59",
       "statut": "verrouille"
+    },
+    "anniciahe": {
+      "device_id": "DEV_2f65b5cfc5f179c9f0e9",
+      "api_hash_hash": "c41bef8ff509db28efb0f71891a7dd4ad83ddf9526f33aeba0e29e41eb80c7dc",
+      "date_liaison": "2026-06-04 19:58:11",
+      "statut": "verrouille"
     }
   }
 }
