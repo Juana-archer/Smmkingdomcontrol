@@ -844,6 +844,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-05 11:59:24"
+    },
+    "khalabnoue": {
+      "android_id": "khalabnoue",
+      "activation_date": "2026-06-05",
+      "activation_time": "14:30:53",
+      "expiration_date": "2026-06-12",
+      "expiration_time": "14:30:53",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-05 14:30:53"
     }
   }
 }
