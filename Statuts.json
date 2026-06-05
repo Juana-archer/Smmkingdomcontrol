@@ -854,6 +854,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-05 14:30:53"
+    },
+    "victoreodb": {
+      "android_id": "victoreodb",
+      "activation_date": "2026-06-05",
+      "activation_time": "15:45:08",
+      "expiration_date": "2026-06-12",
+      "expiration_time": "15:45:08",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-05 15:45:08"
     }
   }
 }
