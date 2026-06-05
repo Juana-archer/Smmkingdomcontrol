@@ -819,11 +819,11 @@
       "activation_time": "14:01:28",
       "expiration_date": "2026-06-11",
       "expiration_time": "14:01:28",
-      "status": "paused",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 14:01:28",
       "paused_at": "2026-06-05 09:11:05",
-      "pause_until": "2026-06-09 09:11:05"
+      "resumed_at": "2026-06-05 09:43:35"
     },
     "anniciahe": {
       "android_id": "anniciahe",
