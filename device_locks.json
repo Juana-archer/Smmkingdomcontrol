@@ -155,6 +155,12 @@
       "api_hash_hash": "c41bef8ff509db28efb0f71891a7dd4ad83ddf9526f33aeba0e29e41eb80c7dc",
       "date_liaison": "2026-06-04 19:58:11",
       "statut": "verrouille"
+    },
+    "alsonvictor": {
+      "device_id": "DEV_40602c2c2b5ccb23d444",
+      "api_hash_hash": "77ed5fbf1ce8bfa636df6179c5b6bfc3be6344fdc7c6974a563788de00977718",
+      "date_liaison": "2026-06-05 12:05:21",
+      "statut": "verrouille"
     }
   }
 }
