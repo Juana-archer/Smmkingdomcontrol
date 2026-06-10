@@ -874,6 +874,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 11:50:42"
+    },
+    "nirinajek": {
+      "android_id": "nirinajek",
+      "activation_date": "2026-06-10",
+      "activation_time": "12:46:19",
+      "expiration_date": "2026-06-17",
+      "expiration_time": "12:46:19",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-10 12:46:19"
     }
   }
 }
