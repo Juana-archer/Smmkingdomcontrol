@@ -5,6 +5,12 @@
       "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
       "date_liaison": "2026-06-10 21:12:23",
       "statut": "verrouille"
+    },
+    "radavanirina": {
+      "device_id": "DEV_2bae83f9e3f32dcdbde3",
+      "api_hash_hash": "41d633680250295a3d384d0bd29481b31b8ca382f0e3e6719a40e2d2e5e8a865",
+      "date_liaison": "2026-06-10 21:13:52",
+      "statut": "verrouille"
     }
   }
 }
