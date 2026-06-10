@@ -894,6 +894,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 13:36:07"
+    },
+    "facielgfey": {
+      "android_id": "facielgfey",
+      "activation_date": "2026-06-10",
+      "activation_time": "14:59:40",
+      "expiration_date": "2026-06-17",
+      "expiration_time": "14:59:40",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-10 14:59:40"
     }
   }
 }
