@@ -23,6 +23,12 @@
       "api_hash_hash": "022e358bb11167f3a9d382247281300b00446dc301f71894f437e4034d33805c",
       "date_liaison": "2026-06-10 21:33:55",
       "statut": "verrouille"
+    },
+    "jouendke": {
+      "device_id": "DEV_3d81a44be369c7f1cb61",
+      "api_hash_hash": "66ce540e72bc75bdfcde5825ddc2920f1715679b419172712de7bc304f1aad8a",
+      "date_liaison": "2026-06-10 21:45:04",
+      "statut": "verrouille"
     }
   }
 }
