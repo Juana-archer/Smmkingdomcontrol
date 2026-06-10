@@ -884,6 +884,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 13:00:24"
+    },
+    "antonia": {
+      "android_id": "antonia",
+      "activation_date": "2026-06-10",
+      "activation_time": "13:36:07",
+      "expiration_date": "2026-06-17",
+      "expiration_time": "13:36:07",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-10 13:36:07"
     }
   }
 }
