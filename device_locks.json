@@ -17,6 +17,12 @@
       "api_hash_hash": "f4a5586d44a172b6cc192645e2d79d91eb73704480a178f38dab9b3049361ad4",
       "date_liaison": "2026-06-10 21:19:53",
       "statut": "verrouille"
+    },
+    "nilamina": {
+      "device_id": "DEV_b268daf9807fffd52320",
+      "api_hash_hash": "022e358bb11167f3a9d382247281300b00446dc301f71894f437e4034d33805c",
+      "date_liaison": "2026-06-10 21:33:55",
+      "statut": "verrouille"
     }
   }
 }
