@@ -173,6 +173,12 @@
       "api_hash_hash": "41d633680250295a3d384d0bd29481b31b8ca382f0e3e6719a40e2d2e5e8a865",
       "date_liaison": "2026-06-07 17:56:50",
       "statut": "verrouille"
+    },
+    "louoekke": {
+      "device_id": "DEV_287ee2dffef82373e43f",
+      "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
+      "date_liaison": "2026-06-10 12:06:53",
+      "statut": "verrouille"
     }
   }
 }
