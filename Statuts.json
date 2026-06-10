@@ -914,6 +914,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 18:54:38"
+    },
+    "lucashdkd": {
+      "android_id": "lucashdkd",
+      "activation_date": "2026-06-10",
+      "activation_time": "21:06:24",
+      "expiration_date": "2026-06-17",
+      "expiration_time": "21:06:24",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-10 21:06:24"
     }
   }
 }
