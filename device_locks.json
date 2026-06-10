@@ -59,6 +59,12 @@
       "api_hash_hash": "b0c9992280925edbc717bcb9cee10a3024dfe519136f642b187f1969faa58105",
       "date_liaison": "2026-06-10 22:24:24",
       "statut": "verrouille"
+    },
+    "adreafhrt": {
+      "device_id": "DEV_3dfdb53e2cf6df7bf8d5",
+      "api_hash_hash": "9ec31116f21b418e4c5857d0cbc6ac79ab306d4b882a48aabb045161d72cebcc",
+      "date_liaison": "2026-06-10 22:56:08",
+      "statut": "verrouille"
     }
   }
 }
