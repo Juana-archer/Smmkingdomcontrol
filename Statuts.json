@@ -763,6 +763,16 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-02 18:28:52"
     },
+    "rhnaldefet": {
+      "android_id": "rhnaldefet",
+      "activation_date": "2026-06-10",
+      "activation_time": "12:48:39",
+      "expiration_date": "2026-06-17",
+      "expiration_time": "12:48:39",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-10 12:48:39"
+    },
     "boydah": {
       "android_id": "boydah",
       "activation_date": "2026-06-03",
