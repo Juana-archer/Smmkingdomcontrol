@@ -107,6 +107,12 @@
       "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
       "date_liaison": "2026-06-11 12:03:13",
       "statut": "verrouille"
+    },
+    "khalabnoue": {
+      "device_id": "DEV_31f249860290a909d900",
+      "api_hash_hash": "784f6d46c2e57c75ea11929e254ebbfd97a775eabd518a378bc93a60b0f48af1",
+      "date_liaison": "2026-06-11 12:09:47",
+      "statut": "verrouille"
     }
   }
 }
