@@ -65,6 +65,12 @@
       "api_hash_hash": "b0c9992280925edbc717bcb9cee10a3024dfe519136f642b187f1969faa58105",
       "date_liaison": "2026-06-11 21:36:24",
       "statut": "verrouille"
+    },
+    "anniciahe": {
+      "device_id": "DEV_2f65b5cfc5f179c9f0e9",
+      "api_hash_hash": "c41bef8ff509db28efb0f71891a7dd4ad83ddf9526f33aeba0e29e41eb80c7dc",
+      "date_liaison": "2026-06-11 22:01:42",
+      "statut": "verrouille"
     }
   }
 }
