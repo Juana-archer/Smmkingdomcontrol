@@ -59,6 +59,12 @@
       "api_hash_hash": "62f6cf9b52fccb5a10b6786ce2b9ea6e9e4e58f307fe316320d51c58801c2576",
       "date_liaison": "2026-06-11 21:23:06",
       "statut": "verrouille"
+    },
+    "antonia": {
+      "device_id": "DEV_c916668686d80ffb4c98",
+      "api_hash_hash": "b0c9992280925edbc717bcb9cee10a3024dfe519136f642b187f1969faa58105",
+      "date_liaison": "2026-06-11 21:36:24",
+      "statut": "verrouille"
     }
   }
 }
