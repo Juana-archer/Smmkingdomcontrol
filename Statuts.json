@@ -769,11 +769,11 @@
       "activation_time": "12:48:39",
       "expiration_date": "2026-06-17",
       "expiration_time": "12:48:39",
-      "status": "paused",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 12:48:39",
       "paused_at": "2026-06-11 09:33:17",
-      "pause_until": "2026-06-17 09:33:17"
+      "resumed_at": "2026-06-11 21:00:56"
     },
     "boydah": {
       "android_id": "boydah",
