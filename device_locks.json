@@ -143,6 +143,12 @@
       "api_hash_hash": "44b678183bd1beba0f6ae2b88260402fba0e210b9cb2838ad15fdcf039caded3",
       "date_liaison": "2026-06-12 18:32:32",
       "statut": "verrouille"
+    },
+    "powelluydf2": {
+      "device_id": "DEV_d8818e3512ec9554e4b8",
+      "api_hash_hash": "9e461e3c1c01847c103a886849c26c17e43fb0084db0722e4f2b060697824e98",
+      "date_liaison": "2026-06-12 21:05:31",
+      "statut": "verrouille"
     }
   }
 }
