@@ -926,6 +926,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-10 21:15:54"
+    },
+    "poeudidj": {
+      "android_id": "poeudidj",
+      "activation_date": "2026-06-12",
+      "activation_time": "18:21:00",
+      "expiration_date": "2026-06-19",
+      "expiration_time": "18:21:00",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-12 18:21:00"
     }
   }
 }
