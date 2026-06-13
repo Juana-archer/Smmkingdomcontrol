@@ -946,6 +946,16 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-12 21:01:14"
+    },
+    "trixpooej": {
+      "android_id": "trixpooej",
+      "activation_date": "2026-06-13",
+      "activation_time": "14:10:54",
+      "expiration_date": "2026-06-20",
+      "expiration_time": "14:10:54",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-13 14:10:54"
     }
   }
 }
