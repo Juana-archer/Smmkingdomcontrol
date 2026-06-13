@@ -149,6 +149,12 @@
       "api_hash_hash": "9e461e3c1c01847c103a886849c26c17e43fb0084db0722e4f2b060697824e98",
       "date_liaison": "2026-06-12 21:05:54",
       "statut": "verrouille"
+    },
+    "trixpooej": {
+      "device_id": "DEV_47433b4d7f47b9fdef12",
+      "api_hash_hash": "a7246cd5ceb2f67c7a7ad741441f15149936e7f50694dbb238b496002fbcc193",
+      "date_liaison": "2026-06-13 14:13:49",
+      "statut": "verrouille"
     }
   }
 }
