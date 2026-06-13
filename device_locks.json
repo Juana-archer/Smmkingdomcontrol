@@ -155,6 +155,12 @@
       "api_hash_hash": "a7246cd5ceb2f67c7a7ad741441f15149936e7f50694dbb238b496002fbcc193",
       "date_liaison": "2026-06-13 14:13:49",
       "statut": "verrouille"
+    },
+    "tsiakotsiory": {
+      "device_id": "DEV_d58a7ecc1c824411ced2",
+      "api_hash_hash": "0e45c638c6d914fab6f52af138dee2f61af859fef32d2cb1bfcee34a36820456",
+      "date_liaison": "2026-06-13 15:22:06",
+      "statut": "verrouille"
     }
   }
 }
