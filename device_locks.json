@@ -161,6 +161,12 @@
       "api_hash_hash": "0e45c638c6d914fab6f52af138dee2f61af859fef32d2cb1bfcee34a36820456",
       "date_liaison": "2026-06-13 15:22:06",
       "statut": "verrouille"
+    },
+    "mimikely": {
+      "device_id": "DEV_0471a1ab7dba68d018a1",
+      "api_hash_hash": "a6da6a1ef876f2bdfcc66a5d193b038ce776425e9ce1aa98d26001095c7785b4",
+      "date_liaison": "2026-06-13 16:28:42",
+      "statut": "verrouille"
     }
   }
 }
