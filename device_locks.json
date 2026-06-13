@@ -173,6 +173,12 @@
       "api_hash_hash": "a7246cd5ceb2f67c7a7ad741441f15149936e7f50694dbb238b496002fbcc193",
       "date_liaison": "2026-06-13 16:55:07",
       "statut": "verrouille"
+    },
+    "gilbertogdc": {
+      "device_id": "DEV_aebc869ce69f9550b714",
+      "api_hash_hash": "1cd47179f84559ee2d228b03f5e60077076fe8d61681f5f06830c9558bed9c86",
+      "date_liaison": "2026-06-13 17:54:42",
+      "statut": "verrouille"
     }
   }
 }
