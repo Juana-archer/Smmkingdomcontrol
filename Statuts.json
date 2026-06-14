@@ -729,9 +729,11 @@
       "activation_time": "01:08:26",
       "expiration_date": "2053-10-16",
       "expiration_time": "01:08:26",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-01 01:08:26"
+      "last_update": "2026-06-01 01:08:26",
+      "paused_at": "2026-06-14 20:41:33",
+      "pause_until": "2026-06-21 20:41:33"
     },
     "fabydefrts": {
       "android_id": "fabydefrts",
