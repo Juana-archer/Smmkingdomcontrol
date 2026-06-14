@@ -320,16 +320,16 @@
       "activation_time": "15:50:32",
       "expiration_date": "2026-06-17",
       "expiration_time": "07:51:30",
-      "status": "paused",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-02 15:50:32",
       "last_prolongation": "2026-03-29 13:29:40",
       "prolongation_note": "Prolongé de 7 jour(s) le 29/03/2026 13:29 (Madagascar)",
       "expired_at": "2026-03-29 12:19:17",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
-      "paused_at": "2026-06-14 17:36:01",
+      "paused_at": "2026-05-01 02:15:20",
       "resumed_at": "2026-04-09 11:47:13",
-      "pause_until": "2026-06-17 17:36:01"
+      "pause_until": "2026-05-03 02:15:20"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
@@ -933,9 +933,11 @@
       "activation_time": "18:21:00",
       "expiration_date": "2026-06-19",
       "expiration_time": "18:21:00",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-12 18:21:00"
+      "last_update": "2026-06-12 18:21:00",
+      "paused_at": "2026-06-14 17:37:40",
+      "pause_until": "2026-06-19 17:37:40"
     },
     "powelluydf2": {
       "android_id": "powelluydf2",
