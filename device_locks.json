@@ -185,6 +185,12 @@
       "api_hash_hash": "54a0d8427c98a0fe46c55867b8f5adb8145500b3e607cd4a2672619443446fd4",
       "date_liaison": "2026-06-13 19:01:55",
       "statut": "verrouille"
+    },
+    "boydah": {
+      "device_id": "DEV_52c9ff0afc440aab92a2",
+      "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
+      "date_liaison": "2026-06-14 14:49:23",
+      "statut": "verrouille"
     }
   }
 }
