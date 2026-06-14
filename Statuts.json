@@ -936,9 +936,11 @@
       "activation_time": "18:21:00",
       "expiration_date": "2026-06-19",
       "expiration_time": "18:21:00",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-12 18:21:00"
+      "last_update": "2026-06-12 18:21:00",
+      "paused_at": "2026-06-14 20:35:04",
+      "pause_until": "2026-06-19 20:35:04"
     },
     "powelluydf2": {
       "android_id": "powelluydf2",
