@@ -1045,6 +1045,18 @@
       "last_calculation_time": "2026-06-15 20:25:23",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-15 20:02:28"
+    },
+    "gilbertogdc": {
+      "android_id": "gilbertogdc",
+      "activation_date": "2026-06-15",
+      "activation_time": "21:19:11",
+      "expiration_date": "2026-06-20",
+      "expiration_time": "21:19:11",
+      "status": "active",
+      "remaining_seconds_base": 432000,
+      "last_calculation_time": "2026-06-15 21:19:11",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-15 21:19:11"
     }
   }
 }
