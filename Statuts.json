@@ -979,16 +979,6 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-13 16:26:16"
-    },
-    "mathieudh": {
-      "android_id": "mathieudh",
-      "activation_date": "2026-06-13",
-      "activation_time": "18:55:32",
-      "expiration_date": "2026-06-20",
-      "expiration_time": "18:55:32",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-13 18:55:32"
     }
   }
 }
