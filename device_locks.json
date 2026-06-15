@@ -17,6 +17,12 @@
       "api_hash_hash": "a7246cd5ceb2f67c7a7ad741441f15149936e7f50694dbb238b496002fbcc193",
       "date_liaison": "2026-06-15 22:07:51",
       "statut": "verrouille"
+    },
+    "philbert": {
+      "device_id": "DEV_4c4407828e101ecf8a6e",
+      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
+      "date_liaison": "2026-06-15 22:09:35",
+      "statut": "verrouille"
     }
   }
 }
