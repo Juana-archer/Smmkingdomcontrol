@@ -314,6 +314,18 @@
       "expired_at": "2026-02-28 20:14:18",
       "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
+    "frigater": {
+      "android_id": "frigater",
+      "activation_date": "2026-06-15",
+      "activation_time": "10:56:32",
+      "expiration_date": "2026-06-18",
+      "expiration_time": "10:56:32",
+      "status": "active",
+      "remaining_seconds_base": 259200,
+      "last_calculation_time": "2026-06-15 10:56:32",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-15 10:56:32"
+    },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
       "activation_date": "2026-03-09",
