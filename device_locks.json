@@ -143,6 +143,12 @@
       "api_hash_hash": "23ce67e09eeda513540e8fff2098ce552d8abe1877b28cfa209072bd4baf9998",
       "date_liaison": "2026-06-16 09:46:40",
       "statut": "verrouille"
+    },
+    "steciaanniciah": {
+      "device_id": "DEV_97515098e472c49e61bb",
+      "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
+      "date_liaison": "2026-06-16 14:01:21",
+      "statut": "verrouille"
     }
   }
 }
