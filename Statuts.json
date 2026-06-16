@@ -974,18 +974,6 @@
       "remaining_seconds_base": 175830.406287,
       "last_calculation_time": "2026-06-15 20:25:23"
     },
-    "poeudidj": {
-      "android_id": "poeudidj",
-      "activation_date": "2026-06-12",
-      "activation_time": "18:21:00",
-      "expiration_date": "2026-06-19",
-      "expiration_time": "18:21:00",
-      "status": "paused",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-12 18:21:00",
-      "paused_at": "2026-06-14 20:35:04",
-      "pause_until": "2026-06-19 20:35:04"
-    },
     "powelluydf2": {
       "android_id": "powelluydf2",
       "activation_date": "2026-06-12",
