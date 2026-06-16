@@ -149,6 +149,12 @@
       "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
       "date_liaison": "2026-06-16 14:04:57",
       "statut": "verrouille"
+    },
+    "poeudidj": {
+      "device_id": "DEV_f9dcebc880e1614c628a",
+      "api_hash_hash": "44b678183bd1beba0f6ae2b88260402fba0e210b9cb2838ad15fdcf039caded3",
+      "date_liaison": "2026-06-16 15:07:45",
+      "statut": "verrouille"
     }
   }
 }
