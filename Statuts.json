@@ -864,11 +864,13 @@
       "activation_time": "18:30:36",
       "expiration_date": "2026-06-17",
       "expiration_time": "20:30:36",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 18:30:36",
       "remaining_seconds_base": 173112.406287,
-      "last_calculation_time": "2026-06-15 20:25:23"
+      "last_calculation_time": "2026-06-15 20:25:23",
+      "paused_at": "2026-06-16 15:42:52",
+      "remaining_seconds_at_pause": 103662.58943699999
     },
     "alsonvictor": {
       "android_id": "alsonvictor",
