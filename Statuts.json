@@ -570,11 +570,13 @@
       "activation_time": "21:08:31",
       "expiration_date": "2026-06-23",
       "expiration_time": "15:46:28",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-14 21:08:31",
       "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-16 15:46:28"
+      "last_calculation_time": "2026-06-16 15:46:28",
+      "paused_at": "2026-06-17 11:44:28",
+      "remaining_seconds_at_pause": 532919.049296
     },
     "mouirjuan": {
       "android_id": "mouirjuan",
