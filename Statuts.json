@@ -1071,6 +1071,18 @@
       "last_calculation_time": "2026-06-18 09:56:51",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-16 16:58:06"
+    },
+    "francia5ge": {
+      "android_id": "francia5ge",
+      "activation_date": "2026-06-18",
+      "activation_time": "14:42:51",
+      "expiration_date": "2026-06-25",
+      "expiration_time": "14:42:51",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-18 14:42:51",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-18 14:42:51"
     }
   }
 }
