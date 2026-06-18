@@ -814,13 +814,13 @@
       "android_id": "jouendke",
       "activation_date": "2026-06-03",
       "activation_time": "21:51:21",
-      "expiration_date": "2026-06-17",
-      "expiration_time": "21:51:21",
-      "status": "expired",
+      "expiration_date": "2026-06-25",
+      "expiration_time": "09:57:08",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-03 21:51:21",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "last_update": "2026-06-18 09:57:08",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-18 09:57:08"
     },
     "faniryjuany": {
       "android_id": "faniryjuany",
