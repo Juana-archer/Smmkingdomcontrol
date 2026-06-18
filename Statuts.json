@@ -848,17 +848,15 @@
     },
     "rhalinohah": {
       "android_id": "rhalinohah",
-      "activation_date": "2026-06-04",
-      "activation_time": "14:01:28",
-      "expiration_date": "2026-06-18",
-      "expiration_time": "16:12:04",
+      "activation_date": "2026-06-18",
+      "activation_time": "20:56:47",
+      "expiration_date": "2026-06-25",
+      "expiration_time": "20:56:47",
       "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-18 20:56:47",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-04 14:01:28",
-      "paused_at": "2026-06-05 09:11:05",
-      "resumed_at": "2026-06-05 09:43:35",
-      "remaining_seconds_base": 22511.712876999984,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "last_update": "2026-06-18 20:56:47"
     },
     "anniciahe": {
       "android_id": "anniciahe",
