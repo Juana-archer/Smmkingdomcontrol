@@ -568,15 +568,14 @@
       "android_id": "harisoafan",
       "activation_date": "2026-05-14",
       "activation_time": "21:08:31",
-      "expiration_date": "2026-06-23",
-      "expiration_time": "15:46:28",
-      "status": "paused",
+      "expiration_date": "2026-06-25",
+      "expiration_time": "02:47:04",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-14 21:08:31",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-16 15:46:28",
-      "paused_at": "2026-06-17 11:44:28",
-      "remaining_seconds_at_pause": 532919.049296
+      "remaining_seconds_base": 532919.049296,
+      "last_calculation_time": "2026-06-18 22:45:05",
+      "resumed_at": "2026-06-18 22:45:05"
     },
     "mouirjuan": {
       "android_id": "mouirjuan",
