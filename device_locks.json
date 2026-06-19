@@ -11,6 +11,12 @@
       "api_hash_hash": "23ce67e09eeda513540e8fff2098ce552d8abe1877b28cfa209072bd4baf9998",
       "date_liaison": "2026-06-19 09:50:46",
       "statut": "verrouille"
+    },
+    "tsiakotsiory": {
+      "device_id": "DEV_d58a7ecc1c824411ced2",
+      "api_hash_hash": "0e45c638c6d914fab6f52af138dee2f61af859fef32d2cb1bfcee34a36820456",
+      "date_liaison": "2026-06-19 10:31:45",
+      "statut": "verrouille"
     }
   }
 }
