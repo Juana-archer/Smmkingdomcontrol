@@ -1,39 +1,9 @@
 {
   "locks": {
-    "mimikely": {
-      "device_id": "DEV_0471a1ab7dba68d018a1",
-      "api_hash_hash": "a6da6a1ef876f2bdfcc66a5d193b038ce776425e9ce1aa98d26001095c7785b4",
-      "date_liaison": "2026-06-19 07:28:46",
-      "statut": "verrouille"
-    },
-    "jouendke": {
-      "device_id": "DEV_3d81a44be369c7f1cb61",
-      "api_hash_hash": "66ce540e72bc75bdfcde5825ddc2920f1715679b419172712de7bc304f1aad8a",
-      "date_liaison": "2026-06-19 07:45:27",
-      "statut": "verrouille"
-    },
-    "francia5ge": {
-      "device_id": "DEV_641879e91b1bdaecd605",
-      "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
-      "date_liaison": "2026-06-19 07:51:32",
-      "statut": "verrouille"
-    },
-    "Sedillontdfg": {
-      "device_id": "DEV_2a1e5a4885927890d547",
-      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-06-19 08:15:48",
-      "statut": "verrouille"
-    },
-    "tsiakotsiory": {
-      "device_id": "DEV_d58a7ecc1c824411ced2",
-      "api_hash_hash": "0e45c638c6d914fab6f52af138dee2f61af859fef32d2cb1bfcee34a36820456",
-      "date_liaison": "2026-06-19 08:20:00",
-      "statut": "verrouille"
-    },
-    "harisoafan": {
-      "device_id": "DEV_d21c06373f88310b32a1",
-      "api_hash_hash": "b8b6e3a0375f65f9fb47250d9b05fb793489b4bf43bb40a44cc2824882769511",
-      "date_liaison": "2026-06-19 09:23:56",
+    "poeudidj": {
+      "device_id": "DEV_f9dcebc880e1614c628a",
+      "api_hash_hash": "44b678183bd1beba0f6ae2b88260402fba0e210b9cb2838ad15fdcf039caded3",
+      "date_liaison": "2026-06-19 09:25:19",
       "statut": "verrouille"
     }
   }
