@@ -23,6 +23,12 @@
       "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
       "date_liaison": "2026-06-20 08:30:03",
       "statut": "verrouille"
+    },
+    "harisoafan": {
+      "device_id": "DEV_d21c06373f88310b32a1",
+      "api_hash_hash": "b8b6e3a0375f65f9fb47250d9b05fb793489b4bf43bb40a44cc2824882769511",
+      "date_liaison": "2026-06-20 08:50:22",
+      "statut": "verrouille"
     }
   }
 }
