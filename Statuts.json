@@ -322,13 +322,11 @@
       "activation_time": "10:57:24",
       "expiration_date": "2026-06-29",
       "expiration_time": "10:57:22",
-      "status": "paused",
+      "status": "active",
       "remaining_seconds_base": 748536.7819330001,
       "last_calculation_time": "2026-06-20 19:01:44",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-18 21:34:06",
-      "paused_at": "2026-06-20 19:37:23",
-      "remaining_seconds_at_pause": 746396.9062010001
+      "last_update": "2026-06-18 21:34:06"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
@@ -1087,13 +1085,13 @@
       "android_id": "finaritra887de",
       "activation_date": "2026-06-20",
       "activation_time": "18:58:29",
-      "expiration_date": "2026-06-21",
-      "expiration_time": "02:58:29",
+      "expiration_date": "2026-06-28",
+      "expiration_time": "02:58:28",
       "status": "active",
-      "remaining_seconds_base": 28604.544403,
-      "last_calculation_time": "2026-06-20 19:01:44",
+      "remaining_seconds_base": 631243.317717,
+      "last_calculation_time": "2026-06-20 19:37:45",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-20 18:58:29"
+      "last_update": "2026-06-20 19:37:45"
     }
   }
 }
