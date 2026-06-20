@@ -1080,6 +1080,18 @@
       "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 14:42:51"
+    },
+    "finaritra887de": {
+      "android_id": "finaritra887de",
+      "activation_date": "2026-06-20",
+      "activation_time": "18:58:29",
+      "expiration_date": "2026-06-21",
+      "expiration_time": "02:58:29",
+      "status": "active",
+      "remaining_seconds_base": 28800,
+      "last_calculation_time": "2026-06-20 18:58:29",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-20 18:58:29"
     }
   }
 }
