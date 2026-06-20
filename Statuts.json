@@ -75,8 +75,8 @@
       "status": "active",
       "paused_at": "2026-04-06 08:41:17",
       "resumed_at": "2026-06-14 20:23:16",
-      "remaining_seconds_base": 853855386.7128769,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 853672130.0047599,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "arianefaly": {
       "android_id": "arianefaly",
@@ -323,8 +323,8 @@
       "expiration_date": "2026-06-29",
       "expiration_time": "10:57:22",
       "status": "active",
-      "remaining_seconds_base": 912195.945647,
-      "last_calculation_time": "2026-06-18 21:34:06",
+      "remaining_seconds_base": 770774.23753,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 21:34:06"
     },
@@ -415,8 +415,8 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-04-03 17:28:43",
       "expired_at": "2026-05-11 22:42:57",
-      "remaining_seconds_base": 387423.71287700004,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 204167.00476000004,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "Farissaddf": {
       "android_id": "Farissaddf",
@@ -498,11 +498,11 @@
       "activation_time": "00:37:18",
       "expiration_date": "2026-06-20",
       "expiration_time": "07:36:30",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-07 00:37:18",
-      "remaining_seconds_base": 164377.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 0,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "faniryjuan": {
       "android_id": "faniryjuan",
@@ -573,8 +573,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-14 21:08:31",
-      "remaining_seconds_base": 532919.049296,
-      "last_calculation_time": "2026-06-18 22:45:05",
+      "remaining_seconds_base": 395756.34117900004,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "resumed_at": "2026-06-18 22:45:05"
     },
     "mouirjuan": {
@@ -596,8 +596,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-18 14:56:06",
-      "remaining_seconds_base": 443899.57173200004,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 260642.86361500004,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "moijuana": {
       "android_id": "moijuana",
@@ -628,8 +628,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-19 19:53:34",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-19 19:53:34"
+      "remaining_seconds_base": 543746.2918829999,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "cristiannoh": {
       "android_id": "cristiannoh",
@@ -637,11 +637,11 @@
       "activation_time": "11:11:03",
       "expiration_date": "2026-06-20",
       "expiration_time": "11:11:03",
-      "status": "active",
+      "status": "expired",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-21 11:11:03",
-      "remaining_seconds_base": 177250.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 0,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "Louisidit": {
       "android_id": "Louisidit",
@@ -704,8 +704,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-27 20:59:20",
-      "remaining_seconds_base": 558147.226848,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 374890.51873099996,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "adelinahkkk": {
       "android_id": "adelinahkkk",
@@ -758,8 +758,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-01 09:39:47",
-      "remaining_seconds_base": 1122174.712877,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 938918.0047599999,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "miorahdkdl": {
       "android_id": "miorahdkdl",
@@ -770,8 +770,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-02 11:59:49",
-      "remaining_seconds_base": 439376.19808099995,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 256119.48996399995,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "alexdetdi": {
       "android_id": "alexdetdi",
@@ -792,8 +792,8 @@
       "expiration_date": "2026-06-20",
       "expiration_time": "14:30:34",
       "status": "active",
-      "remaining_seconds_base": 189221.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51",
+      "remaining_seconds_base": 5965.004759999982,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-15 14:30:34"
     },
@@ -806,8 +806,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-19 18:42:15",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-19 18:42:15"
+      "remaining_seconds_base": 539467.2918829999,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "jouendke": {
       "android_id": "jouendke",
@@ -818,8 +818,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 09:57:08",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-18 09:57:08"
+      "remaining_seconds_base": 421560.291883,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "faniryjuany": {
       "android_id": "faniryjuany",
@@ -830,8 +830,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-04 00:50:47",
-      "remaining_seconds_base": 7546920834.712877,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 7546737578.004761,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "avotragjd": {
       "android_id": "avotragjd",
@@ -842,8 +842,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 09:23:53",
-      "remaining_seconds_base": 611414.0094430001,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 428157.3013260001,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "rhalinohah": {
       "android_id": "rhalinohah",
@@ -852,8 +852,8 @@
       "expiration_date": "2026-06-25",
       "expiration_time": "20:56:47",
       "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-18 20:56:47",
+      "remaining_seconds_base": 461139.291883,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 20:56:47"
     },
@@ -866,8 +866,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-19 20:57:51",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-19 20:57:51"
+      "remaining_seconds_base": 547603.2918829999,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "alsonvictor": {
       "android_id": "alsonvictor",
@@ -878,8 +878,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-20 12:49:58",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-20 12:49:58"
+      "remaining_seconds_base": 604730.291883,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "khalabnoue": {
       "android_id": "khalabnoue",
@@ -980,8 +980,8 @@
       "expiration_date": "2026-06-21",
       "expiration_time": "14:58:02",
       "status": "active",
-      "remaining_seconds_base": 277270.30659,
-      "last_calculation_time": "2026-06-18 09:56:51",
+      "remaining_seconds_base": 94013.59847299999,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-16 14:58:02"
     },
@@ -1006,8 +1006,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-13 14:10:54",
-      "remaining_seconds_base": 447241.71287700004,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 263985.00476000004,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "tsiakotsiory": {
       "android_id": "tsiakotsiory",
@@ -1018,8 +1018,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-13 15:21:16",
-      "remaining_seconds_base": 192263.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 9007.004759999982,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "mimikely": {
       "android_id": "mimikely",
@@ -1030,8 +1030,8 @@
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-13 16:26:16",
-      "remaining_seconds_base": 196163.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "remaining_seconds_base": 12907.004759999982,
+      "last_calculation_time": "2026-06-20 12:51:07"
     },
     "mathieudh": {
       "android_id": "mathieudh",
@@ -1040,8 +1040,8 @@
       "expiration_date": "2026-06-20",
       "expiration_time": "20:02:28",
       "status": "active",
-      "remaining_seconds_base": 209135.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51",
+      "remaining_seconds_base": 25879.00475999998,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-15 20:02:28"
     },
@@ -1052,8 +1052,8 @@
       "expiration_date": "2026-06-20",
       "expiration_time": "21:19:11",
       "status": "active",
-      "remaining_seconds_base": 213739.30659,
-      "last_calculation_time": "2026-06-18 09:56:51",
+      "remaining_seconds_base": 30482.59847299999,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-15 21:19:11"
     },
@@ -1064,8 +1064,8 @@
       "expiration_date": "2026-06-23",
       "expiration_time": "16:58:06",
       "status": "active",
-      "remaining_seconds_base": 457274.30659,
-      "last_calculation_time": "2026-06-18 09:56:51",
+      "remaining_seconds_base": 274017.598473,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-16 16:58:06"
     },
@@ -1076,8 +1076,8 @@
       "expiration_date": "2026-06-25",
       "expiration_time": "14:42:51",
       "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-18 14:42:51",
+      "remaining_seconds_base": 438703.291883,
+      "last_calculation_time": "2026-06-20 12:51:07",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 14:42:51"
     }
