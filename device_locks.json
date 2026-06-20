@@ -29,6 +29,12 @@
       "api_hash_hash": "b8b6e3a0375f65f9fb47250d9b05fb793489b4bf43bb40a44cc2824882769511",
       "date_liaison": "2026-06-20 08:51:26",
       "statut": "verrouille"
+    },
+    "rhalinohah": {
+      "device_id": "DEV_4ddbbe820e267f2807ce",
+      "api_hash_hash": "23ce67e09eeda513540e8fff2098ce552d8abe1877b28cfa209072bd4baf9998",
+      "date_liaison": "2026-06-20 09:02:17",
+      "statut": "verrouille"
     }
   }
 }
