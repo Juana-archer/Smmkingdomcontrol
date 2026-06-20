@@ -873,13 +873,13 @@
       "android_id": "alsonvictor",
       "activation_date": "2026-06-05",
       "activation_time": "11:59:24",
-      "expiration_date": "2026-06-20",
-      "expiration_time": "09:39:40",
+      "expiration_date": "2026-06-27",
+      "expiration_time": "12:49:58",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-05 11:59:24",
-      "remaining_seconds_base": 171767.71287699998,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "last_update": "2026-06-20 12:49:58",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-20 12:49:58"
     },
     "khalabnoue": {
       "android_id": "khalabnoue",
