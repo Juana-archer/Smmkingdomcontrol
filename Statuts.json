@@ -1093,6 +1093,18 @@
       "last_calculation_time": "2026-06-21 15:34:09",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-20 19:39:54"
+    },
+    "eslyduoelas": {
+      "android_id": "eslyduoelas",
+      "activation_date": "2026-06-22",
+      "activation_time": "00:51:15",
+      "expiration_date": "2026-06-29",
+      "expiration_time": "00:51:15",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-22 00:51:15",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-22 00:51:15"
     }
   }
 }
