@@ -636,13 +636,13 @@
       "android_id": "cristiannoh",
       "activation_date": "2026-05-21",
       "activation_time": "11:11:03",
-      "expiration_date": "2026-06-20",
-      "expiration_time": "11:11:03",
-      "status": "expired",
+      "expiration_date": "2026-07-22",
+      "expiration_time": "21:22:10",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-21 11:11:03",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-06-20 12:51:07"
+      "last_update": "2026-06-22 21:22:10",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-06-22 21:22:10"
     },
     "Louisidit": {
       "android_id": "Louisidit",
