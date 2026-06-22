@@ -852,11 +852,13 @@
       "activation_time": "20:56:47",
       "expiration_date": "2026-06-25",
       "expiration_time": "20:56:47",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 364955.185904,
       "last_calculation_time": "2026-06-21 15:34:09",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-18 20:56:47"
+      "last_update": "2026-06-18 20:56:47",
+      "paused_at": "2026-06-22 15:22:38",
+      "remaining_seconds_at_pause": 279245.332437
     },
     "anniciahe": {
       "android_id": "anniciahe",
