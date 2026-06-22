@@ -620,6 +620,18 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-05-19 19:06:27"
     },
+    "steciaanniciah": {
+      "android_id": "steciaanniciah",
+      "activation_date": "2026-05-19",
+      "activation_time": "20:47:07",
+      "expiration_date": "2026-06-26",
+      "expiration_time": "19:53:34",
+      "status": "active",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-06-19 19:53:34",
+      "remaining_seconds_base": 447562.18590399995,
+      "last_calculation_time": "2026-06-21 15:34:09"
+    },
     "cristiannoh": {
       "android_id": "cristiannoh",
       "activation_date": "2026-05-21",
@@ -845,18 +857,6 @@
       "last_calculation_time": "2026-06-21 15:34:09",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 20:56:47"
-    },
-    "anniciahe": {
-      "android_id": "anniciahe",
-      "activation_date": "2026-06-04",
-      "activation_time": "18:30:36",
-      "expiration_date": "2026-06-26",
-      "expiration_time": "20:57:51",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-19 20:57:51",
-      "remaining_seconds_base": 451419.185904,
-      "last_calculation_time": "2026-06-21 15:34:09"
     },
     "alsonvictor": {
       "android_id": "alsonvictor",
