@@ -766,13 +766,13 @@
       "android_id": "miorahdkdl",
       "activation_date": "2026-06-02",
       "activation_time": "11:59:49",
-      "expiration_date": "2026-06-23",
-      "expiration_time": "11:59:48",
+      "expiration_date": "2026-06-30",
+      "expiration_time": "12:29:18",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-02 11:59:49",
-      "remaining_seconds_base": 4408.682667999965,
-      "last_calculation_time": "2026-06-23 10:46:15"
+      "last_update": "2026-06-23 12:29:18",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-06-23 12:29:18"
     },
     "alexdetdi": {
       "android_id": "alexdetdi",
