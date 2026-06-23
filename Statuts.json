@@ -858,18 +858,6 @@
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-18 20:56:47"
     },
-    "alsonvictor": {
-      "android_id": "alsonvictor",
-      "activation_date": "2026-06-05",
-      "activation_time": "11:59:24",
-      "expiration_date": "2026-06-27",
-      "expiration_time": "12:49:58",
-      "status": "active",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-20 12:49:58",
-      "remaining_seconds_base": 508546.1859040001,
-      "last_calculation_time": "2026-06-21 15:34:09"
-    },
     "khalabnoue": {
       "android_id": "khalabnoue",
       "activation_date": "2026-06-05",
