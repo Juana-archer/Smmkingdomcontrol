@@ -497,13 +497,13 @@
       "android_id": "philbert",
       "activation_date": "2026-05-07",
       "activation_time": "00:37:18",
-      "expiration_date": "2026-06-20",
-      "expiration_time": "07:36:30",
-      "status": "expired",
+      "expiration_date": "2026-07-23",
+      "expiration_time": "21:42:40",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-05-07 00:37:18",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-06-20 12:51:07"
+      "last_update": "2026-06-23 21:42:40",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-06-23 21:42:40"
     },
     "faniryjuan": {
       "android_id": "faniryjuan",
