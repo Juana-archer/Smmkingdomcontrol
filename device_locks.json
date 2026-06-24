@@ -53,6 +53,12 @@
       "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
       "date_liaison": "2026-06-24 20:19:48",
       "statut": "verrouille"
+    },
+    "cristiannoh": {
+      "device_id": "DEV_ea37136403484780c990",
+      "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
+      "date_liaison": "2026-06-24 22:36:45",
+      "statut": "verrouille"
     }
   }
 }
