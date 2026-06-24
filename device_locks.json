@@ -47,6 +47,12 @@
       "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
       "date_liaison": "2026-06-24 18:38:12",
       "statut": "verrouille"
+    },
+    "fabydefrt": {
+      "device_id": "DEV_6c1921e216eef9906057",
+      "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
+      "date_liaison": "2026-06-24 20:19:48",
+      "statut": "verrouille"
     }
   }
 }
