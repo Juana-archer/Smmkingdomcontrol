@@ -71,6 +71,12 @@
       "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
       "date_liaison": "2026-06-24 22:52:11",
       "statut": "verrouille"
+    },
+    "jouendke": {
+      "device_id": "DEV_3d81a44be369c7f1cb61",
+      "api_hash_hash": "66ce540e72bc75bdfcde5825ddc2920f1715679b419172712de7bc304f1aad8a",
+      "date_liaison": "2026-06-25 04:09:44",
+      "statut": "verrouille"
     }
   }
 }
