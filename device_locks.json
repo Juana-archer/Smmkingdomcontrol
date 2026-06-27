@@ -89,6 +89,12 @@
       "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
       "date_liaison": "2026-06-27 17:03:18",
       "statut": "verrouille"
+    },
+    "axciatfazs": {
+      "device_id": "DEV_2f65b5cfc5f179c9f0e9",
+      "api_hash_hash": "c41bef8ff509db28efb0f71891a7dd4ad83ddf9526f33aeba0e29e41eb80c7dc",
+      "date_liaison": "2026-06-27 17:16:39",
+      "statut": "verrouille"
     }
   }
 }
