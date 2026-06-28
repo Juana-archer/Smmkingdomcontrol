@@ -1052,13 +1052,13 @@
       "android_id": "eslyduoelas",
       "activation_date": "2026-06-22",
       "activation_time": "00:51:15",
-      "expiration_date": "2026-06-29",
-      "expiration_time": "00:51:15",
+      "expiration_date": "2026-07-29",
+      "expiration_time": "00:51:10",
       "status": "active",
-      "remaining_seconds_base": 48420.608696999974,
-      "last_calculation_time": "2026-06-28 11:24:10",
+      "remaining_seconds_base": 2610046.48439,
+      "last_calculation_time": "2026-06-28 19:50:24",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-22 00:51:15"
+      "last_update": "2026-06-28 19:50:24"
     },
     "rhinakorpp": {
       "android_id": "rhinakorpp",
