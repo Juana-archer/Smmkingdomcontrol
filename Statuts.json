@@ -648,13 +648,13 @@
       "android_id": "loyaledrt",
       "activation_date": "2026-05-25",
       "activation_time": "19:06:27",
-      "expiration_date": "2026-07-05",
+      "expiration_date": "2026-07-04",
       "expiration_time": "11:24:36",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-28 11:24:36",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-06-28 11:24:36"
+      "last_update": "2026-06-28 11:31:20",
+      "remaining_seconds_base": 517995.849495,
+      "last_calculation_time": "2026-06-28 11:31:20"
     },
     "Andréhje": {
       "android_id": "Andréhje",
