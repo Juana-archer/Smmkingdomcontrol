@@ -1145,6 +1145,19 @@
             "telegram_id": 8573912053,
             "telegram_username": "",
             "username": "Tsioryuf"
+        },
+        "koirghbpqaa": {
+            "android_id": "koirghbpqaa",
+            "activation_date": "2026-06-30",
+            "activation_time": "15:15:25",
+            "expiration_date": "2026-06-30",
+            "expiration_time": "20:15:25",
+            "status": "active",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-06-30 15:15:25",
+            "telegram_id": 8589843456,
+            "telegram_username": "chartesd",
+            "username": "koirghe"
         }
     },
     "activations": [
