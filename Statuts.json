@@ -1158,6 +1158,19 @@
             "telegram_id": 8589843456,
             "telegram_username": "chartesd",
             "username": "koirghe"
+        },
+        "hodjekjlwfd": {
+            "android_id": "hodjekjlwfd",
+            "activation_date": "2026-06-30",
+            "activation_time": "18:12:08",
+            "expiration_date": "2026-06-30",
+            "expiration_time": "23:12:08",
+            "status": "active",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-06-30 18:12:08",
+            "telegram_id": 8573912053,
+            "telegram_username": "",
+            "username": "Hodjekd"
         }
     },
     "activations": [
