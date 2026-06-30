@@ -101,6 +101,12 @@
       "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
       "date_liaison": "2026-06-30 15:07:52",
       "statut": "verrouille"
+    },
+    "tsiory9ga1n": {
+      "device_id": "DEV_287ee2dffef82373e43f",
+      "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
+      "date_liaison": "2026-06-30 15:23:05",
+      "statut": "verrouille"
     }
   }
 }
