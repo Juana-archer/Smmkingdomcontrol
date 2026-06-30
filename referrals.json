@@ -1,0 +1,16 @@
+{
+    "referrals": {
+        "faniryjuany": {
+            "total_referrals": 1,
+            "total_earned": 1000,
+            "list": [
+                {
+                    "new_user_id": "koirghbpqaa",
+                    "new_username": "koirghe",
+                    "date": "2026-06-30 15:15:30",
+                    "bonus": 1000
+                }
+            ]
+        }
+    }
+}
