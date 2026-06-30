@@ -1139,12 +1139,14 @@
             "activation_time": "15:13:09",
             "expiration_date": "2026-06-30",
             "expiration_time": "20:13:09",
-            "status": "active",
+            "status": "expired",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-06-30 15:13:09",
             "telegram_id": 8573912053,
             "telegram_username": "",
-            "username": "Tsioryuf"
+            "username": "Tsioryuf",
+            "expired_at": "2026-06-30 21:08:06",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "koirghbpqaa": {
             "android_id": "koirghbpqaa",
@@ -1152,12 +1154,14 @@
             "activation_time": "15:15:25",
             "expiration_date": "2026-06-30",
             "expiration_time": "20:15:25",
-            "status": "active",
+            "status": "expired",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-06-30 15:15:25",
             "telegram_id": 8589843456,
             "telegram_username": "chartesd",
-            "username": "koirghe"
+            "username": "koirghe",
+            "expired_at": "2026-06-30 21:08:06",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "hodjekjlwfd": {
             "android_id": "hodjekjlwfd",
