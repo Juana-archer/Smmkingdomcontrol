@@ -814,15 +814,16 @@
         },
         "faniryjuany": {
             "android_id": "faniryjuany",
-            "activation_date": "2026-06-04",
-            "activation_time": "00:50:47",
-            "expiration_date": "2265-08-13",
-            "expiration_time": "00:50:47",
+            "activation_date": "2026-06-30",
+            "activation_time": "15:14:05",
+            "expiration_date": "2026-06-30",
+            "expiration_time": "20:14:05",
             "status": "active",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-06-04 00:50:47",
-            "remaining_seconds_base": 7545933770.889738,
-            "last_calculation_time": "2026-06-29 20:07:47"
+            "last_update": "2026-06-30 15:14:05",
+            "telegram_id": 8540659124,
+            "telegram_username": "",
+            "username": "Faniry"
         },
         "avotragjd": {
             "android_id": "avotragjd",
