@@ -746,11 +746,13 @@
             "activation_time": "09:39:47",
             "expiration_date": "2026-07-01",
             "expiration_time": "09:39:47",
-            "status": "active",
+            "status": "expired",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-06-01 09:39:47",
             "remaining_seconds_base": 36932.637866999896,
-            "last_calculation_time": "2026-06-30 23:24:05"
+            "last_calculation_time": "2026-06-30 23:24:05",
+            "expired_at": "2026-07-01 10:08:07",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "miorahdkdl": {
             "android_id": "miorahdkdl",
