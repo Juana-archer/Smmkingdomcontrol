@@ -12,5 +12,19 @@
             "telegram_username": "",
             "registered_date": "2026-07-01 10:30:06"
         }
+    },
+    "referrals": {
+        "faniryjuany": {
+            "total_referrals": 1,
+            "total_earned": 1000,
+            "list": [
+                {
+                    "new_user_id": "mampitiy37a",
+                    "new_username": "Mampitony",
+                    "date": "2026-07-01 10:30:20",
+                    "bonus": 1000
+                }
+            ]
+        }
     }
 }
