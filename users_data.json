@@ -55,6 +55,18 @@
                     "bonus": 1000
                 }
             ]
+        },
+        "loyaledrt": {
+            "total_referrals": 1,
+            "total_earned": 1000,
+            "list": [
+                {
+                    "new_user_id": "nyaina4s0tn",
+                    "new_username": "Nyaina",
+                    "date": "2026-07-02 18:48:54",
+                    "bonus": 1000
+                }
+            ]
         }
     }
 }
