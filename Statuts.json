@@ -1225,11 +1225,13 @@
             "activation_time": "21:38:33",
             "expiration_date": "2026-07-02",
             "expiration_time": "02:38:33",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 18000,
             "last_calculation_time": "2026-07-01 21:38:33",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-07-01 21:38:33"
+            "last_update": "2026-07-01 21:38:33",
+            "expired_at": "2026-07-02 03:02:14",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         }
     },
     "activations": [
