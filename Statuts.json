@@ -1273,13 +1273,13 @@
       "android_id": "novaigfdp",
       "activation_date": "2026-07-03",
       "activation_time": "12:09:38",
-      "expiration_date": "2026-07-03",
-      "expiration_time": "17:09:38",
+      "expiration_date": "2026-07-10",
+      "expiration_time": "17:52:30",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-07-03 12:09:38",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-03 17:52:30",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-03 12:09:38"
+      "last_update": "2026-07-03 17:52:30"
     },
     "njaras3qvp": {
       "android_id": "njaras3qvp",
