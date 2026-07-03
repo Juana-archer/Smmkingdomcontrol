@@ -143,6 +143,12 @@
       "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
       "date_liaison": "2026-07-03 12:58:46",
       "statut": "verrouille"
+    },
+    "njaras3qvp": {
+      "device_id": "DEV_fb48bc7789aa7afc96b4",
+      "api_hash_hash": "caecbe26eb7657f2712c22e00d375e78ef154d97e8e661b40e9a84d79d011281",
+      "date_liaison": "2026-07-03 14:40:34",
+      "statut": "verrouille"
     }
   }
 }
