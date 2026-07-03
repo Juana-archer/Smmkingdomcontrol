@@ -1280,6 +1280,18 @@
             "last_calculation_time": "2026-07-03 12:09:38",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-03 12:09:38"
+        },
+        "njaras3qvp": {
+            "android_id": "njaras3qvp",
+            "activation_date": "2026-07-03",
+            "activation_time": "14:23:40",
+            "expiration_date": "2026-07-03",
+            "expiration_time": "19:23:40",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-03 14:23:40",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-03 14:23:40"
         }
     },
     "activations": [
@@ -1358,6 +1370,13 @@
             "username": "Nova",
             "referrer_id": "Aucun",
             "date": "2026-07-03 12:09:38",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "njaras3qvp",
+            "username": "Njara",
+            "referrer_id": "Aucun",
+            "date": "2026-07-03 14:23:40",
             "bonus_hours": 5
         }
     ]
