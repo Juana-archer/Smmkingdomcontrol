@@ -1279,15 +1279,14 @@
       "android_id": "novaigfdp",
       "activation_date": "2026-07-03",
       "activation_time": "12:09:38",
-      "expiration_date": "2026-07-10",
-      "expiration_time": "17:52:30",
-      "status": "paused",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-07-03 17:52:30",
+      "expiration_date": "2026-07-11",
+      "expiration_time": "20:17:17",
+      "status": "active",
+      "remaining_seconds_base": 597796.693368,
+      "last_calculation_time": "2026-07-04 22:14:01",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-03 17:52:30",
-      "paused_at": "2026-07-03 19:49:13",
-      "remaining_seconds_at_pause": 597796.693368
+      "resumed_at": "2026-07-04 22:14:01"
     },
     "njaras3qvp": {
       "android_id": "njaras3qvp",
