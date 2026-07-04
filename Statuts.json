@@ -1107,11 +1107,13 @@
             "activation_time": "16:59:06",
             "expiration_date": "2026-07-04",
             "expiration_time": "16:59:06",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 259753.00510799998,
             "last_calculation_time": "2026-07-01 16:49:50",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-06-27 16:59:06"
+            "last_update": "2026-06-27 16:59:06",
+            "expired_at": "2026-07-04 17:02:15",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "axciatfazs": {
             "android_id": "axciatfazs",
