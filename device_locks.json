@@ -149,6 +149,12 @@
       "api_hash_hash": "caecbe26eb7657f2712c22e00d375e78ef154d97e8e661b40e9a84d79d011281",
       "date_liaison": "2026-07-03 14:43:46",
       "statut": "verrouille"
+    },
+    "jhonancy": {
+      "device_id": "DEV_cff17ce5ae8db180cb4d",
+      "api_hash_hash": "03329c870e69e5c215e1a258029cfce484fd8a173c2b34c727c9bb3ff72e60ea",
+      "date_liaison": "2026-07-05 09:02:12",
+      "statut": "verrouille"
     }
   }
 }
