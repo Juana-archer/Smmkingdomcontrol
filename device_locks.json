@@ -167,6 +167,12 @@
       "api_hash_hash": "692392105ddcb186f54bcb28efb5e44f67b5f8bcb8b3054c6d296f92080022a6",
       "date_liaison": "2026-07-06 18:45:31",
       "statut": "verrouille"
+    },
+    "honlio6in71": {
+      "device_id": "DEV_a1212fa1955261947a85",
+      "api_hash_hash": "6227a4d4bb45305324abc2406748305e14a1da980098fb912719a790a5b704a7",
+      "date_liaison": "2026-07-06 19:29:39",
+      "statut": "verrouille"
     }
   }
 }
