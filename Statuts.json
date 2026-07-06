@@ -915,13 +915,13 @@
       "android_id": "facielgfey",
       "activation_date": "2026-06-10",
       "activation_time": "14:59:40",
-      "expiration_date": "2026-06-17",
-      "expiration_time": "14:59:40",
-      "status": "expired",
+      "expiration_date": "2026-07-13",
+      "expiration_time": "18:42:06",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-10 14:59:40",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-06-18 09:56:51"
+      "last_update": "2026-07-06 18:42:06",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-06 18:42:06"
     },
     "nilamina": {
       "android_id": "nilamina",
