@@ -1071,13 +1071,13 @@
       "android_id": "rhinakorpp",
       "activation_date": "2026-06-22",
       "activation_time": "17:05:10",
-      "expiration_date": "2026-07-06",
-      "expiration_time": "20:08:45",
+      "expiration_date": "2026-07-13",
+      "expiration_time": "20:08:43",
       "status": "active",
-      "remaining_seconds_base": 5998.373171999992,
-      "last_calculation_time": "2026-07-06 18:28:45",
+      "remaining_seconds_base": 606088.009499,
+      "last_calculation_time": "2026-07-06 19:47:15",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-29 20:08:45"
+      "last_update": "2026-07-06 19:47:15"
     },
     "françineporh": {
       "android_id": "françineporh",
