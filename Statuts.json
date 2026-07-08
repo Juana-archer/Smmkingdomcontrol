@@ -320,13 +320,13 @@
       "android_id": "frigater",
       "activation_date": "2026-06-15",
       "activation_time": "10:57:24",
-      "expiration_date": "2026-07-08",
+      "expiration_date": "2026-07-12",
       "expiration_time": "21:29:34",
       "status": "active",
-      "remaining_seconds_base": 183649.14208300004,
-      "last_calculation_time": "2026-07-06 18:28:45",
+      "remaining_seconds_base": 394950.0134940001,
+      "last_calculation_time": "2026-07-08 07:47:04",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-06-18 21:34:06",
+      "last_update": "2026-07-08 07:47:04",
       "resumed_at": "2026-07-03 12:54:40"
     },
     "grygroirhhhf": {
