@@ -1051,13 +1051,13 @@
       "android_id": "francia5ge",
       "activation_date": "2026-06-18",
       "activation_time": "14:42:51",
-      "expiration_date": "2026-07-09",
-      "expiration_time": "17:17:04",
+      "expiration_date": "2026-07-16",
+      "expiration_time": "17:17:03",
       "status": "active",
-      "remaining_seconds_base": 254898.70345999993,
-      "last_calculation_time": "2026-07-06 18:28:45",
+      "remaining_seconds_base": 609148.027008,
+      "last_calculation_time": "2026-07-09 16:04:35",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-02 16:50:00"
+      "last_update": "2026-07-09 16:04:35"
     },
     "eslyduoelas": {
       "android_id": "eslyduoelas",
