@@ -1360,6 +1360,18 @@
             "last_update": "2026-07-07 09:23:16",
             "expired_at": "2026-07-07 01:07:35",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+        },
+        "valerio99tp": {
+            "android_id": "valerio99tp",
+            "activation_date": "2026-07-12",
+            "activation_time": "17:32:50",
+            "expiration_date": "2026-07-12",
+            "expiration_time": "22:32:50",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-12 17:32:50",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-12 17:32:50"
         }
     },
     "activations": [
@@ -1459,6 +1471,13 @@
             "username": "Honlion",
             "referrer_id": "Aucun",
             "date": "2026-07-06 19:18:17",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "valerio99tp",
+            "username": "Valerie",
+            "referrer_id": "Aucun",
+            "date": "2026-07-12 17:32:50",
             "bonus_hours": 5
         }
     ]
