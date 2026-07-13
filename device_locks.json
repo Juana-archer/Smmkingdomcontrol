@@ -12,10 +12,10 @@
       "date_liaison": "2026-07-13 19:03:44",
       "statut": "verrouille"
     },
-    "Sedillontdfg": {
-      "device_id": "DEV_2a1e5a4885927890d547",
-      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-07-13 19:28:33",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-07-13 19:33:17",
       "statut": "verrouille"
     }
   }
