@@ -1376,6 +1376,18 @@
       "last_calculation_time": "2026-07-13 21:08:30",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-12 19:52:58"
+    },
+    "tohand7ccw7": {
+      "android_id": "tohand7ccw7",
+      "activation_date": "2026-07-13",
+      "activation_time": "21:43:42",
+      "expiration_date": "2026-07-15",
+      "expiration_time": "21:43:42",
+      "status": "active",
+      "remaining_seconds_base": 172800,
+      "last_calculation_time": "2026-07-13 21:43:42",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-07-13 21:43:42"
     }
   },
   "activations": [
