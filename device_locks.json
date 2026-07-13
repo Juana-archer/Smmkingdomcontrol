@@ -53,6 +53,12 @@
       "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
       "date_liaison": "2026-07-13 21:12:10",
       "statut": "verrouille"
+    },
+    "esly3drhf": {
+      "device_id": "DEV_867480973ac561981ea9",
+      "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
+      "date_liaison": "2026-07-13 21:45:15",
+      "statut": "verrouille"
     }
   }
 }
