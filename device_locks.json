@@ -47,6 +47,12 @@
       "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
       "date_liaison": "2026-07-14 17:20:37",
       "statut": "verrouille"
+    },
+    "mioratoudgev": {
+      "device_id": "DEV_ef2bc694d475c1e925fd",
+      "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
+      "date_liaison": "2026-07-14 17:38:39",
+      "statut": "verrouille"
     }
   }
 }
