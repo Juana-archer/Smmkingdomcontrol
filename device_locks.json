@@ -59,6 +59,12 @@
       "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
       "date_liaison": "2026-07-14 17:44:56",
       "statut": "verrouille"
+    },
+    "loyaledrt": {
+      "device_id": "DEV_5264730ec78a96fd9bd4",
+      "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
+      "date_liaison": "2026-07-14 17:49:36",
+      "statut": "verrouille"
     }
   }
 }
