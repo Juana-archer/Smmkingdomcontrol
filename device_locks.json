@@ -57,7 +57,13 @@
     "babasephilbert": {
       "device_id": "DEV_4c4407828e101ecf8a6e",
       "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
-      "date_liaison": "2026-07-15 06:40:17",
+      "date_liaison": "2026-07-15 06:37:07",
+      "statut": "verrouille"
+    },
+    "francia5ge": {
+      "device_id": "DEV_641879e91b1bdaecd605",
+      "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
+      "date_liaison": "2026-07-15 06:41:43",
       "statut": "verrouille"
     }
   }
