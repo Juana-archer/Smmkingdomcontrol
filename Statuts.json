@@ -1416,6 +1416,18 @@
             "last_update": "2026-07-14 18:24:07",
             "expired_at": "2026-07-14 23:39:33",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
+        },
+        "shillab5xiq": {
+            "android_id": "shillab5xiq",
+            "activation_date": "2026-07-15",
+            "activation_time": "09:10:40",
+            "expiration_date": "2026-07-15",
+            "expiration_time": "14:10:40",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-15 09:10:40",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-15 09:10:40"
         }
     },
     "activations": [
@@ -1536,6 +1548,13 @@
             "username": "Sitraka",
             "referrer_id": "Aucun",
             "date": "2026-07-14 18:24:07",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "shillab5xiq",
+            "username": "shillaskdkd",
+            "referrer_id": "Aucun",
+            "date": "2026-07-15 09:10:40",
             "bonus_hours": 5
         }
     ]
