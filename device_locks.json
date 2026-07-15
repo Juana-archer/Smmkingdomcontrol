@@ -65,6 +65,12 @@
       "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
       "date_liaison": "2026-07-15 06:41:43",
       "statut": "verrouille"
+    },
+    "facielgfey": {
+      "device_id": "DEV_11e2832a98a71bed66dc",
+      "api_hash_hash": "692392105ddcb186f54bcb28efb5e44f67b5f8bcb8b3054c6d296f92080022a6",
+      "date_liaison": "2026-07-15 08:44:58",
+      "statut": "verrouille"
     }
   }
 }
