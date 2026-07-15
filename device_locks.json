@@ -77,6 +77,12 @@
       "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
       "date_liaison": "2026-07-15 09:19:51",
       "statut": "verrouille"
+    },
+    "shillab5xiq": {
+      "device_id": "DEV_f69f9982b90a142c6ec4",
+      "api_hash_hash": "37f51fc0facca9ef877ecb1fb492a0e1cded619f08de62518e816d1044bdd370",
+      "date_liaison": "2026-07-15 09:24:36",
+      "statut": "verrouille"
     }
   }
 }
