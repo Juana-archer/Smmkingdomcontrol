@@ -47,6 +47,12 @@
       "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
       "date_liaison": "2026-07-15 05:55:44",
       "statut": "verrouille"
+    },
+    "elidiotgdft": {
+      "device_id": "DEV_f2d99ec8336b3e39793c",
+      "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
+      "date_liaison": "2026-07-15 06:23:52",
+      "statut": "verrouille"
     }
   }
 }
