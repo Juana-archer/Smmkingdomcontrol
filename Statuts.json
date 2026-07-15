@@ -1381,13 +1381,13 @@
       "android_id": "tohand7ccw7",
       "activation_date": "2026-07-13",
       "activation_time": "21:43:42",
-      "expiration_date": "2026-07-15",
+      "expiration_date": "2026-07-22",
       "expiration_time": "21:43:42",
       "status": "active",
-      "remaining_seconds_base": 172800,
-      "last_calculation_time": "2026-07-13 21:43:42",
+      "remaining_seconds_base": 607390.510002,
+      "last_calculation_time": "2026-07-15 21:00:31",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-13 21:43:42"
+      "last_update": "2026-07-15 21:00:31"
     },
     "nainauwwdr": {
       "android_id": "nainauwwdr",
