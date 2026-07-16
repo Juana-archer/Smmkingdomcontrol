@@ -1055,13 +1055,13 @@
       "android_id": "francia5ge",
       "activation_date": "2026-06-18",
       "activation_time": "14:42:51",
-      "expiration_date": "2026-07-24",
-      "expiration_time": "06:39:12",
+      "expiration_date": "2026-07-17",
+      "expiration_time": "06:39:13",
       "status": "active",
-      "remaining_seconds_base": 634727.7285179999,
-      "last_calculation_time": "2026-07-16 22:20:24",
+      "remaining_seconds_base": 293442.15499499993,
+      "last_calculation_time": "2026-07-13 21:08:30",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-16 22:20:24",
+      "last_update": "2026-07-09 16:04:35",
       "resumed_at": "2026-07-11 09:32:59"
     },
     "eslyduoelas": {
@@ -1433,13 +1433,13 @@
       "android_id": "tinah6x3vk",
       "activation_date": "2026-07-16",
       "activation_time": "16:23:50",
-      "expiration_date": "2026-07-16",
-      "expiration_time": "21:23:50",
+      "expiration_date": "2026-07-23",
+      "expiration_time": "22:21:13",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-07-16 16:23:50",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-16 22:21:13",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-16 16:23:50"
+      "last_update": "2026-07-16 22:21:13"
     }
   },
   "activations": [
