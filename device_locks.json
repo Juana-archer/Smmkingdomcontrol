@@ -11,6 +11,12 @@
       "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
       "date_liaison": "2026-07-17 17:46:12",
       "statut": "verrouille"
+    },
+    "avotragjd": {
+      "device_id": "DEV_120fa4be1a80cefdd2ab",
+      "api_hash_hash": "1894f656534fd0737fe5ab5e19be1f6a29ff1191fca46b65bdd8c1c83fda6204",
+      "date_liaison": "2026-07-17 18:13:47",
+      "statut": "verrouille"
     }
   }
 }
