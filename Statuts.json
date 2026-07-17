@@ -1057,12 +1057,14 @@
             "activation_time": "14:42:51",
             "expiration_date": "2026-07-17",
             "expiration_time": "06:39:13",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 293442.15499499993,
             "last_calculation_time": "2026-07-13 21:08:30",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-09 16:04:35",
-            "resumed_at": "2026-07-11 09:32:59"
+            "resumed_at": "2026-07-11 09:32:59",
+            "expired_at": "2026-07-17 07:19:06",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "eslyduoelas": {
             "android_id": "eslyduoelas",
