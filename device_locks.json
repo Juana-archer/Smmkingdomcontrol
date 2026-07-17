@@ -35,6 +35,12 @@
       "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
       "date_liaison": "2026-07-17 19:20:45",
       "statut": "verrouille"
+    },
+    "alexdetdi": {
+      "device_id": "DEV_e45265850915a3dd98f4",
+      "api_hash_hash": "8f71a9784c7b04e2b8cc2d8ed6489204c9424bc0b6f0f9bde669adfc7a425a80",
+      "date_liaison": "2026-07-17 19:40:23",
+      "statut": "verrouille"
     }
   }
 }
