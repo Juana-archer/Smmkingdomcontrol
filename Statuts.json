@@ -1478,6 +1478,18 @@
       "last_calculation_time": "2026-07-18 14:26:41",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-18 14:26:41"
+    },
+    "aujourder": {
+      "android_id": "aujourder",
+      "activation_date": "2026-07-18",
+      "activation_time": "17:11:30",
+      "expiration_date": "2026-07-25",
+      "expiration_time": "17:11:30",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-18 17:11:30",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-07-18 17:11:30"
     }
   },
   "activations": [
