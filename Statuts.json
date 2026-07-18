@@ -774,11 +774,13 @@
             "activation_time": "18:28:52",
             "expiration_date": "2026-07-19",
             "expiration_time": "00:02:15",
-            "status": "active",
+            "status": "expired",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-12 00:02:15",
             "remaining_seconds_base": 144586.55575200001,
-            "last_calculation_time": "2026-07-17 07:52:28"
+            "last_calculation_time": "2026-07-17 07:52:28",
+            "expired_at": "2026-07-19 00:19:06",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "rhnaldefet": {
             "android_id": "rhnaldefet",
