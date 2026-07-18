@@ -1490,6 +1490,18 @@
             "last_calculation_time": "2026-07-18 17:11:30",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-18 17:11:30"
+        },
+        "honorigi3r2": {
+            "android_id": "honorigi3r2",
+            "activation_date": "2026-07-18",
+            "activation_time": "20:53:18",
+            "expiration_date": "2026-07-19",
+            "expiration_time": "01:53:18",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-18 20:53:18",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-18 20:53:18"
         }
     },
     "activations": [
@@ -1631,6 +1643,13 @@
             "username": "RH Anicet",
             "referrer_id": "Aucun",
             "date": "2026-07-17 15:09:40",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "honorigi3r2",
+            "username": "Honorine",
+            "referrer_id": "Aucun",
+            "date": "2026-07-18 20:53:18",
             "bonus_hours": 5
         }
     ]
