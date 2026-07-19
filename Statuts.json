@@ -1498,13 +1498,13 @@
       "android_id": "honorigi3r2",
       "activation_date": "2026-07-18",
       "activation_time": "20:53:18",
-      "expiration_date": "2026-07-26",
-      "expiration_time": "01:53:18",
+      "expiration_date": "2026-07-27",
+      "expiration_time": "01:53:16",
       "status": "active",
-      "remaining_seconds_base": 534331.6421899999,
-      "last_calculation_time": "2026-07-19 21:27:45",
+      "remaining_seconds_base": 617816.688629,
+      "last_calculation_time": "2026-07-19 22:16:19",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-18 21:16:59"
+      "last_update": "2026-07-19 22:16:19"
     },
     "jofufyopdj": {
       "android_id": "jofufyopdj",
