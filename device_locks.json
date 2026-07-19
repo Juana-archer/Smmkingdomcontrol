@@ -167,6 +167,12 @@
       "api_hash_hash": "e268dfa37368a499ff389c62649ebeae773b758817ca46430632bc823ff40a90",
       "date_liaison": "2026-07-19 17:00:45",
       "statut": "verrouille"
+    },
+    "maroteyhmhy": {
+      "device_id": "DEV_3b42399d2f41e8aaa9c6",
+      "api_hash_hash": "d5df2b8106035ca6a4141fa186914dcb4b9f753a92a6d67a5fe360809d758e85",
+      "date_liaison": "2026-07-19 17:15:18",
+      "statut": "verrouille"
     }
   }
 }
