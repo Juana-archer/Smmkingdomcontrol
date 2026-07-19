@@ -1524,25 +1524,25 @@
       "android_id": "anjarareogb",
       "activation_date": "2026-07-19",
       "activation_time": "15:20:46",
-      "expiration_date": "2026-07-26",
+      "expiration_date": "2026-07-19",
       "expiration_time": "20:20:46",
       "status": "active",
-      "remaining_seconds_base": 612968.629068,
-      "last_calculation_time": "2026-07-19 18:04:37",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-07-19 15:20:46",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-19 18:04:37"
+      "last_update": "2026-07-19 15:20:46"
     },
     "maroteyhmhy": {
       "android_id": "maroteyhmhy",
       "activation_date": "2026-07-19",
       "activation_time": "17:10:57",
-      "expiration_date": "2026-07-19",
+      "expiration_date": "2026-07-26",
       "expiration_time": "22:10:57",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-07-19 17:10:57",
+      "remaining_seconds_base": 619559.472945,
+      "last_calculation_time": "2026-07-19 18:04:57",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-19 17:10:57"
+      "last_update": "2026-07-19 18:04:57"
     }
   },
   "activations": [
