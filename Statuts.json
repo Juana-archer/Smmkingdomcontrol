@@ -321,15 +321,13 @@
       "activation_date": "2026-06-15",
       "activation_time": "10:57:24",
       "expiration_date": "2026-07-27",
-      "expiration_time": "00:49:09",
-      "status": "paused",
-      "remaining_seconds_base": 501751.116073,
-      "last_calculation_time": "2026-07-19 01:13:33",
+      "expiration_time": "00:57:23",
+      "status": "active",
+      "remaining_seconds_base": 617356.911913,
+      "last_calculation_time": "2026-07-19 21:28:06",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-19 21:19:52",
-      "resumed_at": "2026-07-12 11:34:58",
-      "paused_at": "2026-07-19 17:06:47",
-      "remaining_seconds_at_pause": 617356.911913
+      "resumed_at": "2026-07-19 21:28:06"
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
