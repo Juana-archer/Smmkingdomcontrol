@@ -322,12 +322,14 @@
       "activation_time": "10:57:24",
       "expiration_date": "2026-07-24",
       "expiration_time": "20:36:04",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 501751.116073,
       "last_calculation_time": "2026-07-19 01:13:33",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-19 01:13:33",
-      "resumed_at": "2026-07-12 11:34:58"
+      "resumed_at": "2026-07-12 11:34:58",
+      "paused_at": "2026-07-19 17:06:47",
+      "remaining_seconds_at_pause": 444556.911913
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
@@ -1107,13 +1109,14 @@
       "activation_date": "2026-06-24",
       "activation_time": "11:16:59",
       "expiration_date": "2026-07-24",
-      "expiration_time": "18:45:23",
-      "status": "active",
-      "remaining_seconds_base": 437943.32654499996,
-      "last_calculation_time": "2026-07-19 17:06:20",
+      "expiration_time": "14:42:21",
+      "status": "paused",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-17 14:42:21",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-17 14:42:21",
-      "resumed_at": "2026-07-19 17:06:20"
+      "paused_at": "2026-07-19 13:03:17",
+      "remaining_seconds_at_pause": 437943.32654499996
     },
     "anicia8uiy": {
       "android_id": "anicia8uiy",
