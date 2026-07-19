@@ -155,6 +155,12 @@
       "api_hash_hash": "37f51fc0facca9ef877ecb1fb492a0e1cded619f08de62518e816d1044bdd370",
       "date_liaison": "2026-07-19 11:33:28",
       "statut": "verrouille"
+    },
+    "valerio99tp": {
+      "device_id": "DEV_f0d526d7cf94388171fa",
+      "api_hash_hash": "f034cf15333baaf1c5ccf61c6016faafe6dddfc5abd67de14057eca10e0c8b1a",
+      "date_liaison": "2026-07-19 16:02:37",
+      "statut": "verrouille"
     }
   }
 }
