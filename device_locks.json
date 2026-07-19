@@ -161,6 +161,12 @@
       "api_hash_hash": "f034cf15333baaf1c5ccf61c6016faafe6dddfc5abd67de14057eca10e0c8b1a",
       "date_liaison": "2026-07-19 16:02:37",
       "statut": "verrouille"
+    },
+    "anjarareogb": {
+      "device_id": "DEV_fe2e50fb980eb98b49e2",
+      "api_hash_hash": "e268dfa37368a499ff389c62649ebeae773b758817ca46430632bc823ff40a90",
+      "date_liaison": "2026-07-19 16:59:48",
+      "statut": "verrouille"
     }
   }
 }
