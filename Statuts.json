@@ -1522,13 +1522,13 @@
       "android_id": "anjarareogb",
       "activation_date": "2026-07-19",
       "activation_time": "15:20:46",
-      "expiration_date": "2026-07-19",
-      "expiration_time": "20:20:46",
-      "status": "expired",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-07-19 21:27:45",
+      "expiration_date": "2026-07-26",
+      "expiration_time": "22:04:00",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-19 22:04:00",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-19 15:20:46"
+      "last_update": "2026-07-19 22:04:00"
     },
     "maroteyhmhy": {
       "android_id": "maroteyhmhy",
