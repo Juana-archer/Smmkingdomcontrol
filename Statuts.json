@@ -322,12 +322,14 @@
       "activation_time": "10:57:24",
       "expiration_date": "2026-07-24",
       "expiration_time": "20:36:04",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 501751.116073,
       "last_calculation_time": "2026-07-19 01:13:33",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-19 01:13:33",
-      "resumed_at": "2026-07-12 11:34:58"
+      "resumed_at": "2026-07-12 11:34:58",
+      "paused_at": "2026-07-19 13:03:07",
+      "remaining_seconds_at_pause": 459176.749029
     },
     "grygroirhhhf": {
       "android_id": "grygroirhhhf",
