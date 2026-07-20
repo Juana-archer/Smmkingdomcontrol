@@ -131,6 +131,12 @@
       "api_hash_hash": "c00b0b4bf3c40edf1d806de2dc359ebab9dbe6fbca9670919ee1f4671a8d5367",
       "date_liaison": "2026-07-20 10:28:07",
       "statut": "verrouille"
+    },
+    "tinah6x3vk": {
+      "device_id": "DEV_c5cf3f051632b0bdd5cc",
+      "api_hash_hash": "febcc96ba86d2f01cf8f09799e20926059b678ddc5a6af33fd38a14874c1606c",
+      "date_liaison": "2026-07-20 12:27:14",
+      "statut": "verrouille"
     }
   }
 }
