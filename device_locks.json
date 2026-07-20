@@ -125,6 +125,12 @@
       "api_hash_hash": "e268dfa37368a499ff389c62649ebeae773b758817ca46430632bc823ff40a90",
       "date_liaison": "2026-07-20 10:18:11",
       "statut": "verrouille"
+    },
+    "honorigi3r2": {
+      "device_id": "DEV_cbcc6c601325cf20fd67",
+      "api_hash_hash": "c00b0b4bf3c40edf1d806de2dc359ebab9dbe6fbca9670919ee1f4671a8d5367",
+      "date_liaison": "2026-07-20 10:28:07",
+      "statut": "verrouille"
     }
   }
 }
