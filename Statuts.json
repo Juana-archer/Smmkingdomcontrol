@@ -592,13 +592,13 @@
       "android_id": "Sedillontdfg",
       "activation_date": "2026-05-18",
       "activation_time": "14:56:06",
-      "expiration_date": "2026-07-20",
-      "expiration_time": "11:54:47",
+      "expiration_date": "2026-07-27",
+      "expiration_time": "11:54:45",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-13 11:54:47",
-      "remaining_seconds_base": 52020.639895,
-      "last_calculation_time": "2026-07-19 21:27:45"
+      "last_update": "2026-07-20 11:06:35",
+      "remaining_seconds_base": 607689.941395,
+      "last_calculation_time": "2026-07-20 11:06:35"
     },
     "moijuana": {
       "android_id": "moijuana",
