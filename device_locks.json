@@ -53,6 +53,12 @@
       "api_hash_hash": "c00b0b4bf3c40edf1d806de2dc359ebab9dbe6fbca9670919ee1f4671a8d5367",
       "date_liaison": "2026-07-21 14:49:35",
       "statut": "verrouille"
+    },
+    "shillab5xiq": {
+      "device_id": "DEV_f69f9982b90a142c6ec4",
+      "api_hash_hash": "37f51fc0facca9ef877ecb1fb492a0e1cded619f08de62518e816d1044bdd370",
+      "date_liaison": "2026-07-21 15:35:48",
+      "statut": "verrouille"
     }
   }
 }
