@@ -1456,11 +1456,13 @@
       "activation_time": "22:47:24",
       "expiration_date": "2026-07-24",
       "expiration_time": "21:06:05",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 348785.14225399995,
       "last_calculation_time": "2026-07-20 20:12:58",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-17 21:06:05"
+      "last_update": "2026-07-17 21:06:05",
+      "paused_at": "2026-07-21 14:34:10",
+      "remaining_seconds_at_pause": 282712.6950429999
     },
     "rh anicjf8s": {
       "android_id": "rh anicjf8s",
