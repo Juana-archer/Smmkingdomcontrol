@@ -29,6 +29,12 @@
       "api_hash_hash": "2e980b86456c8a8e299399c3a8190a78aade1a904d96d82f0c8e2bdadd8bba77",
       "date_liaison": "2026-07-21 13:19:21",
       "statut": "verrouille"
+    },
+    "Sedillontdfg": {
+      "device_id": "DEV_2a1e5a4885927890d547",
+      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
+      "date_liaison": "2026-07-21 13:23:52",
+      "statut": "verrouille"
     }
   }
 }
