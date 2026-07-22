@@ -199,6 +199,18 @@
                     "bonus": 1000
                 }
             ]
+        },
+        "Sedillontdfg": {
+            "total_referrals": 1,
+            "total_earned": 1000,
+            "list": [
+                {
+                    "new_user_id": "mickaqskfi",
+                    "new_username": "Micka",
+                    "date": "2026-07-22 19:01:33",
+                    "bonus": 1000
+                }
+            ]
         }
     }
 }
