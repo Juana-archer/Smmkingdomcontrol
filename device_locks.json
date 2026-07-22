@@ -119,6 +119,12 @@
       "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
       "date_liaison": "2026-07-22 23:24:34",
       "statut": "verrouille"
+    },
+    "eslyduoelas": {
+      "device_id": "DEV_4fca89a7c5de021f4453",
+      "api_hash_hash": "2e980b86456c8a8e299399c3a8190a78aade1a904d96d82f0c8e2bdadd8bba77",
+      "date_liaison": "2026-07-22 23:49:05",
+      "statut": "verrouille"
     }
   }
 }
