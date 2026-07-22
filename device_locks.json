@@ -60,10 +60,10 @@
       "date_liaison": "2026-07-22 12:45:23",
       "statut": "verrouille"
     },
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-07-22 13:34:57",
+    "alsonvictor": {
+      "device_id": "DEV_40602c2c2b5ccb23d444",
+      "api_hash_hash": "77ed5fbf1ce8bfa636df6179c5b6bfc3be6344fdc7c6974a563788de00977718",
+      "date_liaison": "2026-07-22 13:38:48",
       "statut": "verrouille"
     }
   }
