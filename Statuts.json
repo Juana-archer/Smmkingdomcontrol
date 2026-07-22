@@ -1562,6 +1562,18 @@
       "last_calculation_time": "2026-07-22 18:37:27",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-22 18:37:27"
+    },
+    "daheryid": {
+      "android_id": "daheryid",
+      "activation_date": "2026-07-22",
+      "activation_time": "18:50:04",
+      "expiration_date": "2036-01-15",
+      "expiration_time": "18:50:04",
+      "status": "active",
+      "remaining_seconds_base": 299289600,
+      "last_calculation_time": "2026-07-22 18:50:04",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-07-22 18:50:04"
     }
   },
   "activations": [
