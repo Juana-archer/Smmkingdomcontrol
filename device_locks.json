@@ -35,6 +35,12 @@
       "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
       "date_liaison": "2026-07-22 10:12:25",
       "statut": "verrouille"
+    },
+    "honorigi3r2": {
+      "device_id": "DEV_cbcc6c601325cf20fd67",
+      "api_hash_hash": "c00b0b4bf3c40edf1d806de2dc359ebab9dbe6fbca9670919ee1f4671a8d5367",
+      "date_liaison": "2026-07-22 10:19:06",
+      "statut": "verrouille"
     }
   }
 }
