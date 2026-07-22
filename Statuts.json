@@ -1432,11 +1432,13 @@
             "activation_time": "09:10:40",
             "expiration_date": "2026-07-22",
             "expiration_time": "14:10:40",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 151059.77866899996,
             "last_calculation_time": "2026-07-20 20:12:58",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-07-15 11:59:44"
+            "last_update": "2026-07-15 11:59:44",
+            "expired_at": "2026-07-22 14:46:46",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "tinah6x3vk": {
             "android_id": "tinah6x3vk",
