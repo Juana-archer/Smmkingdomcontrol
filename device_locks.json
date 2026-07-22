@@ -41,6 +41,12 @@
       "api_hash_hash": "c00b0b4bf3c40edf1d806de2dc359ebab9dbe6fbca9670919ee1f4671a8d5367",
       "date_liaison": "2026-07-22 10:19:06",
       "statut": "verrouille"
+    },
+    "novaigfdp": {
+      "device_id": "DEV_c5078d0ba15fea31b909",
+      "api_hash_hash": "6e60eb7cfde4a367bbd40635b5e9c95a7805fbde9890480ce4b7249e98138710",
+      "date_liaison": "2026-07-22 11:56:18",
+      "statut": "verrouille"
     }
   }
 }
