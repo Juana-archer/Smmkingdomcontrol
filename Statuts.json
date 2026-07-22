@@ -1415,15 +1415,15 @@
       "activation_date": "2026-07-14",
       "activation_time": "18:24:07",
       "expiration_date": "2026-07-24",
-      "expiration_time": "11:06:50",
+      "expiration_time": "11:09:07",
       "status": "active",
       "remaining_seconds_base": 159577.03635599997,
-      "last_calculation_time": "2026-07-22 14:47:13",
+      "last_calculation_time": "2026-07-22 14:49:30",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-15 16:44:02",
       "expired_at": "2026-07-14 23:39:33",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
-      "resumed_at": "2026-07-22 14:47:13"
+      "resumed_at": "2026-07-22 14:49:30"
     },
     "shillab5xiq": {
       "android_id": "shillab5xiq",
