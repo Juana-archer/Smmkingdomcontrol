@@ -137,6 +137,12 @@
       "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
       "date_liaison": "2026-07-23 18:53:02",
       "statut": "verrouille"
+    },
+    "sedmannnkkw": {
+      "device_id": "DEV_4f06b4fc7fa7e33f1e45",
+      "api_hash_hash": "83a822c0c51ffc7f183f18ebf2646d6817efa9791e94cbddd102dc5ee917df2a",
+      "date_liaison": "2026-07-23 22:19:34",
+      "statut": "verrouille"
     }
   }
 }
