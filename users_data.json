@@ -223,6 +223,18 @@
                     "bonus": 1000
                 }
             ]
+        },
+        "Jones": {
+            "total_referrals": 1,
+            "total_earned": 1000,
+            "list": [
+                {
+                    "new_user_id": "micheluc8po",
+                    "new_username": "michelin",
+                    "date": "2026-07-23 22:27:42",
+                    "bonus": 1000
+                }
+            ]
         }
     }
 }
