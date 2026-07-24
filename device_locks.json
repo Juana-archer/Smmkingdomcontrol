@@ -59,6 +59,12 @@
       "api_hash_hash": "e0d2eddf6cb96ca305774f8dab62c34d84278bb1931f32cafe37035bcc102c05",
       "date_liaison": "2026-07-24 05:48:53",
       "statut": "verrouille"
+    },
+    "mickaqskfi": {
+      "device_id": "DEV_96ebfd4963d5506767ce",
+      "api_hash_hash": "52fffb1a592e21c3262549ed8f6b6a5d4bac2830a5e3d1c7945c2e4e277df3e6",
+      "date_liaison": "2026-07-24 06:03:09",
+      "statut": "verrouille"
     }
   }
 }
