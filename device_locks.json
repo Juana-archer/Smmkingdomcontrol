@@ -125,6 +125,12 @@
       "api_hash_hash": "d5df2b8106035ca6a4141fa186914dcb4b9f753a92a6d67a5fe360809d758e85",
       "date_liaison": "2026-07-25 12:47:29",
       "statut": "verrouille"
+    },
+    "eslyduoelas": {
+      "device_id": "DEV_4fca89a7c5de021f4453",
+      "api_hash_hash": "2e980b86456c8a8e299399c3a8190a78aade1a904d96d82f0c8e2bdadd8bba77",
+      "date_liaison": "2026-07-25 17:56:51",
+      "statut": "verrouille"
     }
   }
 }
