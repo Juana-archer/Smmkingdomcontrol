@@ -1548,15 +1548,14 @@
       "android_id": "maroteyhmhy",
       "activation_date": "2026-07-19",
       "activation_time": "17:10:57",
-      "expiration_date": "2026-07-26",
-      "expiration_time": "22:10:57",
-      "status": "paused",
-      "remaining_seconds_base": 525476.615199,
-      "last_calculation_time": "2026-07-20 20:12:58",
+      "expiration_date": "2026-07-31",
+      "expiration_time": "13:57:27",
+      "status": "active",
+      "remaining_seconds_base": 523283.441796,
+      "last_calculation_time": "2026-07-25 12:36:03",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-19 18:04:57",
-      "paused_at": "2026-07-20 20:49:31",
-      "remaining_seconds_at_pause": 523283.441796
+      "resumed_at": "2026-07-25 12:36:03"
     },
     "ravaka9aef6": {
       "android_id": "ravaka9aef6",
