@@ -1520,11 +1520,13 @@
             "activation_time": "20:53:18",
             "expiration_date": "2026-07-27",
             "expiration_time": "01:53:16",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 196013.19935499996,
             "last_calculation_time": "2026-07-24 19:26:20",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-07-19 22:16:19"
+            "last_update": "2026-07-19 22:16:19",
+            "expired_at": "2026-07-27 01:59:40",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "jofufyopdj": {
             "android_id": "jofufyopdj",
