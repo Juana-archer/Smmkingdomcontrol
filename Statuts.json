@@ -1644,6 +1644,18 @@
       "last_calculation_time": "2026-07-27 17:03:36",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-27 17:03:36"
+    },
+    "faniryjurhe": {
+      "android_id": "faniryjurhe",
+      "activation_date": "2026-07-28",
+      "activation_time": "11:23:40",
+      "expiration_date": "2029-04-23",
+      "expiration_time": "11:23:40",
+      "status": "active",
+      "remaining_seconds_base": 86400000,
+      "last_calculation_time": "2026-07-28 11:23:40",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-07-28 11:23:40"
     }
   },
   "activations": [
