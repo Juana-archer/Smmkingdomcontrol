@@ -1155,13 +1155,13 @@
       "android_id": "mioratoudgev",
       "activation_date": "2026-06-30",
       "activation_time": "14:57:27",
-      "expiration_date": "2026-07-28",
-      "expiration_time": "17:05:36",
+      "expiration_date": "2026-08-04",
+      "expiration_time": "17:05:35",
       "status": "active",
-      "remaining_seconds_base": 337155.07222999993,
-      "last_calculation_time": "2026-07-24 19:26:20",
+      "remaining_seconds_base": 625794.175095,
+      "last_calculation_time": "2026-07-28 11:15:40",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-21 11:06:38",
+      "last_update": "2026-07-28 11:15:40",
       "expired_at": "2026-07-07 15:25:58",
       "expired_reason": "Dépassement date expiration (heure Madagascar)"
     },
@@ -1644,18 +1644,6 @@
       "last_calculation_time": "2026-07-27 17:03:36",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-27 17:03:36"
-    },
-    "faniryjurhe": {
-      "android_id": "faniryjurhe",
-      "activation_date": "2026-07-28",
-      "activation_time": "11:14:53",
-      "expiration_date": "2026-10-14",
-      "expiration_time": "11:14:53",
-      "status": "active",
-      "remaining_seconds_base": 6739200,
-      "last_calculation_time": "2026-07-28 11:14:53",
-      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-28 11:14:53"
     }
   },
   "activations": [
