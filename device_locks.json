@@ -179,6 +179,12 @@
       "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
       "date_liaison": "2026-07-29 17:00:46",
       "statut": "verrouille"
+    },
+    "ravaka9aef6": {
+      "device_id": "DEV_355383a38d5035ec1986",
+      "api_hash_hash": "0c7b46dea9997507bc538dac276afcd7ae8796238d7a5d7ce410e078570dd5d9",
+      "date_liaison": "2026-07-29 18:21:15",
+      "statut": "verrouille"
     }
   }
 }
