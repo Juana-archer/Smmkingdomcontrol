@@ -1656,6 +1656,18 @@
       "last_calculation_time": "2026-07-29 15:22:47",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-28 11:23:40"
+    },
+    "kejortr65g": {
+      "android_id": "kejortr65g",
+      "activation_date": "2026-07-29",
+      "activation_time": "15:23:21",
+      "expiration_date": "2026-07-29",
+      "expiration_time": "20:23:21",
+      "status": "active",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-07-29 15:23:21",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-07-29 15:23:21"
     }
   },
   "activations": [
