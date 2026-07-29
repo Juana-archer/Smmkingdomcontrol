@@ -1577,11 +1577,13 @@
             "activation_time": "12:37:26",
             "expiration_date": "2026-07-29",
             "expiration_time": "18:37:27",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 11678.706899999932,
             "last_calculation_time": "2026-07-29 15:22:47",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-07-22 18:37:27"
+            "last_update": "2026-07-22 18:37:27",
+            "expired_at": "2026-07-29 19:07:41",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "daheryid": {
             "android_id": "daheryid",
