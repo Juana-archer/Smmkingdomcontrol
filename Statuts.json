@@ -1672,6 +1672,18 @@
             "last_calculation_time": "2026-07-29 14:42:22",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-29 14:42:22"
+        },
+        "mampioi6utv": {
+            "android_id": "mampioi6utv",
+            "activation_date": "2026-07-29",
+            "activation_time": "15:20:18",
+            "expiration_date": "2026-07-29",
+            "expiration_time": "20:20:18",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-29 15:20:18",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-29 15:20:18"
         }
     },
     "activations": [
@@ -1869,6 +1881,13 @@
             "username": "Kejor",
             "referrer_id": "Aucun",
             "date": "2026-07-29 14:42:22",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "mampioi6utv",
+            "username": "Mampionina",
+            "referrer_id": "Aucun",
+            "date": "2026-07-29 15:20:18",
             "bonus_hours": 5
         }
     ]
