@@ -173,6 +173,12 @@
       "api_hash_hash": "1a10f589ce097f092a4b7a013d4a96fee5d398956272971eccb4a8d74c3afaf7",
       "date_liaison": "2026-07-29 15:26:22",
       "statut": "verrouille"
+    },
+    "eslyu17hl": {
+      "device_id": "DEV_778ab429cf3869b6c191",
+      "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
+      "date_liaison": "2026-07-29 17:00:46",
+      "statut": "verrouille"
     }
   }
 }
