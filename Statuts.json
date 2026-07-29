@@ -1660,6 +1660,18 @@
             "last_calculation_time": "2026-07-28 11:23:40",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-28 11:23:40"
+        },
+        "kejortr65g": {
+            "android_id": "kejortr65g",
+            "activation_date": "2026-07-29",
+            "activation_time": "14:42:22",
+            "expiration_date": "2026-07-29",
+            "expiration_time": "19:42:22",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-29 14:42:22",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-29 14:42:22"
         }
     },
     "activations": [
@@ -1850,6 +1862,13 @@
             "username": "Yellat",
             "referrer_id": "Aucun",
             "date": "2026-07-27 16:46:27",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "kejortr65g",
+            "username": "Kejor",
+            "referrer_id": "Aucun",
+            "date": "2026-07-29 14:42:22",
             "bonus_hours": 5
         }
     ]
