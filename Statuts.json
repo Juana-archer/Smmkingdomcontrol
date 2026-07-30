@@ -1426,14 +1426,16 @@
       "activation_time": "18:24:07",
       "expiration_date": "2026-08-01",
       "expiration_time": "20:45:45",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 278577.679279,
       "last_calculation_time": "2026-07-29 15:22:47",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-25 20:45:45",
       "expired_at": "2026-07-25 16:17:53",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
-      "resumed_at": "2026-07-22 14:49:30"
+      "resumed_at": "2026-07-22 14:49:30",
+      "paused_at": "2026-07-30 09:19:04",
+      "remaining_seconds_at_pause": 214000.31412999998
     },
     "shillab5xiq": {
       "android_id": "shillab5xiq",
