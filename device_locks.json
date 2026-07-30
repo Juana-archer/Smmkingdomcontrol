@@ -125,6 +125,12 @@
       "api_hash_hash": "1a10f589ce097f092a4b7a013d4a96fee5d398956272971eccb4a8d74c3afaf7",
       "date_liaison": "2026-07-30 09:20:08",
       "statut": "verrouille"
+    },
+    "esly3drhf": {
+      "device_id": "DEV_867480973ac561981ea9",
+      "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
+      "date_liaison": "2026-07-30 15:19:48",
+      "statut": "verrouille"
     }
   }
 }
