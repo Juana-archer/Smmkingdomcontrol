@@ -107,6 +107,12 @@
       "api_hash_hash": "8f71a9784c7b04e2b8cc2d8ed6489204c9424bc0b6f0f9bde669adfc7a425a80",
       "date_liaison": "2026-07-30 06:55:09",
       "statut": "verrouille"
+    },
+    "babasephilbert": {
+      "device_id": "DEV_4c4407828e101ecf8a6e",
+      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
+      "date_liaison": "2026-07-30 07:20:53",
+      "statut": "verrouille"
     }
   }
 }
