@@ -119,6 +119,12 @@
       "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
       "date_liaison": "2026-07-30 08:30:16",
       "statut": "verrouille"
+    },
+    "mampioi6utv": {
+      "device_id": "DEV_e49488eaa696692df37e",
+      "api_hash_hash": "1a10f589ce097f092a4b7a013d4a96fee5d398956272971eccb4a8d74c3afaf7",
+      "date_liaison": "2026-07-30 09:20:08",
+      "statut": "verrouille"
     }
   }
 }
