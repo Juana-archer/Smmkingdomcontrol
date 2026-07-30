@@ -131,6 +131,12 @@
       "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
       "date_liaison": "2026-07-30 15:19:48",
       "statut": "verrouille"
+    },
+    "yellathk9tx": {
+      "device_id": "DEV_97515098e472c49e61bb",
+      "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
+      "date_liaison": "2026-07-30 19:12:04",
+      "statut": "verrouille"
     }
   }
 }
