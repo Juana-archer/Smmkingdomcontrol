@@ -1717,13 +1717,13 @@
       "android_id": "nathacwy6sn",
       "activation_date": "2026-07-31",
       "activation_time": "11:48:53",
-      "expiration_date": "2026-07-31",
-      "expiration_time": "16:48:53",
-      "status": "expired",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-07-31 17:05:37",
+      "expiration_date": "2026-08-07",
+      "expiration_time": "17:29:19",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-31 17:29:19",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-31 11:48:53"
+      "last_update": "2026-07-31 17:29:19"
     },
     "Kejortr65g": {
       "android_id": "Kejortr65g",
