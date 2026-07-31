@@ -161,6 +161,12 @@
       "api_hash_hash": "646c3a7b3dce29210af233a8abb03a61ef6ff230cb6a7d002dc2672e64d2dfb3",
       "date_liaison": "2026-07-31 11:27:59",
       "statut": "verrouille"
+    },
+    "nathacwy6sn": {
+      "device_id": "DEV_c354edd498d9d8ad475a",
+      "api_hash_hash": "2b2029459ba504e3a78ab915efd572b119f113d5408f5978740ff045370260bd",
+      "date_liaison": "2026-07-31 11:56:56",
+      "statut": "verrouille"
     }
   }
 }
