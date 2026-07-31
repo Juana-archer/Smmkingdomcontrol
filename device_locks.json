@@ -179,6 +179,12 @@
       "api_hash_hash": "b7b4b0b2d5470987e949c225b744680042b302a96188068b2ff2cb00e06ceded",
       "date_liaison": "2026-07-31 18:20:26",
       "statut": "verrouille"
+    },
+    "jhoanydoq32": {
+      "device_id": "DEV_22a5ff17d45ec651540e",
+      "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
+      "date_liaison": "2026-07-31 19:12:59",
+      "statut": "verrouille"
     }
   }
 }
