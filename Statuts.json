@@ -1067,14 +1067,16 @@
       "activation_time": "14:42:51",
       "expiration_date": "2026-08-03",
       "expiration_time": "09:10:14",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 409646.679279,
       "last_calculation_time": "2026-07-29 15:22:47",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-07-26 09:10:14",
       "resumed_at": "2026-07-22 17:27:58",
       "expired_at": "2026-07-26 09:08:54",
-      "expired_reason": "Dépassement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
+      "paused_at": "2026-07-31 11:58:25",
+      "remaining_seconds_at_pause": 249108.50325399998
     },
     "eslyduoelas": {
       "android_id": "eslyduoelas",
@@ -1715,13 +1717,13 @@
       "android_id": "nathacwy6sn",
       "activation_date": "2026-07-31",
       "activation_time": "11:48:53",
-      "expiration_date": "2026-08-07",
+      "expiration_date": "2026-07-31",
       "expiration_time": "16:48:53",
       "status": "active",
-      "remaining_seconds_base": 622290.809589,
-      "last_calculation_time": "2026-07-31 11:57:22",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-07-31 11:48:53",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-31 11:57:22"
+      "last_update": "2026-07-31 11:48:53"
     }
   },
   "activations": [
