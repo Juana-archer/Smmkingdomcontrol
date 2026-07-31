@@ -1696,6 +1696,18 @@
             "last_calculation_time": "2026-07-31 11:11:39",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-31 11:11:39"
+        },
+        "francopj1h9": {
+            "android_id": "francopj1h9",
+            "activation_date": "2026-07-31",
+            "activation_time": "11:18:15",
+            "expiration_date": "2026-07-31",
+            "expiration_time": "16:18:15",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-07-31 11:18:15",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-07-31 11:18:15"
         }
     },
     "activations": [
@@ -1900,6 +1912,13 @@
             "username": "jhonclien",
             "referrer_id": "Aucun",
             "date": "2026-07-31 11:11:39",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "francopj1h9",
+            "username": "Franco",
+            "referrer_id": "Aucun",
+            "date": "2026-07-31 11:18:15",
             "bonus_hours": 5
         }
     ]
