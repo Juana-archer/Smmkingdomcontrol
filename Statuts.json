@@ -1693,25 +1693,25 @@
       "android_id": "jhonclu2igf",
       "activation_date": "2026-07-31",
       "activation_time": "11:11:39",
-      "expiration_date": "2026-07-31",
-      "expiration_time": "16:11:39",
-      "status": "expired",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-07-31 17:05:37",
+      "expiration_date": "2026-08-07",
+      "expiration_time": "17:11:14",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-07-31 17:11:14",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-31 11:11:39"
+      "last_update": "2026-07-31 17:11:14"
     },
     "francopj1h9": {
       "android_id": "francopj1h9",
       "activation_date": "2026-07-31",
       "activation_time": "11:18:15",
-      "expiration_date": "2026-08-07",
-      "expiration_time": "17:10:29",
-      "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-07-31 17:10:29",
+      "expiration_date": "2026-07-31",
+      "expiration_time": "16:18:15",
+      "status": "expired",
+      "remaining_seconds_base": 0,
+      "last_calculation_time": "2026-07-31 17:05:37",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-31 17:10:29"
+      "last_update": "2026-07-31 11:18:15"
     },
     "nathacwy6sn": {
       "android_id": "nathacwy6sn",
