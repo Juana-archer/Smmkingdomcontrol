@@ -155,6 +155,12 @@
       "api_hash_hash": "bc37602802933c306180298f823d6411d04c4ff187fbc52223642ea62a42fef5",
       "date_liaison": "2026-07-31 11:21:38",
       "statut": "verrouille"
+    },
+    "francopj1h9": {
+      "device_id": "DEV_a480091d1408b4f177e5",
+      "api_hash_hash": "646c3a7b3dce29210af233a8abb03a61ef6ff230cb6a7d002dc2672e64d2dfb3",
+      "date_liaison": "2026-07-31 11:27:59",
+      "statut": "verrouille"
     }
   }
 }
