@@ -173,6 +173,12 @@
       "api_hash_hash": "a6d20c96e98506cec1834f6c1fca35b8aaab687a6f8118c07d6989e5b0d5a8f0",
       "date_liaison": "2026-07-31 17:11:35",
       "statut": "verrouille"
+    },
+    "joellar1kqj": {
+      "device_id": "DEV_3f6d44473df9b2c8badf",
+      "api_hash_hash": "b7b4b0b2d5470987e949c225b744680042b302a96188068b2ff2cb00e06ceded",
+      "date_liaison": "2026-07-31 18:19:08",
+      "statut": "verrouille"
     }
   }
 }
