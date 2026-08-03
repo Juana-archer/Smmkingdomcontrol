@@ -1473,16 +1473,16 @@
       "android_id": "sedmannnkkw",
       "activation_date": "2026-07-16",
       "activation_time": "22:47:24",
-      "expiration_date": "2026-08-04",
-      "expiration_time": "03:11:21",
+      "expiration_date": "2026-08-11",
+      "expiration_time": "09:20:50",
       "status": "paused",
       "remaining_seconds_base": 291971.6535179999,
       "last_calculation_time": "2026-07-31 18:05:09",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-26 21:14:23",
+      "last_update": "2026-08-03 13:50:08",
       "resumed_at": "2026-07-31 18:05:09",
       "paused_at": "2026-08-03 07:40:38",
-      "remaining_seconds_at_pause": 70241.94236499991
+      "remaining_seconds_at_pause": 675041.9423649999
     },
     "rh anicjf8s": {
       "android_id": "rh anicjf8s",
