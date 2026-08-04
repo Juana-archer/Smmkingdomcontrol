@@ -71,6 +71,12 @@
       "api_hash_hash": "bc37602802933c306180298f823d6411d04c4ff187fbc52223642ea62a42fef5",
       "date_liaison": "2026-08-04 22:12:13",
       "statut": "verrouille"
+    },
+    "miorahdkdl": {
+      "device_id": "DEV_3f3800712a64d7ef6acc",
+      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
+      "date_liaison": "2026-08-04 22:20:20",
+      "statut": "verrouille"
     }
   }
 }
