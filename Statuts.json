@@ -1833,13 +1833,13 @@
       "android_id": "mamedxp8px",
       "activation_date": "2026-08-04",
       "activation_time": "22:31:05",
-      "expiration_date": "2026-08-05",
+      "expiration_date": "2026-08-12",
       "expiration_time": "03:31:05",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-08-04 22:31:05",
+      "remaining_seconds_base": 617869.268475,
+      "last_calculation_time": "2026-08-04 23:53:15",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-04 22:31:05"
+      "last_update": "2026-08-04 23:53:15"
     }
   },
   "activations": [
