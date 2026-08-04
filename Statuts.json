@@ -1404,12 +1404,12 @@
             "activation_time": "21:43:42",
             "expiration_date": "2026-08-04",
             "expiration_time": "08:18:12",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 86400,
             "last_calculation_time": "2026-08-03 08:18:12",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-03 08:18:12",
-            "expired_at": "2026-08-02 01:34:51",
+            "expired_at": "2026-08-04 11:40:55",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "nainauwwdr": {
@@ -1475,12 +1475,14 @@
             "activation_time": "22:47:24",
             "expiration_date": "2026-08-04",
             "expiration_time": "10:21:51",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 70241.94236499991,
             "last_calculation_time": "2026-08-03 14:51:09",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-07-26 21:14:23",
-            "resumed_at": "2026-08-03 14:51:09"
+            "resumed_at": "2026-08-03 14:51:09",
+            "expired_at": "2026-08-04 11:40:55",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "rh anicjf8s": {
             "android_id": "rh anicjf8s",
