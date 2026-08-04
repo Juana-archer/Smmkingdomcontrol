@@ -1828,6 +1828,18 @@
       "last_calculation_time": "2026-08-04 20:38:14",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-03 17:39:10"
+    },
+    "mamedxp8px": {
+      "android_id": "mamedxp8px",
+      "activation_date": "2026-08-04",
+      "activation_time": "21:38:54",
+      "expiration_date": "2026-08-05",
+      "expiration_time": "02:38:54",
+      "status": "active",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-08-04 21:38:54",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-08-04 21:38:54"
     }
   },
   "activations": [
