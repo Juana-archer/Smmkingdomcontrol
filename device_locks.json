@@ -113,6 +113,12 @@
       "api_hash_hash": "a6d20c96e98506cec1834f6c1fca35b8aaab687a6f8118c07d6989e5b0d5a8f0",
       "date_liaison": "2026-08-04 23:21:27",
       "statut": "verrouille"
+    },
+    "esly3drhf": {
+      "device_id": "DEV_867480973ac561981ea9",
+      "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
+      "date_liaison": "2026-08-04 23:46:05",
+      "statut": "verrouille"
     }
   }
 }
