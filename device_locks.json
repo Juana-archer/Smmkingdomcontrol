@@ -65,6 +65,12 @@
       "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
       "date_liaison": "2026-08-04 21:45:51",
       "statut": "verrouille"
+    },
+    "jhonclu2igf": {
+      "device_id": "DEV_4ba2400ae9cc7b04ed41",
+      "api_hash_hash": "bc37602802933c306180298f823d6411d04c4ff187fbc52223642ea62a42fef5",
+      "date_liaison": "2026-08-04 22:09:53",
+      "statut": "verrouille"
     }
   }
 }
