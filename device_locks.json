@@ -221,6 +221,12 @@
       "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
       "date_liaison": "2026-08-04 12:34:09",
       "statut": "verrouille"
+    },
+    "mamedxp8px": {
+      "device_id": "DEV_85d6bc8e81ca0d94c2eb",
+      "api_hash_hash": "5907adac8ee92ccf88f656b18636544b279a4ad372a25a2969a75754e3c5b7f7",
+      "date_liaison": "2026-08-04 19:37:06",
+      "statut": "verrouille"
     }
   }
 }
