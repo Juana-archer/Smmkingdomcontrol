@@ -89,6 +89,12 @@
       "api_hash_hash": "5907adac8ee92ccf88f656b18636544b279a4ad372a25a2969a75754e3c5b7f7",
       "date_liaison": "2026-08-04 22:30:10",
       "statut": "verrouille"
+    },
+    "rhanicjf8s": {
+      "device_id": "DEV_8fd9117b4fe47df8bc4c",
+      "api_hash_hash": "f3e15d42821cacc2a6ee908118012ae4e751a49b91626b1c1740326e6163ea47",
+      "date_liaison": "2026-08-04 22:45:52",
+      "statut": "verrouille"
     }
   }
 }
