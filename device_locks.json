@@ -12,10 +12,10 @@
       "date_liaison": "2026-08-05 18:12:04",
       "statut": "verrouille"
     },
-    "eslyu17hl": {
-      "device_id": "DEV_778ab429cf3869b6c191",
-      "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
-      "date_liaison": "2026-08-05 18:20:21",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-05 18:24:52",
       "statut": "verrouille"
     }
   }
