@@ -1671,13 +1671,13 @@
       "android_id": "mampioi6utv",
       "activation_date": "2026-07-29",
       "activation_time": "15:24:53",
-      "expiration_date": "2026-08-05",
-      "expiration_time": "15:24:53",
+      "expiration_date": "2026-08-12",
+      "expiration_time": "17:08:59",
       "status": "active",
-      "remaining_seconds_base": 67596.05680799996,
-      "last_calculation_time": "2026-08-04 20:38:14",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-05 17:08:59",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-07-29 15:24:53"
+      "last_update": "2026-08-05 17:08:59"
     },
     "eslyu17hl": {
       "android_id": "eslyu17hl",
