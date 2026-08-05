@@ -1759,13 +1759,15 @@
       "activation_time": "18:05:17",
       "expiration_date": "2026-08-08",
       "expiration_time": "09:41:52",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 306216.04300699994,
       "last_calculation_time": "2026-08-04 20:38:14",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-01 09:41:52",
       "expired_at": "2026-08-01 09:34:51",
-      "expired_reason": "Dépassement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
+      "paused_at": "2026-08-05 13:38:36",
+      "remaining_seconds_at_pause": 244993.30895499996
     },
     "jhoanydoq32": {
       "android_id": "jhoanydoq32",
