@@ -155,6 +155,12 @@
       "api_hash_hash": "03329c870e69e5c215e1a258029cfce484fd8a173c2b34c727c9bb3ff72e60ea",
       "date_liaison": "2026-08-05 09:03:25",
       "statut": "verrouille"
+    },
+    "jeanqjdrq": {
+      "device_id": "DEV_5fd4536dc5798a74ae2b",
+      "api_hash_hash": "9b8ceb8732b6cc7a7f2ab958ef7d3b0b46cd4d15a91c366b787be7d3d6889fbe",
+      "date_liaison": "2026-08-05 13:31:05",
+      "statut": "verrouille"
     }
   }
 }
