@@ -89,6 +89,12 @@
       "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
       "date_liaison": "2026-08-05 20:32:30",
       "statut": "verrouille"
+    },
+    "yellathk9tx": {
+      "device_id": "DEV_97515098e472c49e61bb",
+      "api_hash_hash": "9184299b6af06aa57b264460750856aaa3ea4e98fba24595780ef10e2fd02a23",
+      "date_liaison": "2026-08-05 20:51:10",
+      "statut": "verrouille"
     }
   }
 }
