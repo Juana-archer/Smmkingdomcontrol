@@ -101,6 +101,12 @@
       "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
       "date_liaison": "2026-08-05 21:37:18",
       "statut": "verrouille"
+    },
+    "willisit8wy": {
+      "device_id": "DEV_f90b1c39d25d2795c8dd",
+      "api_hash_hash": "a25ca92b31c94bb2d074fd7c1469fb897a420f067cc8e94c5e9f654fa10a092a",
+      "date_liaison": "2026-08-05 21:43:12",
+      "statut": "verrouille"
     }
   }
 }
