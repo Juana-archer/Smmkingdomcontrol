@@ -161,6 +161,12 @@
       "api_hash_hash": "9b8ceb8732b6cc7a7f2ab958ef7d3b0b46cd4d15a91c366b787be7d3d6889fbe",
       "date_liaison": "2026-08-05 13:32:48",
       "statut": "verrouille"
+    },
+    "jofufyopdj": {
+      "device_id": "DEV_4f410dc5a9e17186c8ca",
+      "api_hash_hash": "4919ae8f52f5e6a0fdf7416f6c08398209543544e6af7baca0d0a95631ecbbbd",
+      "date_liaison": "2026-08-05 13:38:29",
+      "statut": "verrouille"
     }
   }
 }
