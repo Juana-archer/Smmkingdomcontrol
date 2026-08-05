@@ -143,6 +143,12 @@
       "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
       "date_liaison": "2026-08-05 06:04:52",
       "statut": "verrouille"
+    },
+    "nathoughd": {
+      "device_id": "DEV_2849877e4354cb03f2cf",
+      "api_hash_hash": "37ec44e96d49e3d5adef2bb42644aed8eea5b0517cfc3b81ae7e94587a2d494d",
+      "date_liaison": "2026-08-05 08:51:40",
+      "statut": "verrouille"
     }
   }
 }
