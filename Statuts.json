@@ -1903,6 +1903,18 @@
             "last_calculation_time": "2026-08-06 19:44:03",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-06 19:44:03"
+        },
+        "badmanok7dv": {
+            "android_id": "badmanok7dv",
+            "activation_date": "2026-08-06",
+            "activation_time": "20:07:44",
+            "expiration_date": "2026-08-07",
+            "expiration_time": "01:07:44",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-08-06 20:07:44",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-08-06 20:07:44"
         }
     },
     "activations": [
@@ -2191,6 +2203,13 @@
             "username": "Naikels",
             "referrer_id": "Aucun",
             "date": "2026-08-06 19:44:03",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "badmanok7dv",
+            "username": "badman",
+            "referrer_id": "Aucun",
+            "date": "2026-08-06 20:07:44",
             "bonus_hours": 5
         }
     ]
