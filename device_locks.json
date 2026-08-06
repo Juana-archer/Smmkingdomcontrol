@@ -197,6 +197,12 @@
       "api_hash_hash": "1f88292fc79df1682f0aaace8a27b7d311b93cfa1859f1e91d56c8056e0f5c17",
       "date_liaison": "2026-08-06 19:11:20",
       "statut": "verrouille"
+    },
+    "safidy5h27y": {
+      "device_id": "DEV_1957444ff6c2b8d29130",
+      "api_hash_hash": "9a285e9c4e62f97388f0e7db8ad6874ebdb9775cd73478168619f4d40196898c",
+      "date_liaison": "2026-08-06 19:14:38",
+      "statut": "verrouille"
     }
   }
 }
