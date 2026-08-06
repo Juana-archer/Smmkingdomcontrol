@@ -1671,13 +1671,13 @@
       "android_id": "mampioi6utv",
       "activation_date": "2026-07-29",
       "activation_time": "15:24:53",
-      "expiration_date": "2026-08-12",
+      "expiration_date": "2026-08-15",
       "expiration_time": "17:08:59",
       "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-08-05 17:08:59",
+      "remaining_seconds_base": 807962.470165,
+      "last_calculation_time": "2026-08-06 08:42:56",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-05 17:08:59"
+      "last_update": "2026-08-06 08:42:56"
     },
     "eslyu17hl": {
       "android_id": "eslyu17hl",
@@ -1824,13 +1824,11 @@
       "activation_time": "15:28:38",
       "expiration_date": "2026-08-10",
       "expiration_time": "20:28:38",
-      "status": "paused",
+      "status": "active",
       "remaining_seconds_base": 517821.35017,
       "last_calculation_time": "2026-08-04 20:38:14",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-03 17:39:10",
-      "paused_at": "2026-08-06 08:39:28",
-      "remaining_seconds_at_pause": 388147.012252
+      "last_update": "2026-08-03 17:39:10"
     },
     "mamedxp8px": {
       "android_id": "mamedxp8px",
