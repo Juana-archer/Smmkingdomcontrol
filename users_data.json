@@ -315,8 +315,8 @@
             ]
         },
         "Sedillontdfg": {
-            "total_referrals": 6,
-            "total_earned": 6000,
+            "total_referrals": 7,
+            "total_earned": 7000,
             "list": [
                 {
                     "new_user_id": "mickaqskfi",
@@ -352,6 +352,12 @@
                     "new_user_id": "arnoldxje6a",
                     "new_username": "Arnold",
                     "date": "2026-08-06 19:07:08",
+                    "bonus": 1000
+                },
+                {
+                    "new_user_id": "safidy5h27y",
+                    "new_username": "Safidy",
+                    "date": "2026-08-06 19:10:53",
                     "bonus": 1000
                 }
             ]
