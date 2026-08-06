@@ -1860,13 +1860,13 @@
       "android_id": "harivay2g48",
       "activation_date": "2026-08-06",
       "activation_time": "14:18:39",
-      "expiration_date": "2026-08-07",
+      "expiration_date": "2026-08-13",
       "expiration_time": "19:18:39",
       "status": "active",
-      "remaining_seconds_base": 103172.849596,
-      "last_calculation_time": "2026-08-06 14:39:06",
+      "remaining_seconds_base": 621508.132932,
+      "last_calculation_time": "2026-08-06 14:40:10",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-06 14:39:06"
+      "last_update": "2026-08-06 14:40:10"
     }
   },
   "activations": [
