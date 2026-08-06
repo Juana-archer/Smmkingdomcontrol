@@ -203,6 +203,12 @@
       "api_hash_hash": "9a285e9c4e62f97388f0e7db8ad6874ebdb9775cd73478168619f4d40196898c",
       "date_liaison": "2026-08-06 19:19:34",
       "statut": "verrouille"
+    },
+    "naikelqvc9r": {
+      "device_id": "DEV_5b03ef6b510a88881b5d",
+      "api_hash_hash": "9808bfa79e221f341f94a56bd6ad335b0c5a6f80c5c759903b21ea45371bab7b",
+      "date_liaison": "2026-08-06 19:53:19",
+      "statut": "verrouille"
     }
   }
 }
