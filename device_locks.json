@@ -209,6 +209,12 @@
       "api_hash_hash": "9808bfa79e221f341f94a56bd6ad335b0c5a6f80c5c759903b21ea45371bab7b",
       "date_liaison": "2026-08-06 19:53:19",
       "statut": "verrouille"
+    },
+    "badmanok7dv": {
+      "device_id": "DEV_ab0ef79a0cdbbd16076a",
+      "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
+      "date_liaison": "2026-08-06 20:42:18",
+      "statut": "verrouille"
     }
   }
 }
