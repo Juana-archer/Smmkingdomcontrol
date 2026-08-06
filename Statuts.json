@@ -1879,6 +1879,18 @@
             "last_calculation_time": "2026-08-06 19:07:01",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-06 19:07:01"
+        },
+        "safidy5h27y": {
+            "android_id": "safidy5h27y",
+            "activation_date": "2026-08-06",
+            "activation_time": "19:10:46",
+            "expiration_date": "2026-08-07",
+            "expiration_time": "00:10:46",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-08-06 19:10:46",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-08-06 19:10:46"
         }
     },
     "activations": [
@@ -2153,6 +2165,13 @@
             "username": "Arnold",
             "referrer_id": "Aucun",
             "date": "2026-08-06 19:07:01",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "safidy5h27y",
+            "username": "Safidy",
+            "referrer_id": "Aucun",
+            "date": "2026-08-06 19:10:46",
             "bonus_hours": 5
         }
     ]
