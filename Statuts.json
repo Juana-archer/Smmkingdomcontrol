@@ -1697,13 +1697,13 @@
       "android_id": "jhonclu2igf",
       "activation_date": "2026-07-31",
       "activation_time": "11:11:39",
-      "expiration_date": "2026-08-14",
-      "expiration_time": "18:41:23",
+      "expiration_date": "2026-08-15",
+      "expiration_time": "18:41:49",
       "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-08-07 18:41:23",
+      "remaining_seconds_base": 691200,
+      "last_calculation_time": "2026-08-07 18:41:49",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-07 18:41:23"
+      "last_update": "2026-08-07 18:41:49"
     },
     "francopj1h9": {
       "android_id": "francopj1h9",
