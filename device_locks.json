@@ -53,6 +53,12 @@
       "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
       "date_liaison": "2026-08-08 17:23:46",
       "statut": "verrouille"
+    },
+    "Mampisava": {
+      "device_id": "DEV_391747ad3cf3cf20acb6",
+      "api_hash_hash": "813998759bf11a0702afde3e5fcafa821354b436839a2484182ecd79e8896838",
+      "date_liaison": "2026-08-08 17:34:58",
+      "statut": "verrouille"
     }
   }
 }
