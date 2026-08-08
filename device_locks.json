@@ -125,6 +125,12 @@
       "api_hash_hash": "1a10f589ce097f092a4b7a013d4a96fee5d398956272971eccb4a8d74c3afaf7",
       "date_liaison": "2026-08-08 20:46:36",
       "statut": "verrouille"
+    },
+    "lah31qt4pq": {
+      "device_id": "DEV_77e70249ce87043d01a4",
+      "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
+      "date_liaison": "2026-08-08 21:09:47",
+      "statut": "verrouille"
     }
   }
 }
