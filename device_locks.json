@@ -71,6 +71,12 @@
       "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
       "date_liaison": "2026-08-08 18:06:38",
       "statut": "verrouille"
+    },
+    "arnoldxje6a": {
+      "device_id": "DEV_596709d683918c35e35d",
+      "api_hash_hash": "1f88292fc79df1682f0aaace8a27b7d311b93cfa1859f1e91d56c8056e0f5c17",
+      "date_liaison": "2026-08-08 18:19:37",
+      "statut": "verrouille"
     }
   }
 }
