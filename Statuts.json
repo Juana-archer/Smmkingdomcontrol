@@ -1804,11 +1804,13 @@
             "activation_time": "17:03:07",
             "expiration_date": "2026-08-08",
             "expiration_time": "17:03:07",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 80350.64461799993,
             "last_calculation_time": "2026-08-07 18:43:53",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-            "last_update": "2026-08-01 17:03:07"
+            "last_update": "2026-08-01 17:03:07",
+            "expired_at": "2026-08-08 17:13:13",
+            "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "sediomp1j3y": {
             "android_id": "sediomp1j3y",
