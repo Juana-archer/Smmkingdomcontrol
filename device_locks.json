@@ -209,6 +209,12 @@
       "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
       "date_liaison": "2026-08-09 18:27:46",
       "statut": "verrouille"
+    },
+    "francid1z23": {
+      "device_id": "DEV_d235a42a5da542c1249d",
+      "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
+      "date_liaison": "2026-08-09 18:31:37",
+      "statut": "verrouille"
     }
   }
 }
