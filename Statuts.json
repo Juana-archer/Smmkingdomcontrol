@@ -1926,13 +1926,15 @@
       "android_id": "tinahonxx7",
       "activation_date": "2026-08-07",
       "activation_time": "09:07:04",
-      "expiration_date": "2026-08-09",
-      "expiration_time": "20:04:53",
-      "status": "active",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-08-09 20:04:53",
+      "expiration_date": "2026-08-14",
+      "expiration_time": "14:24:57",
+      "status": "paused",
+      "remaining_seconds_base": 589263.226368,
+      "last_calculation_time": "2026-08-07 18:43:53",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-09 20:04:53"
+      "last_update": "2026-08-07 14:24:57",
+      "paused_at": "2026-08-09 20:05:11",
+      "remaining_seconds_at_pause": 411585.223302
     },
     "bob3b31z": {
       "android_id": "bob3b31z",
