@@ -179,6 +179,12 @@
       "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
       "date_liaison": "2026-08-09 07:49:44",
       "statut": "verrouille"
+    },
+    "sitrakpaup5": {
+      "device_id": "DEV_2c19b8d22299ed546f94",
+      "api_hash_hash": "e0d2eddf6cb96ca305774f8dab62c34d84278bb1931f32cafe37035bcc102c05",
+      "date_liaison": "2026-08-09 08:02:01",
+      "statut": "verrouille"
     }
   }
 }
