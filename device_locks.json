@@ -197,6 +197,12 @@
       "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
       "date_liaison": "2026-08-09 12:52:29",
       "statut": "verrouille"
+    },
+    "bob3b31z": {
+      "device_id": "DEV_a3ab298a2f66d764d521",
+      "api_hash_hash": "8adc48a8bcc6f988d43dd54cbe836ca3a9d874384e9079b0122313e8f9924101",
+      "date_liaison": "2026-08-09 18:10:38",
+      "statut": "verrouille"
     }
   }
 }
