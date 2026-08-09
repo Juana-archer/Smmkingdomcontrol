@@ -215,6 +215,12 @@
       "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
       "date_liaison": "2026-08-09 18:31:37",
       "statut": "verrouille"
+    },
+    "mioratoudgev": {
+      "device_id": "DEV_ef2bc694d475c1e925fd",
+      "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
+      "date_liaison": "2026-08-09 19:42:11",
+      "statut": "verrouille"
     }
   }
 }
