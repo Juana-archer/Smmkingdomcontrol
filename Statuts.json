@@ -1952,13 +1952,13 @@
       "android_id": "francid1z23",
       "activation_date": "2026-08-09",
       "activation_time": "18:16:44",
-      "expiration_date": "2026-08-09",
-      "expiration_time": "23:16:44",
-      "status": "expired",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-08-10 01:45:21",
+      "expiration_date": "2026-08-17",
+      "expiration_time": "07:36:20",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-10 07:36:20",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-09 18:16:44"
+      "last_update": "2026-08-10 07:36:20"
     }
   },
   "activations": [
