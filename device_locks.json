@@ -245,6 +245,12 @@
       "api_hash_hash": "c7c2c64f65d249027d03eb093f57baacb03215e812f4b6ee1be260046ee8397c",
       "date_liaison": "2026-08-11 10:20:02",
       "statut": "verrouille"
+    },
+    "daheryoud": {
+      "device_id": "DEV_471c4195345bc7f9198a",
+      "api_hash_hash": "62f6cf9b52fccb5a10b6786ce2b9ea6e9e4e58f307fe316320d51c58801c2576",
+      "date_liaison": "2026-08-11 22:12:04",
+      "statut": "verrouille"
     }
   }
 }
