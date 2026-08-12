@@ -1545,12 +1545,12 @@
             "activation_time": "00:35:04",
             "expiration_date": "2026-08-12",
             "expiration_time": "12:45:24",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 67549.24312500001,
             "last_calculation_time": "2026-08-11 17:59:30",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-05 12:45:24",
-            "expired_at": "2026-08-03 14:34:51",
+            "expired_at": "2026-08-12 16:44:03",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "anjarareogb": {
