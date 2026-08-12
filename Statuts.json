@@ -2013,6 +2013,18 @@
             "last_calculation_time": "2026-08-12 18:45:50",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-12 18:45:50"
+        },
+        "\ud83d\udc51 cr\u00e9a3eule": {
+            "android_id": "\ud83d\udc51 cr\u00e9a3eule",
+            "activation_date": "2026-08-12",
+            "activation_time": "19:12:34",
+            "expiration_date": "2026-08-13",
+            "expiration_time": "00:12:34",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-08-12 19:12:34",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-08-12 19:12:34"
         }
     },
     "activations": [
@@ -2343,6 +2355,13 @@
             "username": "Estheddy",
             "referrer_id": "Aucun",
             "date": "2026-08-12 18:45:50",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "\ud83d\udc51 cr\u00e9a3eule",
+            "username": "\ud83d\udc51 Cr\u00e9ation VIP",
+            "referrer_id": "Aucun",
+            "date": "2026-08-12 19:12:34",
             "bonus_hours": 5
         }
     ]
