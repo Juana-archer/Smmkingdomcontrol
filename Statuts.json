@@ -1994,13 +1994,13 @@
       "android_id": "levoantn1iy",
       "activation_date": "2026-08-12",
       "activation_time": "18:28:10",
-      "expiration_date": "2026-08-12",
+      "expiration_date": "2026-08-19",
       "expiration_time": "23:28:10",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-08-12 18:28:10",
+      "remaining_seconds_base": 622242.882514,
+      "last_calculation_time": "2026-08-12 18:37:27",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-12 18:28:10"
+      "last_update": "2026-08-12 18:37:27"
     }
   },
   "activations": [
