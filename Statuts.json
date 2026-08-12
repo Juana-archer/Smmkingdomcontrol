@@ -1991,6 +1991,18 @@
             "last_calculation_time": "2026-08-11 21:56:17",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-11 21:56:17"
+        },
+        "levoantn1iy": {
+            "android_id": "levoantn1iy",
+            "activation_date": "2026-08-12",
+            "activation_time": "18:21:07",
+            "expiration_date": "2026-08-12",
+            "expiration_time": "23:21:07",
+            "status": "active",
+            "remaining_seconds_base": 18000,
+            "last_calculation_time": "2026-08-12 18:21:07",
+            "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+            "last_update": "2026-08-12 18:21:07"
         }
     },
     "activations": [
@@ -2314,6 +2326,13 @@
             "username": "Safidy",
             "referrer_id": "Aucun",
             "date": "2026-08-11 10:09:33",
+            "bonus_hours": 5
+        },
+        {
+            "id_tsotra": "levoantn1iy",
+            "username": "Levoana",
+            "referrer_id": "Aucun",
+            "date": "2026-08-12 18:21:07",
             "bonus_hours": 5
         }
     ]
