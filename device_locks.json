@@ -251,6 +251,12 @@
       "api_hash_hash": "62f6cf9b52fccb5a10b6786ce2b9ea6e9e4e58f307fe316320d51c58801c2576",
       "date_liaison": "2026-08-11 22:12:04",
       "statut": "verrouille"
+    },
+    "levoantn1iy": {
+      "device_id": "DEV_5b98ce6e2537353d83d7",
+      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
+      "date_liaison": "2026-08-12 18:30:15",
+      "statut": "verrouille"
     }
   }
 }
