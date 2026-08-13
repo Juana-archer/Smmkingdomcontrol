@@ -1,15 +1,9 @@
 {
   "locks": {
-    "sitrakpaup5": {
-      "device_id": "DEV_2c19b8d22299ed546f94",
-      "api_hash_hash": "e0d2eddf6cb96ca305774f8dab62c34d84278bb1931f32cafe37035bcc102c05",
-      "date_liaison": "2026-08-13 20:06:44",
-      "statut": "verrouille"
-    },
-    "tohand7ccw7": {
-      "device_id": "DEV_8bf0e80b5c56fc6f9926",
-      "api_hash_hash": "129242d16928f0d46234fab916d4281db4adc15e8e7538d69329c8c59eb0220a",
-      "date_liaison": "2026-08-13 20:09:56",
+    "safidyv8j0k": {
+      "device_id": "DEV_102ea67e7d4ce6c9c621",
+      "api_hash_hash": "c7c2c64f65d249027d03eb093f57baacb03215e812f4b6ee1be260046ee8397c",
+      "date_liaison": "2026-08-13 20:41:53",
       "statut": "verrouille"
     }
   }
