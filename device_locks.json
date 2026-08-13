@@ -1,9 +1,9 @@
 {
   "locks": {
-    "safidyv8j0k": {
-      "device_id": "DEV_102ea67e7d4ce6c9c621",
-      "api_hash_hash": "c7c2c64f65d249027d03eb093f57baacb03215e812f4b6ee1be260046ee8397c",
-      "date_liaison": "2026-08-13 19:42:08",
+    "andryoudvj": {
+      "device_id": "DEV_b92ce0b5ae2c0bec83b9",
+      "api_hash_hash": "a3c7d2020bbed1ea0ca4f63ee878ca1998e11aeb690051188ab93a712be9049f",
+      "date_liaison": "2026-08-13 19:42:16",
       "statut": "verrouille"
     }
   }
