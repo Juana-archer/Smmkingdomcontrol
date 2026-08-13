@@ -1,9 +1,9 @@
 {
   "locks": {
-    "eslyu17hl": {
-      "device_id": "DEV_778ab429cf3869b6c191",
-      "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
-      "date_liaison": "2026-08-14 02:06:18",
+    "daheryoud": {
+      "device_id": "DEV_471c4195345bc7f9198a",
+      "api_hash_hash": "62f6cf9b52fccb5a10b6786ce2b9ea6e9e4e58f307fe316320d51c58801c2576",
+      "date_liaison": "2026-08-14 02:25:05",
       "statut": "verrouille"
     }
   }
