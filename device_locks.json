@@ -1,9 +1,9 @@
 {
   "locks": {
-    "andryoudvj": {
-      "device_id": "DEV_b92ce0b5ae2c0bec83b9",
-      "api_hash_hash": "a3c7d2020bbed1ea0ca4f63ee878ca1998e11aeb690051188ab93a712be9049f",
-      "date_liaison": "2026-08-13 19:49:13",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-13 20:00:38",
       "statut": "verrouille"
     }
   }
