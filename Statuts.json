@@ -2029,6 +2029,18 @@
       "last_update": "2026-08-12 19:12:34",
       "expired_at": "2026-08-13 00:44:03",
       "expired_reason": "Dépassement date expiration (heure Madagascar)"
+    },
+    "andryoudvj": {
+      "android_id": "andryoudvj",
+      "activation_date": "2026-08-13",
+      "activation_time": "17:38:14",
+      "expiration_date": "2026-08-20",
+      "expiration_time": "17:38:14",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-13 17:38:14",
+      "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
+      "last_update": "2026-08-13 17:38:14"
     }
   },
   "activations": [
