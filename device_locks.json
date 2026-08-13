@@ -5,6 +5,12 @@
       "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
       "date_liaison": "2026-08-13 23:12:01",
       "statut": "verrouille"
+    },
+    "francid1z23": {
+      "device_id": "DEV_d235a42a5da542c1249d",
+      "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
+      "date_liaison": "2026-08-13 23:12:30",
+      "statut": "verrouille"
     }
   }
 }
