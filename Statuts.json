@@ -1123,13 +1123,13 @@
             "activation_time": "11:16:59",
             "expiration_date": "2026-08-13",
             "expiration_time": "22:08:49",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 99731.00527599998,
             "last_calculation_time": "2026-08-12 18:26:33",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-06 22:08:49",
             "resumed_at": "2026-07-19 17:20:16",
-            "expired_at": "2026-08-01 19:34:51",
+            "expired_at": "2026-08-13 23:05:37",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "anicia8uiy": {
