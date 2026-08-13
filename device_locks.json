@@ -1,9 +1,9 @@
 {
   "locks": {
-    "faniryid": {
-      "device_id": "DEV_f2e7e7de4581508fed04",
-      "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
-      "date_liaison": "2026-08-13 23:02:52",
+    "miorahdkdl": {
+      "device_id": "DEV_3f3800712a64d7ef6acc",
+      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
+      "date_liaison": "2026-08-13 23:06:37",
       "statut": "verrouille"
     }
   }
