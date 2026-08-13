@@ -1859,12 +1859,12 @@
             "activation_time": "19:11:23",
             "expiration_date": "2026-08-13",
             "expiration_time": "07:40:35",
-            "status": "active",
+            "status": "expired",
             "remaining_seconds_base": 47637.00527599998,
             "last_calculation_time": "2026-08-12 18:26:33",
             "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
             "last_update": "2026-08-06 07:40:35",
-            "expired_at": "2026-08-06 00:44:18",
+            "expired_at": "2026-08-13 08:10:20",
             "expired_reason": "D\u00e9passement date expiration (heure Madagascar)"
         },
         "harivay2g48": {
