@@ -1,15 +1,9 @@
 {
   "locks": {
-    "miorahdkdl": {
-      "device_id": "DEV_3f3800712a64d7ef6acc",
-      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
-      "date_liaison": "2026-08-14 01:33:08",
-      "statut": "verrouille"
-    },
-    "jhoanydoq32": {
-      "device_id": "DEV_22a5ff17d45ec651540e",
-      "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
-      "date_liaison": "2026-08-14 01:41:50",
+    "eslyu17hl": {
+      "device_id": "DEV_778ab429cf3869b6c191",
+      "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
+      "date_liaison": "2026-08-14 02:06:18",
       "statut": "verrouille"
     }
   }
