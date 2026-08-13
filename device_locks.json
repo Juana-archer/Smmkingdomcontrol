@@ -1,27 +1,9 @@
 {
   "locks": {
-    "esly3drhf": {
-      "device_id": "DEV_867480973ac561981ea9",
-      "api_hash_hash": "6835a82b29f05b5f38af49f0887ce2d5db72638cd9092ae1b41723b0b585f054",
-      "date_liaison": "2026-08-13 23:12:01",
-      "statut": "verrouille"
-    },
-    "francid1z23": {
-      "device_id": "DEV_d235a42a5da542c1249d",
-      "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
-      "date_liaison": "2026-08-13 23:12:30",
-      "statut": "verrouille"
-    },
-    "miorahdkdl": {
-      "device_id": "DEV_3f3800712a64d7ef6acc",
-      "api_hash_hash": "aff5dc418ea412e5114263899259d6ef661fa24704a3d20a7ee423ba7abf33e9",
-      "date_liaison": "2026-08-13 23:34:01",
-      "statut": "verrouille"
-    },
-    "sitrakpaup5": {
-      "device_id": "DEV_2c19b8d22299ed546f94",
-      "api_hash_hash": "e0d2eddf6cb96ca305774f8dab62c34d84278bb1931f32cafe37035bcc102c05",
-      "date_liaison": "2026-08-13 23:45:53",
+    "levoantn1iy": {
+      "device_id": "DEV_5b98ce6e2537353d83d7",
+      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
+      "date_liaison": "2026-08-13 23:59:48",
       "statut": "verrouille"
     }
   }
