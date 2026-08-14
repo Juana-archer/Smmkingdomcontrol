@@ -6,10 +6,10 @@
       "date_liaison": "2026-08-14 08:42:53",
       "statut": "verrouille"
     },
-    "mioratoudgev": {
-      "device_id": "DEV_ef2bc694d475c1e925fd",
-      "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
-      "date_liaison": "2026-08-14 08:53:22",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-14 08:57:28",
       "statut": "verrouille"
     }
   }
