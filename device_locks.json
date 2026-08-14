@@ -1,15 +1,9 @@
 {
   "locks": {
-    "willisit8wy": {
-      "device_id": "DEV_f90b1c39d25d2795c8dd",
-      "api_hash_hash": "a25ca92b31c94bb2d074fd7c1469fb897a420f067cc8e94c5e9f654fa10a092a",
-      "date_liaison": "2026-08-14 10:42:06",
-      "statut": "verrouille"
-    },
-    "francid1z23": {
-      "device_id": "DEV_d235a42a5da542c1249d",
-      "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
-      "date_liaison": "2026-08-14 10:46:48",
+    "Sedillontdfg": {
+      "device_id": "DEV_2a1e5a4885927890d547",
+      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
+      "date_liaison": "2026-08-14 10:57:02",
       "statut": "verrouille"
     }
   }
