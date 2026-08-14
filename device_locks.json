@@ -1,15 +1,9 @@
 {
   "locks": {
-    "tinahonxx7": {
-      "device_id": "DEV_24ad9355f456870fb13b",
-      "api_hash_hash": "19e2840122a5a7dfd90d4caee2dd88931b2562ad9bf81aea2c8da2ebfe1a0892",
-      "date_liaison": "2026-08-14 09:38:54",
-      "statut": "verrouille"
-    },
-    "Sedillontdfg": {
-      "device_id": "DEV_2a1e5a4885927890d547",
-      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
-      "date_liaison": "2026-08-14 09:44:39",
+    "jhoanydoq32": {
+      "device_id": "DEV_22a5ff17d45ec651540e",
+      "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
+      "date_liaison": "2026-08-14 09:58:19",
       "statut": "verrouille"
     }
   }
