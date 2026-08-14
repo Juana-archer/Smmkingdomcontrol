@@ -1,0 +1,12 @@
+{
+  "pauses": {
+    "ioudbf": {
+      "user_id": "ioudbf",
+      "date_pause": "2026-08-14 21:19:01",
+      "temps_preserve": 604404.323064,
+      "temps_formate": "6j 23h 53min",
+      "statut_avant": "active",
+      "expiration_originale": "N/A"
+    }
+  }
+}
