@@ -125,6 +125,12 @@
       "api_hash_hash": "e978a7041f4bebccf6aea690f21b46c048b2a2a9bd217e6f92505a293b16d7b5",
       "date_liaison": "2026-08-14 18:30:28",
       "statut": "verrouille"
+    },
+    "faniryjurhe": {
+      "device_id": "DEV_2ed0744368788109cff0",
+      "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
+      "date_liaison": "2026-08-14 18:33:03",
+      "statut": "verrouille"
     }
   }
 }
