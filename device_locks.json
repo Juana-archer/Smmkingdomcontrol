@@ -131,6 +131,12 @@
       "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
       "date_liaison": "2026-08-14 18:35:00",
       "statut": "verrouille"
+    },
+    "andryoudvj": {
+      "device_id": "DEV_b92ce0b5ae2c0bec83b9",
+      "api_hash_hash": "a3c7d2020bbed1ea0ca4f63ee878ca1998e11aeb690051188ab93a712be9049f",
+      "date_liaison": "2026-08-14 18:55:33",
+      "statut": "verrouille"
     }
   }
 }
