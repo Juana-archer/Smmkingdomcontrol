@@ -1,9 +1,9 @@
 {
   "locks": {
-    "jhoanydoq32": {
-      "device_id": "DEV_22a5ff17d45ec651540e",
-      "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
-      "date_liaison": "2026-08-14 10:15:27",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-14 10:25:56",
       "statut": "verrouille"
     }
   }
