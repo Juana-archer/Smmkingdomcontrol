@@ -1,27 +1,9 @@
 {
   "locks": {
-    "francopj1h9": {
-      "device_id": "DEV_a480091d1408b4f177e5",
-      "api_hash_hash": "646c3a7b3dce29210af233a8abb03a61ef6ff230cb6a7d002dc2672e64d2dfb3",
-      "date_liaison": "2026-08-14 06:29:46",
-      "statut": "verrouille"
-    },
-    "francid1z23": {
-      "device_id": "DEV_d235a42a5da542c1249d",
-      "api_hash_hash": "d51e80e5e205c2bf9ba408822dfa9e3facb0e00ae761b33bcc6498b233bd52f1",
-      "date_liaison": "2026-08-14 06:31:03",
-      "statut": "verrouille"
-    },
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-08-14 06:51:22",
-      "statut": "verrouille"
-    },
-    "sediomp1j3y": {
-      "device_id": "DEV_1cd3ffc8dacd2a7ccd3d",
-      "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
-      "date_liaison": "2026-08-14 06:57:39",
+    "Sedillontdfg": {
+      "device_id": "DEV_2a1e5a4885927890d547",
+      "api_hash_hash": "7d7b1b93c497d07436896384832605bf3731b0710c33e1eb3022647c85b69eeb",
+      "date_liaison": "2026-08-14 07:06:36",
       "statut": "verrouille"
     }
   }
