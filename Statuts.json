@@ -1561,7 +1561,7 @@
       "activation_time": "15:20:46",
       "expiration_date": "2026-08-14",
       "expiration_time": "20:27:17",
-      "status": "active",
+      "status": "expired",
       "remaining_seconds_base": 74821.46540499997,
       "last_calculation_time": "2026-08-13 23:40:11",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
