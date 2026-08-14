@@ -2047,6 +2047,18 @@
       "last_calculation_time": "2026-08-13 23:40:11",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-13 17:38:14"
+    },
+    "ioudbf": {
+      "android_id": "ioudbf",
+      "activation_date": "2026-08-14",
+      "activation_time": "21:12:26",
+      "expiration_date": "2026-08-21",
+      "expiration_time": "21:12:26",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-14 21:12:26",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-08-14 21:12:26"
     }
   },
   "activations": [
