@@ -191,6 +191,12 @@
       "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
       "date_liaison": "2026-08-15 19:27:25",
       "statut": "verrouille"
+    },
+    "manamb873hdh": {
+      "device_id": "DEV_903530dc736f453d21bd",
+      "api_hash_hash": "3cfbdf063372294331d92042ce4ca66e39f0b72128d435eee52b48189b683304",
+      "date_liaison": "2026-08-15 23:12:08",
+      "statut": "verrouille"
     }
   }
 }
