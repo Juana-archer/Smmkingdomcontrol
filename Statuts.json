@@ -2071,6 +2071,18 @@
       "last_calculation_time": "2026-08-15 19:05:44",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-08-15 19:05:44"
+    },
+    "oududi": {
+      "android_id": "oududi",
+      "activation_date": "2026-08-15",
+      "activation_time": "19:23:58",
+      "expiration_date": "2026-08-16",
+      "expiration_time": "03:23:58",
+      "status": "active",
+      "remaining_seconds_base": 28800,
+      "last_calculation_time": "2026-08-15 19:23:58",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-08-15 19:23:58"
     }
   },
   "activations": [
