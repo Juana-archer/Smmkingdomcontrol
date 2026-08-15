@@ -179,6 +179,12 @@
       "api_hash_hash": "4919ae8f52f5e6a0fdf7416f6c08398209543544e6af7baca0d0a95631ecbbbd",
       "date_liaison": "2026-08-15 18:07:09",
       "statut": "verrouille"
+    },
+    "pourrjfk": {
+      "device_id": "DEV_2ed0744368788109cff0",
+      "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
+      "date_liaison": "2026-08-15 19:12:33",
+      "statut": "verrouille"
     }
   }
 }
