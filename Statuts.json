@@ -2047,6 +2047,18 @@
       "last_calculation_time": "2026-08-13 23:40:11",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-13 17:38:14"
+    },
+    "heriyffjid6ue": {
+      "android_id": "heriyffjid6ue",
+      "activation_date": "2026-08-15",
+      "activation_time": "16:20:55",
+      "expiration_date": "2026-08-22",
+      "expiration_time": "16:20:55",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-15 16:20:55",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-08-15 16:20:55"
     }
   },
   "activations": [
