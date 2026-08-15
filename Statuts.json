@@ -2059,6 +2059,18 @@
       "last_calculation_time": "2026-08-15 16:20:55",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-08-15 16:20:55"
+    },
+    "pourrjfk": {
+      "android_id": "pourrjfk",
+      "activation_date": "2026-08-15",
+      "activation_time": "19:05:44",
+      "expiration_date": "2026-08-22",
+      "expiration_time": "19:05:44",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-15 19:05:44",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-08-15 19:05:44"
     }
   },
   "activations": [
