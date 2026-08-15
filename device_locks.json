@@ -167,6 +167,12 @@
       "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
       "date_liaison": "2026-08-14 21:28:35",
       "statut": "verrouille"
+    },
+    "heriyffjid6ue": {
+      "device_id": "DEV_dc5ab4c7450174c5e0b3",
+      "api_hash_hash": "99a3f517fa35166341233cb1862525db3f04050a5e904e58b2946b25424f85b3",
+      "date_liaison": "2026-08-15 16:27:24",
+      "statut": "verrouille"
     }
   }
 }
