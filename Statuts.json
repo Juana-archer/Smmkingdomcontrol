@@ -2066,11 +2066,16 @@
       "activation_time": "19:05:44",
       "expiration_date": "2026-08-22",
       "expiration_time": "19:05:44",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-08-15 19:05:44",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-08-15 19:05:44"
+      "last_update": "2026-08-15 19:05:44",
+      "previous_status": "active",
+      "paused_at": "2026-08-15 19:36:31",
+      "remaining_seconds_at_pause": 602952.726651,
+      "saved_expiration_date": "2026-08-22",
+      "saved_expiration_time": "19:05:44"
     },
     "oududi": {
       "android_id": "oududi",
