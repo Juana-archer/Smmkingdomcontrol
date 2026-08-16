@@ -1873,13 +1873,13 @@
       "android_id": "harivay2g48",
       "activation_date": "2026-08-06",
       "activation_time": "14:18:39",
-      "expiration_date": "2026-08-13",
-      "expiration_time": "19:18:39",
-      "status": "expired",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-08-13 23:40:11",
+      "expiration_date": "2026-08-23",
+      "expiration_time": "22:56:16",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-16 22:56:16",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-06 14:40:10"
+      "last_update": "2026-08-16 22:56:16"
     },
     "arnoldxje6a": {
       "android_id": "arnoldxje6a",
