@@ -101,6 +101,12 @@
       "api_hash_hash": "129242d16928f0d46234fab916d4281db4adc15e8e7538d69329c8c59eb0220a",
       "date_liaison": "2026-08-16 23:11:21",
       "statut": "verrouille"
+    },
+    "faniryid": {
+      "device_id": "DEV_2ed0744368788109cff0",
+      "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
+      "date_liaison": "2026-08-17 01:37:54",
+      "statut": "verrouille"
     }
   }
 }
