@@ -107,6 +107,12 @@
       "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
       "date_liaison": "2026-08-16 15:04:35",
       "statut": "verrouille"
+    },
+    "tohand7ccw7": {
+      "device_id": "DEV_8bf0e80b5c56fc6f9926",
+      "api_hash_hash": "129242d16928f0d46234fab916d4281db4adc15e8e7538d69329c8c59eb0220a",
+      "date_liaison": "2026-08-16 16:18:49",
+      "statut": "verrouille"
     }
   }
 }
