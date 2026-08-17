@@ -1,9 +1,9 @@
 {
   "locks": {
-    "levoantn1iy": {
-      "device_id": "DEV_5b98ce6e2537353d83d7",
-      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
-      "date_liaison": "2026-08-17 19:05:43",
+    "faniryid": {
+      "device_id": "DEV_2ed0744368788109cff0",
+      "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
+      "date_liaison": "2026-08-17 19:06:56",
       "statut": "verrouille"
     }
   }
