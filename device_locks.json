@@ -1,9 +1,9 @@
 {
   "locks": {
-    "levoantn1iy": {
-      "device_id": "DEV_5b98ce6e2537353d83d7",
-      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
-      "date_liaison": "2026-08-17 17:25:44",
+    "babasephilbert": {
+      "device_id": "DEV_4c4407828e101ecf8a6e",
+      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
+      "date_liaison": "2026-08-17 17:26:33",
       "statut": "verrouille"
     }
   }
