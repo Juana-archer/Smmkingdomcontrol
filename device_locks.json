@@ -1,9 +1,9 @@
 {
   "locks": {
-    "elidiotgdft": {
-      "device_id": "DEV_f2d99ec8336b3e39793c",
-      "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
-      "date_liaison": "2026-08-17 18:58:46",
+    "mioratoudgev": {
+      "device_id": "DEV_ef2bc694d475c1e925fd",
+      "api_hash_hash": "3faae18aac1e3e45ddf56e816bd97cbfe620f99911188f27081a8c1b3bfd8dbd",
+      "date_liaison": "2026-08-17 19:01:02",
       "statut": "verrouille"
     }
   }
