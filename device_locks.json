@@ -113,6 +113,12 @@
       "api_hash_hash": "c7c2c64f65d249027d03eb093f57baacb03215e812f4b6ee1be260046ee8397c",
       "date_liaison": "2026-08-17 03:10:32",
       "statut": "verrouille"
+    },
+    "francia5ge": {
+      "device_id": "DEV_641879e91b1bdaecd605",
+      "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
+      "date_liaison": "2026-08-17 08:54:45",
+      "statut": "verrouille"
     }
   }
 }
