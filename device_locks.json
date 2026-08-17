@@ -6,10 +6,10 @@
       "date_liaison": "2026-08-17 19:16:13",
       "statut": "verrouille"
     },
-    "babasephilbert": {
-      "device_id": "DEV_4c4407828e101ecf8a6e",
-      "api_hash_hash": "5818df4dc7cdfdd376d23ee495815406e6b5a10ca99b5e2428fdd53a0a07caa7",
-      "date_liaison": "2026-08-17 19:33:12",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-17 19:34:09",
       "statut": "verrouille"
     }
   }
