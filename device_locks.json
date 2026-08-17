@@ -131,6 +131,12 @@
       "api_hash_hash": "99a3f517fa35166341233cb1862525db3f04050a5e904e58b2946b25424f85b3",
       "date_liaison": "2026-08-17 10:04:13",
       "statut": "verrouille"
+    },
+    "sediomp1j3y": {
+      "device_id": "DEV_1cd3ffc8dacd2a7ccd3d",
+      "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
+      "date_liaison": "2026-08-17 10:42:00",
+      "statut": "verrouille"
     }
   }
 }
