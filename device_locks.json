@@ -47,6 +47,12 @@
       "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
       "date_liaison": "2026-08-19 01:37:34",
       "statut": "verrouille"
+    },
+    "lah31qt4pq": {
+      "device_id": "DEV_77e70249ce87043d01a4",
+      "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
+      "date_liaison": "2026-08-19 01:49:41",
+      "statut": "verrouille"
     }
   }
 }
