@@ -2112,6 +2112,18 @@
       "last_calculation_time": "2026-08-16 19:20:31",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-08-16 19:20:31"
+    },
+    "lotryykut": {
+      "android_id": "lotryykut",
+      "activation_date": "2026-08-19",
+      "activation_time": "10:08:13",
+      "expiration_date": "2026-08-19",
+      "expiration_time": "12:08:13",
+      "status": "active",
+      "remaining_seconds_base": 7200,
+      "last_calculation_time": "2026-08-19 10:08:13",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-08-19 10:08:13"
     }
   },
   "activations": [
