@@ -5,6 +5,12 @@
       "api_hash_hash": "a25ca92b31c94bb2d074fd7c1469fb897a420f067cc8e94c5e9f654fa10a092a",
       "date_liaison": "2026-08-19 21:03:58",
       "statut": "verrouille"
+    },
+    "sediomp1j3y": {
+      "device_id": "DEV_1cd3ffc8dacd2a7ccd3d",
+      "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
+      "date_liaison": "2026-08-19 21:22:57",
+      "statut": "verrouille"
     }
   }
 }
