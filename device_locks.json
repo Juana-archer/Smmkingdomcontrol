@@ -125,6 +125,12 @@
       "api_hash_hash": "e5d1e05985b957d0e5b00dda79e4ee43fc8444e621626ec76036612064576f5d",
       "date_liaison": "2026-08-20 14:37:30",
       "statut": "verrouille"
+    },
+    "tolotrakor67hh": {
+      "device_id": "DEV_8634ce6600721848207b",
+      "api_hash_hash": "171babc655c1481c9c6ec860a1be4b245aa757b9a8307471ea01a7984a67a9fc",
+      "date_liaison": "2026-08-20 15:02:50",
+      "statut": "verrouille"
     }
   }
 }
