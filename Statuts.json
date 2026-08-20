@@ -2140,12 +2140,12 @@
       "activation_date": "2026-08-20",
       "activation_time": "14:53:28",
       "expiration_date": "2026-08-27",
-      "expiration_time": "14:53:28",
+      "expiration_time": "19:53:28",
       "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-08-20 14:53:28",
+      "remaining_seconds_base": 622759.90486,
+      "last_calculation_time": "2026-08-20 14:54:08",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-08-20 14:53:28"
+      "last_update": "2026-08-20 14:54:08"
     }
   },
   "activations": [
