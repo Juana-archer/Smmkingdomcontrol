@@ -131,6 +131,12 @@
       "api_hash_hash": "171babc655c1481c9c6ec860a1be4b245aa757b9a8307471ea01a7984a67a9fc",
       "date_liaison": "2026-08-20 15:06:34",
       "statut": "verrouille"
+    },
+    "rhanicjf8s": {
+      "device_id": "DEV_8fd9117b4fe47df8bc4c",
+      "api_hash_hash": "f3e15d42821cacc2a6ee908118012ae4e751a49b91626b1c1740326e6163ea47",
+      "date_liaison": "2026-08-21 11:30:13",
+      "statut": "verrouille"
     }
   }
 }
