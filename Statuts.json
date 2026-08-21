@@ -778,13 +778,18 @@
       "activation_time": "11:59:49",
       "expiration_date": "2026-08-20",
       "expiration_time": "23:29:50",
-      "status": "active",
+      "status": "paused",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-17 13:29:01",
       "remaining_seconds_base": 294684.24162800005,
       "last_calculation_time": "2026-08-17 13:38:26",
       "expired_at": "2026-07-27 07:59:40",
-      "expired_reason": "Dépassement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
+      "previous_status": "active",
+      "paused_at": "2026-08-21 09:47:14",
+      "remaining_seconds_at_pause": 0,
+      "saved_expiration_date": "2026-08-20",
+      "saved_expiration_time": "23:29:50"
     },
     "alexdetdi": {
       "android_id": "alexdetdi",
