@@ -53,6 +53,12 @@
       "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
       "date_liaison": "2026-08-22 06:12:39",
       "statut": "verrouille"
+    },
+    "philibert": {
+      "device_id": "DEV_f2e7e7de4581508fed04",
+      "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
+      "date_liaison": "2026-08-22 06:36:35",
+      "statut": "verrouille"
     }
   }
 }
