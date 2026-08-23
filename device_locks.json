@@ -95,6 +95,12 @@
       "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
       "date_liaison": "2026-08-23 00:39:24",
       "statut": "verrouille"
+    },
+    "jhoanydoq32": {
+      "device_id": "DEV_22a5ff17d45ec651540e",
+      "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
+      "date_liaison": "2026-08-23 16:34:49",
+      "statut": "verrouille"
     }
   }
 }
