@@ -2161,12 +2161,12 @@
       "activation_date": "2026-08-24",
       "activation_time": "18:27:47",
       "expiration_date": "2026-08-24",
-      "expiration_time": "18:34:56",
+      "expiration_time": "23:35:44",
       "status": "active",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-08-24 18:34:56",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-08-24 18:35:44",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-08-24 18:27:47"
+      "last_update": "2026-08-24 18:35:44"
     }
   },
   "activations": [
