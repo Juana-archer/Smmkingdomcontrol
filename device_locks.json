@@ -101,6 +101,12 @@
       "api_hash_hash": "d06b9edc906bee6aab0369966ae4deaea8ca1cbb98e82dd93254c952c1e61b53",
       "date_liaison": "2026-08-23 16:34:49",
       "statut": "verrouille"
+    },
+    "andryhhe6khd": {
+      "device_id": "DEV_af373799c874502bcf2b",
+      "api_hash_hash": "5e3ba0a402f1cd8970a9b073c9d5b229db02029a64ee4840708e91f920cb6886",
+      "date_liaison": "2026-08-24 18:34:52",
+      "statut": "verrouille"
     }
   }
 }
