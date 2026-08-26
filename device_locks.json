@@ -11,6 +11,12 @@
       "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
       "date_liaison": "2026-08-26 10:57:27",
       "statut": "verrouille"
+    },
+    "sediomp1j3y": {
+      "device_id": "DEV_1cd3ffc8dacd2a7ccd3d",
+      "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
+      "date_liaison": "2026-08-26 11:14:50",
+      "statut": "verrouille"
     }
   }
 }
