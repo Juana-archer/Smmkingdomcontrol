@@ -5,6 +5,12 @@
       "api_hash_hash": "e5d1e05985b957d0e5b00dda79e4ee43fc8444e621626ec76036612064576f5d",
       "date_liaison": "2026-08-26 09:13:20",
       "statut": "verrouille"
+    },
+    "levoantn1iy": {
+      "device_id": "DEV_5b98ce6e2537353d83d7",
+      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
+      "date_liaison": "2026-08-26 09:35:04",
+      "statut": "verrouille"
     }
   }
 }
