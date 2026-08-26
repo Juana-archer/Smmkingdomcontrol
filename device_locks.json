@@ -1,15 +1,9 @@
 {
   "locks": {
-    "fafynyaina34hhd": {
-      "device_id": "DEV_19a37a12caf8cfe7aa3b",
-      "api_hash_hash": "0108b4797e40ff1666ad8fdc638d2fd496bb0cf71be3926caaa3c725740d5d06",
-      "date_liaison": "2026-08-26 12:17:19",
-      "statut": "verrouille"
-    },
-    "levoantn1iy": {
-      "device_id": "DEV_5b98ce6e2537353d83d7",
-      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
-      "date_liaison": "2026-08-26 12:23:01",
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-08-26 12:35:58",
       "statut": "verrouille"
     }
   }
