@@ -1,33 +1,9 @@
 {
   "locks": {
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-08-26 15:15:40",
-      "statut": "verrouille"
-    },
-    "harivay2g48": {
-      "device_id": "DEV_b6b2e12469cbd3e04d44",
-      "api_hash_hash": "e5d1e05985b957d0e5b00dda79e4ee43fc8444e621626ec76036612064576f5d",
-      "date_liaison": "2026-08-26 15:34:52",
-      "statut": "verrouille"
-    },
-    "sitrakpaup5": {
-      "device_id": "DEV_2c19b8d22299ed546f94",
-      "api_hash_hash": "e0d2eddf6cb96ca305774f8dab62c34d84278bb1931f32cafe37035bcc102c05",
-      "date_liaison": "2026-08-26 15:51:14",
-      "statut": "verrouille"
-    },
-    "badmanok7dv": {
-      "device_id": "DEV_ab0ef79a0cdbbd16076a",
-      "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
-      "date_liaison": "2026-08-26 16:11:28",
-      "statut": "verrouille"
-    },
-    "fafynyaina34hhd": {
-      "device_id": "DEV_19a37a12caf8cfe7aa3b",
-      "api_hash_hash": "0108b4797e40ff1666ad8fdc638d2fd496bb0cf71be3926caaa3c725740d5d06",
-      "date_liaison": "2026-08-26 16:24:58",
+    "sedmannnkkw": {
+      "device_id": "DEV_4f06b4fc7fa7e33f1e45",
+      "api_hash_hash": "83a822c0c51ffc7f183f18ebf2646d6817efa9791e94cbddd102dc5ee917df2a",
+      "date_liaison": "2026-08-26 17:02:23",
       "statut": "verrouille"
     }
   }
