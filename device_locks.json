@@ -5,6 +5,12 @@
       "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
       "date_liaison": "2026-08-26 15:15:40",
       "statut": "verrouille"
+    },
+    "harivay2g48": {
+      "device_id": "DEV_b6b2e12469cbd3e04d44",
+      "api_hash_hash": "e5d1e05985b957d0e5b00dda79e4ee43fc8444e621626ec76036612064576f5d",
+      "date_liaison": "2026-08-26 15:34:52",
+      "statut": "verrouille"
     }
   }
 }
