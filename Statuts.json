@@ -1480,7 +1480,7 @@
       "activation_time": "22:47:24",
       "expiration_date": "2026-09-02",
       "expiration_time": "05:08:25",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-08-26 05:08:25",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
@@ -1488,7 +1488,11 @@
       "resumed_at": "2026-08-03 14:51:09",
       "expired_at": "2026-08-13 12:10:19",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
-      "previous_status": "active"
+      "previous_status": "active",
+      "paused_at": "2026-08-26 10:33:39",
+      "remaining_seconds_at_pause": 585285.985252,
+      "saved_expiration_date": "2026-09-02",
+      "saved_expiration_time": "05:08:25"
     },
     "rh anicjf8s": {
       "android_id": "rh anicjf8s",
