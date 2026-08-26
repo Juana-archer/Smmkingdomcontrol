@@ -1,9 +1,9 @@
 {
   "locks": {
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-08-26 10:30:23",
+    "levoantn1iy": {
+      "device_id": "DEV_5b98ce6e2537353d83d7",
+      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
+      "date_liaison": "2026-08-26 10:39:41",
       "statut": "verrouille"
     }
   }
