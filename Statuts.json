@@ -1822,13 +1822,13 @@
       "android_id": "sediomp1j3y",
       "activation_date": "2026-08-03",
       "activation_time": "14:54:47",
-      "expiration_date": "2026-08-27",
-      "expiration_time": "19:54:37",
+      "expiration_date": "2026-09-03",
+      "expiration_time": "19:57:22",
       "status": "active",
-      "remaining_seconds_base": 678957.476829,
-      "last_calculation_time": "2026-08-19 23:18:40",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-27 19:57:22",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
-      "last_update": "2026-08-19 23:18:40"
+      "last_update": "2026-08-27 19:57:22"
     },
     "jeanqjdrq": {
       "android_id": "jeanqjdrq",
