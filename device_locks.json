@@ -77,6 +77,12 @@
       "api_hash_hash": "5013941a85ae6e6c421b267801da97ea03bf17d00e7c34d629a04b631300c2ec",
       "date_liaison": "2026-08-27 10:38:40",
       "statut": "verrouille"
+    },
+    "jofufyopdj": {
+      "device_id": "DEV_4f410dc5a9e17186c8ca",
+      "api_hash_hash": "4919ae8f52f5e6a0fdf7416f6c08398209543544e6af7baca0d0a95631ecbbbd",
+      "date_liaison": "2026-08-27 11:19:17",
+      "statut": "verrouille"
     }
   }
 }
