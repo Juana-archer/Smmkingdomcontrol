@@ -2156,13 +2156,13 @@
       "android_id": "andryhhe6khd",
       "activation_date": "2026-08-24",
       "activation_time": "18:27:47",
-      "expiration_date": "2026-08-24",
-      "expiration_time": "23:35:44",
-      "status": "expired",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-08-24 18:35:44",
+      "expiration_date": "2026-09-06",
+      "expiration_time": "11:13:02",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-08-30 11:13:02",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-08-24 18:35:44"
+      "last_update": "2026-08-30 11:13:02"
     }
   },
   "activations": [
