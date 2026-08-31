@@ -47,6 +47,12 @@
       "api_hash_hash": "4b81a941705745d0c5771583291bda5608cfe92da09dccd7b2f12279333b9446",
       "date_liaison": "2026-08-31 23:54:14",
       "statut": "verrouille"
+    },
+    "levoantn1iy": {
+      "device_id": "DEV_5b98ce6e2537353d83d7",
+      "api_hash_hash": "5923e47248482c24918a2f7d1f1c1993e5106df3cc9145bfc9a97fabc3ff5dd9",
+      "date_liaison": "2026-09-01 00:09:38",
+      "statut": "verrouille"
     }
   }
 }
