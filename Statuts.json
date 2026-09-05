@@ -2168,23 +2168,6 @@
       "last_calculation_time": "2026-08-21 15:27:43",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-08-21 15:27:43"
-    },
-    "andryhhe6khd": {
-      "android_id": "andryhhe6khd",
-      "activation_date": "2026-08-24",
-      "activation_time": "18:27:47",
-      "expiration_date": "2026-09-06",
-      "expiration_time": "11:13:02",
-      "status": "paused",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-08-30 11:13:02",
-      "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-08-30 11:13:02",
-      "previous_status": "active",
-      "paused_at": "2026-08-31 20:06:19",
-      "remaining_seconds_at_pause": 486402.610681,
-      "saved_expiration_date": "2026-09-06",
-      "saved_expiration_time": "11:13:02"
     }
   },
   "activations": [
