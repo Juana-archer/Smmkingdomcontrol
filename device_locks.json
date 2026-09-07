@@ -1,39 +1,9 @@
 {
   "locks": {
-    "andryhhe6khd": {
-      "device_id": "DEV_af373799c874502bcf2b",
-      "api_hash_hash": "5e3ba0a402f1cd8970a9b073c9d5b229db02029a64ee4840708e91f920cb6886",
-      "date_liaison": "2026-09-07 11:36:03",
-      "statut": "verrouille"
-    },
-    "francia5ge": {
-      "device_id": "DEV_641879e91b1bdaecd605",
-      "api_hash_hash": "2bfd52d01e94c2adb63ae9fb4c0ecd433240a0c824889109ce218ae853e1663f",
-      "date_liaison": "2026-09-07 11:49:56",
-      "statut": "verrouille"
-    },
-    "boydah": {
-      "device_id": "DEV_52c9ff0afc440aab92a2",
-      "api_hash_hash": "9fea4702feacfdecbb0a8d455b18987c455936b9530566d1c26c0762aca609b0",
-      "date_liaison": "2026-09-07 12:07:19",
-      "statut": "verrouille"
-    },
-    "loyaledrt": {
-      "device_id": "DEV_5264730ec78a96fd9bd4",
-      "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
-      "date_liaison": "2026-09-07 13:18:37",
-      "statut": "verrouille"
-    },
-    "lah31qt4pq": {
-      "device_id": "DEV_77e70249ce87043d01a4",
-      "api_hash_hash": "281f24352220d3c8884ef70099901e54e90445159162865670eb1a41044d943d",
-      "date_liaison": "2026-09-07 14:01:53",
-      "statut": "verrouille"
-    },
-    "faniryid": {
-      "device_id": "DEV_2ed0744368788109cff0",
-      "api_hash_hash": "0352704cfbbf3267cdb3676989a4ec60cfd0c69c2e944e3e9706c7251ddcf9e0",
-      "date_liaison": "2026-09-07 14:38:47",
+    "philibert": {
+      "device_id": "DEV_f2e7e7de4581508fed04",
+      "api_hash_hash": "9b6a49a019beadf65e7282bbafcd971419c2dbd0b021b2b9bf4a23e705e80020",
+      "date_liaison": "2026-09-07 16:17:53",
       "statut": "verrouille"
     }
   }
