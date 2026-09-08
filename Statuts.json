@@ -2144,11 +2144,16 @@
       "activation_time": "17:24:42",
       "expiration_date": "2026-09-11",
       "expiration_time": "08:24:42",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 485768.842877,
       "last_calculation_time": "2026-09-05 17:28:33",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-05 17:24:42"
+      "last_update": "2026-09-05 17:24:42",
+      "previous_status": "active",
+      "paused_at": "2026-09-08 23:57:02",
+      "remaining_seconds_at_pause": 203259.689388,
+      "saved_expiration_date": "2026-09-11",
+      "saved_expiration_time": "08:24:42"
     },
     "miorahdkdl": {
       "android_id": "miorahdkdl",
