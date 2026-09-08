@@ -1434,8 +1434,8 @@
       "expired_at": "2026-08-02 07:34:51",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "resumed_at": "2026-07-30 19:27:11",
-      "previous_status": "active",
-      "paused_at": "2026-09-07 21:46:19",
+      "previous_status": "paused",
+      "paused_at": "2026-09-08 23:57:19",
       "remaining_seconds_at_pause": 294995.88066400005,
       "saved_expiration_date": "2026-09-11",
       "saved_expiration_time": "07:42:55"
