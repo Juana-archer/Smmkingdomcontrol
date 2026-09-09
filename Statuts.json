@@ -1,29 +1,5 @@
 {
   "utilisateurs": {
-    "loyaldert": {
-      "android_id": "loyaldert",
-      "activation_date": "2026-09-09",
-      "activation_time": "18:17:22",
-      "expiration_date": "2026-09-16",
-      "expiration_time": "18:17:22",
-      "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-09-09 18:17:22",
-      "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-09 18:17:22"
-    },
-    "kenoyhdvk45": {
-      "android_id": "kenoyhdvk45",
-      "activation_date": "2026-09-09",
-      "activation_time": "18:38:45",
-      "expiration_date": "2026-09-16",
-      "expiration_time": "18:38:45",
-      "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-09-09 18:38:45",
-      "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-09 18:38:45"
-    },
     "frigater": {
       "android_id": "frigater",
       "activation_date": "2026-09-09",
@@ -35,6 +11,18 @@
       "last_calculation_time": "2026-09-09 18:39:57",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:39:57"
+    },
+    "loyaledrt": {
+      "android_id": "loyaledrt",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:40:01",
+      "expiration_date": "2026-09-15",
+      "expiration_time": "18:40:01",
+      "status": "active",
+      "remaining_seconds_base": 518400,
+      "last_calculation_time": "2026-09-09 18:40:01",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:40:01"
     }
   }
 }
