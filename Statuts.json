@@ -23,6 +23,18 @@
       "last_calculation_time": "2026-09-09 18:45:08",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:45:08"
+    },
+    "faniryid": {
+      "android_id": "faniryid",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:46:24",
+      "expiration_date": "4189-02-04",
+      "expiration_time": "18:46:24",
+      "status": "active",
+      "remaining_seconds_base": 68238979200,
+      "last_calculation_time": "2026-09-09 18:46:24",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:46:24"
     }
   }
 }
