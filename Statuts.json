@@ -24,29 +24,29 @@
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:40:01"
     },
-    "kenoyhdvk45": {
-      "android_id": "kenoyhdvk45",
-      "activation_date": "2026-09-09",
-      "activation_time": "18:38:45",
-      "expiration_date": "2026-09-16",
-      "expiration_time": "18:38:45",
-      "status": "active",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-09-09 18:38:45",
-      "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-09 18:38:45"
-    },
     "andryhhe6khd": {
       "android_id": "andryhhe6khd",
       "activation_date": "2026-09-09",
-      "activation_time": "18:40:47",
+      "activation_time": "18:40:48",
       "expiration_date": "2026-09-12",
-      "expiration_time": "18:40:47",
+      "expiration_time": "18:40:48",
       "status": "active",
       "remaining_seconds_base": 259200,
-      "last_calculation_time": "2026-09-09 18:40:47",
+      "last_calculation_time": "2026-09-09 18:40:48",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-09 18:40:47"
+      "last_update": "2026-09-09 18:40:48"
+    },
+    "boydah": {
+      "android_id": "boydah",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:41:25",
+      "expiration_date": "2026-09-15",
+      "expiration_time": "18:41:25",
+      "status": "active",
+      "remaining_seconds_base": 518400,
+      "last_calculation_time": "2026-09-09 18:41:25",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:41:25"
     }
   }
 }
