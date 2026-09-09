@@ -71,6 +71,18 @@
       "last_calculation_time": "2026-09-09 18:41:52",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:41:52"
+    },
+    "miorahdkdl": {
+      "android_id": "miorahdkdl",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:44:18",
+      "expiration_date": "2026-09-11",
+      "expiration_time": "18:44:18",
+      "status": "active",
+      "remaining_seconds_base": 172800,
+      "last_calculation_time": "2026-09-09 18:44:18",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:44:18"
     }
   }
 }
