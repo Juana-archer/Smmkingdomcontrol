@@ -23,6 +23,18 @@
       "last_calculation_time": "2026-09-09 18:38:45",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:38:45"
+    },
+    "frigater": {
+      "android_id": "frigater",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:39:57",
+      "expiration_date": "2026-09-13",
+      "expiration_time": "18:39:57",
+      "status": "active",
+      "remaining_seconds_base": 345600,
+      "last_calculation_time": "2026-09-09 18:39:57",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:39:57"
     }
   }
 }
