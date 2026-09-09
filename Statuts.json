@@ -2208,6 +2208,18 @@
       "last_calculation_time": "2026-09-08 21:08:02",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-08 21:08:02"
+    },
+    "faniryio": {
+      "android_id": "faniryio",
+      "activation_date": "2026-09-09",
+      "activation_time": "09:31:58",
+      "expiration_date": "2026-09-16",
+      "expiration_time": "09:31:58",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-09 09:31:58",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 09:31:58"
     }
   },
   "activations": [
