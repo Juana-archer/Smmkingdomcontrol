@@ -119,6 +119,18 @@
       "last_calculation_time": "2026-09-09 18:58:31",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:58:31"
+    },
+    "boydah": {
+      "android_id": "boydah",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:59:10",
+      "expiration_date": "2026-09-16",
+      "expiration_time": "18:59:10",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-09 18:59:10",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:59:10"
     }
   }
 }
