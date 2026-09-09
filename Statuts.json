@@ -2220,6 +2220,18 @@
       "last_calculation_time": "2026-09-09 09:31:58",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 09:31:58"
+    },
+    "oujjdj": {
+      "android_id": "oujjdj",
+      "activation_date": "2026-09-09",
+      "activation_time": "12:25:34",
+      "expiration_date": "2026-09-16",
+      "expiration_time": "12:25:34",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-09 12:25:34",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 12:25:34"
     }
   },
   "activations": [
