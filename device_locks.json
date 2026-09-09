@@ -1,5 +1,11 @@
 {
   "locks": {
+    "frigater": {
+      "device_id": "DEV_be3ed5f41f70d3d56d36",
+      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
+      "date_liaison": "2026-09-09 19:56:06",
+      "statut": "verrouille"
+    },
     "loyaledrt": {
       "device_id": "DEV_5264730ec78a96fd9bd4",
       "api_hash_hash": "7e61c73f92d1e46e81cacff4c5d6ce47f3e3ff04cecd1e3bae6bc8628191c985",
@@ -16,12 +22,6 @@
       "device_id": "DEV_8634ce6600721848207b",
       "api_hash_hash": "171babc655c1481c9c6ec860a1be4b245aa757b9a8307471ea01a7984a67a9fc",
       "date_liaison": "2026-09-09 19:19:08",
-      "statut": "verrouille"
-    },
-    "frigater": {
-      "device_id": "DEV_be3ed5f41f70d3d56d36",
-      "api_hash_hash": "84239813bb0ee2d9cfa7766f8426f7be061bbe33608922cb73753f3ec8d3121b",
-      "date_liaison": "2026-09-09 18:54:01",
       "statut": "verrouille"
     },
     "andryhhe6khd": {
