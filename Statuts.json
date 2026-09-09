@@ -59,6 +59,18 @@
       "last_calculation_time": "2026-09-09 18:38:45",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 18:38:45"
+    },
+    "elidiotgdft": {
+      "android_id": "elidiotgdft",
+      "activation_date": "2026-09-09",
+      "activation_time": "18:41:52",
+      "expiration_date": "2027-01-17",
+      "expiration_time": "18:41:52",
+      "status": "active",
+      "remaining_seconds_base": 11232000,
+      "last_calculation_time": "2026-09-09 18:41:52",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-09 18:41:52"
     }
   }
 }
