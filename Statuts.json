@@ -2240,6 +2240,18 @@
       "last_calculation_time": "2026-09-09 12:25:34",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-09 12:25:34"
+    },
+    "houpoui": {
+      "android_id": "houpoui",
+      "activation_date": "2026-09-11",
+      "activation_time": "00:40:14",
+      "expiration_date": "2241-07-30",
+      "expiration_time": "00:40:14",
+      "status": "active",
+      "remaining_seconds_base": 6781017600,
+      "last_calculation_time": "2026-09-11 00:40:14",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-11 00:40:14"
     }
   }
 }
