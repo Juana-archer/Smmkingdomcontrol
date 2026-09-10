@@ -1263,13 +1263,18 @@
       "activation_time": "14:57:27",
       "expiration_date": "2026-08-24",
       "expiration_time": "13:34:10",
-      "status": "expired",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-08-17 13:34:10",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-08-17 13:34:10",
       "expired_at": "2026-07-07 15:25:58",
-      "expired_reason": "Dépassement date expiration (heure Madagascar)"
+      "expired_reason": "Dépassement date expiration (heure Madagascar)",
+      "previous_status": "expired",
+      "paused_at": "2026-09-10 18:47:29",
+      "remaining_seconds_at_pause": 0,
+      "saved_expiration_date": "2026-08-24",
+      "saved_expiration_time": "13:34:10"
     },
     "tsiory9ga1n": {
       "android_id": "tsiory9ga1n",
