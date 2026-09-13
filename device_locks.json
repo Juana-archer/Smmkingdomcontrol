@@ -113,6 +113,12 @@
       "api_hash_hash": "29a6dbb15832fdd8d1c53ebdf1bcc6cd386adef99057ca19270452cf1adc01a2",
       "date_liaison": "2026-09-11 21:23:16",
       "statut": "verrouille"
+    },
+    "harivay2g48": {
+      "device_id": "DEV_b6b2e12469cbd3e04d44",
+      "api_hash_hash": "e5d1e05985b957d0e5b00dda79e4ee43fc8444e621626ec76036612064576f5d",
+      "date_liaison": "2026-09-13 15:35:08",
+      "statut": "verrouille"
     }
   }
 }
