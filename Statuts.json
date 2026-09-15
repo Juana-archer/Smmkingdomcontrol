@@ -2168,12 +2168,14 @@
       "activation_time": "17:24:42",
       "expiration_date": "2026-09-19",
       "expiration_time": "23:17:26",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-09-12 23:17:26",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-12 23:17:26",
-      "previous_status": "active"
+      "previous_status": "active",
+      "paused_at": "2026-09-15 23:21:04",
+      "remaining_seconds_at_pause": 345381.31705199997
     },
     "harivay2g48": {
       "android_id": "harivay2g48",
@@ -2181,11 +2183,14 @@
       "activation_time": "11:53:23",
       "expiration_date": "2026-09-21",
       "expiration_time": "11:53:21",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 667929.7235879999,
       "last_calculation_time": "2026-09-13 18:21:11",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-09-08 16:33:54"
+      "last_update": "2026-09-08 16:33:54",
+      "previous_status": "active",
+      "paused_at": "2026-09-15 23:19:53",
+      "remaining_seconds_at_pause": 477207.64499199996
     },
     "koydfgj": {
       "android_id": "koydfgj",
