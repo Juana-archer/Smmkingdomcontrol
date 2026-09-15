@@ -7,6 +7,12 @@
       "temps_formate": "6j 23h 53min",
       "statut_avant": "active",
       "expiration_originale": "N/A"
+    },
+    "frigater": {
+      "user_id": "frigater",
+      "date_pause": "2026-09-15 11:59:36",
+      "temps_preserve": 454252.0434300001,
+      "temps_formate": "5j 6h 10m 52s"
     }
   }
 }
