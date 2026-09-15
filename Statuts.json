@@ -2244,6 +2244,18 @@
       "last_calculation_time": "2026-09-11 00:40:14",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-11 00:40:14"
+    },
+    "babasephilibert": {
+      "android_id": "babasephilibert",
+      "activation_date": "2026-09-15",
+      "activation_time": "10:44:25",
+      "expiration_date": "2026-09-22",
+      "expiration_time": "10:44:25",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-15 10:44:25",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-15 10:44:25"
     }
   }
 }
