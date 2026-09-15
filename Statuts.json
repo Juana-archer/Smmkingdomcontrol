@@ -99,13 +99,15 @@
       "activation_time": "10:57:24",
       "expiration_date": "2026-09-20",
       "expiration_time": "18:10:29",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 606804.884698,
       "last_calculation_time": "2026-09-13 17:37:04",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-09-01 15:36:32",
       "resumed_at": "2026-07-19 21:28:06",
-      "previous_status": "active"
+      "previous_status": "active",
+      "paused_at": "2026-09-15 11:59:36",
+      "remaining_seconds_at_pause": 454252.0434300001
     },
     "kenoyhdvk45": {
       "android_id": "kenoyhdvk45",
