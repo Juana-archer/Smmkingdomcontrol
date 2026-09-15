@@ -131,6 +131,12 @@
       "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
       "date_liaison": "2026-09-14 06:06:57",
       "statut": "verrouille"
+    },
+    "francinefgey": {
+      "device_id": "DEV_02facd7cfcd9982727c0",
+      "api_hash_hash": "6ff67c778da6aeb5d0c83aa3f0f9ee5378c52c1fc3b450d08b56ac89cba7b70c",
+      "date_liaison": "2026-09-15 16:24:43",
+      "statut": "verrouille"
     }
   }
 }
