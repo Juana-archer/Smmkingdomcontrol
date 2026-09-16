@@ -137,6 +137,12 @@
       "api_hash_hash": "6ff67c778da6aeb5d0c83aa3f0f9ee5378c52c1fc3b450d08b56ac89cba7b70c",
       "date_liaison": "2026-09-15 16:24:43",
       "statut": "verrouille"
+    },
+    "mureokfam": {
+      "device_id": "DEV_fa147282037a92faab14",
+      "api_hash_hash": "7ebf6858c78b17b03edcb352c85bd242a7a3a3ccfe82b3949765d727b96654f8",
+      "date_liaison": "2026-09-16 16:44:04",
+      "statut": "verrouille"
     }
   }
 }
