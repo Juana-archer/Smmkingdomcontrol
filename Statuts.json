@@ -2287,6 +2287,18 @@
       "last_calculation_time": "2026-09-16 16:39:00",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-16 16:39:00"
+    },
+    "eliokdgkjd": {
+      "android_id": "eliokdgkjd",
+      "activation_date": "2026-09-19",
+      "activation_time": "00:51:02",
+      "expiration_date": "2026-09-26",
+      "expiration_time": "00:51:02",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-19 00:51:02",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-19 00:51:02"
     }
   }
 }
