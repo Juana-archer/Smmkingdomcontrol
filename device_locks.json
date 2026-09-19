@@ -155,6 +155,12 @@
       "api_hash_hash": "b1b13286a020d18c3240d414c001b2a94e95b9e3d0cb3d90311bbdcb86d206b3",
       "date_liaison": "2026-09-17 05:35:46",
       "statut": "verrouille"
+    },
+    "eliokdgkjd": {
+      "device_id": "DEV_5760a0b63ecc47d8902b",
+      "api_hash_hash": "4f9c0b8f7bd0bb15f4edcb348b8e2338fd0d5c9b5f6c04168c7678d8ebf5fb24",
+      "date_liaison": "2026-09-19 13:09:48",
+      "statut": "verrouille"
     }
   }
 }
