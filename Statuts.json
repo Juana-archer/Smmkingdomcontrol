@@ -2299,6 +2299,18 @@
       "last_calculation_time": "2026-09-19 00:51:02",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-19 00:51:02"
+    },
+    "annah45ggeuye": {
+      "android_id": "annah45ggeuye",
+      "activation_date": "2026-09-22",
+      "activation_time": "18:11:07",
+      "expiration_date": "2026-09-29",
+      "expiration_time": "18:11:07",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-09-22 18:11:07",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-09-22 18:11:07"
     }
   }
 }
