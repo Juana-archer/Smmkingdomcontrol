@@ -191,6 +191,12 @@
       "api_hash_hash": "df36f98bc374b337bb3416d26dc4547ba23313dfb40a1f009874ecb43b9fbc6c",
       "date_liaison": "2026-10-02 10:40:45",
       "statut": "verrouille"
+    },
+    "mabeaheureux": {
+      "device_id": "DEV_4565fb8062625b65283f",
+      "api_hash_hash": "693f69e6ccbfd678305f5da915c192a9ed392075462a1df14ff028aa48f9a634",
+      "date_liaison": "2026-10-03 19:24:00",
+      "statut": "verrouille"
     }
   }
 }
