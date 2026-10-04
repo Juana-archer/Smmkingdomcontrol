@@ -197,6 +197,12 @@
       "api_hash_hash": "693f69e6ccbfd678305f5da915c192a9ed392075462a1df14ff028aa48f9a634",
       "date_liaison": "2026-10-03 19:24:00",
       "statut": "verrouille"
+    },
+    "evahoiduhjzk": {
+      "device_id": "DEV_ef35724575627b0ae891",
+      "api_hash_hash": "73eb0a46799bcd8fcb6807ded10d7717fd5647b4651ff8cf1b618704e0a5d9cb",
+      "date_liaison": "2026-10-04 18:00:25",
+      "statut": "verrouille"
     }
   }
 }
