@@ -2321,6 +2321,18 @@
       "last_calculation_time": "2026-10-03 19:15:53",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-03 19:15:53"
+    },
+    "evahoiduhjzk": {
+      "android_id": "evahoiduhjzk",
+      "activation_date": "2026-10-04",
+      "activation_time": "17:21:18",
+      "expiration_date": "2026-10-11",
+      "expiration_time": "17:21:18",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-10-04 17:21:18",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-04 17:21:18"
     }
   }
 }
