@@ -203,6 +203,12 @@
       "api_hash_hash": "73eb0a46799bcd8fcb6807ded10d7717fd5647b4651ff8cf1b618704e0a5d9cb",
       "date_liaison": "2026-10-04 18:05:09",
       "statut": "verrouille"
+    },
+    "bernzrhoo964j": {
+      "device_id": "DEV_6c29410680988565d433",
+      "api_hash_hash": "ebea558d459dc40051ac0c8841435b5d6344bf6ac422412d46baa1744e87802a",
+      "date_liaison": "2026-10-05 18:08:31",
+      "statut": "verrouille"
     }
   }
 }
