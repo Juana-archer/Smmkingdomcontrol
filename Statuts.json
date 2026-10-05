@@ -2333,6 +2333,18 @@
       "last_calculation_time": "2026-10-04 17:21:18",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-04 17:21:18"
+    },
+    "bernzrhoo964j": {
+      "android_id": "bernzrhoo964j",
+      "activation_date": "2026-10-05",
+      "activation_time": "18:02:40",
+      "expiration_date": "2026-10-12",
+      "expiration_time": "18:02:40",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-10-05 18:02:40",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-05 18:02:40"
     }
   }
 }
