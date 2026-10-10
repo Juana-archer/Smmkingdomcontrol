@@ -2345,6 +2345,18 @@
       "last_calculation_time": "2026-10-05 18:02:40",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-05 18:02:40"
+    },
+    "odilonkouhe": {
+      "android_id": "odilonkouhe",
+      "activation_date": "2026-10-10",
+      "activation_time": "16:51:50",
+      "expiration_date": "2026-10-17",
+      "expiration_time": "16:51:50",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-10-10 16:51:50",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-10 16:51:50"
     }
   }
 }
