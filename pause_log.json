@@ -25,6 +25,12 @@
       "date_pause": "2026-09-15 23:19:53",
       "temps_preserve": 477207.64499199996,
       "temps_formate": "5j 12h 33m 27s"
+    },
+    "miorahdkdl": {
+      "user_id": "miorahdkdl",
+      "date_pause": "2026-10-11 22:02:43",
+      "temps_preserve": 85284.724881,
+      "temps_formate": "23h 41m 24s"
     }
   }
 }
