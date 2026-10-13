@@ -2362,11 +2362,11 @@
       "android_id": "karenn5gdt",
       "activation_date": "2026-10-13",
       "activation_time": "12:38:40",
-      "expiration_date": "2026-10-13",
+      "expiration_date": "2026-10-20",
       "expiration_time": "17:38:40",
       "status": "active",
-      "remaining_seconds_base": 18000,
-      "last_calculation_time": "2026-10-13 12:38:40",
+      "remaining_seconds_base": 619156.607781,
+      "last_calculation_time": "2026-10-13 13:39:23",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-13 12:38:40"
     }
