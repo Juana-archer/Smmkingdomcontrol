@@ -215,6 +215,12 @@
       "api_hash_hash": "a247c9d8fb332ee13f61a1b3db100fd24bb8e0c58cc0e4f4124a1885867f1953",
       "date_liaison": "2026-10-10 16:54:57",
       "statut": "verrouille"
+    },
+    "karenn5gdt": {
+      "device_id": "DEV_4d99d559c979d699605d",
+      "api_hash_hash": "c360028d237d6d7b074e014463f18b36e1fd9757de4db823aa4c13c50d9ed44f",
+      "date_liaison": "2026-10-13 12:47:46",
+      "statut": "verrouille"
     }
   }
 }
