@@ -2369,6 +2369,18 @@
       "last_calculation_time": "2026-10-13 13:39:23",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-13 12:38:40"
+    },
+    "duoleyuzyi": {
+      "android_id": "duoleyuzyi",
+      "activation_date": "2026-10-14",
+      "activation_time": "21:38:00",
+      "expiration_date": "2026-10-21",
+      "expiration_time": "21:38:00",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-10-14 21:38:00",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-14 21:38:00"
     }
   }
 }
