@@ -221,6 +221,12 @@
       "api_hash_hash": "c360028d237d6d7b074e014463f18b36e1fd9757de4db823aa4c13c50d9ed44f",
       "date_liaison": "2026-10-13 12:47:46",
       "statut": "verrouille"
+    },
+    "duoleyuzyi": {
+      "device_id": "DEV_b80df214443598efde11",
+      "api_hash_hash": "4db04dd04cd2add0f828a1ffe3648ca86d82f3c40925f0daa2b0515b2edad278",
+      "date_liaison": "2026-10-14 21:43:25",
+      "statut": "verrouille"
     }
   }
 }
