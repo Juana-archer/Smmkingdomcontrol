@@ -31,6 +31,12 @@
       "date_pause": "2026-10-14 02:32:18",
       "temps_preserve": 549119.084946,
       "temps_formate": "6j 8h 31m 59s"
+    },
+    "sitrakpaup5": {
+      "user_id": "sitrakpaup5",
+      "date_pause": "2026-10-16 18:29:28",
+      "temps_preserve": 14344.22678300005,
+      "temps_formate": "3h 59m 4s"
     }
   }
 }
