@@ -233,6 +233,12 @@
       "api_hash_hash": "4268d2d18385e8850742602c66b7c042247536cfafd75322976c2a0b39ddf999",
       "date_liaison": "2026-10-15 23:21:33",
       "statut": "verrouille"
+    },
+    "haingokjoue": {
+      "device_id": "DEV_0deb57ceece48c76d1aa",
+      "api_hash_hash": "943be7b761ea3ff5f76df60c587274c433d96eee4d5ebc5f354b60c082443a3e",
+      "date_liaison": "2026-10-18 09:37:28",
+      "statut": "verrouille"
     }
   }
 }
