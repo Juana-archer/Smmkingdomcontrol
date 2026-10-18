@@ -2381,6 +2381,18 @@
       "last_calculation_time": "2026-10-14 21:38:00",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-14 21:38:00"
+    },
+    "haingokjoue": {
+      "android_id": "haingokjoue",
+      "activation_date": "2026-10-18",
+      "activation_time": "09:17:00",
+      "expiration_date": "2026-10-18",
+      "expiration_time": "14:17:00",
+      "status": "active",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-10-18 09:17:00",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-18 09:17:00"
     }
   }
 }
