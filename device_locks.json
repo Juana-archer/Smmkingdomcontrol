@@ -239,6 +239,12 @@
       "api_hash_hash": "943be7b761ea3ff5f76df60c587274c433d96eee4d5ebc5f354b60c082443a3e",
       "date_liaison": "2026-10-18 09:38:32",
       "statut": "verrouille"
+    },
+    "harenak5hdh": {
+      "device_id": "DEV_aa89ba2b0021f3b10f2b",
+      "api_hash_hash": "2a38d90b66a14195abb0e8da3d5c2a18b8fea2c6d86dec08a320f774e6a657f4",
+      "date_liaison": "2026-10-19 10:56:21",
+      "statut": "verrouille"
     }
   }
 }
