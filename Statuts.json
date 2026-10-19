@@ -2393,6 +2393,18 @@
       "last_calculation_time": "2026-10-18 14:36:57",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-18 09:17:00"
+    },
+    "harenak5hdh": {
+      "android_id": "harenak5hdh",
+      "activation_date": "2026-10-19",
+      "activation_time": "09:56:33",
+      "expiration_date": "2026-10-19",
+      "expiration_time": "14:56:33",
+      "status": "active",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-10-19 09:56:33",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-19 09:56:33"
     }
   }
 }
