@@ -5,15 +5,13 @@
       "activation_date": "2026-09-05",
       "activation_time": "21:32:06",
       "expiration_date": "2026-10-27",
-      "expiration_time": "12:10:55",
-      "status": "paused",
-      "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-10-20 12:10:55",
+      "expiration_time": "12:39:37",
+      "status": "active",
+      "remaining_seconds_base": 504946.197196,
+      "last_calculation_time": "2026-10-21 16:23:50",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-09-12 23:17:34",
-      "previous_status": "active",
-      "paused_at": "2026-10-21 15:55:08",
-      "remaining_seconds_at_pause": 504946.197196
+      "previous_status": "active"
     },
     "babasephilbert": {
       "android_id": "babasephilbert",
