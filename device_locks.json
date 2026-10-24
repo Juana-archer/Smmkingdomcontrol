@@ -251,6 +251,12 @@
       "api_hash_hash": "f88d1ac6f1c00671a2eab504897d218595829b6aaecfb240c54bbd1b31ac1242",
       "date_liaison": "2026-10-20 13:20:26",
       "statut": "verrouille"
+    },
+    "heriyffjid6ue": {
+      "device_id": "DEV_dc5ab4c7450174c5e0b3",
+      "api_hash_hash": "99a3f517fa35166341233cb1862525db3f04050a5e904e58b2946b25424f85b3",
+      "date_liaison": "2026-10-24 15:08:20",
+      "statut": "verrouille"
     }
   }
 }
