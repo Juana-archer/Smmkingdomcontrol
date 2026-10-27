@@ -257,6 +257,12 @@
       "api_hash_hash": "99a3f517fa35166341233cb1862525db3f04050a5e904e58b2946b25424f85b3",
       "date_liaison": "2026-10-24 15:12:30",
       "statut": "verrouille"
+    },
+    "honoreftwtd": {
+      "device_id": "DEV_8a0f73ae0aed20a5b63b",
+      "api_hash_hash": "1d317a45b0a81c151828578dca75ce9b7fe9705e7fa9ae56fc40864184cb737c",
+      "date_liaison": "2026-10-27 08:32:04",
+      "statut": "verrouille"
     }
   }
 }
