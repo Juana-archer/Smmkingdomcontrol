@@ -2405,6 +2405,18 @@
       "last_calculation_time": "2026-10-19 11:06:49",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-10-19 09:56:33"
+    },
+    "honoreftwtd": {
+      "android_id": "honoreftwtd",
+      "activation_date": "2026-10-27",
+      "activation_time": "07:31:12",
+      "expiration_date": "2026-10-27",
+      "expiration_time": "12:31:12",
+      "status": "active",
+      "remaining_seconds_base": 18000,
+      "last_calculation_time": "2026-10-27 07:31:12",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-10-27 07:31:12"
     }
   }
 }
