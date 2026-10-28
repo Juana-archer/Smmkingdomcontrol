@@ -37,6 +37,12 @@
       "date_pause": "2026-10-16 18:29:28",
       "temps_preserve": 14344.22678300005,
       "temps_formate": "3h 59m 4s"
+    },
+    "loyaledrt": {
+      "user_id": "loyaledrt",
+      "date_pause": "2026-10-28 14:55:51",
+      "temps_preserve": 318648.72603300004,
+      "temps_formate": "3j 16h 30m 48s"
     }
   }
 }
