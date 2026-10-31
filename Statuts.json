@@ -951,13 +951,13 @@
       "android_id": "avotragjd",
       "activation_date": "2026-06-04",
       "activation_time": "11:47:07",
-      "expiration_date": "2026-07-29",
-      "expiration_time": "01:13:30",
-      "status": "expired",
+      "expiration_date": "2026-11-30",
+      "expiration_time": "08:02:07",
+      "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-06-29 01:13:30",
-      "remaining_seconds_base": 0,
-      "last_calculation_time": "2026-07-29 15:22:47"
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-10-31 08:02:07"
     },
     "rhalinohah": {
       "android_id": "rhalinohah",
