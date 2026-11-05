@@ -2466,6 +2466,18 @@
       "last_calculation_time": "2026-11-05 13:12:19",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-05 13:12:19"
+    },
+    "esly5": {
+      "android_id": "esly5",
+      "activation_date": "2026-11-05",
+      "activation_time": "13:13:01",
+      "expiration_date": "2026-11-12",
+      "expiration_time": "13:13:01",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-05 13:13:01",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-05 13:13:01"
     }
   }
 }
