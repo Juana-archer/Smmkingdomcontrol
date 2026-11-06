@@ -287,6 +287,12 @@
       "api_hash_hash": "a67636fc9ad4110f3ca732be0a47077c1e26a9bc1c88e55a46e753f837b76bac",
       "date_liaison": "2026-11-06 12:52:35",
       "statut": "verrouille"
+    },
+    "esly5": {
+      "device_id": "DEV_849e0caed369e5c904bb",
+      "api_hash_hash": "580d381ce737f7e9ad66c0d12a4eff588376c7dafa41ebdf7675687d00494fd7",
+      "date_liaison": "2026-11-06 22:32:46",
+      "statut": "verrouille"
     }
   }
 }
