@@ -408,15 +408,15 @@
       "android_id": "odilonerttw",
       "activation_date": "2026-03-05",
       "activation_time": "09:08:02",
-      "expiration_date": "2026-11-04",
-      "expiration_time": "15:32:49",
+      "expiration_date": "2026-11-14",
+      "expiration_time": "22:28:53",
       "status": "active",
       "timezone": "Indian/Antananarivo (Madagascar UTC+3)",
       "last_update": "2026-03-05 09:08:02",
       "expired_at": "2026-03-12 09:25:47",
       "expired_reason": "Dépassement date expiration (heure Madagascar)",
       "remaining_seconds_base": 604800,
-      "last_calculation_time": "2026-10-28 15:32:49"
+      "last_calculation_time": "2026-11-07 22:28:53"
     },
     "dahertdef": {
       "android_id": "dahertdef",
