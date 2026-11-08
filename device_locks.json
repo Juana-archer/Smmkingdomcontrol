@@ -299,6 +299,12 @@
       "api_hash_hash": "00044db161e97eb1baa172ad9775554d796b1235a747009abd44e8d5caaca84e",
       "date_liaison": "2026-11-06 22:58:29",
       "statut": "verrouille"
+    },
+    "dahboyloy1hd": {
+      "device_id": "DEV_57e351388d1f1117f311",
+      "api_hash_hash": "7f994636a4b56e86a37411c68ec808cf9556e2d909f1a01a6b1c95401f80e9e8",
+      "date_liaison": "2026-11-08 20:44:21",
+      "statut": "verrouille"
     }
   }
 }
