@@ -2478,6 +2478,18 @@
       "last_calculation_time": "2026-11-05 13:13:01",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-05 13:13:01"
+    },
+    "loyalboydhue": {
+      "android_id": "loyalboydhue",
+      "activation_date": "2026-11-08",
+      "activation_time": "20:40:09",
+      "expiration_date": "2026-11-15",
+      "expiration_time": "20:40:09",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-08 20:40:09",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-08 20:40:09"
     }
   }
 }
