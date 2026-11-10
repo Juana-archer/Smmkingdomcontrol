@@ -2508,6 +2508,18 @@
       "previous_status": "paused",
       "paused_at": "2026-11-10 11:34:34",
       "remaining_seconds_at_pause": 464748.412959
+    },
+    "elidiopoue": {
+      "android_id": "elidiopoue",
+      "activation_date": "2026-11-10",
+      "activation_time": "14:56:16",
+      "expiration_date": "2026-12-10",
+      "expiration_time": "14:56:16",
+      "status": "active",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-11-10 14:56:16",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-10 14:56:16"
     }
   }
 }
