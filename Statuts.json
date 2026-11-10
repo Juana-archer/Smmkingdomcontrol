@@ -2485,11 +2485,14 @@
       "activation_time": "20:40:09",
       "expiration_date": "2026-11-15",
       "expiration_time": "20:40:09",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-11-08 20:40:09",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-11-08 20:40:09"
+      "last_update": "2026-11-08 20:40:09",
+      "previous_status": "active",
+      "paused_at": "2026-11-10 11:32:42",
+      "remaining_seconds_at_pause": 464846.065498
     },
     "dahboyloy1hd": {
       "android_id": "dahboyloy1hd",
