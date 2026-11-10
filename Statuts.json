@@ -2500,11 +2500,14 @@
       "activation_time": "20:40:22",
       "expiration_date": "2026-11-15",
       "expiration_time": "20:40:22",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-11-08 20:40:22",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-11-08 20:40:22"
+      "last_update": "2026-11-08 20:40:22",
+      "previous_status": "paused",
+      "paused_at": "2026-11-10 11:34:34",
+      "remaining_seconds_at_pause": 464748.412959
     }
   }
 }
