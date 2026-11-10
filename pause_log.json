@@ -40,15 +40,21 @@
     },
     "loyaledrt": {
       "user_id": "loyaledrt",
-      "date_pause": "2026-10-28 14:55:51",
-      "temps_preserve": 318648.72603300004,
-      "temps_formate": "3j 16h 30m 48s"
+      "date_pause": "2026-11-10 09:52:14",
+      "temps_preserve": 470858.226734,
+      "temps_formate": "5j 10h 47m 38s"
     },
     "sedmannnkkw": {
       "user_id": "sedmannnkkw",
       "date_pause": "2026-11-06 09:35:38",
       "temps_preserve": 75424.11028900003,
       "temps_formate": "20h 57m 4s"
+    },
+    "boydah": {
+      "user_id": "boydah",
+      "date_pause": "2026-11-10 09:52:10",
+      "temps_preserve": 470858.98520500003,
+      "temps_formate": "5j 10h 47m 38s"
     }
   }
 }
