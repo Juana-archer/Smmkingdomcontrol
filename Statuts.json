@@ -2537,11 +2537,11 @@
       "android_id": "daheryef",
       "activation_date": "2026-11-13",
       "activation_time": "01:28:08",
-      "expiration_date": "2083-08-19",
+      "expiration_date": "2083-09-08",
       "expiration_time": "01:28:08",
       "status": "active",
-      "remaining_seconds_base": 1791331200,
-      "last_calculation_time": "2026-11-13 01:28:08",
+      "remaining_seconds_base": 1793059016.524889,
+      "last_calculation_time": "2026-11-13 01:31:11",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-13 01:28:08"
     }
