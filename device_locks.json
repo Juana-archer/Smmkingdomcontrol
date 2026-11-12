@@ -323,6 +323,12 @@
       "api_hash_hash": "ec017959d81d656cb76b708677ad8185b22426dcb9aa6509747af279efbfd0ad",
       "date_liaison": "2026-11-13 00:01:17",
       "statut": "verrouille"
+    },
+    "daheryef": {
+      "device_id": "DEV_6354698a8b38d79ca167",
+      "api_hash_hash": "4a3e6148887cafc3298f02b2fe1bc77d41362d29bc5a3ecce3fe54743f67ee4e",
+      "date_liaison": "2026-11-13 01:31:54",
+      "statut": "verrouille"
     }
   }
 }
