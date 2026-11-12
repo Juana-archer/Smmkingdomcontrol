@@ -311,6 +311,12 @@
       "api_hash_hash": "7f994636a4b56e86a37411c68ec808cf9556e2d909f1a01a6b1c95401f80e9e8",
       "date_liaison": "2026-11-08 20:44:21",
       "statut": "verrouille"
+    },
+    "elidiopoue": {
+      "device_id": "DEV_ea37136403484780c990",
+      "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
+      "date_liaison": "2026-11-12 18:56:17",
+      "statut": "verrouille"
     }
   }
 }
