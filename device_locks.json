@@ -317,6 +317,12 @@
       "api_hash_hash": "329f1e1b74374f2a14084d6e774f7fa4f14dddd59d45d7f2ba6b930c98df9192",
       "date_liaison": "2026-11-12 18:56:17",
       "statut": "verrouille"
+    },
+    "daheryid": {
+      "device_id": "DEV_58749e3f5101d8cbcaff",
+      "api_hash_hash": "ec017959d81d656cb76b708677ad8185b22426dcb9aa6509747af279efbfd0ad",
+      "date_liaison": "2026-11-13 00:01:17",
+      "statut": "verrouille"
     }
   }
 }
