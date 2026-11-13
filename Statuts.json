@@ -2580,6 +2580,18 @@
       "last_calculation_time": "2026-11-13 18:37:56",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-13 18:37:56"
+    },
+    "kyhouirh": {
+      "android_id": "kyhouirh",
+      "activation_date": "2026-11-14",
+      "activation_time": "01:05:13",
+      "expiration_date": "2871-03-02",
+      "expiration_time": "01:05:13",
+      "status": "active",
+      "remaining_seconds_base": 26643427200,
+      "last_calculation_time": "2026-11-14 01:05:13",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-14 01:05:13"
     }
   }
 }
