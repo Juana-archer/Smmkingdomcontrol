@@ -2544,6 +2544,18 @@
       "last_calculation_time": "2026-11-13 01:31:11",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-13 01:28:08"
+    },
+    "avotrakmpo": {
+      "android_id": "avotrakmpo",
+      "activation_date": "2026-11-13",
+      "activation_time": "10:46:01",
+      "expiration_date": "2026-12-13",
+      "expiration_time": "10:46:01",
+      "status": "active",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-11-13 10:46:01",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-13 10:46:01"
     }
   }
 }
