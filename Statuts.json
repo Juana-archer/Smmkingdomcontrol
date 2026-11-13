@@ -2556,6 +2556,18 @@
       "last_calculation_time": "2026-11-13 10:46:01",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-13 10:46:01"
+    },
+    "faniryjou": {
+      "android_id": "faniryjou",
+      "activation_date": "2026-11-13",
+      "activation_time": "15:07:22",
+      "expiration_date": "2048-04-14",
+      "expiration_time": "15:07:22",
+      "status": "active",
+      "remaining_seconds_base": 675907200,
+      "last_calculation_time": "2026-11-13 15:07:22",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-13 15:07:22"
     }
   }
 }
