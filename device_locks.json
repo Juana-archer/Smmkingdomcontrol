@@ -335,6 +335,12 @@
       "api_hash_hash": "dceba51ff5657d0b7b6cf1c5fc86380034e64f1d9a1b9fff1de00c286036b033",
       "date_liaison": "2026-11-13 10:54:11",
       "statut": "verrouille"
+    },
+    "faniryjou": {
+      "device_id": "DEV_2660822090288df600d9",
+      "api_hash_hash": "e64313f2d03058ce1164105c11fc0736ba6f30cfac0a49b26d5b5a67478ce1ce",
+      "date_liaison": "2026-11-13 15:16:09",
+      "statut": "verrouille"
     }
   }
 }
