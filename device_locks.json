@@ -329,6 +329,12 @@
       "api_hash_hash": "4a3e6148887cafc3298f02b2fe1bc77d41362d29bc5a3ecce3fe54743f67ee4e",
       "date_liaison": "2026-11-13 01:31:54",
       "statut": "verrouille"
+    },
+    "avotrakmpo": {
+      "device_id": "DEV_c7c0a440b3b30513e38b",
+      "api_hash_hash": "dceba51ff5657d0b7b6cf1c5fc86380034e64f1d9a1b9fff1de00c286036b033",
+      "date_liaison": "2026-11-13 10:54:11",
+      "statut": "verrouille"
     }
   }
 }
