@@ -2568,6 +2568,18 @@
       "last_calculation_time": "2026-11-13 15:07:22",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-13 15:07:22"
+    },
+    "elidiothfh": {
+      "android_id": "elidiothfh",
+      "activation_date": "2026-11-13",
+      "activation_time": "18:37:56",
+      "expiration_date": "2026-12-13",
+      "expiration_time": "18:37:56",
+      "status": "active",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-11-13 18:37:56",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-13 18:37:56"
     }
   }
 }
