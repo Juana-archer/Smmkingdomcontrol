@@ -347,6 +347,12 @@
       "api_hash_hash": "ed0bd8d48fe2779b9113fd1b2085f74ff7b203a170b01dc8ec6ed2a40978b479",
       "date_liaison": "2026-11-14 01:08:42",
       "statut": "verrouille"
+    },
+    "daheryidou": {
+      "device_id": "DEV_a56ae31e6db8b8fc3fab",
+      "api_hash_hash": "263661a6ffddea268d9e38774ba6b499ac932e08472e43e2dc664aabc207ebc7",
+      "date_liaison": "2026-11-14 21:36:27",
+      "statut": "verrouille"
     }
   }
 }
