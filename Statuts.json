@@ -2602,6 +2602,18 @@
       "last_calculation_time": "2026-11-14 21:28:49",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-14 21:28:49"
+    },
+    "dahlery": {
+      "android_id": "dahlery",
+      "activation_date": "2026-11-14",
+      "activation_time": "23:24:01",
+      "expiration_date": "2048-06-09",
+      "expiration_time": "23:24:01",
+      "status": "active",
+      "remaining_seconds_base": 680659200,
+      "last_calculation_time": "2026-11-14 23:24:01",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-14 23:24:01"
     }
   }
 }
