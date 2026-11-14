@@ -353,6 +353,12 @@
       "api_hash_hash": "263661a6ffddea268d9e38774ba6b499ac932e08472e43e2dc664aabc207ebc7",
       "date_liaison": "2026-11-14 21:36:27",
       "statut": "verrouille"
+    },
+    "dahlery": {
+      "device_id": "DEV_73e19a1ece42d04e534b",
+      "api_hash_hash": "dcc1f4254f8e1143972b676180ba22351d3f59d15659de4c6cb619e9134000d0",
+      "date_liaison": "2026-11-14 23:26:26",
+      "statut": "verrouille"
     }
   }
 }
