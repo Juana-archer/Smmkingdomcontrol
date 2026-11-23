@@ -6,11 +6,14 @@
       "activation_time": "20:24:31",
       "expiration_date": "2026-11-27",
       "expiration_time": "20:24:31",
-      "status": "active",
+      "status": "paused",
       "remaining_seconds_base": 604800,
       "last_calculation_time": "2026-11-20 20:24:31",
       "timezone": "Indian/Antananarivo (UTC+3)",
-      "last_update": "2026-11-20 20:24:31"
+      "last_update": "2026-11-20 20:24:31",
+      "previous_status": "active",
+      "paused_at": "2026-11-23 18:07:02",
+      "remaining_seconds_at_pause": 353848.13583000004
     },
     "babasephilbert": {
       "android_id": "babasephilbert",
