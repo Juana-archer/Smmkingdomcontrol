@@ -377,6 +377,12 @@
       "api_hash_hash": "cb058d6ce489353baa47753b1250713dbd133d8822ec446a9d1337966409b396",
       "date_liaison": "2026-11-24 20:35:31",
       "statut": "verrouille"
+    },
+    "fashion": {
+      "device_id": "DEV_20788f1c9a14598e2dd5",
+      "api_hash_hash": "16f0255010190911843fe4162b12f24f6ad6542f5aff4cd23509a86a39bab9f4",
+      "date_liaison": "2026-11-24 20:45:41",
+      "statut": "verrouille"
     }
   }
 }
