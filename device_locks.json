@@ -389,6 +389,12 @@
       "api_hash_hash": "16f0255010190911843fe4162b12f24f6ad6542f5aff4cd23509a86a39bab9f4",
       "date_liaison": "2026-11-24 20:45:41",
       "statut": "verrouille"
+    },
+    "maheryb": {
+      "device_id": "DEV_57659a8e0164819cfe2d",
+      "api_hash_hash": "8b8888ebfc0491a1031bcd88cc196fed000ce4e46bf64f5d88bcd790d7dafadf",
+      "date_liaison": "2026-11-24 21:11:07",
+      "statut": "verrouille"
     }
   }
 }
