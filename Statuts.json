@@ -2664,6 +2664,18 @@
       "last_calculation_time": "2026-11-24 20:36:37",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-24 20:36:37"
+    },
+    "fashion": {
+      "android_id": "fashion",
+      "activation_date": "2026-11-24",
+      "activation_time": "20:37:09",
+      "expiration_date": "2026-12-01",
+      "expiration_time": "20:37:09",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-24 20:37:09",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-24 20:37:09"
     }
   }
 }
