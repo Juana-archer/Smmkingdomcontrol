@@ -371,6 +371,12 @@
       "api_hash_hash": "5a1b40e82102fc57db373240c0348e092ad6e8f4c8ec797bac4ccdf46fcf6ed2",
       "date_liaison": "2026-11-18 16:51:15",
       "statut": "verrouille"
+    },
+    "manday": {
+      "device_id": "DEV_9a405d286d0ec3cf8c66",
+      "api_hash_hash": "cb058d6ce489353baa47753b1250713dbd133d8822ec446a9d1337966409b396",
+      "date_liaison": "2026-11-24 20:35:31",
+      "statut": "verrouille"
     }
   }
 }
