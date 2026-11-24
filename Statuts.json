@@ -2640,6 +2640,30 @@
       "last_calculation_time": "2026-11-24 20:34:37",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-24 20:34:37"
+    },
+    "you": {
+      "android_id": "you",
+      "activation_date": "2026-11-24",
+      "activation_time": "20:35:52",
+      "expiration_date": "2026-12-01",
+      "expiration_time": "20:35:52",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-24 20:35:52",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-24 20:35:52"
+    },
+    "maheryb": {
+      "android_id": "maheryb",
+      "activation_date": "2026-11-24",
+      "activation_time": "20:36:37",
+      "expiration_date": "2026-12-01",
+      "expiration_time": "20:36:37",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-24 20:36:37",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-24 20:36:37"
     }
   }
 }
