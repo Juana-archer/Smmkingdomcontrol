@@ -2628,6 +2628,18 @@
       "last_calculation_time": "2026-11-20 15:17:18",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-20 15:17:18"
+    },
+    "manday": {
+      "android_id": "manday",
+      "activation_date": "2026-11-24",
+      "activation_time": "20:34:37",
+      "expiration_date": "2026-12-01",
+      "expiration_time": "20:34:37",
+      "status": "active",
+      "remaining_seconds_base": 604800,
+      "last_calculation_time": "2026-11-24 20:34:37",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-24 20:34:37"
     }
   }
 }
