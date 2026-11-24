@@ -378,6 +378,12 @@
       "date_liaison": "2026-11-24 20:35:31",
       "statut": "verrouille"
     },
+    "you": {
+      "device_id": "DEV_19dec14ddfd48b3dd0a4",
+      "api_hash_hash": "e02f5701d64bdad296fd9e9486a91b2d6a54380601fc7cd94ed724c54ed44f0f",
+      "date_liaison": "2026-11-24 20:45:49",
+      "statut": "verrouille"
+    },
     "fashion": {
       "device_id": "DEV_20788f1c9a14598e2dd5",
       "api_hash_hash": "16f0255010190911843fe4162b12f24f6ad6542f5aff4cd23509a86a39bab9f4",
