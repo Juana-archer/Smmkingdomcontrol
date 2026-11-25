@@ -2676,6 +2676,18 @@
       "last_calculation_time": "2026-11-24 20:37:09",
       "timezone": "Indian/Antananarivo (UTC+3)",
       "last_update": "2026-11-24 20:37:09"
+    },
+    "honore": {
+      "android_id": "honore",
+      "activation_date": "2026-11-25",
+      "activation_time": "17:35:37",
+      "expiration_date": "2026-12-25",
+      "expiration_time": "17:35:37",
+      "status": "active",
+      "remaining_seconds_base": 2592000,
+      "last_calculation_time": "2026-11-25 17:35:37",
+      "timezone": "Indian/Antananarivo (UTC+3)",
+      "last_update": "2026-11-25 17:35:37"
     }
   }
 }
